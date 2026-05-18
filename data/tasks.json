@@ -1,0 +1,50 @@
+[
+  {
+    "id": "customer-service",
+    "name": "客服回复",
+    "slug": "customer-service",
+    "description": "生成针对客户咨询、投诉、售后问题的专业回复话术"
+  },
+  {
+    "id": "campaign-copy",
+    "name": "活动文案",
+    "slug": "campaign-copy",
+    "description": "为促销活动、节日营销、新品发布等场景撰写推广文案"
+  },
+  {
+    "id": "short-video",
+    "name": "短视频脚本",
+    "slug": "short-video",
+    "description": "生成适合抖音、快手等平台的短视频拍摄脚本和口播文案"
+  },
+  {
+    "id": "product-description",
+    "name": "商品与服务描述",
+    "slug": "product-description",
+    "description": "为商品详情页、服务介绍页撰写清晰有吸引力的描述文案"
+  },
+  {
+    "id": "recruitment",
+    "name": "招聘与培训",
+    "slug": "recruitment",
+    "description": "生成招聘启事、岗位说明、员工培训材料等人事相关文案"
+  },
+  {
+    "id": "quotation",
+    "name": "报价与合同前说明",
+    "slug": "quotation",
+    "description": "生成报价单说明、服务范围描述、合同前沟通话术"
+  },
+  {
+    "id": "operations",
+    "name": "运营表格",
+    "slug": "operations",
+    "description": "生成日常运营所需的排班表、库存表、数据统计等表格模板"
+  },
+  {
+    "id": "review-checklist",
+    "name": "复核清单",
+    "slug": "review-checklist",
+    "description": "提供 AI 生成内容的人工复核要点，确保发布前质量达标"
+  }
+]

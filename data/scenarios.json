@@ -1,0 +1,154 @@
+[
+  {
+    "id": "bargain",
+    "title": "客户砍价应对",
+    "slug": "bargain",
+    "description": "当客户要求降价或讨价还价时的多轮对话应对策略",
+    "industry": "retail",
+    "dialogue": [
+      {
+        "role": "customer",
+        "content": "这个能便宜点吗？别家比你们便宜好多。"
+      },
+      {
+        "role": "recommended_a",
+        "label": "推荐回复A（强调价值）",
+        "content": "理解您想找性价比高的，我们这款用的是XX材质，耐用度会好很多。如果您今天确定的话，我可以帮您申请一个小赠品。"
+      },
+      {
+        "role": "recommended_b",
+        "label": "推荐回复B（提供替代方案）",
+        "content": "这款确实是我们品质比较好的，价格已经是活动价了。如果预算有限，我可以推荐另一款性价比更高的给您看看？"
+      },
+      {
+        "role": "not_recommended",
+        "label": "不建议的回复",
+        "content": "不行，这个价格已经很低了，不能再少了。",
+        "reason": "语气生硬，容易让客户反感离开"
+      },
+      {
+        "role": "customer",
+        "content": "赠品不要，直接减20块行不行？"
+      },
+      {
+        "role": "recommended_a",
+        "label": "推荐回复（坚持底线但留余地）",
+        "content": "20块确实超出我的权限了，这样吧，我帮您看看能不能申请减10元或者送运费险，您看可以吗？实在不行您再考虑考虑也没关系的。"
+      }
+    ]
+  },
+  {
+    "id": "bad-review-response",
+    "title": "差评回复对话",
+    "slug": "bad-review-response",
+    "description": "收到差评后如何通过私信或回复进行沟通挽回",
+    "industry": "catering",
+    "dialogue": [
+      {
+        "role": "customer",
+        "content": "菜都凉了，而且分量也太少了吧，再也不会点了。"
+      },
+      {
+        "role": "recommended_a",
+        "label": "推荐回复A（诚恳道歉+具体方案）",
+        "content": "真的很抱歉这次体验不好。菜品温度问题我们会和配送环节一起排查改进。分量方面我核实了一下，可能是打包时有疏忽。方便的话加我微信，下次给您补一份小食表示歉意。"
+      },
+      {
+        "role": "recommended_b",
+        "label": "推荐回复B（简短真诚）",
+        "content": "抱歉没让您吃好，这次确实是我们的问题。已经记录反馈给后厨了，下次点单备注一下我给您多加点量。"
+      },
+      {
+        "role": "not_recommended",
+        "label": "不建议的回复",
+        "content": "配送慢不是我们的问题，是骑手的事。分量都是标准的。",
+        "reason": "推卸责任、否认客户感受，会加剧矛盾"
+      },
+      {
+        "role": "customer",
+        "content": "补一份小食有什么用，我要退款。"
+      },
+      {
+        "role": "recommended_a",
+        "label": "推荐回复（灵活处理）",
+        "content": "理解您的心情。这样吧，我帮您申请这单的部分退款，同时下次下单我再额外送您一个菜。希望能有机会让您重新体验一下我们正常的出品水平。"
+      }
+    ]
+  },
+  {
+    "id": "refund-negotiation",
+    "title": "退款协商对话",
+    "slug": "refund-negotiation",
+    "description": "客户要求退款时如何沟通协商达成双方可接受的方案",
+    "industry": "retail",
+    "dialogue": [
+      {
+        "role": "customer",
+        "content": "我要退款，这个东西和图片差太多了，色差很大。"
+      },
+      {
+        "role": "recommended_a",
+        "label": "推荐回复A（先确认问题）",
+        "content": "抱歉给您带来困扰。方便发张实物照片给我看看吗？我核实一下是不是发错色号了。如果确实有问题，退换都可以的。"
+      },
+      {
+        "role": "recommended_b",
+        "label": "推荐回复B（直接给方案）",
+        "content": "不好意思，屏幕显示确实可能有色差。支持7天无理由退换，我给您发退货地址，运费我们承担。如果您不想退，也可以给您减10元作为补偿，您看哪种方便？"
+      },
+      {
+        "role": "not_recommended",
+        "label": "不建议的回复",
+        "content": "我们详情页写了色差属于正常现象，不支持退款。",
+        "reason": "虽然可能合规，但态度强硬容易引发投诉升级"
+      },
+      {
+        "role": "customer",
+        "content": "我不想退了太麻烦，但是你们得给我补偿。"
+      },
+      {
+        "role": "recommended_a",
+        "label": "推荐回复（给出合理补偿）",
+        "content": "理解，退货确实麻烦。这样吧，给您退差价10元到账户余额，下次购物可以直接抵扣。另外送您一张满50减5的券，算是我们的一点心意。"
+      }
+    ]
+  },
+  {
+    "id": "appointment-confirm",
+    "title": "预约确认对话",
+    "slug": "appointment-confirm",
+    "description": "客户预约服务时的确认沟通和注意事项告知",
+    "industry": "beauty",
+    "dialogue": [
+      {
+        "role": "customer",
+        "content": "我想约这周六下午做个头发，有位置吗？"
+      },
+      {
+        "role": "recommended_a",
+        "label": "推荐回复A（确认+引导选择）",
+        "content": "周六下午有位置的～您想约几点呢？2点和4点都可以。另外您是想做什么项目？剪发、烫染还是护理？我帮您预留对应的时间。"
+      },
+      {
+        "role": "recommended_b",
+        "label": "推荐回复B（时间紧张时）",
+        "content": "周六下午目前还剩4点的位置，2点已经约满了。您4点方便吗？如果时间不合适，周日上午也有空档。"
+      },
+      {
+        "role": "not_recommended",
+        "label": "不建议的回复",
+        "content": "有，你来就行。",
+        "reason": "信息不完整，没有确认具体时间和项目，容易造成到店后等待"
+      },
+      {
+        "role": "customer",
+        "content": "4点可以，我想烫个卷发，大概多少钱？"
+      },
+      {
+        "role": "recommended_a",
+        "label": "推荐回复（确认预约+告知信息）",
+        "content": "好的，帮您约了周六下午4点烫发。根据发长和药水不同，价格在280-480之间，到店后Tony老师会根据您的发质和想要的效果给您具体建议。烫发大概需要3小时左右，您安排好时间哦～到店前不需要洗头。"
+      }
+    ]
+  }
+]
