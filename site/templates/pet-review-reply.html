@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宠物服务评价回复 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="针对宠物服务的好评或差评生成回复">
+<link rel="canonical" href="https://bizai.jtlcook.com/templates/pet-review-reply.html">
+<link rel="stylesheet" href="../assets/styles.css">
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>宠物服务评价回复</span>
+</nav>
+<article class="template-detail">
+  <h1>宠物服务评价回复</h1>
+  <div class="template-meta">
+    <span class="tag">宠物与本地服务</span>
+    <span class="tag">客服回复</span>
+  </div>
+  <p class="template-desc">针对宠物服务的好评或差评生成回复</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>收到平台评价、客户反馈时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于医疗纠纷的回复</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>评价类型</li><li>评价内容</li><li>宠物名字</li><li>回复重点</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位宠物店客服主管。请针对以下评价撰写回复。
+
+评价类型：{评价类型}（好评/中评/差评）
+评价内容：{评价内容}
+宠物名字：{宠物名字}
+回复重点：{回复重点}
+
+要求：
+1. 好评：感谢+记住宠物名字+期待下次
+2. 差评：道歉+解释+改进+补偿
+3. 体现对宠物的关心
+4. 字数60-120字</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{评价类型}</code></td><td>好评、中评还是差评</td></tr><tr><td><code>{评价内容}</code></td><td>客户写了什么</td></tr><tr><td><code>{宠物名字}</code></td><td>被服务的宠物名字</td></tr><tr><td><code>{回复重点}</code></td><td>你想在回复中强调什么</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>60-120字评价回复</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>感谢您带豆豆来我们店～看到豆豆洗完澡开心地摇尾巴，我们也很高兴！豆豆的毛质很好，下次可以试试我们的护毛精油SPA，会更顺滑哦。期待豆豆下次光临（仅供格式参考）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 确认宠物名字正确</label></li><li><label><input type="checkbox"> 回复是否有温度</label></li><li><label><input type="checkbox"> 好评回复是否有二次推荐</label></li><li><label><input type="checkbox"> 差评回复是否有改进措施</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-appointment.html" class="related-link">宠物服务预约确认</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

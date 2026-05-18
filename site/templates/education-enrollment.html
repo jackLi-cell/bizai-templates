@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教育培训招生文案 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为培训机构生成招生宣传文案">
+<link rel="canonical" href="https://bizai.jtlcook.com/templates/education-enrollment.html">
+<link rel="stylesheet" href="../assets/styles.css">
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>教育培训招生文案</span>
+</nav>
+<article class="template-detail">
+  <h1>教育培训招生文案</h1>
+  <div class="template-meta">
+    <span class="tag">教育培训</span>
+    <span class="tag">活动文案</span>
+  </div>
+  <p class="template-desc">为培训机构生成招生宣传文案</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>新学期招生、暑假班报名、新课程推广时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于承诺考试通过率或就业保障</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>课程名称</li><li>适合年龄/人群</li><li>课程亮点</li><li>报名优惠</li><li>联系方式</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位教育培训行业文案助手。请为以下课程撰写招生文案。
+
+课程名称：{课程名称}
+适合人群：{适合年龄/人群}
+课程亮点：{课程亮点}
+报名优惠：{报名优惠}
+联系方式：{联系方式}
+
+要求：
+1. 字数100-150字
+2. 突出课程价值和特色
+3. 不承诺成绩提升或考试通过
+4. 不使用绝对化用语
+5. 适合朋友圈或家长群发布</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{课程名称}</code></td><td>开设的课程名称</td></tr><tr><td><code>{适合年龄/人群}</code></td><td>目标学员的年龄段或基础要求</td></tr><tr><td><code>{课程亮点}</code></td><td>师资、教学方式、环境等优势</td></tr><tr><td><code>{报名优惠}</code></td><td>早鸟价、团报优惠等</td></tr><tr><td><code>{联系方式}</code></td><td>咨询电话或微信</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>100-150字招生文案</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>少儿编程启蒙班开始报名啦！适合6-10岁零基础小朋友，用Scratch图形化编程入门，边玩边学逻辑思维。小班教学（每班不超过8人），老师能照顾到每个孩子。本月报名享早鸟价立减200元，两人同行再减100。免费试听一节课，满意再报名。咨询微信：XXX（仅供格式参考）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 确认没有成绩承诺</label></li><li><label><input type="checkbox"> 检查优惠信息准确</label></li><li><label><input type="checkbox"> 确认适合人群描述合理</label></li><li><label><input type="checkbox"> 联系方式是否正确</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/education-course-intro.html" class="related-link">教育课程介绍</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
