@@ -162,6 +162,7 @@ function htmlPage({ title, description, canonical, body, extra = '', jsonLd = nu
 <title>${title} - ${SITE_NAME}</title>
 <meta name="description" content="${description}">
 <link rel="canonical" href="${canonical}">
+<link rel="icon" type="image/svg+xml" href="${prefix}favicon.svg">
 ${ogMetaTags}
 <link rel="stylesheet" href="${prefix}assets/styles.css">
 ${jsonLdScript}
