@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美业投诉处理话术 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为美容院客户投诉生成处理话术">
+<link rel="canonical" href="https://bizai.jtlcook.com/templates/beauty-complaint.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta property="og:title" content="美业投诉处理话术 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为美容院客户投诉生成处理话术">
+<meta property="og:url" content="https://bizai.jtlcook.com/templates/beauty-complaint.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业投诉处理话术","description":"为美容院客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容、实际情况、解决方案、后续安排"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否承认问题；解决方案是否合理；语气是否诚恳；后续跟进是否具体"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容"},{"@type":"HowToSupply","name":"实际情况"},{"@type":"HowToSupply","name":"解决方案"},{"@type":"HowToSupply","name":"后续安排"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>美业投诉处理话术</span>
+</nav>
+<article class="template-detail">
+  <h1>美业投诉处理话术</h1>
+  <div class="template-meta">
+    <span class="tag">美容美发</span>
+    <span class="tag">投诉处理</span>
+  </div>
+  <p class="template-desc">为美容院客户投诉生成处理话术</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>客户对服务效果不满意、预约出错等投诉时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于医疗事故处理</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>投诉内容</li><li>实际情况</li><li>解决方案</li><li>后续安排</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位美容院店长。请针对以下客户投诉生成处理话术。
+
+投诉内容：{投诉内容}
+实际情况：{实际情况}
+解决方案：{解决方案}
+后续安排：{后续安排}
+
+要求：
+1. 先表示理解和歉意
+2. 不推卸责任
+3. 给出具体解决方案
+4. 语气温和专业
+5. 字数80-120字</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{投诉内容}</code></td><td>客户不满意什么</td></tr><tr><td><code>{实际情况}</code></td><td>核实后的情况</td></tr><tr><td><code>{解决方案}</code></td><td>如何补偿或解决</td></tr><tr><td><code>{后续安排}</code></td><td>后续如何跟进</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>80-120字投诉处理话术</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>姐，真的很抱歉这次体验没有让您满意。您说的过敏情况我非常重视，可能是新产品不太适合您的肤质。这样，我安排您这周再来一次，用温和的产品给您做一次修复护理，费用我们承担。之后我会在您的档案里备注敏感肌专用产品，避免再出现这种情况（仅供格式参考）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否承认问题</label></li><li><label><input type="checkbox"> 解决方案是否合理</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li><li><label><input type="checkbox"> 后续跟进是否具体</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-appointment.html" class="related-link">美业预约确认话术</a><a href="../templates/beauty-recall.html" class="related-link">美业老客户召回话术</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>摄影预约确认 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为摄影工作室生成预约确认话术">
+<link rel="canonical" href="https://bizai.jtlcook.com/templates/photography-appointment.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta property="og:title" content="摄影预约确认 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为摄影工作室生成预约确认话术">
+<meta property="og:url" content="https://bizai.jtlcook.com/templates/photography-appointment.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影预约确认","description":"为摄影工作室生成预约确认话术","step":[{"@type":"HowToStep","text":"准备材料：客户称呼、拍摄套餐、拍摄时间、拍摄地点、准备事项"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：时间地点是否正确；准备事项是否完整；套餐信息准确；语气是否友好"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户称呼"},{"@type":"HowToSupply","name":"拍摄套餐"},{"@type":"HowToSupply","name":"拍摄时间"},{"@type":"HowToSupply","name":"拍摄地点"},{"@type":"HowToSupply","name":"准备事项"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>摄影预约确认</span>
+</nav>
+<article class="template-detail">
+  <h1>摄影预约确认</h1>
+  <div class="template-meta">
+    <span class="tag">摄影工作室</span>
+    <span class="tag">预约管理</span>
+  </div>
+  <p class="template-desc">为摄影工作室生成预约确认话术</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>客户预约拍摄后确认细节时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于合同签订</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>客户称呼</li><li>拍摄套餐</li><li>拍摄时间</li><li>拍摄地点</li><li>准备事项</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室客服。请生成预约确认话术。
+
+客户：{客户称呼}
+套餐：{拍摄套餐}
+时间：{拍摄时间}
+地点：{拍摄地点}
+准备：{准备事项}
+
+要求：
+1. 信息完整
+2. 提醒准备事项
+3. 语气专业友好
+4. 字数80-120字</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{客户称呼}</code></td><td>客户怎么称呼</td></tr><tr><td><code>{拍摄套餐}</code></td><td>预约了什么套餐</td></tr><tr><td><code>{拍摄时间}</code></td><td>拍摄日期和时间</td></tr><tr><td><code>{拍摄地点}</code></td><td>在哪里拍</td></tr><tr><td><code>{准备事项}</code></td><td>客户需要准备什么</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>80-120字预约确认</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>小王您好～您的日系写真套餐预约已确认：本周六上午10点，地点在我们工作室（XX路XX号3楼）。温馨提示：1.当天含妆造，可以素颜来；2.建议带一双舒适的鞋子备用；3.如果有想拍的参考图可以提前发我。拍摄约2小时，轻松愉快。周六见（仅供格式参考）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 时间地点是否正确</label></li><li><label><input type="checkbox"> 准备事项是否完整</label></li><li><label><input type="checkbox"> 套餐信息准确</label></li><li><label><input type="checkbox"> 语气是否友好</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/photography-package-intro.html" class="related-link">摄影套餐介绍</a><a href="../templates/photography-review-response.html" class="related-link">摄影评价回复</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>零售上新推广文案 - 小商家 AI 工作流与模板库</title>
-<meta name="description" content="为零售店铺新品到货生成社交媒体推广文案">
+<meta name="description" content="为新到货商品撰写推广文案">
 <link rel="canonical" href="https://bizai.jtlcook.com/templates/retail-new-arrival.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta property="og:title" content="零售上新推广文案 - 小商家 AI 工作流与模板库">
-<meta property="og:description" content="为零售店铺新品到货生成社交媒体推广文案">
+<meta property="og:description" content="为新到货商品撰写推广文案">
 <meta property="og:url" content="https://bizai.jtlcook.com/templates/retail-new-arrival.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售上新推广文案","description":"为零售店铺新品到货生成社交媒体推广文案","step":[{"@type":"HowToStep","text":"准备材料：新品类别、新品亮点、价格、购买渠道"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认商品信息准确；检查价格是否正确；确认购买渠道畅通；没有虚假宣传"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"新品类别"},{"@type":"HowToSupply","name":"新品亮点"},{"@type":"HowToSupply","name":"价格"},{"@type":"HowToSupply","name":"购买渠道"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售上新推广文案","description":"为新到货商品撰写推广文案","step":[{"@type":"HowToStep","text":"准备材料：商品类别、新品亮点、价格区间、购买渠道"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认商品已到货；价格信息准确；无夸大宣传；购买渠道信息正确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"商品类别"},{"@type":"HowToSupply","name":"新品亮点"},{"@type":"HowToSupply","name":"价格区间"},{"@type":"HowToSupply","name":"购买渠道"}]}</script>
 
 </head>
 <body>
@@ -41,40 +41,40 @@
     <span class="tag">零售与小电商</span>
     <span class="tag">活动文案</span>
   </div>
-  <p class="template-desc">为零售店铺新品到货生成社交媒体推广文案</p>
+  <p class="template-desc">为新到货商品撰写推广文案</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>适用场景</h3>
-      <p>新品到货、换季上新、独家款发布时使用</p>
+      <p>新品到货、换季上新时使用</p>
     </div>
     <div class="info-box">
       <h3>不适合</h3>
-      <p>不适合用于清仓甩卖类活动</p>
+      <p>不适合用于清仓甩卖</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>新品类别</li><li>新品亮点</li><li>价格</li><li>购买渠道</li></ul>
+    <ul class="materials-list"><li>商品类别</li><li>新品亮点</li><li>价格区间</li><li>购买渠道</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位零售店铺运营助手。请为以下新品撰写上新推广文案。
+      <pre class="prompt-text" id="prompt-text">你是一位零售店文案助手。请为以下上新活动撰写推广文案。
 
-新品类别：{新品类别}
+商品类别：{商品类别}
 新品亮点：{新品亮点}
-价格：{价格}
+价格区间：{价格区间}
 购买渠道：{购买渠道}
 
 要求：
 1. 字数60-100字
-2. 制造新鲜感和期待感
-3. 突出新品独特之处
-4. 适合朋友圈/社群发布
-5. 不使用绝对化用语</pre>
+2. 突出新鲜感和时效性
+3. 语气轻快
+4. 不使用绝对化用语
+5. 适合朋友圈发布</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,29 +83,29 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{新品类别}</code></td><td>什么类型的商品，如服装、家居等</td></tr><tr><td><code>{新品亮点}</code></td><td>新品最吸引人的特点</td></tr><tr><td><code>{价格}</code></td><td>新品售价</td></tr><tr><td><code>{购买渠道}</code></td><td>在哪里可以买到</td></tr></tbody>
+      <tbody><tr><td><code>{商品类别}</code></td><td>如「秋季外套」「新款包包」</td></tr><tr><td><code>{新品亮点}</code></td><td>这批新品的特色</td></tr><tr><td><code>{价格区间}</code></td><td>大致价格范围</td></tr><tr><td><code>{购买渠道}</code></td><td>到店还是线上</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>60-100字社交媒体文案</p>
+    <p>60-100字上新文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>春装上新第一波！这次进了几款亚麻衬衫，料子软软的，穿着不闷。颜色都是温柔的大地色系，搭裤子裙子都好看。尺码S-XL，价格89-119元。到店试穿或微信下单都可以，看中了帮你留（仅供格式参考）</p>
+      <p>秋季新款外套到货啦！这批主打轻薄保暖，面料是防风防水的，通勤户外都能穿。价格在199-399之间，比去年同款还便宜一些。到店试穿手感更直观，周末来逛逛？新品前三天享9折（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认商品信息准确</label></li><li><label><input type="checkbox"> 检查价格是否正确</label></li><li><label><input type="checkbox"> 确认购买渠道畅通</label></li><li><label><input type="checkbox"> 没有虚假宣传</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 确认商品已到货</label></li><li><label><input type="checkbox"> 价格信息准确</label></li><li><label><input type="checkbox"> 无夸大宣传</label></li><li><label><input type="checkbox"> 购买渠道信息正确</label></li></ul>
   </section>
 
-  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-product-desc.html" class="related-link">零售商品描述</a><a href="../templates/retail-after-sales.html" class="related-link">零售售后回复</a></div></section>
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-product-desc.html" class="related-link">零售商品描述</a><a href="../templates/retail-social-media.html" class="related-link">零售店朋友圈运营</a></div></section>
 </article>
 </main>
 <footer class="site-footer">

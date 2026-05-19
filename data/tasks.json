@@ -46,5 +46,47 @@
     "name": "复核清单",
     "slug": "review-checklist",
     "description": "提供 AI 生成内容的人工复核要点，确保发布前质量达标"
+  },
+  {
+    "id": "social-media",
+    "name": "社交媒体运营",
+    "slug": "social-media",
+    "description": "生成朋友圈、小红书、抖音等平台的日常运营内容和互动话术"
+  },
+  {
+    "id": "review-response",
+    "name": "评价回复",
+    "slug": "review-response",
+    "description": "针对好评、中评、差评生成得体的商家回复，维护店铺口碑"
+  },
+  {
+    "id": "appointment",
+    "name": "预约管理",
+    "slug": "appointment",
+    "description": "生成预约确认、提醒、改期、取消等场景的沟通话术"
+  },
+  {
+    "id": "membership",
+    "name": "会员运营",
+    "slug": "membership",
+    "description": "生成会员招募、续费提醒、积分活动、老客户召回等运营文案"
+  },
+  {
+    "id": "seasonal-promo",
+    "name": "季节性促销",
+    "slug": "seasonal-promo",
+    "description": "为春节、情人节、双十一等节日和换季节点撰写促销文案"
+  },
+  {
+    "id": "complaint-handling",
+    "name": "投诉处理",
+    "slug": "complaint-handling",
+    "description": "生成针对客户投诉的安抚话术、解决方案说明和跟进回复"
+  },
+  {
+    "id": "brand-story",
+    "name": "品牌故事",
+    "slug": "brand-story",
+    "description": "为小商家撰写品牌介绍、创业故事、理念宣传等品牌建设内容"
   }
 ]

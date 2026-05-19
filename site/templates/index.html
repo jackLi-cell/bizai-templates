@@ -34,11 +34,11 @@
 
 <section class="section">
   <h1>模板资料库</h1>
-  <p>共 33 个模板，覆盖 6 个行业、8 类任务</p>
+  <p>共 116 个模板，覆盖 15 个行业、15 类任务</p>
   <div class="filter-bar">
     <input type="text" id="search-input" placeholder="搜索模板..." class="search-input">
-    <select id="filter-industry" class="filter-select"><option value="">全部行业</option><option value="catering">餐饮与咖啡</option><option value="retail">零售与小电商</option><option value="beauty">美业与健身</option><option value="repair">维修与家政</option><option value="pet">宠物与本地服务</option><option value="education">教育培训</option></select>
-    <select id="filter-task" class="filter-select"><option value="">全部任务</option><option value="customer-service">客服回复</option><option value="campaign-copy">活动文案</option><option value="short-video">短视频脚本</option><option value="product-description">商品与服务描述</option><option value="recruitment">招聘与培训</option><option value="quotation">报价与合同前说明</option><option value="operations">运营表格</option><option value="review-checklist">复核清单</option></select>
+    <select id="filter-industry" class="filter-select"><option value="">全部行业</option><option value="catering">餐饮与咖啡</option><option value="retail">零售与小电商</option><option value="beauty">美容美发</option><option value="repair">维修与家政</option><option value="pet">宠物服务</option><option value="education">教育培训</option><option value="photography">摄影工作室</option><option value="fitness">健身瑜伽</option><option value="hotel">民宿酒店</option><option value="clinic">诊所中医馆</option><option value="auto-repair">汽车服务</option><option value="flower">花店绿植</option><option value="bakery">烘焙甜品</option><option value="laundry">洗衣干洗</option><option value="real-estate">房产中介</option></select>
+    <select id="filter-task" class="filter-select"><option value="">全部任务</option><option value="customer-service">客服回复</option><option value="campaign-copy">活动文案</option><option value="short-video">短视频脚本</option><option value="product-description">商品与服务描述</option><option value="recruitment">招聘与培训</option><option value="quotation">报价与合同前说明</option><option value="operations">运营表格</option><option value="review-checklist">复核清单</option><option value="social-media">社交媒体运营</option><option value="review-response">评价回复</option><option value="appointment">预约管理</option><option value="membership">会员运营</option><option value="seasonal-promo">季节性促销</option><option value="complaint-handling">投诉处理</option><option value="brand-story">品牌故事</option></select>
   </div>
   <table class="template-table" id="template-table">
     <thead><tr><th>模板名称</th><th>行业</th><th>任务</th><th>说明</th></tr></thead>
@@ -52,161 +52,576 @@
       <td>餐饮与咖啡</td>
       <td>活动文案</td>
       <td>为餐厅新菜品或新饮品上市撰写推广文案</td>
-    </tr><tr data-industry="catering" data-task="customer-service">
+    </tr><tr data-industry="catering" data-task="review-response">
       <td><a href="../templates/catering-bad-review.html">餐饮差评回复</a></td>
       <td>餐饮与咖啡</td>
-      <td>客服回复</td>
+      <td>评价回复</td>
       <td>针对外卖平台或点评网站的差评生成专业回复</td>
+    </tr><tr data-industry="catering" data-task="customer-service">
+      <td><a href="../templates/catering-delivery-reply.html">餐饮外卖客服回复</a></td>
+      <td>餐饮与咖啡</td>
+      <td>客服回复</td>
+      <td>针对外卖订单问题生成客服回复话术</td>
+    </tr><tr data-industry="catering" data-task="product-description">
+      <td><a href="../templates/catering-menu-description.html">餐饮菜品描述</a></td>
+      <td>餐饮与咖啡</td>
+      <td>商品与服务描述</td>
+      <td>为菜单或外卖平台撰写菜品描述文案</td>
     </tr><tr data-industry="catering" data-task="short-video">
       <td><a href="../templates/catering-short-video.html">餐饮短视频脚本</a></td>
       <td>餐饮与咖啡</td>
       <td>短视频脚本</td>
-      <td>为餐饮店生成15-60秒短视频拍摄脚本</td>
-    </tr><tr data-industry="beauty" data-task="campaign-copy">
-      <td><a href="../templates/beauty-campaign.html">美业朋友圈活动文案</a></td>
-      <td>美业与健身</td>
-      <td>活动文案</td>
-      <td>为美容院、美甲店等生成朋友圈促销活动文案</td>
-    </tr><tr data-industry="beauty" data-task="product-description">
-      <td><a href="../templates/beauty-project-intro.html">美业项目介绍</a></td>
-      <td>美业与健身</td>
-      <td>商品与服务描述</td>
-      <td>为美容美体项目撰写清晰的服务介绍文案</td>
-    </tr><tr data-industry="beauty" data-task="customer-service">
-      <td><a href="../templates/beauty-member-recall.html">美业会员召回</a></td>
-      <td>美业与健身</td>
-      <td>客服回复</td>
-      <td>为长期未到店的会员生成温馨召回话术</td>
+      <td>为餐厅抖音/快手账号生成短视频拍摄脚本</td>
+    </tr><tr data-industry="catering" data-task="social-media">
+      <td><a href="../templates/catering-social-media.html">餐饮朋友圈日常内容</a></td>
+      <td>餐饮与咖啡</td>
+      <td>社交媒体运营</td>
+      <td>为餐饮店生成朋友圈日常运营内容</td>
+    </tr><tr data-industry="catering" data-task="membership">
+      <td><a href="../templates/catering-membership.html">餐饮会员卡推广</a></td>
+      <td>餐饮与咖啡</td>
+      <td>会员运营</td>
+      <td>为餐厅会员卡或储值卡撰写推广话术</td>
+    </tr><tr data-industry="catering" data-task="seasonal-promo">
+      <td><a href="../templates/catering-seasonal.html">餐饮季节性促销文案</a></td>
+      <td>餐饮与咖啡</td>
+      <td>季节性促销</td>
+      <td>为餐厅节日或换季促销撰写活动文案</td>
+    </tr><tr data-industry="catering" data-task="complaint-handling">
+      <td><a href="../templates/catering-complaint.html">餐饮投诉处理话术</a></td>
+      <td>餐饮与咖啡</td>
+      <td>投诉处理</td>
+      <td>为餐厅处理现场或线上投诉生成应对话术</td>
+    </tr><tr data-industry="catering" data-task="brand-story">
+      <td><a href="../templates/catering-brand-story.html">餐饮品牌故事</a></td>
+      <td>餐饮与咖啡</td>
+      <td>品牌故事</td>
+      <td>为餐厅撰写品牌故事或创业故事</td>
+    </tr><tr data-industry="catering" data-task="recruitment">
+      <td><a href="../templates/catering-recruitment.html">餐饮店招聘启事</a></td>
+      <td>餐饮与咖啡</td>
+      <td>招聘与培训</td>
+      <td>为餐饮店撰写招聘启事</td>
     </tr><tr data-industry="retail" data-task="product-description">
       <td><a href="../templates/retail-product-desc.html">零售商品描述</a></td>
       <td>零售与小电商</td>
       <td>商品与服务描述</td>
-      <td>为线上店铺商品撰写详情页描述文案</td>
+      <td>为网店或实体店商品撰写详情描述</td>
     </tr><tr data-industry="retail" data-task="campaign-copy">
       <td><a href="../templates/retail-new-arrival.html">零售上新推广文案</a></td>
       <td>零售与小电商</td>
       <td>活动文案</td>
-      <td>为零售店铺新品到货生成社交媒体推广文案</td>
-    </tr><tr data-industry="retail" data-task="customer-service">
-      <td><a href="../templates/retail-after-sales.html">零售售后回复</a></td>
-      <td>零售与小电商</td>
-      <td>客服回复</td>
-      <td>针对退换货、质量问题等售后咨询生成回复话术</td>
-    </tr><tr data-industry="repair" data-task="quotation">
-      <td><a href="../templates/repair-quotation.html">维修报价说明</a></td>
-      <td>维修与家政</td>
-      <td>报价与合同前说明</td>
-      <td>为维修服务生成清晰的报价说明文案</td>
-    </tr><tr data-industry="repair" data-task="product-description">
-      <td><a href="../templates/repair-service-flow.html">维修服务流程说明</a></td>
-      <td>维修与家政</td>
-      <td>商品与服务描述</td>
-      <td>为维修/家政服务撰写标准服务流程说明</td>
-    </tr><tr data-industry="pet" data-task="customer-service">
-      <td><a href="../templates/pet-appointment.html">宠物服务预约确认</a></td>
-      <td>宠物与本地服务</td>
-      <td>客服回复</td>
-      <td>为宠物店生成预约确认和注意事项提醒消息</td>
-    </tr><tr data-industry="pet" data-task="customer-service">
-      <td><a href="../templates/pet-review-reply.html">宠物服务评价回复</a></td>
-      <td>宠物与本地服务</td>
-      <td>客服回复</td>
-      <td>针对宠物服务的好评或差评生成回复</td>
-    </tr><tr data-industry="education" data-task="campaign-copy">
-      <td><a href="../templates/education-enrollment.html">教育培训招生文案</a></td>
-      <td>教育培训</td>
-      <td>活动文案</td>
-      <td>为培训机构生成招生宣传文案</td>
-    </tr><tr data-industry="education" data-task="product-description">
-      <td><a href="../templates/education-course-intro.html">教育课程介绍</a></td>
-      <td>教育培训</td>
-      <td>商品与服务描述</td>
-      <td>为培训课程撰写详细的课程介绍说明</td>
-    </tr><tr data-industry="catering" data-task="recruitment">
-      <td><a href="../templates/general-recruitment.html">通用招聘启事</a></td>
-      <td>餐饮与咖啡</td>
-      <td>招聘与培训</td>
-      <td>为小商家生成简洁有效的招聘启事</td>
-    </tr><tr data-industry="retail" data-task="customer-service">
-      <td><a href="../templates/general-refund.html">通用退款沟通</a></td>
-      <td>零售与小电商</td>
-      <td>客服回复</td>
-      <td>针对客户退款请求生成专业沟通话术</td>
-    </tr><tr data-industry="retail" data-task="customer-service">
-      <td><a href="../templates/general-follow-up.html">通用客户跟进</a></td>
-      <td>零售与小电商</td>
-      <td>客服回复</td>
-      <td>为已咨询未成交的客户生成跟进话术</td>
-    </tr><tr data-industry="retail" data-task="customer-service">
-      <td><a href="../templates/general-bad-review.html">通用差评回复</a></td>
-      <td>零售与小电商</td>
-      <td>客服回复</td>
-      <td>适用于各行业的通用差评回复模板</td>
-    </tr><tr data-industry="catering" data-task="product-description">
-      <td><a href="../templates/catering-menu-description.html">菜单菜品描述</a></td>
-      <td>餐饮与咖啡</td>
-      <td>商品与服务描述</td>
-      <td>为菜单上的菜品撰写简短有食欲的描述文字</td>
-    </tr><tr data-industry="beauty" data-task="customer-service">
-      <td><a href="../templates/beauty-appointment-reminder.html">美业预约提醒话术</a></td>
-      <td>美业与健身</td>
-      <td>客服回复</td>
-      <td>生成预约确认和到店提醒的微信消息模板</td>
-    </tr><tr data-industry="repair" data-task="customer-service">
-      <td><a href="../templates/repair-customer-comm.html">维修客户沟通话术</a></td>
-      <td>维修与家政</td>
-      <td>客服回复</td>
-      <td>为维修家政服务的客户沟通场景生成话术</td>
-    </tr><tr data-industry="pet" data-task="product-description">
-      <td><a href="../templates/pet-service-description.html">宠物服务说明文案</a></td>
-      <td>宠物与本地服务</td>
-      <td>商品与服务描述</td>
-      <td>为宠物店服务项目撰写清晰的说明文案</td>
-    </tr><tr data-industry="education" data-task="customer-service">
-      <td><a href="../templates/education-parent-comm.html">家长沟通话术</a></td>
-      <td>教育培训</td>
-      <td>客服回复</td>
-      <td>为培训机构与家长的日常沟通生成话术模板</td>
-    </tr><tr data-industry="catering" data-task="operations">
-      <td><a href="../templates/general-operations-sheet.html">运营排班表模板</a></td>
-      <td>餐饮与咖啡</td>
-      <td>运营表格</td>
-      <td>为小商家生成周排班表或值班安排表格</td>
-    </tr><tr data-industry="retail" data-task="review-checklist">
-      <td><a href="../templates/general-review-checklist.html">AI内容发布复核清单</a></td>
-      <td>零售与小电商</td>
-      <td>复核清单</td>
-      <td>为AI生成的内容提供发布前的人工复核要点清单</td>
+      <td>为新到货商品撰写推广文案</td>
     </tr><tr data-industry="retail" data-task="customer-service">
       <td><a href="../templates/retail-customer-reply.html">零售客服咨询回复</a></td>
       <td>零售与小电商</td>
       <td>客服回复</td>
-      <td>为线上店铺客户咨询生成标准回复话术</td>
-    </tr><tr data-industry="catering" data-task="recruitment">
-      <td><a href="../templates/general-hiring-post.html">招聘启事文案</a></td>
-      <td>餐饮与咖啡</td>
-      <td>招聘与培训</td>
-      <td>为小商家撰写简洁有效的招聘启事</td>
-    </tr><tr data-industry="retail" data-task="customer-service">
-      <td><a href="../templates/general-customer-followup.html">客户跟进话术</a></td>
+      <td>为零售店客服生成常见咨询的回复话术</td>
+    </tr><tr data-industry="retail" data-task="complaint-handling">
+      <td><a href="../templates/retail-after-sales.html">零售售后处理话术</a></td>
       <td>零售与小电商</td>
-      <td>客服回复</td>
-      <td>为已咨询但未成交的客户生成跟进消息</td>
-    </tr><tr data-industry="catering" data-task="customer-service">
-      <td><a href="../templates/catering-delivery-reply.html">外卖平台客服回复</a></td>
-      <td>餐饮与咖啡</td>
-      <td>客服回复</td>
-      <td>为外卖平台上的客户消息生成快速回复</td>
+      <td>投诉处理</td>
+      <td>为零售店售后问题生成处理话术</td>
+    </tr><tr data-industry="retail" data-task="review-response">
+      <td><a href="../templates/retail-review-response.html">零售好评/差评回复</a></td>
+      <td>零售与小电商</td>
+      <td>评价回复</td>
+      <td>为网店评价生成商家回复</td>
+    </tr><tr data-industry="retail" data-task="social-media">
+      <td><a href="../templates/retail-social-media.html">零售店朋友圈运营</a></td>
+      <td>零售与小电商</td>
+      <td>社交媒体运营</td>
+      <td>为零售店生成日常朋友圈内容</td>
+    </tr><tr data-industry="retail" data-task="short-video">
+      <td><a href="../templates/retail-short-video.html">零售商品展示短视频脚本</a></td>
+      <td>零售与小电商</td>
+      <td>短视频脚本</td>
+      <td>为零售商品拍摄短视频撰写脚本</td>
+    </tr><tr data-industry="retail" data-task="seasonal-promo">
+      <td><a href="../templates/retail-seasonal-promo.html">零售换季促销文案</a></td>
+      <td>零售与小电商</td>
+      <td>季节性促销</td>
+      <td>为零售店换季清仓或节日促销撰写文案</td>
+    </tr><tr data-industry="retail" data-task="membership">
+      <td><a href="../templates/retail-membership.html">零售会员招募文案</a></td>
+      <td>零售与小电商</td>
+      <td>会员运营</td>
+      <td>为零售店会员制度撰写招募文案</td>
+    </tr><tr data-industry="retail" data-task="brand-story">
+      <td><a href="../templates/retail-brand-story.html">零售店品牌故事</a></td>
+      <td>零售与小电商</td>
+      <td>品牌故事</td>
+      <td>为零售店撰写品牌介绍或创业故事</td>
+    </tr><tr data-industry="retail" data-task="recruitment">
+      <td><a href="../templates/retail-recruitment.html">零售店招聘启事</a></td>
+      <td>零售与小电商</td>
+      <td>招聘与培训</td>
+      <td>为零售店撰写导购或店员招聘启事</td>
+    </tr><tr data-industry="beauty" data-task="product-description">
+      <td><a href="../templates/beauty-project-intro.html">美容项目介绍文案</a></td>
+      <td>美容美发</td>
+      <td>商品与服务描述</td>
+      <td>为美容院服务项目撰写介绍文案</td>
+    </tr><tr data-industry="beauty" data-task="campaign-copy">
+      <td><a href="../templates/beauty-campaign.html">美业活动促销文案</a></td>
+      <td>美容美发</td>
+      <td>活动文案</td>
+      <td>为美容院促销活动撰写推广文案</td>
+    </tr><tr data-industry="beauty" data-task="membership">
+      <td><a href="../templates/beauty-membership.html">美业会员卡推广</a></td>
+      <td>美容美发</td>
+      <td>会员运营</td>
+      <td>为美容院会员卡或储值卡撰写推广文案</td>
+    </tr><tr data-industry="beauty" data-task="membership">
+      <td><a href="../templates/beauty-recall.html">美业老客户召回话术</a></td>
+      <td>美容美发</td>
+      <td>会员运营</td>
+      <td>为长期未到店的老客户生成召回话术</td>
+    </tr><tr data-industry="beauty" data-task="appointment">
+      <td><a href="../templates/beauty-appointment.html">美业预约确认话术</a></td>
+      <td>美容美发</td>
+      <td>预约管理</td>
+      <td>为美容院预约确认和提醒生成话术</td>
     </tr><tr data-industry="beauty" data-task="short-video">
       <td><a href="../templates/beauty-video-script.html">美业短视频脚本</a></td>
-      <td>美业与健身</td>
+      <td>美容美发</td>
       <td>短视频脚本</td>
-      <td>为美容美发店拍摄短视频提供脚本框架</td>
+      <td>为美容院抖音/小红书短视频撰写脚本</td>
+    </tr><tr data-industry="beauty" data-task="social-media">
+      <td><a href="../templates/beauty-social-media.html">美业朋友圈日常</a></td>
+      <td>美容美发</td>
+      <td>社交媒体运营</td>
+      <td>为美容院生成朋友圈日常运营内容</td>
+    </tr><tr data-industry="beauty" data-task="complaint-handling">
+      <td><a href="../templates/beauty-complaint.html">美业投诉处理话术</a></td>
+      <td>美容美发</td>
+      <td>投诉处理</td>
+      <td>为美容院客户投诉生成处理话术</td>
+    </tr><tr data-industry="beauty" data-task="review-response">
+      <td><a href="../templates/beauty-review-response.html">美业评价回复</a></td>
+      <td>美容美发</td>
+      <td>评价回复</td>
+      <td>为美容院线上评价生成回复</td>
+    </tr><tr data-industry="beauty" data-task="seasonal-promo">
+      <td><a href="../templates/beauty-seasonal.html">美业季节性活动文案</a></td>
+      <td>美容美发</td>
+      <td>季节性促销</td>
+      <td>为美容院节日或换季活动撰写文案</td>
+    </tr><tr data-industry="beauty" data-task="recruitment">
+      <td><a href="../templates/beauty-recruitment.html">美业招聘启事</a></td>
+      <td>美容美发</td>
+      <td>招聘与培训</td>
+      <td>为美容院招聘美容师或学徒</td>
+    </tr><tr data-industry="repair" data-task="quotation">
+      <td><a href="../templates/repair-quotation.html">维修报价说明</a></td>
+      <td>维修与家政</td>
+      <td>报价与合同前说明</td>
+      <td>为维修服务生成报价说明话术</td>
+    </tr><tr data-industry="repair" data-task="product-description">
+      <td><a href="../templates/repair-service-flow.html">维修服务流程介绍</a></td>
+      <td>维修与家政</td>
+      <td>商品与服务描述</td>
+      <td>为维修/家政服务撰写服务流程介绍</td>
+    </tr><tr data-industry="repair" data-task="customer-service">
+      <td><a href="../templates/repair-customer-comm.html">维修客户沟通话术</a></td>
+      <td>维修与家政</td>
+      <td>客服回复</td>
+      <td>为维修师傅生成与客户沟通的话术</td>
+    </tr><tr data-industry="repair" data-task="review-response">
+      <td><a href="../templates/repair-review-response.html">维修服务评价回复</a></td>
+      <td>维修与家政</td>
+      <td>评价回复</td>
+      <td>为维修/家政服务的线上评价生成回复</td>
+    </tr><tr data-industry="repair" data-task="complaint-handling">
+      <td><a href="../templates/repair-complaint.html">维修投诉处理话术</a></td>
+      <td>维修与家政</td>
+      <td>投诉处理</td>
+      <td>为维修服务投诉生成处理话术</td>
+    </tr><tr data-industry="repair" data-task="social-media">
+      <td><a href="../templates/repair-social-media.html">维修服务朋友圈内容</a></td>
+      <td>维修与家政</td>
+      <td>社交媒体运营</td>
+      <td>为维修/家政服务生成朋友圈日常内容</td>
+    </tr><tr data-industry="repair" data-task="brand-story">
+      <td><a href="../templates/repair-brand-story.html">维修服务品牌介绍</a></td>
+      <td>维修与家政</td>
+      <td>品牌故事</td>
+      <td>为维修/家政服务撰写品牌介绍</td>
+    </tr><tr data-industry="repair" data-task="seasonal-promo">
+      <td><a href="../templates/repair-seasonal.html">维修服务季节性提醒</a></td>
+      <td>维修与家政</td>
+      <td>季节性促销</td>
+      <td>为维修服务生成季节性保养提醒和促销</td>
+    </tr><tr data-industry="repair" data-task="appointment">
+      <td><a href="../templates/repair-appointment.html">维修上门预约确认</a></td>
+      <td>维修与家政</td>
+      <td>预约管理</td>
+      <td>为维修服务生成预约确认和上门提醒</td>
+    </tr><tr data-industry="repair" data-task="recruitment">
+      <td><a href="../templates/repair-recruitment.html">维修服务招聘启事</a></td>
+      <td>维修与家政</td>
+      <td>招聘与培训</td>
+      <td>为维修/家政公司招聘师傅</td>
+    </tr><tr data-industry="pet" data-task="product-description">
+      <td><a href="../templates/pet-service-description.html">宠物服务项目介绍</a></td>
+      <td>宠物服务</td>
+      <td>商品与服务描述</td>
+      <td>为宠物店服务项目撰写介绍文案</td>
+    </tr><tr data-industry="pet" data-task="appointment">
+      <td><a href="../templates/pet-appointment.html">宠物服务预约确认</a></td>
+      <td>宠物服务</td>
+      <td>预约管理</td>
+      <td>为宠物店生成预约确认和提醒话术</td>
+    </tr><tr data-industry="pet" data-task="review-response">
+      <td><a href="../templates/pet-review-reply.html">宠物店评价回复</a></td>
+      <td>宠物服务</td>
+      <td>评价回复</td>
+      <td>为宠物店线上评价生成回复</td>
+    </tr><tr data-industry="pet" data-task="social-media">
+      <td><a href="../templates/pet-social-media.html">宠物店朋友圈内容</a></td>
+      <td>宠物服务</td>
+      <td>社交媒体运营</td>
+      <td>为宠物店生成朋友圈日常内容</td>
+    </tr><tr data-industry="pet" data-task="short-video">
+      <td><a href="../templates/pet-short-video.html">宠物店短视频脚本</a></td>
+      <td>宠物服务</td>
+      <td>短视频脚本</td>
+      <td>为宠物店短视频撰写拍摄脚本</td>
+    </tr><tr data-industry="pet" data-task="membership">
+      <td><a href="../templates/pet-membership.html">宠物店会员卡推广</a></td>
+      <td>宠物服务</td>
+      <td>会员运营</td>
+      <td>为宠物店会员制度撰写推广文案</td>
+    </tr><tr data-industry="pet" data-task="complaint-handling">
+      <td><a href="../templates/pet-complaint.html">宠物店投诉处理</a></td>
+      <td>宠物服务</td>
+      <td>投诉处理</td>
+      <td>为宠物店客户投诉生成处理话术</td>
+    </tr><tr data-industry="pet" data-task="seasonal-promo">
+      <td><a href="../templates/pet-seasonal.html">宠物店季节性活动</a></td>
+      <td>宠物服务</td>
+      <td>季节性促销</td>
+      <td>为宠物店节日或换季活动撰写文案</td>
+    </tr><tr data-industry="pet" data-task="brand-story">
+      <td><a href="../templates/pet-brand-story.html">宠物店品牌故事</a></td>
+      <td>宠物服务</td>
+      <td>品牌故事</td>
+      <td>为宠物店撰写品牌介绍</td>
+    </tr><tr data-industry="pet" data-task="recruitment">
+      <td><a href="../templates/pet-recruitment.html">宠物店招聘启事</a></td>
+      <td>宠物服务</td>
+      <td>招聘与培训</td>
+      <td>为宠物店招聘宠物美容师或店员</td>
+    </tr><tr data-industry="education" data-task="product-description">
+      <td><a href="../templates/education-course-intro.html">培训课程介绍</a></td>
+      <td>教育培训</td>
+      <td>商品与服务描述</td>
+      <td>为培训机构课程撰写介绍文案</td>
     </tr><tr data-industry="education" data-task="campaign-copy">
-      <td><a href="../templates/education-trial-invite.html">试听课邀请话术</a></td>
+      <td><a href="../templates/education-enrollment.html">培训招生文案</a></td>
       <td>教育培训</td>
       <td>活动文案</td>
-      <td>为培训机构生成试听课邀请文案</td>
+      <td>为培训机构招生季撰写推广文案</td>
+    </tr><tr data-industry="education" data-task="appointment">
+      <td><a href="../templates/education-trial-invite.html">培训试听课邀约</a></td>
+      <td>教育培训</td>
+      <td>预约管理</td>
+      <td>为培训机构生成试听课邀约话术</td>
+    </tr><tr data-industry="education" data-task="customer-service">
+      <td><a href="../templates/education-parent-comm.html">培训家长沟通话术</a></td>
+      <td>教育培训</td>
+      <td>客服回复</td>
+      <td>为培训机构生成与家长沟通的话术</td>
+    </tr><tr data-industry="education" data-task="review-response">
+      <td><a href="../templates/education-review-response.html">培训机构评价回复</a></td>
+      <td>教育培训</td>
+      <td>评价回复</td>
+      <td>为培训机构线上评价生成回复</td>
+    </tr><tr data-industry="education" data-task="social-media">
+      <td><a href="../templates/education-social-media.html">培训机构朋友圈内容</a></td>
+      <td>教育培训</td>
+      <td>社交媒体运营</td>
+      <td>为培训机构生成朋友圈日常内容</td>
+    </tr><tr data-industry="education" data-task="short-video">
+      <td><a href="../templates/education-short-video.html">培训机构短视频脚本</a></td>
+      <td>教育培训</td>
+      <td>短视频脚本</td>
+      <td>为培训机构短视频撰写脚本</td>
+    </tr><tr data-industry="education" data-task="seasonal-promo">
+      <td><a href="../templates/education-seasonal.html">培训机构季节性招生</a></td>
+      <td>教育培训</td>
+      <td>季节性促销</td>
+      <td>为培训机构节假日或寒暑假招生撰写文案</td>
+    </tr><tr data-industry="education" data-task="complaint-handling">
+      <td><a href="../templates/education-complaint.html">培训机构投诉处理</a></td>
+      <td>教育培训</td>
+      <td>投诉处理</td>
+      <td>为培训机构处理家长投诉生成话术</td>
+    </tr><tr data-industry="education" data-task="brand-story">
+      <td><a href="../templates/education-brand-story.html">培训机构品牌故事</a></td>
+      <td>教育培训</td>
+      <td>品牌故事</td>
+      <td>为培训机构撰写品牌介绍</td>
+    </tr><tr data-industry="photography" data-task="product-description">
+      <td><a href="../templates/photography-package-intro.html">摄影套餐介绍</a></td>
+      <td>摄影工作室</td>
+      <td>商品与服务描述</td>
+      <td>为摄影工作室套餐撰写介绍文案</td>
+    </tr><tr data-industry="photography" data-task="campaign-copy">
+      <td><a href="../templates/photography-campaign.html">摄影活动促销文案</a></td>
+      <td>摄影工作室</td>
+      <td>活动文案</td>
+      <td>为摄影工作室促销活动撰写文案</td>
+    </tr><tr data-industry="photography" data-task="social-media">
+      <td><a href="../templates/photography-social-media.html">摄影工作室朋友圈</a></td>
+      <td>摄影工作室</td>
+      <td>社交媒体运营</td>
+      <td>为摄影工作室生成朋友圈日常内容</td>
+    </tr><tr data-industry="photography" data-task="short-video">
+      <td><a href="../templates/photography-short-video.html">摄影工作室短视频脚本</a></td>
+      <td>摄影工作室</td>
+      <td>短视频脚本</td>
+      <td>为摄影工作室短视频撰写脚本</td>
+    </tr><tr data-industry="photography" data-task="appointment">
+      <td><a href="../templates/photography-appointment.html">摄影预约确认</a></td>
+      <td>摄影工作室</td>
+      <td>预约管理</td>
+      <td>为摄影工作室生成预约确认话术</td>
+    </tr><tr data-industry="photography" data-task="review-response">
+      <td><a href="../templates/photography-review-response.html">摄影评价回复</a></td>
+      <td>摄影工作室</td>
+      <td>评价回复</td>
+      <td>为摄影工作室线上评价生成回复</td>
+    </tr><tr data-industry="photography" data-task="seasonal-promo">
+      <td><a href="../templates/photography-seasonal.html">摄影季节性活动</a></td>
+      <td>摄影工作室</td>
+      <td>季节性促销</td>
+      <td>为摄影工作室季节性主题活动撰写文案</td>
+    </tr><tr data-industry="photography" data-task="membership">
+      <td><a href="../templates/photography-membership.html">摄影会员/年度套餐</a></td>
+      <td>摄影工作室</td>
+      <td>会员运营</td>
+      <td>为摄影工作室年度会员或多次套餐撰写推广</td>
+    </tr><tr data-industry="photography" data-task="complaint-handling">
+      <td><a href="../templates/photography-complaint.html">摄影投诉处理</a></td>
+      <td>摄影工作室</td>
+      <td>投诉处理</td>
+      <td>为摄影工作室客户投诉生成处理话术</td>
+    </tr><tr data-industry="photography" data-task="brand-story">
+      <td><a href="../templates/photography-brand-story.html">摄影工作室品牌故事</a></td>
+      <td>摄影工作室</td>
+      <td>品牌故事</td>
+      <td>为摄影工作室撰写品牌介绍</td>
+    </tr><tr data-industry="fitness" data-task="product-description">
+      <td><a href="../templates/fitness-course-intro.html">健身课程介绍</a></td>
+      <td>健身瑜伽</td>
+      <td>商品与服务描述</td>
+      <td>为健身房/瑜伽馆课程撰写介绍文案</td>
+    </tr><tr data-industry="fitness" data-task="campaign-copy">
+      <td><a href="../templates/fitness-campaign.html">健身活动促销文案</a></td>
+      <td>健身瑜伽</td>
+      <td>活动文案</td>
+      <td>为健身房促销活动撰写文案</td>
+    </tr><tr data-industry="fitness" data-task="appointment">
+      <td><a href="../templates/fitness-trial.html">健身体验课邀约</a></td>
+      <td>健身瑜伽</td>
+      <td>预约管理</td>
+      <td>为健身房生成体验课邀约话术</td>
+    </tr><tr data-industry="fitness" data-task="membership">
+      <td><a href="../templates/fitness-membership.html">健身会员续费话术</a></td>
+      <td>健身瑜伽</td>
+      <td>会员运营</td>
+      <td>为健身房会员续费或升级撰写话术</td>
+    </tr><tr data-industry="fitness" data-task="social-media">
+      <td><a href="../templates/fitness-social-media.html">健身房朋友圈内容</a></td>
+      <td>健身瑜伽</td>
+      <td>社交媒体运营</td>
+      <td>为健身房生成朋友圈日常内容</td>
+    </tr><tr data-industry="fitness" data-task="short-video">
+      <td><a href="../templates/fitness-short-video.html">健身短视频脚本</a></td>
+      <td>健身瑜伽</td>
+      <td>短视频脚本</td>
+      <td>为健身房短视频撰写脚本</td>
+    </tr><tr data-industry="fitness" data-task="review-response">
+      <td><a href="../templates/fitness-review-response.html">健身房评价回复</a></td>
+      <td>健身瑜伽</td>
+      <td>评价回复</td>
+      <td>为健身房线上评价生成回复</td>
+    </tr><tr data-industry="fitness" data-task="complaint-handling">
+      <td><a href="../templates/fitness-complaint.html">健身房投诉处理</a></td>
+      <td>健身瑜伽</td>
+      <td>投诉处理</td>
+      <td>为健身房客户投诉生成处理话术</td>
+    </tr><tr data-industry="fitness" data-task="seasonal-promo">
+      <td><a href="../templates/fitness-seasonal.html">健身季节性活动</a></td>
+      <td>健身瑜伽</td>
+      <td>季节性促销</td>
+      <td>为健身房季节性活动撰写文案</td>
+    </tr><tr data-industry="fitness" data-task="brand-story">
+      <td><a href="../templates/fitness-brand-story.html">健身房品牌故事</a></td>
+      <td>健身瑜伽</td>
+      <td>品牌故事</td>
+      <td>为健身房撰写品牌介绍</td>
+    </tr><tr data-industry="hotel" data-task="product-description">
+      <td><a href="../templates/hotel-room-description.html">民宿房型介绍</a></td>
+      <td>民宿酒店</td>
+      <td>商品与服务描述</td>
+      <td>为民宿/酒店房型撰写介绍文案</td>
+    </tr><tr data-industry="hotel" data-task="review-response">
+      <td><a href="../templates/hotel-review-response.html">民宿评价回复</a></td>
+      <td>民宿酒店</td>
+      <td>评价回复</td>
+      <td>为民宿/酒店线上评价生成回复</td>
+    </tr><tr data-industry="hotel" data-task="social-media">
+      <td><a href="../templates/hotel-social-media.html">民宿朋友圈内容</a></td>
+      <td>民宿酒店</td>
+      <td>社交媒体运营</td>
+      <td>为民宿生成朋友圈日常内容</td>
+    </tr><tr data-industry="hotel" data-task="seasonal-promo">
+      <td><a href="../templates/hotel-seasonal.html">民宿季节性推广</a></td>
+      <td>民宿酒店</td>
+      <td>季节性促销</td>
+      <td>为民宿季节性活动撰写推广文案</td>
+    </tr><tr data-industry="hotel" data-task="complaint-handling">
+      <td><a href="../templates/hotel-complaint.html">民宿投诉处理</a></td>
+      <td>民宿酒店</td>
+      <td>投诉处理</td>
+      <td>为民宿客人投诉生成处理话术</td>
+    </tr><tr data-industry="hotel" data-task="appointment">
+      <td><a href="../templates/hotel-appointment.html">民宿入住引导</a></td>
+      <td>民宿酒店</td>
+      <td>预约管理</td>
+      <td>为民宿生成入住前引导话术</td>
+    </tr><tr data-industry="hotel" data-task="membership">
+      <td><a href="../templates/hotel-membership.html">民宿回头客优惠</a></td>
+      <td>民宿酒店</td>
+      <td>会员运营</td>
+      <td>为民宿老客户回头优惠撰写话术</td>
+    </tr><tr data-industry="hotel" data-task="brand-story">
+      <td><a href="../templates/hotel-brand-story.html">民宿品牌故事</a></td>
+      <td>民宿酒店</td>
+      <td>品牌故事</td>
+      <td>为民宿撰写品牌介绍</td>
+    </tr><tr data-industry="hotel" data-task="short-video">
+      <td><a href="../templates/hotel-short-video.html">民宿短视频脚本</a></td>
+      <td>民宿酒店</td>
+      <td>短视频脚本</td>
+      <td>为民宿短视频撰写脚本</td>
+    </tr><tr data-industry="hotel" data-task="recruitment">
+      <td><a href="../templates/hotel-recruitment.html">民宿招聘启事</a></td>
+      <td>民宿酒店</td>
+      <td>招聘与培训</td>
+      <td>为民宿招聘管家或保洁</td>
+    </tr><tr data-industry="clinic" data-task="social-media">
+      <td><a href="../templates/clinic-health-education.html">诊所健康科普文案</a></td>
+      <td>诊所中医馆</td>
+      <td>社交媒体运营</td>
+      <td>为诊所生成健康科普类朋友圈内容</td>
+    </tr><tr data-industry="clinic" data-task="appointment">
+      <td><a href="../templates/clinic-appointment.html">诊所预约提醒</a></td>
+      <td>诊所中医馆</td>
+      <td>预约管理</td>
+      <td>为诊所生成预约确认和就诊提醒</td>
+    </tr><tr data-industry="clinic" data-task="review-response">
+      <td><a href="../templates/clinic-review-response.html">诊所评价回复</a></td>
+      <td>诊所中医馆</td>
+      <td>评价回复</td>
+      <td>为诊所线上评价生成回复</td>
+    </tr><tr data-industry="clinic" data-task="seasonal-promo">
+      <td><a href="../templates/clinic-seasonal.html">诊所季节性健康提醒</a></td>
+      <td>诊所中医馆</td>
+      <td>季节性促销</td>
+      <td>为诊所生成季节性健康提醒和体检推广</td>
+    </tr><tr data-industry="clinic" data-task="complaint-handling">
+      <td><a href="../templates/clinic-complaint.html">诊所投诉处理</a></td>
+      <td>诊所中医馆</td>
+      <td>投诉处理</td>
+      <td>为诊所患者投诉生成处理话术</td>
+    </tr><tr data-industry="clinic" data-task="brand-story">
+      <td><a href="../templates/clinic-brand-story.html">诊所品牌介绍</a></td>
+      <td>诊所中医馆</td>
+      <td>品牌故事</td>
+      <td>为诊所撰写品牌介绍</td>
+    </tr><tr data-industry="auto-repair" data-task="product-description">
+      <td><a href="../templates/auto-repair-service-intro.html">汽车服务项目介绍</a></td>
+      <td>汽车服务</td>
+      <td>商品与服务描述</td>
+      <td>为汽修店服务项目撰写介绍</td>
+    </tr><tr data-industry="auto-repair" data-task="quotation">
+      <td><a href="../templates/auto-repair-quotation.html">汽修报价说明</a></td>
+      <td>汽车服务</td>
+      <td>报价与合同前说明</td>
+      <td>为汽修店生成维修报价说明</td>
+    </tr><tr data-industry="auto-repair" data-task="customer-service">
+      <td><a href="../templates/auto-repair-customer-comm.html">汽修客户沟通话术</a></td>
+      <td>汽车服务</td>
+      <td>客服回复</td>
+      <td>为汽修店生成与车主沟通的话术</td>
+    </tr><tr data-industry="auto-repair" data-task="review-response">
+      <td><a href="../templates/auto-repair-review-response.html">汽修店评价回复</a></td>
+      <td>汽车服务</td>
+      <td>评价回复</td>
+      <td>为汽修店线上评价生成回复</td>
+    </tr><tr data-industry="auto-repair" data-task="social-media">
+      <td><a href="../templates/auto-repair-social-media.html">汽修店朋友圈内容</a></td>
+      <td>汽车服务</td>
+      <td>社交媒体运营</td>
+      <td>为汽修店生成朋友圈日常内容</td>
+    </tr><tr data-industry="auto-repair" data-task="seasonal-promo">
+      <td><a href="../templates/auto-repair-seasonal.html">汽修季节性保养提醒</a></td>
+      <td>汽车服务</td>
+      <td>季节性促销</td>
+      <td>为汽修店生成季节性保养提醒和优惠</td>
+    </tr><tr data-industry="auto-repair" data-task="complaint-handling">
+      <td><a href="../templates/auto-repair-complaint.html">汽修投诉处理</a></td>
+      <td>汽车服务</td>
+      <td>投诉处理</td>
+      <td>为汽修店客户投诉生成处理话术</td>
+    </tr><tr data-industry="auto-repair" data-task="brand-story">
+      <td><a href="../templates/auto-repair-brand-story.html">汽修店品牌介绍</a></td>
+      <td>汽车服务</td>
+      <td>品牌故事</td>
+      <td>为汽修店撰写品牌介绍</td>
+    </tr><tr data-industry="flower" data-task="product-description">
+      <td><a href="../templates/flower-product-desc.html">花束产品描述</a></td>
+      <td>花店绿植</td>
+      <td>商品与服务描述</td>
+      <td>为花店花束/绿植撰写产品描述</td>
+    </tr><tr data-industry="flower" data-task="seasonal-promo">
+      <td><a href="../templates/flower-campaign.html">花店节日促销文案</a></td>
+      <td>花店绿植</td>
+      <td>季节性促销</td>
+      <td>为花店节日活动撰写促销文案</td>
+    </tr><tr data-industry="flower" data-task="social-media">
+      <td><a href="../templates/flower-social-media.html">花店朋友圈内容</a></td>
+      <td>花店绿植</td>
+      <td>社交媒体运营</td>
+      <td>为花店生成朋友圈日常内容</td>
+    </tr><tr data-industry="flower" data-task="review-response">
+      <td><a href="../templates/flower-review-response.html">花店评价回复</a></td>
+      <td>花店绿植</td>
+      <td>评价回复</td>
+      <td>为花店线上评价生成回复</td>
+    </tr><tr data-industry="flower" data-task="complaint-handling">
+      <td><a href="../templates/flower-complaint.html">花店投诉处理</a></td>
+      <td>花店绿植</td>
+      <td>投诉处理</td>
+      <td>为花店客户投诉生成处理话术</td>
+    </tr><tr data-industry="flower" data-task="membership">
+      <td><a href="../templates/flower-membership.html">花店订阅/会员推广</a></td>
+      <td>花店绿植</td>
+      <td>会员运营</td>
+      <td>为花店鲜花订阅或会员制度撰写推广</td>
+    </tr><tr data-industry="flower" data-task="short-video">
+      <td><a href="../templates/flower-short-video.html">花店短视频脚本</a></td>
+      <td>花店绿植</td>
+      <td>短视频脚本</td>
+      <td>为花店短视频撰写脚本</td>
+    </tr><tr data-industry="flower" data-task="brand-story">
+      <td><a href="../templates/flower-brand-story.html">花店品牌故事</a></td>
+      <td>花店绿植</td>
+      <td>品牌故事</td>
+      <td>为花店撰写品牌介绍</td>
     </tr></tbody>
   </table>
 </section>

@@ -2,403 +2,997 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bizai.jtlcook.com/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/templates/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/templates/catering-combo-campaign.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/templates/catering-new-product.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/templates/catering-bad-review.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/catering-short-video.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/beauty-campaign.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/beauty-project-intro.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/beauty-member-recall.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/retail-product-desc.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/retail-new-arrival.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/retail-after-sales.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/repair-quotation.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/repair-service-flow.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/pet-appointment.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/pet-review-reply.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/education-enrollment.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/education-course-intro.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/general-recruitment.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/general-refund.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/general-follow-up.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/general-bad-review.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/catering-menu-description.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/beauty-appointment-reminder.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/repair-customer-comm.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/pet-service-description.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/education-parent-comm.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/general-operations-sheet.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/general-review-checklist.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/retail-customer-reply.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/general-hiring-post.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bizai.jtlcook.com/templates/general-customer-followup.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/templates/catering-delivery-reply.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/catering-menu-description.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/catering-short-video.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/catering-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/catering-membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/catering-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/catering-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/catering-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/catering-recruitment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-product-desc.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-new-arrival.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-customer-reply.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-after-sales.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-short-video.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-seasonal-promo.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/retail-recruitment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-project-intro.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-campaign.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-recall.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-appointment.html</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/templates/beauty-video-script.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/beauty-recruitment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-quotation.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-service-flow.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-customer-comm.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-appointment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/repair-recruitment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-service-description.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-appointment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-review-reply.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-short-video.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/pet-recruitment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-course-intro.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-enrollment.html</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/templates/education-trial-invite.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-parent-comm.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-short-video.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/education-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-package-intro.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-campaign.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-short-video.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-appointment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/photography-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-course-intro.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-campaign.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-trial.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-short-video.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/fitness-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-room-description.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-appointment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-short-video.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/hotel-recruitment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/clinic-health-education.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/clinic-appointment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/clinic-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/clinic-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/clinic-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/clinic-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/auto-repair-service-intro.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/auto-repair-quotation.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/auto-repair-customer-comm.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/auto-repair-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/auto-repair-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/auto-repair-seasonal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/auto-repair-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/auto-repair-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/flower-product-desc.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/flower-campaign.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/flower-social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/flower-review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/flower-complaint.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/flower-membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/flower-short-video.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/templates/flower-brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/industries/catering.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/industries/retail.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/industries/beauty.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/industries/repair.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/industries/pet.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/industries/education.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/photography.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/fitness.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/hotel.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/clinic.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/auto-repair.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/flower.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/bakery.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/laundry.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/industries/real-estate.html</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tasks/customer-service.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tasks/campaign-copy.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tasks/short-video.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tasks/product-description.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tasks/recruitment.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tasks/quotation.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tasks/operations.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tasks/review-checklist.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/tasks/social-media.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/tasks/review-response.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/tasks/appointment.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/tasks/membership.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/tasks/seasonal-promo.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/tasks/complaint-handling.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizai.jtlcook.com/tasks/brand-story.html</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/guides/how-to-use-ai.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/guides/review-checklist.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/guides/platform-rules.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/guides/template-guide.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/guides/customer-service-review.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/guides/ai-output-issues.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/scenarios/bargain.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/scenarios/bad-review-response.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/scenarios/refund-negotiation.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/scenarios/appointment-confirm.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tools/prompt-builder.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tools/output-checker.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/tools/reply-filter.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/pages/about.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/pages/contact.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/pages/disclaimer.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/pages/privacy.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://bizai.jtlcook.com/pages/terms.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>

@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>餐饮短视频脚本 - 小商家 AI 工作流与模板库</title>
-<meta name="description" content="为餐饮店生成15-60秒短视频拍摄脚本">
+<meta name="description" content="为餐厅抖音/快手账号生成短视频拍摄脚本">
 <link rel="canonical" href="https://bizai.jtlcook.com/templates/catering-short-video.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta property="og:title" content="餐饮短视频脚本 - 小商家 AI 工作流与模板库">
-<meta property="og:description" content="为餐饮店生成15-60秒短视频拍摄脚本">
+<meta property="og:description" content="为餐厅抖音/快手账号生成短视频拍摄脚本">
 <meta property="og:url" content="https://bizai.jtlcook.com/templates/catering-short-video.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮短视频脚本","description":"为餐饮店生成15-60秒短视频拍摄脚本","step":[{"@type":"HowToStep","text":"准备材料：视频主题、时长要求、拍摄场景、想突出的卖点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认时长合理；检查开头是否有吸引力；确认没有违规内容；检查引导语是否合规"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题"},{"@type":"HowToSupply","name":"时长要求"},{"@type":"HowToSupply","name":"拍摄场景"},{"@type":"HowToSupply","name":"想突出的卖点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮短视频脚本","description":"为餐厅抖音/快手账号生成短视频拍摄脚本","step":[{"@type":"HowToStep","text":"准备材料：视频主题、拍摄菜品、店铺特色、时长要求"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认拍摄内容可执行；检查是否有夸大宣传；确认时长符合平台要求；无违规承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题"},{"@type":"HowToSupply","name":"拍摄菜品"},{"@type":"HowToSupply","name":"店铺特色"},{"@type":"HowToSupply","name":"时长要求"}]}</script>
 
 </head>
 <body>
@@ -41,40 +41,41 @@
     <span class="tag">餐饮与咖啡</span>
     <span class="tag">短视频脚本</span>
   </div>
-  <p class="template-desc">为餐饮店生成15-60秒短视频拍摄脚本</p>
+  <p class="template-desc">为餐厅抖音/快手账号生成短视频拍摄脚本</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>适用场景</h3>
-      <p>拍摄菜品制作过程、店铺日常、活动宣传短视频时使用</p>
+      <p>日常发布探店风格短视频、新品展示视频时使用</p>
     </div>
     <div class="info-box">
       <h3>不适合</h3>
-      <p>不适合用于长视频或纪录片式内容</p>
+      <p>不适合用于正式广告片拍摄</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>视频主题</li><li>时长要求</li><li>拍摄场景</li><li>想突出的卖点</li></ul>
+    <ul class="materials-list"><li>视频主题</li><li>拍摄菜品</li><li>店铺特色</li><li>时长要求</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位短视频内容策划师。请为餐饮店生成一个短视频拍摄脚本。
+      <pre class="prompt-text" id="prompt-text">你是一位短视频内容策划。请为以下餐饮短视频撰写拍摄脚本。
 
 视频主题：{视频主题}
+展示菜品：{拍摄菜品}
+店铺特色：{店铺特色}
 时长：{时长要求}
-拍摄场景：{拍摄场景}
-核心卖点：{想突出的卖点}
 
 要求：
-1. 分镜头描述（画面+文字/口播）
-2. 开头3秒要有吸引力
-3. 适合竖屏拍摄
-4. 标注背景音乐风格建议
-5. 结尾带引导关注或到店</pre>
+1. 分镜头描述（开场、中间、结尾）
+2. 配文字幕建议
+3. 背景音乐风格建议
+4. 口播文案（如需要）
+5. 适合竖屏拍摄
+6. 不承诺效果</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,32 +84,31 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{视频主题}</code></td><td>这条视频要拍什么，如「招牌菜制作过程」</td></tr><tr><td><code>{时长要求}</code></td><td>15秒/30秒/60秒</td></tr><tr><td><code>{拍摄场景}</code></td><td>厨房、前厅、户外等</td></tr><tr><td><code>{想突出的卖点}</code></td><td>食材新鲜、手工制作、分量足等</td></tr></tbody>
+      <tbody><tr><td><code>{视频主题}</code></td><td>如「后厨揭秘」「新品试吃」</td></tr><tr><td><code>{拍摄菜品}</code></td><td>要展示的具体菜品</td></tr><tr><td><code>{店铺特色}</code></td><td>如「20年老店」「手工现做」</td></tr><tr><td><code>{时长要求}</code></td><td>如「15-30秒」「60秒以内」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>分镜头脚本表格，含画面描述、口播/字幕、时长</p>
+    <p>分镜头脚本，含画面描述和文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【开头3秒】画面：特写锅中翻炒，油烟升腾 | 字幕：「你猜这锅什么菜？」
-【4-15秒】画面：食材准备全景 | 口播：今天给大家看看我们招牌酸菜鱼的做法
-【16-25秒】画面：制作过程快剪 | 背景音乐：轻快节奏
-【26-30秒】画面：成品摆盘+店铺地址 | 字幕：到店报「抖音来的」送小菜一份（仅供格式参考）</p>
+      <p>【开场3秒】画面：热气腾腾的锅底特写，字幕「今天带你看看我们的招牌锅底是怎么熬的」
+【中间15秒】画面：后厨师傅加入牛骨、香料的过程，口播「每天早上6点开始熬制，足足4个小时」
+【结尾5秒】画面：成品上桌，顾客夹菜，字幕「XX路XX号，来尝尝？」配轻快BGM（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认时长合理</label></li><li><label><input type="checkbox"> 检查开头是否有吸引力</label></li><li><label><input type="checkbox"> 确认没有违规内容</label></li><li><label><input type="checkbox"> 检查引导语是否合规</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 确认拍摄内容可执行</label></li><li><label><input type="checkbox"> 检查是否有夸大宣传</label></li><li><label><input type="checkbox"> 确认时长符合平台要求</label></li><li><label><input type="checkbox"> 无违规承诺</label></li></ul>
   </section>
 
-  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-new-product.html" class="related-link">餐饮新品上新文案</a><a href="../templates/catering-combo-campaign.html" class="related-link">餐饮套餐活动文案</a></div></section>
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-new-product.html" class="related-link">餐饮新品上新文案</a><a href="../templates/catering-social-media.html" class="related-link">餐饮朋友圈日常内容</a></div></section>
 </article>
 </main>
 <footer class="site-footer">

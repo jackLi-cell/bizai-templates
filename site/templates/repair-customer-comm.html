@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>维修客户沟通话术 - 小商家 AI 工作流与模板库</title>
-<meta name="description" content="为维修家政服务的客户沟通场景生成话术">
+<meta name="description" content="为维修师傅生成与客户沟通的话术">
 <link rel="canonical" href="https://bizai.jtlcook.com/templates/repair-customer-comm.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta property="og:title" content="维修客户沟通话术 - 小商家 AI 工作流与模板库">
-<meta property="og:description" content="为维修家政服务的客户沟通场景生成话术">
+<meta property="og:description" content="为维修师傅生成与客户沟通的话术">
 <meta property="og:url" content="https://bizai.jtlcook.com/templates/repair-customer-comm.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修客户沟通话术","description":"为维修家政服务的客户沟通场景生成话术","step":[{"@type":"HowToStep","text":"准备材料：沟通场景、客户信息、服务信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认时间和服务信息准确；检查是否遗漏重要信息；确认语气得体"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"沟通场景"},{"@type":"HowToSupply","name":"客户信息"},{"@type":"HowToSupply","name":"服务信息"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修客户沟通话术","description":"为维修师傅生成与客户沟通的话术","step":[{"@type":"HowToStep","text":"准备材料：沟通场景、客户情况、需要传达的信息、注意事项"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：信息是否完整；语气是否专业；时间是否明确；注意事项是否提到"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"沟通场景"},{"@type":"HowToSupply","name":"客户情况"},{"@type":"HowToSupply","name":"需要传达的信息"},{"@type":"HowToSupply","name":"注意事项"}]}</script>
 
 </head>
 <body>
@@ -41,38 +41,40 @@
     <span class="tag">维修与家政</span>
     <span class="tag">客服回复</span>
   </div>
-  <p class="template-desc">为维修家政服务的客户沟通场景生成话术</p>
+  <p class="template-desc">为维修师傅生成与客户沟通的话术</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>适用场景</h3>
-      <p>预约确认、上门前通知、完工确认、回访时使用</p>
+      <p>上门前确认、维修中说明、完工后交代时使用</p>
     </div>
     <div class="info-box">
       <h3>不适合</h3>
-      <p>不适合用于纠纷调解或赔偿协商</p>
+      <p>不适合用于纠纷调解</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>沟通场景</li><li>客户信息</li><li>服务信息</li></ul>
+    <ul class="materials-list"><li>沟通场景</li><li>客户情况</li><li>需要传达的信息</li><li>注意事项</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位维修家政客服助手。请根据以下场景生成沟通话术（40-80字）。
+      <pre class="prompt-text" id="prompt-text">你是一位维修服务沟通助手。请生成以下场景的客户沟通话术。
 
-沟通场景：{预约确认/上门通知/完工确认/回访}
-客户称呼：{称呼}
-服务项目：{项目}
-相关时间：{时间信息}
+沟通场景：{沟通场景}
+客户情况：{客户情况}
+需要传达：{需要传达的信息}
+注意事项：{注意事项}
 
 要求：
-1. 信息完整简洁
-2. 语气专业礼貌
-3. 根据场景调整重点</pre>
+1. 语气专业友好
+2. 信息简洁明了
+3. 让客户放心
+4. 字数60-100字
+5. 适合电话或微信沟通</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -81,29 +83,29 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{沟通场景}</code></td><td>预约确认/上门通知/完工确认/回访</td></tr><tr><td><code>{称呼}</code></td><td>客户怎么称呼</td></tr><tr><td><code>{项目}</code></td><td>什么服务</td></tr><tr><td><code>{时间信息}</code></td><td>相关的时间</td></tr></tbody>
+      <tbody><tr><td><code>{沟通场景}</code></td><td>如「上门前确认」「维修中说明」</td></tr><tr><td><code>{客户情况}</code></td><td>客户的基本情况</td></tr><tr><td><code>{需要传达的信息}</code></td><td>要告诉客户什么</td></tr><tr><td><code>{注意事项}</code></td><td>有什么需要客户配合的</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>40-80字沟通消息</p>
+    <p>60-100字沟通话术</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>张先生您好，明天上午10点安排师傅上门维修热水器，预计1小时左右。请确保家中有人，师傅会提前15分钟电话联系您（仅供格式参考）</p>
+      <p>王先生您好，我是XX维修的小李，您预约的热水器维修我下午2点左右到。麻烦您提前把热水器电源关掉，我到了会先检查一下故障原因，确认维修方案和费用后再动手，您放心（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认时间和服务信息准确</label></li><li><label><input type="checkbox"> 检查是否遗漏重要信息</label></li><li><label><input type="checkbox"> 确认语气得体</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 信息是否完整</label></li><li><label><input type="checkbox"> 语气是否专业</label></li><li><label><input type="checkbox"> 时间是否明确</label></li><li><label><input type="checkbox"> 注意事项是否提到</label></li></ul>
   </section>
 
-  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-quotation.html" class="related-link">维修报价说明</a><a href="../templates/repair-service-flow.html" class="related-link">维修服务流程说明</a></div></section>
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-quotation.html" class="related-link">维修报价说明</a><a href="../templates/repair-review-response.html" class="related-link">维修服务评价回复</a></div></section>
 </article>
 </main>
 <footer class="site-footer">

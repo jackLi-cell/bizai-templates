@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>零售客服咨询回复 - 小商家 AI 工作流与模板库</title>
-<meta name="description" content="为线上店铺客户咨询生成标准回复话术">
+<meta name="description" content="为零售店客服生成常见咨询的回复话术">
 <link rel="canonical" href="https://bizai.jtlcook.com/templates/retail-customer-reply.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta property="og:title" content="零售客服咨询回复 - 小商家 AI 工作流与模板库">
-<meta property="og:description" content="为线上店铺客户咨询生成标准回复话术">
+<meta property="og:description" content="为零售店客服生成常见咨询的回复话术">
 <meta property="og:url" content="https://bizai.jtlcook.com/templates/retail-customer-reply.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售客服咨询回复","description":"为线上店铺客户咨询生成标准回复话术","step":[{"@type":"HowToStep","text":"准备材料：咨询类型、商品信息、店铺政策"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认回复符合店铺政策；检查是否有超范围承诺；确认信息完整"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"咨询类型"},{"@type":"HowToSupply","name":"商品信息"},{"@type":"HowToSupply","name":"店铺政策"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售客服咨询回复","description":"为零售店客服生成常见咨询的回复话术","step":[{"@type":"HowToStep","text":"准备材料：客户问题、商品信息、店铺政策"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认尺码建议准确；发货时间是否真实；退换政策是否正确；语气是否友好"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户问题"},{"@type":"HowToSupply","name":"商品信息"},{"@type":"HowToSupply","name":"店铺政策"}]}</script>
 
 </head>
 <body>
@@ -41,12 +41,12 @@
     <span class="tag">零售与小电商</span>
     <span class="tag">客服回复</span>
   </div>
-  <p class="template-desc">为线上店铺客户咨询生成标准回复话术</p>
+  <p class="template-desc">为零售店客服生成常见咨询的回复话术</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>适用场景</h3>
-      <p>客户咨询商品信息、物流、退换货等问题时使用</p>
+      <p>客户询问尺码、发货、退换等问题时使用</p>
     </div>
     <div class="info-box">
       <h3>不适合</h3>
@@ -56,23 +56,24 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>咨询类型</li><li>商品信息</li><li>店铺政策</li></ul>
+    <ul class="materials-list"><li>客户问题</li><li>商品信息</li><li>店铺政策</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位零售店客服助手。请根据以下咨询生成回复（40-80字）。
+      <pre class="prompt-text" id="prompt-text">你是一位零售店客服。请针对以下客户咨询生成回复。
 
-咨询类型：{商品咨询/物流查询/退换货}
-客户问题：{问题内容}
-相关商品：{商品名称}
-店铺政策：{相关政策}
+客户问题：{客户问题}
+相关商品信息：{商品信息}
+店铺政策：{店铺政策}
 
 要求：
-1. 先回答问题，再给建议
+1. 回答准确、简洁
 2. 语气友好专业
-3. 不做超出政策的承诺</pre>
+3. 主动提供有用信息
+4. 字数50-100字
+5. 如有不确定的信息，建议客户进一步确认</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -81,29 +82,29 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{咨询类型}</code></td><td>客户问的是哪类问题</td></tr><tr><td><code>{问题内容}</code></td><td>客户具体问了什么</td></tr><tr><td><code>{商品名称}</code></td><td>涉及哪个商品</td></tr><tr><td><code>{相关政策}</code></td><td>店铺相关规定</td></tr></tbody>
+      <tbody><tr><td><code>{客户问题}</code></td><td>客户具体问的什么</td></tr><tr><td><code>{商品信息}</code></td><td>相关商品的详细信息</td></tr><tr><td><code>{店铺政策}</code></td><td>退换货、发货等政策</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>40-80字客服回复</p>
+    <p>50-100字客服回复</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>您好，这款围裙支持7天无理由退换，如需退货请保持吊牌完整，拍照发我确认后给您退货地址。运费由买家承担，收到后1-2天退款到账～（仅供格式参考）</p>
+      <p>亲，这款外套建议看下尺码表哦～您平时穿M码的话，这款建议拍L码，版型偏修身。面料是聚酯纤维+棉混纺，有一点弹性。今天下单明天发货，省内一般2天到。7天无理由退换，不影响二次销售就行（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认回复符合店铺政策</label></li><li><label><input type="checkbox"> 检查是否有超范围承诺</label></li><li><label><input type="checkbox"> 确认信息完整</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 确认尺码建议准确</label></li><li><label><input type="checkbox"> 发货时间是否真实</label></li><li><label><input type="checkbox"> 退换政策是否正确</label></li><li><label><input type="checkbox"> 语气是否友好</label></li></ul>
   </section>
 
-  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-after-sales.html" class="related-link">零售售后回复</a><a href="../templates/retail-product-desc.html" class="related-link">零售商品描述</a></div></section>
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-after-sales.html" class="related-link">零售售后处理话术</a><a href="../templates/retail-review-response.html" class="related-link">零售好评/差评回复</a></div></section>
 </article>
 </main>
 <footer class="site-footer">

@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>美业短视频脚本 - 小商家 AI 工作流与模板库</title>
-<meta name="description" content="为美容美发店拍摄短视频提供脚本框架">
+<meta name="description" content="为美容院抖音/小红书短视频撰写脚本">
 <link rel="canonical" href="https://bizai.jtlcook.com/templates/beauty-video-script.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta property="og:title" content="美业短视频脚本 - 小商家 AI 工作流与模板库">
-<meta property="og:description" content="为美容美发店拍摄短视频提供脚本框架">
+<meta property="og:description" content="为美容院抖音/小红书短视频撰写脚本">
 <meta property="og:url" content="https://bizai.jtlcook.com/templates/beauty-video-script.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业短视频脚本","description":"为美容美发店拍摄短视频提供脚本框架","step":[{"@type":"HowToStep","text":"准备材料：视频主题、时长、拍摄内容、目标平台"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认无功效承诺；检查是否适合平台规则；确认拍摄内容可执行"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题"},{"@type":"HowToSupply","name":"时长"},{"@type":"HowToSupply","name":"拍摄内容"},{"@type":"HowToSupply","name":"目标平台"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业短视频脚本","description":"为美容院抖音/小红书短视频撰写脚本","step":[{"@type":"HowToStep","text":"准备材料：视频主题、展示项目、目标受众、时长"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无医疗效果承诺；内容是否专业准确；拍摄方案可执行；无绝对化用语"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题"},{"@type":"HowToSupply","name":"展示项目"},{"@type":"HowToSupply","name":"目标受众"},{"@type":"HowToSupply","name":"时长"}]}</script>
 
 </head>
 <body>
@@ -38,43 +38,43 @@
 <article class="template-detail">
   <h1>美业短视频脚本</h1>
   <div class="template-meta">
-    <span class="tag">美业与健身</span>
+    <span class="tag">美容美发</span>
     <span class="tag">短视频脚本</span>
   </div>
-  <p class="template-desc">为美容美发店拍摄短视频提供脚本框架</p>
+  <p class="template-desc">为美容院抖音/小红书短视频撰写脚本</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>适用场景</h3>
-      <p>拍摄服务过程、店铺日常时使用</p>
+      <p>拍摄项目展示、护肤知识分享类视频时使用</p>
     </div>
     <div class="info-box">
       <h3>不适合</h3>
-      <p>不适合用于医美广告投放</p>
+      <p>不适合用于医美手术过程展示</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>视频主题</li><li>时长</li><li>拍摄内容</li><li>目标平台</li></ul>
+    <ul class="materials-list"><li>视频主题</li><li>展示项目</li><li>目标受众</li><li>时长</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位短视频脚本助手。请为以下美业短视频撰写脚本（15-30秒）。
+      <pre class="prompt-text" id="prompt-text">你是一位美业短视频策划。请撰写以下短视频脚本。
 
-视频主题：{主题}
-目标时长：{时长}秒
-拍摄内容：{拍什么}
-目标平台：{平台}
-
-请按格式输出：开头（前3秒）、中间、结尾
+视频主题：{视频主题}
+展示项目：{展示项目}
+目标受众：{目标受众}
+时长：{时长}
 
 要求：
-1. 不承诺效果
-2. 展示服务过程和氛围
-3. 节奏紧凑</pre>
+1. 分镜头描述
+2. 口播文案自然
+3. 不承诺效果
+4. 不使用医疗用语
+5. 适合竖屏拍摄</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,32 +83,31 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{主题}</code></td><td>这条视频要拍什么</td></tr><tr><td><code>{时长}</code></td><td>计划拍多长</td></tr><tr><td><code>{拍什么}</code></td><td>具体拍摄内容</td></tr><tr><td><code>{平台}</code></td><td>发在哪个平台</td></tr></tbody>
+      <tbody><tr><td><code>{视频主题}</code></td><td>如「护理过程展示」「护肤小知识」</td></tr><tr><td><code>{展示项目}</code></td><td>要展示的服务项目</td></tr><tr><td><code>{目标受众}</code></td><td>想吸引什么样的客户</td></tr><tr><td><code>{时长}</code></td><td>视频时长要求</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>分段式脚本</p>
+    <p>分镜头脚本含口播文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【开头0-3秒】画面：手部特写，美甲师在调色
-【中间3-12秒】画面：美甲制作过程，从底色到花纹
-【结尾12-15秒】画面：成品展示，配文&quot;本周还有3个位置&quot;
-（仅供格式参考）</p>
+      <p>【开场3秒】画面：美容师准备工具的特写。字幕「很多姐妹问我，清洁到底怎么做才对？」
+【中间20秒】画面：清洁步骤展示（卸妆→洁面→深清）。口播「第一步卸妆一定要乳化充分，第二步洁面不要超过60秒...」
+【结尾5秒】画面：做完后的皮肤状态。字幕「定期深清，皮肤会慢慢稳定下来」（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认无功效承诺</label></li><li><label><input type="checkbox"> 检查是否适合平台规则</label></li><li><label><input type="checkbox"> 确认拍摄内容可执行</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 无医疗效果承诺</label></li><li><label><input type="checkbox"> 内容是否专业准确</label></li><li><label><input type="checkbox"> 拍摄方案可执行</label></li><li><label><input type="checkbox"> 无绝对化用语</label></li></ul>
   </section>
 
-  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-campaign.html" class="related-link">美业朋友圈活动文案</a><a href="../templates/catering-short-video.html" class="related-link">餐饮短视频脚本</a></div></section>
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-social-media.html" class="related-link">美业朋友圈日常</a><a href="../templates/beauty-project-intro.html" class="related-link">美容项目介绍文案</a></div></section>
 </article>
 </main>
 <footer class="site-footer">

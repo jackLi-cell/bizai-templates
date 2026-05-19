@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>健身房评价回复 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为健身房线上评价生成回复">
+<link rel="canonical" href="https://bizai.jtlcook.com/templates/fitness-review-response.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta property="og:title" content="健身房评价回复 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为健身房线上评价生成回复">
+<meta property="og:url" content="https://bizai.jtlcook.com/templates/fitness-review-response.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身房评价回复","description":"为健身房线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、会员情况、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无效果承诺；语气是否积极；回复是否具体；无身材评价"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"会员情况"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>健身房评价回复</span>
+</nav>
+<article class="template-detail">
+  <h1>健身房评价回复</h1>
+  <div class="template-meta">
+    <span class="tag">健身瑜伽</span>
+    <span class="tag">评价回复</span>
+  </div>
+  <p class="template-desc">为健身房线上评价生成回复</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>收到大众点评等平台评价时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于纠纷处理</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>会员情况</li><li>回复重点</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位健身房运营。请针对评价生成回复。
+
+评价：{评价内容}
+星级：{评价星级}
+会员：{会员情况}
+重点：{回复重点}
+
+要求：
+1. 感谢反馈
+2. 针对具体内容
+3. 不承诺效果
+4. 字数50-80字</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价</td></tr><tr><td><code>{评价星级}</code></td><td>几星</td></tr><tr><td><code>{会员情况}</code></td><td>新会员还是老会员</td></tr><tr><td><code>{回复重点}</code></td><td>想强调什么</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>50-80字评价回复</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>感谢认可！很高兴你喜欢我们的团课氛围，搏击课确实是释放压力的好方式。坚持运动一段时间，你会感受到体能的变化。有任何课程问题随时问前台或你的顾问，我们随时在（仅供格式参考）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 无效果承诺</label></li><li><label><input type="checkbox"> 语气是否积极</label></li><li><label><input type="checkbox"> 回复是否具体</label></li><li><label><input type="checkbox"> 无身材评价</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/fitness-social-media.html" class="related-link">健身房朋友圈内容</a><a href="../templates/fitness-membership.html" class="related-link">健身会员续费话术</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

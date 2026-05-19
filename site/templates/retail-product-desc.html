@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>零售商品描述 - 小商家 AI 工作流与模板库</title>
-<meta name="description" content="为线上店铺商品撰写详情页描述文案">
+<meta name="description" content="为网店或实体店商品撰写详情描述">
 <link rel="canonical" href="https://bizai.jtlcook.com/templates/retail-product-desc.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <meta property="og:title" content="零售商品描述 - 小商家 AI 工作流与模板库">
-<meta property="og:description" content="为线上店铺商品撰写详情页描述文案">
+<meta property="og:description" content="为网店或实体店商品撰写详情描述">
 <meta property="og:url" content="https://bizai.jtlcook.com/templates/retail-product-desc.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售商品描述","description":"为线上店铺商品撰写详情页描述文案","step":[{"@type":"HowToStep","text":"准备材料：商品名称、规格参数、核心卖点、适用场景、价格区间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认规格参数准确；检查是否有夸大描述；确认价格正确；没有使用违禁词"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"商品名称"},{"@type":"HowToSupply","name":"规格参数"},{"@type":"HowToSupply","name":"核心卖点"},{"@type":"HowToSupply","name":"适用场景"},{"@type":"HowToSupply","name":"价格区间"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售商品描述","description":"为网店或实体店商品撰写详情描述","step":[{"@type":"HowToStep","text":"准备材料：商品名称、材质/成分、规格尺寸、适用人群、卖点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认材质描述准确；检查尺寸数据正确；无绝对化用语；适用人群描述合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"商品名称"},{"@type":"HowToSupply","name":"材质/成分"},{"@type":"HowToSupply","name":"规格尺寸"},{"@type":"HowToSupply","name":"适用人群"},{"@type":"HowToSupply","name":"卖点"}]}</script>
 
 </head>
 <body>
@@ -41,41 +41,41 @@
     <span class="tag">零售与小电商</span>
     <span class="tag">商品与服务描述</span>
   </div>
-  <p class="template-desc">为线上店铺商品撰写详情页描述文案</p>
+  <p class="template-desc">为网店或实体店商品撰写详情描述</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>适用场景</h3>
-      <p>新品上架、优化现有商品描述、提升转化率时使用</p>
+      <p>上架新商品、优化商品详情页时使用</p>
     </div>
     <div class="info-box">
       <h3>不适合</h3>
-      <p>不适合用于虚假宣传或夸大功效</p>
+      <p>不适合用于商品质检报告</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>商品名称</li><li>规格参数</li><li>核心卖点</li><li>适用场景</li><li>价格区间</li></ul>
+    <ul class="materials-list"><li>商品名称</li><li>材质/成分</li><li>规格尺寸</li><li>适用人群</li><li>卖点</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位电商文案助手。请为以下商品撰写详情页描述。
+      <pre class="prompt-text" id="prompt-text">你是一位电商文案助手。请为以下商品撰写详情描述。
 
 商品名称：{商品名称}
-规格参数：{规格参数}
-核心卖点：{核心卖点}
-适用场景：{适用场景}
-价格区间：{价格区间}
+材质/成分：{材质或成分}
+规格尺寸：{规格尺寸}
+适用人群：{适用人群}
+核心卖点：{卖点}
 
 要求：
-1. 字数150-250字
-2. 结构清晰（卖点+场景+参数）
-3. 突出差异化优势
-4. 不使用绝对化用语
-5. 适合淘宝/拼多多/抖音店铺</pre>
+1. 字数100-150字
+2. 突出材质和使用场景
+3. 用具体数据说话
+4. 不使用「最」「第一」等绝对化用语
+5. 适合电商详情页展示</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,39 +84,29 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{商品名称}</code></td><td>商品的完整名称</td></tr><tr><td><code>{规格参数}</code></td><td>尺寸、材质、重量等</td></tr><tr><td><code>{核心卖点}</code></td><td>这个商品最突出的2-3个优势</td></tr><tr><td><code>{适用场景}</code></td><td>什么人在什么情况下会用</td></tr><tr><td><code>{价格区间}</code></td><td>售价范围</td></tr></tbody>
+      <tbody><tr><td><code>{商品名称}</code></td><td>商品的完整名称</td></tr><tr><td><code>{材质或成分}</code></td><td>如「100%纯棉」「304不锈钢」</td></tr><tr><td><code>{规格尺寸}</code></td><td>具体的尺寸或容量</td></tr><tr><td><code>{适用人群}</code></td><td>目标用户群体</td></tr><tr><td><code>{卖点}</code></td><td>最想让顾客知道的优势</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>150-250字商品描述，分段呈现</p>
+    <p>100-150字商品描述</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【品名】纯棉加厚四件套 水洗棉系列
-
-亲肤A类面料，40支精梳棉，越洗越柔软。加厚冬季款，被套内侧加绒，盖着暖和不闷。
-
-适合：出租屋换新、婚房布置、送礼自用都合适。
-
-规格：1.5m/1.8m床通用，被套200x230cm，枕套一对。
-
-颜色：奶白/浅灰/豆绿 三色可选。
-
-售价：128-168元（仅供格式参考）</p>
+      <p>【纯棉亲肤T恤】采用新疆长绒棉，面料克重220g，厚实不透但透气性好。宽松版型，肩线下落2cm，男女同款。尺码S-3XL，身高155-185cm均可选到合适尺码。预缩水处理，机洗不易变形。适合日常通勤、周末休闲，基础款百搭不挑人（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认规格参数准确</label></li><li><label><input type="checkbox"> 检查是否有夸大描述</label></li><li><label><input type="checkbox"> 确认价格正确</label></li><li><label><input type="checkbox"> 没有使用违禁词</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 确认材质描述准确</label></li><li><label><input type="checkbox"> 检查尺寸数据正确</label></li><li><label><input type="checkbox"> 无绝对化用语</label></li><li><label><input type="checkbox"> 适用人群描述合理</label></li></ul>
   </section>
 
-  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-new-arrival.html" class="related-link">零售上新推广文案</a><a href="../templates/retail-after-sales.html" class="related-link">零售售后回复</a></div></section>
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-new-arrival.html" class="related-link">零售上新推广文案</a><a href="../templates/retail-short-video.html" class="related-link">零售商品展示短视频脚本</a></div></section>
 </article>
 </main>
 <footer class="site-footer">

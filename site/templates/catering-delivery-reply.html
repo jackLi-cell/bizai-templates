@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>外卖平台客服回复 - 小商家 AI 工作流与模板库</title>
-<meta name="description" content="为外卖平台上的客户消息生成快速回复">
+<title>餐饮外卖客服回复 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="针对外卖订单问题生成客服回复话术">
 <link rel="canonical" href="https://bizai.jtlcook.com/templates/catering-delivery-reply.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<meta property="og:title" content="外卖平台客服回复 - 小商家 AI 工作流与模板库">
-<meta property="og:description" content="为外卖平台上的客户消息生成快速回复">
+<meta property="og:title" content="餐饮外卖客服回复 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="针对外卖订单问题生成客服回复话术">
 <meta property="og:url" content="https://bizai.jtlcook.com/templates/catering-delivery-reply.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"外卖平台客服回复","description":"为外卖平台上的客户消息生成快速回复","step":[{"@type":"HowToStep","text":"准备材料：客户问题、菜品信息、配送政策"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认菜品信息准确；检查是否承诺了配送时间；确认活动信息正确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户问题"},{"@type":"HowToSupply","name":"菜品信息"},{"@type":"HowToSupply","name":"配送政策"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮外卖客服回复","description":"针对外卖订单问题生成客服回复话术","step":[{"@type":"HowToStep","text":"准备材料：客户问题描述、订单情况、补偿方案"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认补偿方案可执行；检查语气是否得当；确认没有推卸责任；核实时间承诺合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户问题描述"},{"@type":"HowToSupply","name":"订单情况"},{"@type":"HowToSupply","name":"补偿方案"}]}</script>
 
 </head>
 <body>
@@ -33,47 +33,47 @@
 <main class="main-content">
 
 <nav class="breadcrumb">
-  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>外卖平台客服回复</span>
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>餐饮外卖客服回复</span>
 </nav>
 <article class="template-detail">
-  <h1>外卖平台客服回复</h1>
+  <h1>餐饮外卖客服回复</h1>
   <div class="template-meta">
     <span class="tag">餐饮与咖啡</span>
     <span class="tag">客服回复</span>
   </div>
-  <p class="template-desc">为外卖平台上的客户消息生成快速回复</p>
+  <p class="template-desc">针对外卖订单问题生成客服回复话术</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>适用场景</h3>
-      <p>客户在外卖平台咨询口味、配送、优惠等问题时使用</p>
+      <p>外卖漏送、送错、超时等问题的客服回复</p>
     </div>
     <div class="info-box">
       <h3>不适合</h3>
-      <p>不适合用于食品安全投诉的正式回复</p>
+      <p>不适合用于食品安全投诉的正式回应</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>客户问题</li><li>菜品信息</li><li>配送政策</li></ul>
+    <ul class="materials-list"><li>客户问题描述</li><li>订单情况</li><li>补偿方案</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位外卖店铺客服。请根据以下问题生成回复（30-60字）。
+      <pre class="prompt-text" id="prompt-text">你是一位餐饮店外卖客服。请针对以下客户问题生成一段回复话术。
 
-客户问题：{问题内容}
-涉及菜品：{菜品名称}
-店铺政策：{相关政策}
-当前活动：{活动信息}
+客户问题：{客户问题描述}
+订单实际情况：{订单情况}
+我们的补偿方案：{补偿方案}
 
 要求：
-1. 回复简短直接
-2. 语气友好
-3. 如有活动可顺带提及
-4. 不承诺配送时间</pre>
+1. 先道歉并表示理解
+2. 简要说明情况
+3. 提出补偿方案
+4. 语气温和专业
+5. 字数60-100字</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,29 +82,29 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{问题内容}</code></td><td>客户问了什么</td></tr><tr><td><code>{菜品名称}</code></td><td>问的哪个菜</td></tr><tr><td><code>{相关政策}</code></td><td>起送费、包装费等</td></tr><tr><td><code>{活动信息}</code></td><td>当前有什么优惠</td></tr></tbody>
+      <tbody><tr><td><code>{客户问题描述}</code></td><td>客户反馈的具体问题</td></tr><tr><td><code>{订单情况}</code></td><td>核实后的实际订单状态</td></tr><tr><td><code>{补偿方案}</code></td><td>你打算如何补偿客户</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>30-60字快速回复</p>
+    <p>60-100字客服回复</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>您好～这道酸菜鱼是微辣口味，如果不吃辣可以备注做清汤的。今天满30减5，可以看看还要加点什么凑一下哦（仅供格式参考）</p>
+      <p>亲，实在抱歉给您带来不好的体验！核实了一下，确实是我们打包时漏放了一份小食。已经安排骑手为您补送，预计20分钟内送达。另外赠送您一张5元优惠券，下次点餐可直接使用。再次说声抱歉（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认菜品信息准确</label></li><li><label><input type="checkbox"> 检查是否承诺了配送时间</label></li><li><label><input type="checkbox"> 确认活动信息正确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 确认补偿方案可执行</label></li><li><label><input type="checkbox"> 检查语气是否得当</label></li><li><label><input type="checkbox"> 确认没有推卸责任</label></li><li><label><input type="checkbox"> 核实时间承诺合理</label></li></ul>
   </section>
 
-  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-bad-review.html" class="related-link">餐饮差评回复</a><a href="../templates/catering-combo-campaign.html" class="related-link">餐饮套餐活动文案</a></div></section>
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-bad-review.html" class="related-link">餐饮差评回复</a><a href="../templates/catering-complaint.html" class="related-link">餐饮投诉处理话术</a></div></section>
 </article>
 </main>
 <footer class="site-footer">

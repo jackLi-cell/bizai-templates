@@ -13,9 +13,9 @@
   },
   {
     "id": "beauty",
-    "name": "美业与健身",
+    "name": "美容美发",
     "slug": "beauty",
-    "description": "适用于美容院、美甲店、理发店、健身房等，覆盖项目介绍、会员维护、朋友圈推广等场景"
+    "description": "适用于美容院、美甲店、理发店等美业商家，覆盖项目介绍、会员维护、朋友圈推广等场景"
   },
   {
     "id": "repair",
@@ -25,7 +25,7 @@
   },
   {
     "id": "pet",
-    "name": "宠物与本地服务",
+    "name": "宠物服务",
     "slug": "pet",
     "description": "适用于宠物店、宠物医院、宠物寄养等本地服务商家，覆盖预约确认、评价回复等场景"
   },
@@ -34,5 +34,59 @@
     "name": "教育培训",
     "slug": "education",
     "description": "适用于培训机构、兴趣班、家教中心等教育类商家，覆盖招生宣传、课程介绍等场景"
+  },
+  {
+    "id": "photography",
+    "name": "摄影工作室",
+    "slug": "photography",
+    "description": "适用于婚纱摄影、证件照、写真工作室等，覆盖套餐介绍、客片展示文案、预约引导等场景"
+  },
+  {
+    "id": "fitness",
+    "name": "健身瑜伽",
+    "slug": "fitness",
+    "description": "适用于健身房、瑜伽馆、私教工作室等，覆盖课程推广、会员续费、体验课邀约等场景"
+  },
+  {
+    "id": "hotel",
+    "name": "民宿酒店",
+    "slug": "hotel",
+    "description": "适用于民宿、精品酒店、客栈等住宿类商家，覆盖房型介绍、好评回复、入住引导等场景"
+  },
+  {
+    "id": "clinic",
+    "name": "诊所中医馆",
+    "slug": "clinic",
+    "description": "适用于口腔诊所、中医馆、康复理疗等，覆盖科普宣传、预约提醒、患者沟通等场景（不提供医疗建议）"
+  },
+  {
+    "id": "auto-repair",
+    "name": "汽车服务",
+    "slug": "auto-repair",
+    "description": "适用于汽车维修、洗车美容、轮胎店等，覆盖保养提醒、报价说明、服务项目介绍等场景"
+  },
+  {
+    "id": "flower",
+    "name": "花店绿植",
+    "slug": "flower",
+    "description": "适用于鲜花店、绿植馆、花艺工作室等，覆盖节日促销、花束介绍、养护指南等场景"
+  },
+  {
+    "id": "bakery",
+    "name": "烘焙甜品",
+    "slug": "bakery",
+    "description": "适用于面包店、蛋糕房、甜品工作室等，覆盖新品推广、定制蛋糕沟通、节日礼盒介绍等场景"
+  },
+  {
+    "id": "laundry",
+    "name": "洗衣干洗",
+    "slug": "laundry",
+    "description": "适用于洗衣店、干洗店、皮具护理等，覆盖服务说明、取送提醒、会员卡推广等场景"
+  },
+  {
+    "id": "real-estate",
+    "name": "房产中介",
+    "slug": "real-estate",
+    "description": "适用于房产中介、租房平台、物业管理等，覆盖房源描述、带看邀约、租客沟通等场景（不提供投资建议）"
   }
 ]

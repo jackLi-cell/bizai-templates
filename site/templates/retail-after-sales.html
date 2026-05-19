@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>零售售后回复 - 小商家 AI 工作流与模板库</title>
-<meta name="description" content="针对退换货、质量问题等售后咨询生成回复话术">
+<title>零售售后处理话术 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为零售店售后问题生成处理话术">
 <link rel="canonical" href="https://bizai.jtlcook.com/templates/retail-after-sales.html">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<meta property="og:title" content="零售售后回复 - 小商家 AI 工作流与模板库">
-<meta property="og:description" content="针对退换货、质量问题等售后咨询生成回复话术">
+<meta property="og:title" content="零售售后处理话术 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为零售店售后问题生成处理话术">
 <meta property="og:url" content="https://bizai.jtlcook.com/templates/retail-after-sales.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售售后回复","description":"针对退换货、质量问题等售后咨询生成回复话术","step":[{"@type":"HowToStep","text":"准备材料：问题类型、客户诉求、处理方案"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认处理方案可执行；检查承诺时间是否合理；语气是否友好；没有推卸责任"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"问题类型"},{"@type":"HowToSupply","name":"客户诉求"},{"@type":"HowToSupply","name":"处理方案"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售售后处理话术","description":"为零售店售后问题生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：售后问题、商品情况、处理方案、时间节点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：处理方案是否可执行；时间承诺是否合理；是否承担了应有责任；语气是否诚恳"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"售后问题"},{"@type":"HowToSupply","name":"商品情况"},{"@type":"HowToSupply","name":"处理方案"},{"@type":"HowToSupply","name":"时间节点"}]}</script>
 
 </head>
 <body>
@@ -33,47 +33,48 @@
 <main class="main-content">
 
 <nav class="breadcrumb">
-  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>零售售后回复</span>
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>零售售后处理话术</span>
 </nav>
 <article class="template-detail">
-  <h1>零售售后回复</h1>
+  <h1>零售售后处理话术</h1>
   <div class="template-meta">
     <span class="tag">零售与小电商</span>
-    <span class="tag">客服回复</span>
+    <span class="tag">投诉处理</span>
   </div>
-  <p class="template-desc">针对退换货、质量问题等售后咨询生成回复话术</p>
+  <p class="template-desc">为零售店售后问题生成处理话术</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>适用场景</h3>
-      <p>客户申请退换货、反馈质量问题、物流异常时使用</p>
+      <p>客户要求退换货、商品有质量问题时使用</p>
     </div>
     <div class="info-box">
       <h3>不适合</h3>
-      <p>不适合用于恶意索赔的法律应对</p>
+      <p>不适合用于批量召回通知</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>问题类型</li><li>客户诉求</li><li>处理方案</li></ul>
+    <ul class="materials-list"><li>售后问题</li><li>商品情况</li><li>处理方案</li><li>时间节点</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位零售店铺客服。请针对以下售后问题撰写回复。
+      <pre class="prompt-text" id="prompt-text">你是一位零售店售后客服。请针对以下售后问题生成处理话术。
 
-问题类型：{问题类型}
-客户诉求：{客户诉求}
-我们的处理方案：{处理方案}
+售后问题：{售后问题}
+商品情况：{商品情况}
+处理方案：{处理方案}
+处理时间：{时间节点}
 
 要求：
-1. 先表达理解和歉意
-2. 明确告知处理方案
-3. 给出处理时间预期
-4. 语气耐心友好
-5. 字数60-120字</pre>
+1. 先表示理解和歉意
+2. 说明处理方案
+3. 给出明确时间节点
+4. 语气诚恳
+5. 字数80-120字</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,29 +83,29 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{问题类型}</code></td><td>退货/换货/质量问题/物流问题等</td></tr><tr><td><code>{客户诉求}</code></td><td>客户想要什么结果</td></tr><tr><td><code>{处理方案}</code></td><td>你打算怎么解决</td></tr></tbody>
+      <tbody><tr><td><code>{售后问题}</code></td><td>客户反馈的具体问题</td></tr><tr><td><code>{商品情况}</code></td><td>商品目前的状态</td></tr><tr><td><code>{处理方案}</code></td><td>退款、换货还是维修</td></tr><tr><td><code>{时间节点}</code></td><td>预计多久处理完</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>60-120字客服回复</p>
+    <p>80-120字售后回复</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>亲，非常抱歉给您带来不好的体验。您反馈的尺码偏小问题我已经记录了，支持7天无理由退换。我这边马上给您安排换大一码的，运费我们承担。新的预计2-3天到，到时候您试试看合不合适（仅供格式参考）</p>
+      <p>亲，非常抱歉给您带来不便！看了您发的照片，确实是线头开裂的质量问题，这是我们的责任。给您两个方案：1.直接退款，运费我们承担；2.换一件新的寄给您，预计3天内收到。您看哪个方便？退货的话我这边马上发快递单给您（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认处理方案可执行</label></li><li><label><input type="checkbox"> 检查承诺时间是否合理</label></li><li><label><input type="checkbox"> 语气是否友好</label></li><li><label><input type="checkbox"> 没有推卸责任</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 处理方案是否可执行</label></li><li><label><input type="checkbox"> 时间承诺是否合理</label></li><li><label><input type="checkbox"> 是否承担了应有责任</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li></ul>
   </section>
 
-  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-product-desc.html" class="related-link">零售商品描述</a><a href="../templates/general-bad-review.html" class="related-link">通用差评回复</a></div></section>
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-customer-reply.html" class="related-link">零售客服咨询回复</a><a href="../templates/retail-review-response.html" class="related-link">零售好评/差评回复</a></div></section>
 </article>
 </main>
 <footer class="site-footer">

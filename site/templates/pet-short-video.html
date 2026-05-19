@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宠物店短视频脚本 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为宠物店短视频撰写拍摄脚本">
+<link rel="canonical" href="https://bizai.jtlcook.com/templates/pet-short-video.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<meta property="og:title" content="宠物店短视频脚本 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为宠物店短视频撰写拍摄脚本">
+<meta property="og:url" content="https://bizai.jtlcook.com/templates/pet-short-video.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店短视频脚本","description":"为宠物店短视频撰写拍摄脚本","step":[{"@type":"HowToStep","text":"准备材料：视频主题、拍摄对象、想传达的信息、时长"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：内容是否有趣；无医疗操作；拍摄方案可执行；无不当对待动物"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题"},{"@type":"HowToSupply","name":"拍摄对象"},{"@type":"HowToSupply","name":"想传达的信息"},{"@type":"HowToSupply","name":"时长"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>宠物店短视频脚本</span>
+</nav>
+<article class="template-detail">
+  <h1>宠物店短视频脚本</h1>
+  <div class="template-meta">
+    <span class="tag">宠物服务</span>
+    <span class="tag">短视频脚本</span>
+  </div>
+  <p class="template-desc">为宠物店短视频撰写拍摄脚本</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>拍摄萌宠日常、洗护过程、知识科普时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于医疗操作展示</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>视频主题</li><li>拍摄对象</li><li>想传达的信息</li><li>时长</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位宠物短视频策划。请撰写以下短视频脚本。
+
+视频主题：{视频主题}
+拍摄对象：{拍摄对象}
+想传达：{想传达的信息}
+时长：{时长}
+
+要求：
+1. 突出萌点
+2. 分镜头描述
+3. 适合竖屏
+4. 不涉及医疗操作
+5. 有趣有料</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{视频主题}</code></td><td>如「洗澡前后对比」「养宠知识」</td></tr><tr><td><code>{拍摄对象}</code></td><td>拍哪只宠物或什么内容</td></tr><tr><td><code>{想传达的信息}</code></td><td>想让观众知道什么</td></tr><tr><td><code>{时长}</code></td><td>视频时长</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>分镜头脚本</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>【开场3秒】画面：一只脏兮兮的泰迪走进店里。字幕「又一只小脏狗来报到了」
+【中间15秒】画面：洗澡过程快进，泡泡、冲水、吹毛。配欢快BGM
+【结尾5秒】画面：洗完后蓬松可爱的泰迪。字幕「同一只狗，判若两狗」。定格3秒（仅供格式参考）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 内容是否有趣</label></li><li><label><input type="checkbox"> 无医疗操作</label></li><li><label><input type="checkbox"> 拍摄方案可执行</label></li><li><label><input type="checkbox"> 无不当对待动物</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-social-media.html" class="related-link">宠物店朋友圈内容</a><a href="../templates/pet-service-description.html" class="related-link">宠物服务项目介绍</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
