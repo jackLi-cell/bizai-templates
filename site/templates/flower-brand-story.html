@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店品牌故事","description":"为花店撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：创业故事、花艺理念、选花标准、服务特色"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：故事是否真实；理念是否清晰；无虚构成分；语气是否自然"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创业故事"},{"@type":"HowToSupply","name":"花艺理念"},{"@type":"HowToSupply","name":"选花标准"},{"@type":"HowToSupply","name":"服务特色"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店品牌故事","description":"为花店撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：花店创办时间和创始人背景、开花店的初衷和个人故事、花艺理念和审美风格、花材选品标准和供应链说明、服务特色（定制服务、配送范围、企业合作等）、花店的定位和目标客群、未来愿景（简短）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：创业故事是否真实（不编造经历）；花艺理念是否能在实际服务中体现；选花标准描述是否可持续执行；是否存在绝对化表述或虚假宣传；语气是否真实自然、有个人色彩；服务特色是否与实际经营一致；整体篇幅是否适合目标展示平台"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"花店创办时间和创始人背景"},{"@type":"HowToSupply","name":"开花店的初衷和个人故事"},{"@type":"HowToSupply","name":"花艺理念和审美风格"},{"@type":"HowToSupply","name":"花材选品标准和供应链说明"},{"@type":"HowToSupply","name":"服务特色（定制服务、配送范围、企业合作等）"},{"@type":"HowToSupply","name":"花店的定位和目标客群"},{"@type":"HowToSupply","name":"未来愿景（简短）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,43 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>创业故事</li><li>花艺理念</li><li>选花标准</li><li>服务特色</li></ul>
+    <ul class="materials-list"><li>花店创办时间和创始人背景</li><li>开花店的初衷和个人故事</li><li>花艺理念和审美风格</li><li>花材选品标准和供应链说明</li><li>服务特色（定制服务、配送范围、企业合作等）</li><li>花店的定位和目标客群</li><li>未来愿景（简短）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位品牌文案助手。请为花店撰写品牌故事。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助小型花店做品牌建设的文案顾问。你深知花店品牌故事的核心不是「我们的花多好」，而是「我们为什么做这件事、怎么做这件事」。一个好的花店品牌故事应该让人感受到店主对花的热爱和对品质的坚持。现在需要为一家独立花店撰写品牌介绍，用于小红书主页、微信公众号「关于我们」或门店展示。
 
-故事：{创业故事}
-理念：{花艺理念}
-选花：{选花标准}
-特色：{服务特色}
+请根据以下信息撰写：
+花店名称：{花店名称}
+创办时间：{创办时间}
+创始人背景：{创始人背景}
+开店初衷：{开店初衷}
+花艺理念：{花艺理念}
+选花标准：{选花标准}
+服务特色：{服务特色}
+目标客群：{目标客群}
 
-要求：
-1. 字数150-250字
-2. 有美感有温度
-3. 真实不做作
-4. 适合小红书主页</pre>
+输出格式要求：
+- 总字数控制在200-300字
+- 结构：一句话定位→开店故事（为什么做）→花艺理念（怎么做）→选花标准（用什么做）→服务特色→一句话愿景
+- 故事部分要有具体细节，不要泛泛而谈
+- 理念部分要能体现在具体做法上
+
+语气与风格：
+- 真实、温暖、有个人色彩
+- 像在跟一个新朋友介绍自己的店
+- 有生活气息，不要过度商业化
+- 可以有一点点文艺，但不矫情
+
+禁止事项：
+- 不能编造虚假的创业故事
+- 不能使用「全城最美」「独一无二」等绝对化表述
+- 不能抄袭其他花店的品牌故事
+- 不能过度渲染「情怀」而忽略实际服务信息
+- 不能贬低其他花店或花材供应商
+- 不能承诺无法持续兑现的服务标准</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +101,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{创业故事}</code></td><td>为什么开花店</td></tr><tr><td><code>{花艺理念}</code></td><td>怎么看待花艺</td></tr><tr><td><code>{选花标准}</code></td><td>怎么选花材</td></tr><tr><td><code>{服务特色}</code></td><td>和别家有什么不同</td></tr></tbody>
+      <tbody><tr><td><code>{花店名称}</code></td><td>花店的名字</td></tr><tr><td><code>{创办时间}</code></td><td>什么时候开的店</td></tr><tr><td><code>{创始人背景}</code></td><td>店主之前做什么的、什么契机开了花店</td></tr><tr><td><code>{开店初衷}</code></td><td>为什么想开花店，如「觉得日常买花不应该那么贵」「想让更多人体验花艺的乐趣」</td></tr><tr><td><code>{花艺理念}</code></td><td>对花艺的理解和追求，如「自然不刻意」「少即是多」「让花回归日常」</td></tr><tr><td><code>{选花标准}</code></td><td>怎么选花材，如「每周三凌晨亲自去花市选货」「只用A级以上花材」「优先选择当季本地花材」</td></tr><tr><td><code>{服务特色}</code></td><td>区别于其他花店的特点，如「支持全定制」「企业长期用花合作」「丧葬花篮得体专业」</td></tr><tr><td><code>{目标客群}</code></td><td>主要服务什么人，如「追求生活品质的年轻女性」「有日常用花需求的家庭」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +113,22 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>开花店是因为觉得「家里有花」这件事不应该很贵。以前买花总觉得花店的花太贵太正式，其实日常用花不需要那么隆重。所以我的店主打「日常花」：价格在50-150之间，不追求稀有花材，就用当季最新鲜的花做简单好看的搭配。每周三凌晨去花市选花，只拿当天到的新鲜货。包装也尽量简单，不过度包装。希望买花变成像买水果一样日常的事，每周给自己或家人带一束回去，让生活多一点颜色（仅供格式参考）</p>
+      <p>「让买花变成像买水果一样日常的事。」
+
+我是小鹿，之前在互联网公司做设计，2021年辞职开了这家花店。原因很简单：我自己喜欢买花，但总觉得花店的花太贵太隆重，好像只有过节送人才会去买。我想做一家「日常花店」，让每周给自己买束花变成一件轻松平常的事。
+
+选花：每周三凌晨4点去花市，只拿当天到的最新鲜的货。不追求稀有进口花材，就用当季状态最好的花做搭配。
+
+理念：花不需要太多包装和仪式感，简单几枝插在瓶子里就很美。所以我们的花束走「自然系」风格，不过度包装，让花本身说话。
+
+价格：日常花束50-150元，订阅更划算。希望你路过的时候，能像买杯咖啡一样随手带束花回家。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 故事是否真实</label></li><li><label><input type="checkbox"> 理念是否清晰</label></li><li><label><input type="checkbox"> 无虚构成分</label></li><li><label><input type="checkbox"> 语气是否自然</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 创业故事是否真实（不编造经历）</label></li><li><label><input type="checkbox"> 花艺理念是否能在实际服务中体现</label></li><li><label><input type="checkbox"> 选花标准描述是否可持续执行</label></li><li><label><input type="checkbox"> 是否存在绝对化表述或虚假宣传</label></li><li><label><input type="checkbox"> 语气是否真实自然、有个人色彩</label></li><li><label><input type="checkbox"> 服务特色是否与实际经营一致</label></li><li><label><input type="checkbox"> 整体篇幅是否适合目标展示平台</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/flower-social-media.html" class="related-link">花店朋友圈内容</a></div></section>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训机构品牌故事","description":"为培训机构撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：创办初衷、教学理念、师资特色、办学成果"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：故事是否真实；无升学承诺；理念是否清晰；成果描述是否客观"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创办初衷"},{"@type":"HowToSupply","name":"教学理念"},{"@type":"HowToSupply","name":"师资特色"},{"@type":"HowToSupply","name":"办学成果"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训机构品牌故事","description":"为培训机构撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：机构创办经历和教育初衷、主营课程和教学特色、师资团队情况（人数、背景、教学年限）、教学理念和方法论、机构数据（办学年限、学生数量、续报率等）、校区地址和联系方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：创办经历是否真实可信；教学特色是否通过具体细节体现；师资信息是否准确（人数、教龄、学历）；数据是否真实可查；是否避免了空洞套话和效果承诺；地址和联系方式是否完整；语气是否沉稳专业而非夸大"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"机构创办经历和教育初衷"},{"@type":"HowToSupply","name":"主营课程和教学特色"},{"@type":"HowToSupply","name":"师资团队情况（人数、背景、教学年限）"},{"@type":"HowToSupply","name":"教学理念和方法论"},{"@type":"HowToSupply","name":"机构数据（办学年限、学生数量、续报率等）"},{"@type":"HowToSupply","name":"校区地址和联系方式"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>创办初衷</li><li>教学理念</li><li>师资特色</li><li>办学成果</li></ul>
+    <ul class="materials-list"><li>机构创办经历和教育初衷</li><li>主营课程和教学特色</li><li>师资团队情况（人数、背景、教学年限）</li><li>教学理念和方法论</li><li>机构数据（办学年限、学生数量、续报率等）</li><li>校区地址和联系方式</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位教育品牌文案助手。请撰写品牌故事。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助教育培训机构撰写品牌故事的文案顾问。你知道家长选机构最看重的是「老师好不好」「教学方法适不适合我家孩子」「这家机构能不能长期信任」。所以品牌介绍要用具体的教学细节和真实数据来建立信任，而不是堆砌教育理念和获奖证书。
 
-初衷：{创办初衷}
-理念：{教学理念}
-师资：{师资特色}
-成果：{办学成果}
+现在需要为一家培训机构撰写品牌介绍，用于官网、招生手册或大众点评店铺页面。
 
-要求：
-1. 字数150-250字
-2. 体现教育情怀
-3. 不夸大成果
-4. 不承诺升学
-5. 真实可信</pre>
+请根据以下信息撰写：
+创办经历：{创办经历}
+主营课程：{主营课程}
+师资团队：{师资团队}
+教学理念：{教学理念}
+机构数据：{机构数据}
+地址联系：{地址联系}
+
+输出格式要求：
+- 总字数140-200字
+- 开头用一句话说明机构做什么、做了多久
+- 用1-2个教学细节体现教学理念（如「每节课最后5分钟让孩子自己总结今天学了什么」而非「我们注重培养自主学习能力」）
+- 师资介绍要具体到人数、平均教龄、筛选标准
+- 用数据佐证（办学年限、学生数量、续报率）
+- 结尾写明校区位置和咨询方式
+- 语气沉稳专业，像一个认真做教育的人在介绍自己的事业
+
+禁止事项：
+- 不使用「名师荟萃」「因材施教」等空洞套话
+- 不罗列一长串获奖证书（选最有说服力的1-2个）
+- 不承诺教学效果（如「保证提分」）
+- 不贬低学校教育或其他机构
+- 不使用「改变命运」「成就未来」等过大的口号</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +97,30 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{创办初衷}</code></td><td>为什么办这个机构</td></tr><tr><td><code>{教学理念}</code></td><td>怎么看待教育</td></tr><tr><td><code>{师资特色}</code></td><td>老师有什么特别的</td></tr><tr><td><code>{办学成果}</code></td><td>做了多久、服务了多少学生</td></tr></tbody>
+      <tbody><tr><td><code>{创办经历}</code></td><td>为什么办这个机构，如「2018年创办，创始人是10年教龄的数学老师，觉得大班课照顾不到每个孩子」</td></tr><tr><td><code>{主营课程}</code></td><td>主要教什么，如「小学数学思维、初中数理化、英语口语」</td></tr><tr><td><code>{师资团队}</code></td><td>老师什么情况，如「全职教师8人，平均教龄6年，全部本科以上学历，入职需通过3轮试讲」</td></tr><tr><td><code>{教学理念}</code></td><td>怎么教的，如「小班6人，每节课有针对性练习，错题当堂讲不过夜」</td></tr><tr><td><code>{机构数据}</code></td><td>能证明靠谱的数据，如「办学6年，累计服务学生1200+，老学员续报率75%」</td></tr><tr><td><code>{地址联系}</code></td><td>在哪里、怎么联系，如「XX区XX路XX号3楼，微信：XXX」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>150-250字品牌故事</p>
+    <p>140-200字品牌介绍</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>2019年创办这个画室，是因为我自己小时候学画画的经历——老师只让临摹，从不问我想画什么。所以我想做一个「让孩子自由表达」的地方。我们不追求画得像，而是鼓励孩子用画笔讲自己的故事。五年了，从最初5个学生到现在稳定在60多人，很多孩子从幼儿园一直跟到小学毕业。我们的老师都是美院毕业，但更重要的是，他们真的喜欢和孩子相处（仅供格式参考）</p>
+      <p>我们是一家专注小学数学思维的培训机构，2018年开始做，到现在第6年了。创始人张老师之前在公立学校教了10年数学，出来做小班是因为觉得40人的大课实在顾不过来每个孩子。
+
+我们的课是这样上的：6人小班，每节课老师会根据上次的错题给每个孩子出不同的针对性练习，错题当堂讲清楚不留到下次。每月一次阶段测试，结果只发给家长本人不做排名。
+
+团队8位全职老师，平均教龄6年，入职要过3轮试讲。目前服务过1200多个学生，老学员续报率75%。XX路XX号3楼，欢迎带孩子来试听一节课感受一下。（仅供格式参考，请根据实际情况生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 故事是否真实</label></li><li><label><input type="checkbox"> 无升学承诺</label></li><li><label><input type="checkbox"> 理念是否清晰</label></li><li><label><input type="checkbox"> 成果描述是否客观</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 创办经历是否真实可信</label></li><li><label><input type="checkbox"> 教学特色是否通过具体细节体现</label></li><li><label><input type="checkbox"> 师资信息是否准确（人数、教龄、学历）</label></li><li><label><input type="checkbox"> 数据是否真实可查</label></li><li><label><input type="checkbox"> 是否避免了空洞套话和效果承诺</label></li><li><label><input type="checkbox"> 地址和联系方式是否完整</label></li><li><label><input type="checkbox"> 语气是否沉稳专业而非夸大</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/education-social-media.html" class="related-link">培训机构朋友圈内容</a></div></section>

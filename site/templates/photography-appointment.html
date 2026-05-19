@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影预约确认","description":"为摄影工作室生成预约确认话术","step":[{"@type":"HowToStep","text":"准备材料：客户称呼、拍摄套餐、拍摄时间、拍摄地点、准备事项"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：时间地点是否正确；准备事项是否完整；套餐信息准确；语气是否友好"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户称呼"},{"@type":"HowToSupply","name":"拍摄套餐"},{"@type":"HowToSupply","name":"拍摄时间"},{"@type":"HowToSupply","name":"拍摄地点"},{"@type":"HowToSupply","name":"准备事项"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影预约确认","description":"为摄影工作室生成预约确认话术","step":[{"@type":"HowToStep","text":"准备材料：客户的预约记录（套餐、时间、地点）、工作室的改期和取消政策、拍摄当天的实用准备建议清单、工作室详细地址和到达方式、当天摄影师和化妆师的排班信息、如含妆造，需要提前到达的具体时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：预约的套餐名称、日期、时间是否与实际一致；拍摄地点地址是否准确完整；妆造时间是否已计入到达时间提醒；准备事项是否实用且与该套餐相关；改期规则是否与工作室政策一致；是否存在对客户外貌的预设性描述"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户的预约记录（套餐、时间、地点）"},{"@type":"HowToSupply","name":"工作室的改期和取消政策"},{"@type":"HowToSupply","name":"拍摄当天的实用准备建议清单"},{"@type":"HowToSupply","name":"工作室详细地址和到达方式"},{"@type":"HowToSupply","name":"当天摄影师和化妆师的排班信息"},{"@type":"HowToSupply","name":"如含妆造，需要提前到达的具体时间"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>客户称呼</li><li>拍摄套餐</li><li>拍摄时间</li><li>拍摄地点</li><li>准备事项</li></ul>
+    <ul class="materials-list"><li>客户的预约记录（套餐、时间、地点）</li><li>工作室的改期和取消政策</li><li>拍摄当天的实用准备建议清单</li><li>工作室详细地址和到达方式</li><li>当天摄影师和化妆师的排班信息</li><li>如含妆造，需要提前到达的具体时间</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室客服。请生成预约确认话术。
+      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室的客户服务专员，负责在客户成功预约后发送拍摄前的确认和准备提醒。你的沟通风格专业细致又不失亲和力，能让客户感到被重视的同时获取所有必要信息。现在需要生成一条预约确认消息，通过微信发送给已预约的客户。
 
-客户：{客户称呼}
-套餐：{拍摄套餐}
-时间：{拍摄时间}
-地点：{拍摄地点}
-准备：{准备事项}
+请根据以下信息生成预约确认话术：
+客户称呼：{客户称呼}
+预约套餐名称：{套餐名称}
+拍摄日期和时间：{拍摄时间}
+拍摄地点（工作室地址/外景地点）：{拍摄地点}
+是否含妆造（如含，到达时间需提前）：{妆造安排}
+客户需自行准备的物品：{准备物品}
+拍摄当天注意事项：{注意事项}
+如需改期的联系方式和截止时间：{改期规则}
+摄影师姓名（可选）：{摄影师}
 
-要求：
-1. 信息完整
-2. 提醒准备事项
-3. 语气专业友好
-4. 字数80-120字</pre>
+输出格式要求：
+- 字数控制在100-150字
+- 开头确认预约信息（套餐+时间+地点），一目了然
+- 中间用编号列出客户需要准备和注意的事项（3-5条）
+- 结尾告知改期规则和联系方式
+- 语气温暖专业，像一位贴心的服务管家
+- 适当使用分行让信息层次清晰
+
+禁止事项：
+- 不透露其他客户的预约信息
+- 不使用过于随意的网络用语
+- 不在确认消息中追加推销其他套餐
+- 不对客户的外貌或穿搭做预设性评价
+- 不使用「亲」「宝」等过度亲昵的称呼</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{客户称呼}</code></td><td>客户怎么称呼</td></tr><tr><td><code>{拍摄套餐}</code></td><td>预约了什么套餐</td></tr><tr><td><code>{拍摄时间}</code></td><td>拍摄日期和时间</td></tr><tr><td><code>{拍摄地点}</code></td><td>在哪里拍</td></tr><tr><td><code>{准备事项}</code></td><td>客户需要准备什么</td></tr></tbody>
+      <tbody><tr><td><code>{客户称呼}</code></td><td>客户希望被怎么称呼，用预约时留的称呼即可</td></tr><tr><td><code>{套餐名称}</code></td><td>客户预约的具体套餐名称</td></tr><tr><td><code>{拍摄时间}</code></td><td>确定的拍摄日期和开始时间</td></tr><tr><td><code>{拍摄地点}</code></td><td>拍摄的具体地址，如果是外景需要写清楚集合地点</td></tr><tr><td><code>{妆造安排}</code></td><td>是否包含妆造服务，如包含需要提前多久到达</td></tr><tr><td><code>{准备物品}</code></td><td>客户需要自己准备的东西，如参考图、备用衣物、隐形眼镜等</td></tr><tr><td><code>{注意事项}</code></td><td>拍摄当天的注意事项，如穿着建议、饮食建议、作息建议</td></tr><tr><td><code>{改期规则}</code></td><td>如果客户需要改期，最晚什么时候联系，通过什么方式</td></tr><tr><td><code>{摄影师}</code></td><td>当天负责拍摄的摄影师姓名，方便客户了解</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +109,25 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>小王您好～您的日系写真套餐预约已确认：本周六上午10点，地点在我们工作室（XX路XX号3楼）。温馨提示：1.当天含妆造，可以素颜来；2.建议带一双舒适的鞋子备用；3.如果有想拍的参考图可以提前发我。拍摄约2小时，轻松愉快。周六见（仅供格式参考）</p>
+      <p>小林您好，您的预约已确认：
+套餐：日系轻写真
+时间：本周六 10:00（含妆造，请9:00到店）
+地点：XX路XX号3楼工作室
+
+拍摄准备提醒：
+1. 当天请穿开衫方便换装，避免穿套头衣物弄花妆面
+2. 如有想拍的参考图可提前发我，方便摄影师准备
+3. 前一晚早点休息，少吃重口味食物（避免面部浮肿）
+4. 隐形眼镜建议带一副备用
+
+如需改期请提前48小时联系我。周六见！（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 时间地点是否正确</label></li><li><label><input type="checkbox"> 准备事项是否完整</label></li><li><label><input type="checkbox"> 套餐信息准确</label></li><li><label><input type="checkbox"> 语气是否友好</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 预约的套餐名称、日期、时间是否与实际一致</label></li><li><label><input type="checkbox"> 拍摄地点地址是否准确完整</label></li><li><label><input type="checkbox"> 妆造时间是否已计入到达时间提醒</label></li><li><label><input type="checkbox"> 准备事项是否实用且与该套餐相关</label></li><li><label><input type="checkbox"> 改期规则是否与工作室政策一致</label></li><li><label><input type="checkbox"> 是否存在对客户外貌的预设性描述</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/photography-package-intro.html" class="related-link">摄影套餐介绍</a><a href="../templates/photography-review-response.html" class="related-link">摄影评价回复</a></div></section>

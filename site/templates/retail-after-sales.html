@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售售后处理话术","description":"为零售店售后问题生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：售后问题、商品情况、处理方案、时间节点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：处理方案是否可执行；时间承诺是否合理；是否承担了应有责任；语气是否诚恳"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"售后问题"},{"@type":"HowToSupply","name":"商品情况"},{"@type":"HowToSupply","name":"处理方案"},{"@type":"HowToSupply","name":"时间节点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售售后处理话术","description":"为零售店售后问题生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：客户反馈的具体问题和证据（照片等）、商品状况判断、经授权的处理方案（含备选）、各环节的时间节点、运费承担方案、退货地址和快递信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：处理方案是否在你的权限范围内；时间承诺是否可兑现；运费承担是否明确说明；是否给了客户选择权；是否有暗示客户责任的表述；需要客户配合的事项是否简单明了；语气是否诚恳高效"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户反馈的具体问题和证据（照片等）"},{"@type":"HowToSupply","name":"商品状况判断"},{"@type":"HowToSupply","name":"经授权的处理方案（含备选）"},{"@type":"HowToSupply","name":"各环节的时间节点"},{"@type":"HowToSupply","name":"运费承担方案"},{"@type":"HowToSupply","name":"退货地址和快递信息"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,35 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>售后问题</li><li>商品情况</li><li>处理方案</li><li>时间节点</li></ul>
+    <ul class="materials-list"><li>客户反馈的具体问题和证据（照片等）</li><li>商品状况判断</li><li>经授权的处理方案（含备选）</li><li>各环节的时间节点</li><li>运费承担方案</li><li>退货地址和快递信息</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位零售店售后客服。请针对以下售后问题生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位处理过大量售后问题的零售客服主管，深知售后处理的核心是「快速解决+不让客户觉得麻烦」。现在需要针对一位客户的售后问题生成处理话术。
 
-售后问题：{售后问题}
-商品情况：{商品情况}
-处理方案：{处理方案}
-处理时间：{时间节点}
+请根据以下信息生成话术：
+客户反馈的售后问题：{售后问题}
+商品当前状况（客户描述/照片）：{商品情况}
+经确认的处理方案：{处理方案}
+处理时间节点：{时间节点}
+需要客户配合的事项：{客户配合}
 
-要求：
-1. 先表示理解和歉意
-2. 说明处理方案
-3. 给出明确时间节点
-4. 语气诚恳
-5. 字数80-120字</pre>
+输出要求：
+- 字数100-150字
+- 开头表示理解，但不要过度道歉（一句即可）
+- 快速进入解决方案，给出2个选项让客户选择（如可能）
+- 每个方案要说清楚：客户需要做什么+我们做什么+多久完成
+- 如果需要客户寄回商品，主动说明运费承担方
+- 结尾确认客户意向，不要单方面决定
+
+禁止事项：
+- 不要求客户提供过多证明（照片够了就不要求视频）
+- 不使用「按照规定」「公司流程要求」等冷冰冰的话
+- 不暗示客户使用不当
+- 不拖延处理时间
+- 不承诺无法兑现的时间节点</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +93,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{售后问题}</code></td><td>客户反馈的具体问题</td></tr><tr><td><code>{商品情况}</code></td><td>商品目前的状态</td></tr><tr><td><code>{处理方案}</code></td><td>退款、换货还是维修</td></tr><tr><td><code>{时间节点}</code></td><td>预计多久处理完</td></tr></tbody>
+      <tbody><tr><td><code>{售后问题}</code></td><td>客户反馈的具体问题，如「衣服走线开裂」「鞋子左右脚颜色不一样」</td></tr><tr><td><code>{商品情况}</code></td><td>根据客户描述或照片判断的商品状况</td></tr><tr><td><code>{处理方案}</code></td><td>经确认可执行的方案，如「退款/换货/补发配件」</td></tr><tr><td><code>{时间节点}</code></td><td>每个环节的预计时间，如「今天发货，后天到」「退款3个工作日到账」</td></tr><tr><td><code>{客户配合}</code></td><td>需要客户做什么，如「寄回商品」「提供订单号」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +105,17 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>亲，非常抱歉给您带来不便！看了您发的照片，确实是线头开裂的质量问题，这是我们的责任。给您两个方案：1.直接退款，运费我们承担；2.换一件新的寄给您，预计3天内收到。您看哪个方便？退货的话我这边马上发快递单给您（仅供格式参考）</p>
+      <p>看了您发的照片，确实是走线开裂的质量问题，给您添麻烦了。这边给您两个方案：
+方案一：直接退款，您把衣服寄回来就行，运费我们出（发退货码给您，不用垫付）；
+方案二：换一件新的寄给您，我这边今天就发，预计后天到。
+您看哪个方便？选好了我马上安排。（仅供格式参考，实际请根据具体售后问题生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 处理方案是否可执行</label></li><li><label><input type="checkbox"> 时间承诺是否合理</label></li><li><label><input type="checkbox"> 是否承担了应有责任</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 处理方案是否在你的权限范围内</label></li><li><label><input type="checkbox"> 时间承诺是否可兑现</label></li><li><label><input type="checkbox"> 运费承担是否明确说明</label></li><li><label><input type="checkbox"> 是否给了客户选择权</label></li><li><label><input type="checkbox"> 是否有暗示客户责任的表述</label></li><li><label><input type="checkbox"> 需要客户配合的事项是否简单明了</label></li><li><label><input type="checkbox"> 语气是否诚恳高效</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-customer-reply.html" class="related-link">零售客服咨询回复</a><a href="../templates/retail-review-response.html" class="related-link">零售好评/差评回复</a></div></section>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮短视频脚本","description":"为餐厅抖音/快手账号生成短视频拍摄脚本","step":[{"@type":"HowToStep","text":"准备材料：视频主题、拍摄菜品、店铺特色、时长要求"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认拍摄内容可执行；检查是否有夸大宣传；确认时长符合平台要求；无违规承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题"},{"@type":"HowToSupply","name":"拍摄菜品"},{"@type":"HowToSupply","name":"店铺特色"},{"@type":"HowToSupply","name":"时长要求"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮短视频脚本","description":"为餐厅抖音/快手账号生成短视频拍摄脚本","step":[{"@type":"HowToStep","text":"准备材料：视频选题方向、要展示的菜品或场景、店铺的核心记忆点、目标时长、可用的拍摄设备和人员、发布平台（抖音/快手/小红书）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：开场前3秒是否有足够的视觉吸引力；每个镜头是否标注了景别和时长；拍摄方案是否在现有条件下可执行；是否有夸大宣传或虚假内容；总时长是否符合要求；字幕和口播文案是否自然；是否避免了版权风险"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频选题方向"},{"@type":"HowToSupply","name":"要展示的菜品或场景"},{"@type":"HowToSupply","name":"店铺的核心记忆点"},{"@type":"HowToSupply","name":"目标时长"},{"@type":"HowToSupply","name":"可用的拍摄设备和人员"},{"@type":"HowToSupply","name":"发布平台（抖音/快手/小红书）"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,35 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>视频主题</li><li>拍摄菜品</li><li>店铺特色</li><li>时长要求</li></ul>
+    <ul class="materials-list"><li>视频选题方向</li><li>要展示的菜品或场景</li><li>店铺的核心记忆点</li><li>目标时长</li><li>可用的拍摄设备和人员</li><li>发布平台（抖音/快手/小红书）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位短视频内容策划。请为以下餐饮短视频撰写拍摄脚本。
+      <pre class="prompt-text" id="prompt-text">你是一位专注餐饮类内容的短视频编导，熟悉抖音和快手的流量机制，知道什么样的餐饮视频容易获得推荐。现在需要为一家餐厅撰写一条短视频的拍摄脚本。
 
-视频主题：{视频主题}
-展示菜品：{拍摄菜品}
-店铺特色：{店铺特色}
-时长：{时长要求}
+请根据以下信息撰写脚本：
+视频主题/选题：{视频主题}
+要展示的菜品或场景：{拍摄菜品}
+店铺特色或记忆点：{店铺特色}
+目标时长：{时长要求}
+拍摄条件（设备/人员）：{拍摄条件}
 
-要求：
-1. 分镜头描述（开场、中间、结尾）
-2. 配文字幕建议
-3. 背景音乐风格建议
-4. 口播文案（如需要）
-5. 适合竖屏拍摄
-6. 不承诺效果</pre>
+输出要求：
+- 按「开场hook（前3秒）→ 主体内容 → 结尾引导」三段式结构
+- 每个镜头写清楚：画面内容、景别（特写/中景/全景）、运镜方式、时长
+- 标注字幕文案和口播文案（如需要）
+- 给出背景音乐风格建议（不指定具体歌曲）
+- 开场前3秒必须有一个「停留钩子」：悬念、冲突或视觉冲击
+- 所有内容基于手机竖屏拍摄
+
+禁止事项：
+- 不承诺「发了就能火」等效果
+- 不建议使用有版权风险的音乐
+- 不设计需要专业设备才能完成的镜头
+- 不包含虚假或夸大的内容
+- 不抄袭其他账号的创意</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +93,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{视频主题}</code></td><td>如「后厨揭秘」「新品试吃」</td></tr><tr><td><code>{拍摄菜品}</code></td><td>要展示的具体菜品</td></tr><tr><td><code>{店铺特色}</code></td><td>如「20年老店」「手工现做」</td></tr><tr><td><code>{时长要求}</code></td><td>如「15-30秒」「60秒以内」</td></tr></tbody>
+      <tbody><tr><td><code>{视频主题}</code></td><td>这条视频的核心选题，如「后厨揭秘」「招牌菜制作过程」「顾客反应」</td></tr><tr><td><code>{拍摄菜品}</code></td><td>要重点展示的菜品或饮品名称</td></tr><tr><td><code>{店铺特色}</code></td><td>你的店有什么记忆点，如「20年老店」「老板是退伍军人」「食材每天现采」</td></tr><tr><td><code>{时长要求}</code></td><td>目标视频时长，如「15-30秒」「60秒以内」</td></tr><tr><td><code>{拍摄条件}</code></td><td>你有什么设备和人员，如「一部手机+一个店员帮拍」「有三脚架」</td></tr></tbody>
     </table>
   </section>
 
@@ -96,16 +105,16 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【开场3秒】画面：热气腾腾的锅底特写，字幕「今天带你看看我们的招牌锅底是怎么熬的」
-【中间15秒】画面：后厨师傅加入牛骨、香料的过程，口播「每天早上6点开始熬制，足足4个小时」
-【结尾5秒】画面：成品上桌，顾客夹菜，字幕「XX路XX号，来尝尝？」配轻快BGM（仅供格式参考）</p>
+      <p>【开场hook 0-3秒】景别：大特写。画面：滚烫的油浇在鱼片上，滋滋冒烟，花椒粒在油里跳动。字幕：「这一勺油，温度必须是230度」
+【主体 3-20秒】景别：中景切特写。画面：厨师片鱼→腌制→摆盘→浇油的完整过程。口播：「鱼是每天早上鱼市拿的活鲈鱼，片好之后先用料酒和姜去腥...」
+【结尾 20-25秒】景别：中景。画面：成品端上桌，顾客夹起第一筷。字幕：「想看完整做法评论区扣1 / XX路XX号」BGM风格：轻快中国风（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认拍摄内容可执行</label></li><li><label><input type="checkbox"> 检查是否有夸大宣传</label></li><li><label><input type="checkbox"> 确认时长符合平台要求</label></li><li><label><input type="checkbox"> 无违规承诺</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 开场前3秒是否有足够的视觉吸引力</label></li><li><label><input type="checkbox"> 每个镜头是否标注了景别和时长</label></li><li><label><input type="checkbox"> 拍摄方案是否在现有条件下可执行</label></li><li><label><input type="checkbox"> 是否有夸大宣传或虚假内容</label></li><li><label><input type="checkbox"> 总时长是否符合要求</label></li><li><label><input type="checkbox"> 字幕和口播文案是否自然</label></li><li><label><input type="checkbox"> 是否避免了版权风险</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-new-product.html" class="related-link">餐饮新品上新文案</a><a href="../templates/catering-social-media.html" class="related-link">餐饮朋友圈日常内容</a></div></section>

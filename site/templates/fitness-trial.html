@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身体验课邀约","description":"为健身房生成体验课邀约话术","step":[{"@type":"HowToStep","text":"准备材料：体验课程、时间安排、地址、注意事项"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否说明免费；语气是否自然；无强迫感；信息是否完整"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"体验课程"},{"@type":"HowToSupply","name":"时间安排"},{"@type":"HowToSupply","name":"地址"},{"@type":"HowToSupply","name":"注意事项"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身体验课邀约","description":"为健身房生成体验课邀约话术","step":[{"@type":"HowToStep","text":"准备材料：本周可体验课程的完整时间表、健身房详细地址和交通指引、体验课的费用政策（确认免费且无隐性消费）、体验流程说明（让客户知道来了做什么）、健身房提供的物品清单（毛巾、水、储物柜等）、关于「不强制办卡」的明确政策"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否明确说明了体验免费且不强制办卡；是否存在对客户身材或健康的评价；准备事项是否清晰（降低行动门槛）；地址和交通信息是否准确；语气是否轻松无压力；是否给了客户充分的选择空间"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"本周可体验课程的完整时间表"},{"@type":"HowToSupply","name":"健身房详细地址和交通指引"},{"@type":"HowToSupply","name":"体验课的费用政策（确认免费且无隐性消费）"},{"@type":"HowToSupply","name":"体验流程说明（让客户知道来了做什么）"},{"@type":"HowToSupply","name":"健身房提供的物品清单（毛巾、水、储物柜等）"},{"@type":"HowToSupply","name":"关于「不强制办卡」的明确政策"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>体验课程</li><li>时间安排</li><li>地址</li><li>注意事项</li></ul>
+    <ul class="materials-list"><li>本周可体验课程的完整时间表</li><li>健身房详细地址和交通指引</li><li>体验课的费用政策（确认免费且无隐性消费）</li><li>体验流程说明（让客户知道来了做什么）</li><li>健身房提供的物品清单（毛巾、水、储物柜等）</li><li>关于「不强制办卡」的明确政策</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位健身房课程顾问。请生成体验课邀约话术。
+      <pre class="prompt-text" id="prompt-text">你是一位健身房的课程顾问，擅长用零压力的方式邀请潜在客户来体验。你深知很多人对健身房有「被推销」「跟不上」「尴尬」的顾虑，所以你的邀约话术核心是降低心理门槛、消除顾虑、强调自由选择权。现在需要生成一条体验课邀约话术，通过微信发送给有意向但还在犹豫的潜在客户。
 
-课程：{体验课程}
-时间：{时间安排}
-地址：{地址}
-注意：{注意事项}
+请根据以下信息生成邀约话术：
+可体验的课程选项：{体验课程}
+体验课时间安排：{时间安排}
+健身房地址和交通：{地址交通}
+体验是否免费：{费用说明}
+需要客户准备什么：{准备事项}
+体验流程简述：{体验流程}
+客户可能的顾虑点：{顾虑点}
 
-要求：
-1. 语气友好不强迫
-2. 降低门槛
-3. 说明免费
-4. 字数60-100字</pre>
+输出格式要求：
+- 字数控制在80-120字
+- 开头用一个轻松的问句或场景引入，不要直接说「来体验吧」
+- 针对客户可能的顾虑给出具体的消除方案
+- 明确说明是否免费、不强制办卡
+- 告知需要准备什么（降低行动成本）
+- 结尾给客户充分的选择空间
+- 语气像朋友邀请你一起去运动，轻松无压力
+
+禁止事项：
+- 不使用「你需要锻炼了」「该动起来了」等暗示对方身体有问题的话
+- 不使用「免费」作为唯一卖点反复强调
+- 不暗示不来体验就会怎样
+- 不在邀约阶段提及办卡价格
+- 不使用「名额有限」制造虚假紧迫
+- 不评价对方的身材或健康状况</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{体验课程}</code></td><td>可以体验什么课</td></tr><tr><td><code>{时间安排}</code></td><td>什么时候可以来</td></tr><tr><td><code>{地址}</code></td><td>健身房地址</td></tr><tr><td><code>{注意事项}</code></td><td>需要带什么</td></tr></tbody>
+      <tbody><tr><td><code>{体验课程}</code></td><td>可以免费体验哪些课程，列出具体名称</td></tr><tr><td><code>{时间安排}</code></td><td>体验课的具体时间，或者客户可以选择的时间段</td></tr><tr><td><code>{地址交通}</code></td><td>健身房的详细地址和最方便的到达方式</td></tr><tr><td><code>{费用说明}</code></td><td>体验是否完全免费，有没有任何隐性费用</td></tr><tr><td><code>{准备事项}</code></td><td>客户来体验需要自己准备什么（衣服、鞋子等）</td></tr><tr><td><code>{体验流程}</code></td><td>来了之后的流程是什么（签到→换衣→上课→结束）</td></tr><tr><td><code>{顾虑点}</code></td><td>这位客户可能在担心什么（跟不上、被推销、尴尬等）</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +109,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>最近有没有想运动的想法？我们这周有免费体验课：瑜伽、搏击、单车都可以选。不用有基础，穿运动服来就行，我们提供毛巾和水。地址在XX商场B1层，停车方便。来感受一下，不喜欢也没关系，就当活动活动（仅供格式参考）</p>
+      <p>最近有没有想找个地方活动活动的想法？我们这周有几节体验课可以免费来试：瑜伽、搏击、动感单车都有，零基础完全没问题，教练会照顾新人节奏。穿运动服运动鞋来就行，毛巾和水我们提供。地址在XX商场B1层，地铁3号线直达。来感受一下氛围，不喜欢也没关系，不会有人追着你办卡。有兴趣的话告诉我想试哪个课，我帮你留位置。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否说明免费</label></li><li><label><input type="checkbox"> 语气是否自然</label></li><li><label><input type="checkbox"> 无强迫感</label></li><li><label><input type="checkbox"> 信息是否完整</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否明确说明了体验免费且不强制办卡</label></li><li><label><input type="checkbox"> 是否存在对客户身材或健康的评价</label></li><li><label><input type="checkbox"> 准备事项是否清晰（降低行动门槛）</label></li><li><label><input type="checkbox"> 地址和交通信息是否准确</label></li><li><label><input type="checkbox"> 语气是否轻松无压力</label></li><li><label><input type="checkbox"> 是否给了客户充分的选择空间</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/fitness-campaign.html" class="related-link">健身活动促销文案</a><a href="../templates/fitness-membership.html" class="related-link">健身会员续费话术</a></div></section>

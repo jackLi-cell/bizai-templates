@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业预约确认话术","description":"为美容院预约确认和提醒生成话术","step":[{"@type":"HowToStep","text":"准备材料：客户称呼、预约项目、预约时间、注意事项"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：时间信息是否正确；项目名称是否准确；注意事项是否完整；语气是否得当"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户称呼"},{"@type":"HowToSupply","name":"预约项目"},{"@type":"HowToSupply","name":"预约时间"},{"@type":"HowToSupply","name":"注意事项"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业预约确认话术","description":"为美容院预约确认和提醒生成话术","step":[{"@type":"HowToStep","text":"准备材料：客户称呼、预约项目名称、预约日期和具体时间、指定美容师（如有）、到店前注意事项、消息发送时机（确认/提醒）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：预约时间是否准确（日期+具体时间）；项目名称是否正确；指定美容师是否正确；注意事项是否实用具体；是否有推销其他项目的内容；语气是否温和不强硬；是否给了改约的空间"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户称呼"},{"@type":"HowToSupply","name":"预约项目名称"},{"@type":"HowToSupply","name":"预约日期和具体时间"},{"@type":"HowToSupply","name":"指定美容师（如有）"},{"@type":"HowToSupply","name":"到店前注意事项"},{"@type":"HowToSupply","name":"消息发送时机（确认/提醒）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>客户称呼</li><li>预约项目</li><li>预约时间</li><li>注意事项</li></ul>
+    <ul class="materials-list"><li>客户称呼</li><li>预约项目名称</li><li>预约日期和具体时间</li><li>指定美容师（如有）</li><li>到店前注意事项</li><li>消息发送时机（确认/提醒）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美容院前台。请生成预约确认/提醒话术。
+      <pre class="prompt-text" id="prompt-text">你是一位美容院的资深前台，负责预约确认和到店提醒，深知一条好的提醒消息能减少爽约率并提升客户体验。现在需要生成一条预约确认或到店提醒的微信消息。
 
+请根据以下信息生成：
 客户称呼：{客户称呼}
-预约项目：{预约项目}
-预约时间：{预约时间}
-到店注意：{注意事项}
+预约的项目：{预约项目}
+预约日期和时间：{预约时间}
+预约的美容师（如指定）：{指定美容师}
+到店前需要注意/准备的事项：{注意事项}
+消息类型（预约确认/到店提醒）：{消息类型}
 
-要求：
-1. 简洁明了
-2. 包含关键信息
-3. 语气温和
-4. 提醒注意事项
-5. 字数50-80字</pre>
+输出要求：
+- 字数60-100字
+- 预约确认：确认关键信息（时间+项目+美容师）+注意事项
+- 到店提醒（前一天发）：温馨提醒时间+注意事项+改约说明
+- 注意事项要具体实用（如「建议素颜到店」「提前15分钟到」）
+- 结尾留一句「如需改时间提前说」，降低客户心理压力
+- 语气温和专业，不过度热情
+
+禁止事项：
+- 不使用「期待您的光临」等商业套话
+- 不发送过长的消息（客户不会看完）
+- 不在提醒消息中推销其他项目
+- 不使用「务必」「必须」等强硬语气
+- 不泄露其他客户的预约信息</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{客户称呼}</code></td><td>客户怎么称呼</td></tr><tr><td><code>{预约项目}</code></td><td>预约了什么服务</td></tr><tr><td><code>{预约时间}</code></td><td>具体日期和时间</td></tr><tr><td><code>{注意事项}</code></td><td>到店前需要注意什么</td></tr></tbody>
+      <tbody><tr><td><code>{客户称呼}</code></td><td>客户怎么称呼，如「李姐」「小王」</td></tr><tr><td><code>{预约项目}</code></td><td>预约了什么服务，如「面部深层补水护理」「全身精油SPA」</td></tr><tr><td><code>{预约时间}</code></td><td>具体的日期和时间，如「明天（周六）下午2:00」</td></tr><tr><td><code>{指定美容师}</code></td><td>客户指定的美容师，如「美容师小王」，没有指定则留空</td></tr><tr><td><code>{注意事项}</code></td><td>到店前需要注意什么，如「建议素颜」「不要空腹」「穿宽松衣服」</td></tr><tr><td><code>{消息类型}</code></td><td>是预约刚确认时发的，还是到店前一天的提醒</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>李姐您好～温馨提醒：您预约的明天（周六）下午2点面部护理已确认。到店前建议素颜，方便直接开始。如需改时间提前跟我说就行。明天见（仅供格式参考）</p>
+      <p>李姐您好，温馨提醒一下：您预约的明天（周六）下午2:00面部深层补水护理已确认，美容师小王为您服务。到店前建议素颜，方便直接开始操作。如果临时有事需要改时间，提前跟我说就行，随时可以调。明天见~（仅供格式参考，实际请根据具体预约信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 时间信息是否正确</label></li><li><label><input type="checkbox"> 项目名称是否准确</label></li><li><label><input type="checkbox"> 注意事项是否完整</label></li><li><label><input type="checkbox"> 语气是否得当</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 预约时间是否准确（日期+具体时间）</label></li><li><label><input type="checkbox"> 项目名称是否正确</label></li><li><label><input type="checkbox"> 指定美容师是否正确</label></li><li><label><input type="checkbox"> 注意事项是否实用具体</label></li><li><label><input type="checkbox"> 是否有推销其他项目的内容</label></li><li><label><input type="checkbox"> 语气是否温和不强硬</label></li><li><label><input type="checkbox"> 是否给了改约的空间</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-recall.html" class="related-link">美业老客户召回话术</a><a href="../templates/beauty-complaint.html" class="related-link">美业投诉处理话术</a></div></section>

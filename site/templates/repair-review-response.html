@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务评价回复","description":"为维修/家政服务的线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、服务项目、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对具体内容；语气是否诚恳；质保信息是否准确；无过度承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"服务项目"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务评价回复","description":"为维修/家政服务的线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价原文（好评或差评的完整内容）、评价星级和平台来源、客户当时的维修项目和实际情况、如果是差评：内部核实的原因和已采取的改进、可提供的后续服务或补偿方案、店铺联系方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否针对评价中提到的具体问题做了回应；差评回复是否承认了问题而非推卸；改进措施是否具体可执行；补救方案是否已获授权可兑现；语气是否诚恳而非敷衍或辩解；是否避免了模板化套话；回复长度是否适当（不过长也不过短）"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价原文（好评或差评的完整内容）"},{"@type":"HowToSupply","name":"评价星级和平台来源"},{"@type":"HowToSupply","name":"客户当时的维修项目和实际情况"},{"@type":"HowToSupply","name":"如果是差评：内部核实的原因和已采取的改进"},{"@type":"HowToSupply","name":"可提供的后续服务或补偿方案"},{"@type":"HowToSupply","name":"店铺联系方式"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>服务项目</li><li>回复重点</li></ul>
+    <ul class="materials-list"><li>评价原文（好评或差评的完整内容）</li><li>评价星级和平台来源</li><li>客户当时的维修项目和实际情况</li><li>如果是差评：内部核实的原因和已采取的改进</li><li>可提供的后续服务或补偿方案</li><li>店铺联系方式</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位维修服务运营。请针对以下评价生成回复。
+      <pre class="prompt-text" id="prompt-text">你是一位经营维修服务店铺5年的老板，在58同城和美团上积累了上千条评价。你回复评价的原则是：好评要感谢但不敷衍，差评要解决问题而不是辩解。你知道潜在客户会看评价回复来判断这家店靠不靠谱。
 
+现在需要针对一条线上评价撰写商家回复。
+
+请根据以下信息撰写：
 评价内容：{评价内容}
-星级：{评价星级}
-服务项目：{服务项目}
-回复重点：{回复重点}
+评价星级：{星级}
+评价平台：{平台}
+当时的维修项目：{维修项目}
+实际情况说明：{实际情况}
+后续方案（差评适用）：{后续方案}
 
-要求：
-1. 好评感谢，差评道歉
-2. 体现专业性
-3. 语气诚恳
-4. 字数50-80字</pre>
+输出格式要求：
+- 好评回复60-100字，差评回复100-160字
+- 好评回复：提及客户具体夸奖的点，补充一个使用小贴士，欢迎再次联系
+- 差评回复：先道歉，再针对具体问题说明原因（不推卸），然后说已经做了什么改进，最后给出补救方案和联系方式
+- 称呼用「您」，不用「亲」「宝」
+- 语气诚恳务实，像一个重视口碑的手艺人在回话
+
+禁止事项：
+- 不使用「感谢您的五星好评」等模板化开头
+- 不在差评回复中暗示客户有错
+- 不使用「我们会加强管理」等空洞承诺
+- 不在回复中透露其他客户的信息
+- 不用过长的回复（避免像在写作文）</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,26 +95,26 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价</td></tr><tr><td><code>{评价星级}</code></td><td>几星</td></tr><tr><td><code>{服务项目}</code></td><td>做了什么服务</td></tr><tr><td><code>{回复重点}</code></td><td>想强调什么</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价原文，如「师傅很准时，修得也快，就是走的时候地上有点脏」</td></tr><tr><td><code>{星级}</code></td><td>客户给了几颗星，如「4星」「2星」</td></tr><tr><td><code>{平台}</code></td><td>评价发在哪个平台，如「58同城」「美团」「大众点评」</td></tr><tr><td><code>{维修项目}</code></td><td>当时给这位客户修的什么，如「厨房水龙头更换」</td></tr><tr><td><code>{实际情况}</code></td><td>你了解到的实际情况，如「当天师傅赶下一单确实走得急，没来得及清理」</td></tr><tr><td><code>{后续方案}</code></td><td>差评情况下你打算怎么补救，如「安排师傅上门清理并检查是否有遗漏」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>50-80字评价回复</p>
+    <p>好评60-100字/差评100-160字平台回复</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>感谢您的认可！水管疏通这类问题确实需要及时处理，很高兴能帮到您。我们所有维修都有质保，后续如果有任何问题随时联系，24小时响应。祝生活愉快（仅供格式参考）</p>
+      <p>您好，感谢反馈。师傅走后现场没清理干净这个问题确实是我们的疏忽，当天单子排得紧不是借口。我已经跟师傅强调过，以后每次完工必须清理现场、请客户验收后再离开。您看方便的话加我微信XXX，我安排人上门把卫生补做了，顺便帮您检查一下水龙头用着是否正常。给您添麻烦了，抱歉。（仅供格式参考，请根据实际评价内容生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对具体内容</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li><li><label><input type="checkbox"> 质保信息是否准确</label></li><li><label><input type="checkbox"> 无过度承诺</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否针对评价中提到的具体问题做了回应</label></li><li><label><input type="checkbox"> 差评回复是否承认了问题而非推卸</label></li><li><label><input type="checkbox"> 改进措施是否具体可执行</label></li><li><label><input type="checkbox"> 补救方案是否已获授权可兑现</label></li><li><label><input type="checkbox"> 语气是否诚恳而非敷衍或辩解</label></li><li><label><input type="checkbox"> 是否避免了模板化套话</label></li><li><label><input type="checkbox"> 回复长度是否适当（不过长也不过短）</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-customer-comm.html" class="related-link">维修客户沟通话术</a><a href="../templates/repair-complaint.html" class="related-link">维修投诉处理话术</a></div></section>

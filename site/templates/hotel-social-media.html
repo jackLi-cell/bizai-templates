@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿朋友圈内容","description":"为民宿生成朋友圈日常内容","step":[{"@type":"HowToStep","text":"准备材料：今日内容、环境描述、住客故事"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：内容是否真实；无过度美化；语气是否自然；无隐私泄露"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"今日内容"},{"@type":"HowToSupply","name":"环境描述"},{"@type":"HowToSupply","name":"住客故事"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿朋友圈内容","description":"为民宿生成朋友圈日常内容","step":[{"@type":"HowToStep","text":"准备材料：当日的实景照片素材、当前的季节和天气信息、如涉及住客互动，确认隐私保护、近期想传达的信息（房间空余、新增体验等，可选）、本周的内容发布计划（避免重复）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否存在过度美化或虚假描述；是否泄露了住客的个人信息；环境描述是否与当前实际情况一致；语气是否自然，不像广告文案；字数是否在50-90字范围内；是否使用了烂俗文艺词汇"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"当日的实景照片素材"},{"@type":"HowToSupply","name":"当前的季节和天气信息"},{"@type":"HowToSupply","name":"如涉及住客互动，确认隐私保护"},{"@type":"HowToSupply","name":"近期想传达的信息（房间空余、新增体验等，可选）"},{"@type":"HowToSupply","name":"本周的内容发布计划（避免重复）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>今日内容</li><li>环境描述</li><li>住客故事</li></ul>
+    <ul class="materials-list"><li>当日的实景照片素材</li><li>当前的季节和天气信息</li><li>如涉及住客互动，确认隐私保护</li><li>近期想传达的信息（房间空余、新增体验等，可选）</li><li>本周的内容发布计划（避免重复）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位民宿主的朋友圈运营助手。请生成日常内容。
+      <pre class="prompt-text" id="prompt-text">你是一位民宿主的朋友圈内容助手，帮助民宿主用真实、有生活气息的内容展示民宿的日常。你的内容策略是：不过度美化，不刻意营销，而是通过真实的场景、季节变化、住客互动来让读者感受到这个地方的氛围和温度。现在需要生成一条适合配合实景照片发布的朋友圈文案。
 
-内容：{今日内容}
-环境：{环境描述}
-故事：{住客故事}
+请根据以下信息创作：
+发布类型（环境日常/住客故事/季节变化/美食分享/周边发现）：{发布类型}
+具体内容描述：{内容描述}
+当前季节和天气：{季节天气}
+配图内容：{配图说明}
+是否涉及住客（需确认隐私）：{住客隐私}
+想顺带传达的信息（可选）：{附带信息}
 
-要求：
-1. 字数50-80字
-2. 有生活气息
-3. 展示真实环境
-4. 不过度美化
-5. 适合配实景照片</pre>
+输出格式要求：
+- 字数严格控制在50-90字
+- 用一个具体的感官细节开头（看到的、听到的、闻到的）
+- 文案要能让读者「感受到」这个地方此刻的状态
+- 如涉及住客，不透露任何可识别信息
+- 语气像民宿主人在记录生活日常，自然不做作
+- 不使用hashtag
+
+禁止事项：
+- 不使用「岁月静好」「诗和远方」等烂俗文艺词
+- 不过度美化实际环境（如把阴天说成「朦胧美」）
+- 不透露住客的个人信息（姓名、职业、来自哪里）
+- 不使用「快来」「约起」等直接推销用语
+- 不编造没有发生的住客故事</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{今日内容}</code></td><td>今天想分享什么</td></tr><tr><td><code>{环境描述}</code></td><td>当前的环境状态</td></tr><tr><td><code>{住客故事}</code></td><td>有趣的住客互动</td></tr></tbody>
+      <tbody><tr><td><code>{发布类型}</code></td><td>这条朋友圈的内容类型：日常环境、住客互动、季节变化、自制美食、周边新发现</td></tr><tr><td><code>{内容描述}</code></td><td>具体要发什么内容</td></tr><tr><td><code>{季节天气}</code></td><td>当前的季节和天气状况</td></tr><tr><td><code>{配图说明}</code></td><td>准备配什么照片</td></tr><tr><td><code>{住客隐私}</code></td><td>如果涉及住客，是否已确认不会泄露隐私</td></tr><tr><td><code>{附带信息}</code></td><td>是否想顺带提一下房间空余或特色体验，不需要则留空</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>今早雾气还没散，山间像铺了一层纱。昨天入住的一对小情侣，早上5点就起来等日出了，拍了好多照片。这种「特意早起看风景」的仪式感，大概就是旅行的意义吧（仅供格式参考）</p>
+      <p>今早雾气还没散，山间像蒙了一层纱。院子里的桂花开了，泡茶的时候能闻到若有若无的香气。昨天入住的客人一大早就端着杯子坐在露台上发呆，说这种安静在城里买不到。秋天的山里确实舒服，不冷不热刚刚好。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 内容是否真实</label></li><li><label><input type="checkbox"> 无过度美化</label></li><li><label><input type="checkbox"> 语气是否自然</label></li><li><label><input type="checkbox"> 无隐私泄露</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否存在过度美化或虚假描述</label></li><li><label><input type="checkbox"> 是否泄露了住客的个人信息</label></li><li><label><input type="checkbox"> 环境描述是否与当前实际情况一致</label></li><li><label><input type="checkbox"> 语气是否自然，不像广告文案</label></li><li><label><input type="checkbox"> 字数是否在50-90字范围内</label></li><li><label><input type="checkbox"> 是否使用了烂俗文艺词汇</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/hotel-room-description.html" class="related-link">民宿房型介绍</a><a href="../templates/hotel-seasonal.html" class="related-link">民宿季节性推广</a></div></section>

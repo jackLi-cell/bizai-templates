@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修季节性保养提醒","description":"为汽修店生成季节性保养提醒和优惠","step":[{"@type":"HowToStep","text":"准备材料：季节主题、保养建议、优惠活动、预约方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：建议是否合理；无恐吓营销；优惠信息准确；无强制消费"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"季节主题"},{"@type":"HowToSupply","name":"保养建议"},{"@type":"HowToSupply","name":"优惠活动"},{"@type":"HowToSupply","name":"预约方式"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修季节性保养提醒","description":"为汽修店生成季节性保养提醒和优惠","step":[{"@type":"HowToStep","text":"准备材料：当前季节对应的车辆保养重点项目、各项目的技术标准和检查方法（简化版）、门店季节性活动内容和价格、活动时间和预约方式、不同车型的差异化建议（如有）、免费检查项目清单（如有）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：检查项目和判断标准是否技术准确；是否存在恐吓营销或夸大风险的表述；活动价格是否明确（免费检查是否真免费）；是否明确说明「不强制消费」；不同车型的差异是否有提示；预约方式是否清晰；是否有虚假紧迫感或限量话术"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"当前季节对应的车辆保养重点项目"},{"@type":"HowToSupply","name":"各项目的技术标准和检查方法（简化版）"},{"@type":"HowToSupply","name":"门店季节性活动内容和价格"},{"@type":"HowToSupply","name":"活动时间和预约方式"},{"@type":"HowToSupply","name":"不同车型的差异化建议（如有）"},{"@type":"HowToSupply","name":"免费检查项目清单（如有）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,41 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>季节主题</li><li>保养建议</li><li>优惠活动</li><li>预约方式</li></ul>
+    <ul class="materials-list"><li>当前季节对应的车辆保养重点项目</li><li>各项目的技术标准和检查方法（简化版）</li><li>门店季节性活动内容和价格</li><li>活动时间和预约方式</li><li>不同车型的差异化建议（如有）</li><li>免费检查项目清单（如有）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位汽修店营销助手。请生成季节性保养提醒。
+      <pre class="prompt-text" id="prompt-text">你是一位汽修店的技术顾问，每到换季都会提醒老客户做相应的车辆检查。你的风格是「给建议不给压力」，让车主自己判断需不需要来。现在需要撰写一条换季保养提醒，发布在朋友圈或客户群。
 
-主题：{季节主题}
-建议：{保养建议}
-优惠：{优惠活动}
-预约：{预约方式}
+请根据以下信息撰写：
+季节主题：{季节主题}
+重点检查项目：{检查项目}
+各项目的判断标准：{判断标准}
+门店活动：{门店活动}
+活动价格：{活动价格}
+活动时间：{活动时间}
+预约方式：{预约方式}
 
-要求：
-1. 字数80-120字
-2. 实用建议为主
-3. 不恐吓营销
-4. 优惠信息清晰
-5. 适合朋友圈</pre>
+输出格式要求：
+- 总字数控制在120-170字
+- 结构：季节引入（一句话）→需要关注的项目（列点，每项附简单判断标准）→门店活动介绍→预约方式
+- 检查项目要给出车主自己能初步判断的标准
+- 活动信息占比不超过30%
+
+语气与风格：
+- 像一位老朋友在提醒你「该检查车了」
+- 给出具体的自检方法，让车主觉得有用
+- 活动介绍要强调「检查免费/不强制消费」
+
+禁止事项：
+- 不能使用恐吓话术（如「不检查出了事后悔都来不及」）
+- 不能虚构安全隐患来促成到店
+- 不能使用「限时」「仅剩」等虚假紧迫感
+- 不能强制捆绑消费（检查归检查，维修另算）
+- 不能承诺「包过年检」等不确定结果
+- 不能贬低不做保养的车主</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +99,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{季节主题}</code></td><td>如「入冬检车」「长假前检查」</td></tr><tr><td><code>{保养建议}</code></td><td>季节性保养建议</td></tr><tr><td><code>{优惠活动}</code></td><td>有什么优惠</td></tr><tr><td><code>{预约方式}</code></td><td>怎么预约</td></tr></tbody>
+      <tbody><tr><td><code>{季节主题}</code></td><td>当前季节的保养主题，如「入冬前全车检查」「夏季高温防护」「长假前出行检查」</td></tr><tr><td><code>{检查项目}</code></td><td>该季节需要重点关注的项目，如「防冻液冰点、电瓶电压、轮胎花纹深度、暖风系统」</td></tr><tr><td><code>{判断标准}</code></td><td>车主自己能初步判断的标准，如「防冻液低于MIN线要补充」「轮胎花纹低于1.6mm该换」</td></tr><tr><td><code>{门店活动}</code></td><td>季节性活动内容，如「冬季20项免费安全检查」</td></tr><tr><td><code>{活动价格}</code></td><td>活动的收费情况，如「检查免费，发现问题另行报价，不强制维修」</td></tr><tr><td><code>{活动时间}</code></td><td>活动持续时间，如「即日起至12月31日」</td></tr><tr><td><code>{预约方式}</code></td><td>如何预约，如「微信发我车型+方便的时间就行」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +111,20 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>国庆准备自驾出行的朋友，出发前建议做个全车检查：轮胎气压和磨损、刹车系统、机油液位、灯光。本月推出「出行安检套餐」：全车20项检查+胎压调整+玻璃水加注，只收工时费50元。发现问题再报价，不强制消费。提前预约不排队，电话/微信都行（仅供格式参考）</p>
+      <p>气温降到10度以下了，提醒各位车主关注几个冬季重点项目：
+1. 防冻液：看膨胀壶液位是否在MIN-MAX之间，低了要补
+2. 电瓶：冷车启动明显变慢的话，电瓶可能该换了（一般寿命3-4年）
+3. 轮胎：花纹深度低于1.6mm建议更换，冬天路滑制动距离会更长
+4. 雨刮：刮不干净就换，冬天结冰会加速老化
+
+本月推出「冬季安全检查」：以上项目免费检测，20分钟出结果。发现问题当场报价，修不修您说了算。微信预约不排队。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 建议是否合理</label></li><li><label><input type="checkbox"> 无恐吓营销</label></li><li><label><input type="checkbox"> 优惠信息准确</label></li><li><label><input type="checkbox"> 无强制消费</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 检查项目和判断标准是否技术准确</label></li><li><label><input type="checkbox"> 是否存在恐吓营销或夸大风险的表述</label></li><li><label><input type="checkbox"> 活动价格是否明确（免费检查是否真免费）</label></li><li><label><input type="checkbox"> 是否明确说明「不强制消费」</label></li><li><label><input type="checkbox"> 不同车型的差异是否有提示</label></li><li><label><input type="checkbox"> 预约方式是否清晰</label></li><li><label><input type="checkbox"> 是否有虚假紧迫感或限量话术</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/auto-repair-social-media.html" class="related-link">汽修店朋友圈内容</a><a href="../templates/auto-repair-service-intro.html" class="related-link">汽车服务项目介绍</a></div></section>

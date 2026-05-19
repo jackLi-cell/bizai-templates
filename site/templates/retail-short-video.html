@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售商品展示短视频脚本","description":"为零售商品拍摄短视频撰写脚本","step":[{"@type":"HowToStep","text":"准备材料：商品名称、展示重点、目标平台、视频时长"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认商品信息准确；拍摄方案是否可执行；无夸大宣传；时长符合平台要求"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"商品名称"},{"@type":"HowToSupply","name":"展示重点"},{"@type":"HowToSupply","name":"目标平台"},{"@type":"HowToSupply","name":"视频时长"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售商品展示短视频脚本","description":"为零售商品拍摄短视频撰写脚本","step":[{"@type":"HowToStep","text":"准备材料：商品名称和核心卖点、目标发布平台、期望视频时长、可用的拍摄设备和人员、目标受众画像、商品的可视化亮点（颜色、质感、功能等）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：前3秒是否有足够的停留吸引力；卖点展示是否用了对比或演示方式；每个镜头是否在现有条件下可拍摄；是否有效果承诺或绝对化用语；视频风格是否匹配目标平台；总时长是否符合要求；字幕文案是否简洁有力"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"商品名称和核心卖点"},{"@type":"HowToSupply","name":"目标发布平台"},{"@type":"HowToSupply","name":"期望视频时长"},{"@type":"HowToSupply","name":"可用的拍摄设备和人员"},{"@type":"HowToSupply","name":"目标受众画像"},{"@type":"HowToSupply","name":"商品的可视化亮点（颜色、质感、功能等）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>商品名称</li><li>展示重点</li><li>目标平台</li><li>视频时长</li></ul>
+    <ul class="materials-list"><li>商品名称和核心卖点</li><li>目标发布平台</li><li>期望视频时长</li><li>可用的拍摄设备和人员</li><li>目标受众画像</li><li>商品的可视化亮点（颜色、质感、功能等）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位短视频内容策划。请为以下零售商品撰写短视频脚本。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助实体零售店拍摄商品展示视频的内容策划，熟悉抖音和小红书的内容调性差异。现在需要为一件商品撰写短视频拍摄脚本。
 
+请根据以下信息撰写：
 商品名称：{商品名称}
-展示重点：{展示重点}
-目标平台：{目标平台}
+要重点展示的卖点：{展示重点}
+目标发布平台：{目标平台}
 视频时长：{视频时长}
+拍摄条件：{拍摄条件}
+目标受众：{目标受众}
 
-要求：
-1. 分镜头描述
-2. 包含口播或字幕文案
-3. 突出商品卖点
-4. 适合竖屏拍摄
-5. 不承诺效果</pre>
+输出要求：
+- 按「hook前3秒→卖点展示→行动引导」三段结构
+- 每个镜头标注：画面内容、景别、时长、字幕/口播
+- 前3秒必须有一个让人停下来的点（视觉冲击/痛点共鸣/好奇心）
+- 卖点展示要用「对比」或「演示」的方式，不要只是说
+- 抖音风格偏快节奏+强视觉，小红书偏慢节奏+真实感
+- 所有镜头基于手机竖屏可完成
+
+禁止事项：
+- 不设计需要专业设备的镜头
+- 不承诺「穿了显瘦」「用了变白」等效果
+- 不使用有版权风险的音乐
+- 不抄袭其他账号的创意
+- 不使用绝对化用语</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{商品名称}</code></td><td>要展示的商品</td></tr><tr><td><code>{展示重点}</code></td><td>如「面料质感」「上身效果」</td></tr><tr><td><code>{目标平台}</code></td><td>抖音、快手还是小红书</td></tr><tr><td><code>{视频时长}</code></td><td>15秒、30秒或60秒</td></tr></tbody>
+      <tbody><tr><td><code>{商品名称}</code></td><td>要拍摄的商品</td></tr><tr><td><code>{展示重点}</code></td><td>最想让观众看到的卖点，如「面料质感」「上身效果」「功能演示」</td></tr><tr><td><code>{目标平台}</code></td><td>发布在哪里：抖音（快节奏）、小红书（真实感）、快手（接地气）</td></tr><tr><td><code>{视频时长}</code></td><td>目标时长，如「15-20秒」「30秒」「60秒」</td></tr><tr><td><code>{拍摄条件}</code></td><td>你有什么设备和人员，如「手机+三脚架」「有模特」「只有商品没有人」</td></tr><tr><td><code>{目标受众}</code></td><td>想吸引什么样的人看，如「25-35岁通勤女性」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,16 +106,16 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【开场3秒】画面：衣服平铺特写，手摸面料展示质感。字幕「摸起来是这种软糯感」
-【中间10秒】画面：模特上身展示正面、侧面、背面。字幕「160cm/50kg穿M码的效果」
-【结尾5秒】画面：多色展示+价格标签。字幕「三个色都好看，XX元到手」（仅供格式参考）</p>
+      <p>【hook 0-3秒】画面：手摸面料特写，指尖按压展示弹性。字幕：「220g的棉T摸起来是什么手感」
+【卖点展示 3-15秒】镜头1：模特上身正面/侧面/背面各2秒。字幕：「160cm 50kg / M码上身效果」。镜头2：拉扯面料展示弹性+洗后对比（新旧放一起）。字幕：「洗了10次 vs 新的」
+【行动引导 15-20秒】画面：三个颜色平铺展示+价格标签。字幕：「三色可选 / XX元 / 主页链接」BGM：轻快电子风（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认商品信息准确</label></li><li><label><input type="checkbox"> 拍摄方案是否可执行</label></li><li><label><input type="checkbox"> 无夸大宣传</label></li><li><label><input type="checkbox"> 时长符合平台要求</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 前3秒是否有足够的停留吸引力</label></li><li><label><input type="checkbox"> 卖点展示是否用了对比或演示方式</label></li><li><label><input type="checkbox"> 每个镜头是否在现有条件下可拍摄</label></li><li><label><input type="checkbox"> 是否有效果承诺或绝对化用语</label></li><li><label><input type="checkbox"> 视频风格是否匹配目标平台</label></li><li><label><input type="checkbox"> 总时长是否符合要求</label></li><li><label><input type="checkbox"> 字幕文案是否简洁有力</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-social-media.html" class="related-link">零售店朋友圈运营</a><a href="../templates/retail-new-arrival.html" class="related-link">零售上新推广文案</a></div></section>

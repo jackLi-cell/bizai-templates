@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮朋友圈日常内容","description":"为餐饮店生成朋友圈日常运营内容","step":[{"@type":"HowToStep","text":"准备材料：今日推荐菜品、天气或时令、店铺近况、想传达的氛围"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：检查语气是否自然；确认没有硬广感；检查信息准确性"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"今日推荐菜品"},{"@type":"HowToSupply","name":"天气或时令"},{"@type":"HowToSupply","name":"店铺近况"},{"@type":"HowToSupply","name":"想传达的氛围"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮朋友圈日常内容","description":"为餐饮店生成朋友圈日常运营内容","step":[{"@type":"HowToStep","text":"准备材料：今天想提及的菜品或食材、当天天气/时令信息、店里真实发生的小事或细节、想营造的氛围感、准备搭配的照片"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：读起来是否像真实的朋友圈而非广告；菜品信息是否自然融入而非硬推；提到的事情是否真实发生过；语气是否自然放松；是否避免了商业话术和促销感；配图建议是否与文案匹配"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"今天想提及的菜品或食材"},{"@type":"HowToSupply","name":"当天天气/时令信息"},{"@type":"HowToSupply","name":"店里真实发生的小事或细节"},{"@type":"HowToSupply","name":"想营造的氛围感"},{"@type":"HowToSupply","name":"准备搭配的照片"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>今日推荐菜品</li><li>天气或时令</li><li>店铺近况</li><li>想传达的氛围</li></ul>
+    <ul class="materials-list"><li>今天想提及的菜品或食材</li><li>当天天气/时令信息</li><li>店里真实发生的小事或细节</li><li>想营造的氛围感</li><li>准备搭配的照片</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位餐饮店老板的朋友圈运营助手。请生成一条朋友圈日常内容。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助餐饮老板经营个人朋友圈的内容顾问，深知朋友圈营销的核心是「不像营销」。现在需要生成一条餐饮店老板的朋友圈日常内容，目标是让顾客觉得这家店有人情味、值得常来。
 
-今日推荐：{今日推荐菜品}
-天气/时令：{天气或时令}
-店铺近况：{店铺近况}
-想传达的氛围：{想传达的氛围}
+请根据以下信息生成内容：
+今日想推的菜品或饮品：{今日推荐菜品}
+当前天气或时令节气：{天气或时令}
+店里今天发生的事：{店铺近况}
+想给顾客的感觉：{想传达的氛围}
+配图计划：{配图说明}
 
-要求：
-1. 字数50-80字
-2. 像朋友聊天一样自然
-3. 可以带1-2个表情
-4. 不要硬推销
-5. 让人觉得这家店有温度</pre>
+输出要求：
+- 字数50-90字
+- 像在跟朋友随口聊天，不要有「文案感」
+- 菜品信息要自然融入生活场景中，不要单独推荐
+- 可以分享一个小细节、小故事或小感悟
+- 最多用1个表情符号，不要堆砌
+- 不要用hashtag或话题标签
+- 结尾可以是一个开放式的互动（问句或邀请）
+
+禁止事项：
+- 不要出现「欢迎光临」「期待您的到来」等商业话术
+- 不要罗列菜品和价格
+- 不要用感叹号超过1个
+- 不要写成广告或促销信息
+- 不要编造没发生的事情</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{今日推荐菜品}</code></td><td>今天想推的菜或饮品</td></tr><tr><td><code>{天气或时令}</code></td><td>如「降温了」「入秋」</td></tr><tr><td><code>{店铺近况}</code></td><td>如「刚到一批新鲜食材」</td></tr><tr><td><code>{想传达的氛围}</code></td><td>如「温暖」「轻松」</td></tr></tbody>
+      <tbody><tr><td><code>{今日推荐菜品}</code></td><td>今天想让顾客知道的菜品，不一定要直接推荐，可以是「今天到了新鲜的XX」</td></tr><tr><td><code>{天气或时令}</code></td><td>当天的天气或节气，如「突然降温」「立冬」「连续下了三天雨」</td></tr><tr><td><code>{店铺近况}</code></td><td>店里今天发生的真实小事，如「新来了个学徒」「早市买到了好食材」</td></tr><tr><td><code>{想传达的氛围}</code></td><td>想让看到的人有什么感觉，如「温暖踏实」「轻松有趣」「用心做事」</td></tr><tr><td><code>{配图说明}</code></td><td>准备配什么照片，如「后厨备菜的照片」「今天的汤的特写」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>降温了，今天熬了一锅姜丝红糖水，到店的朋友免费喝一杯暖暖。顺便说一句，新到的羊肉已经炖上了，晚市供应，想吃的记得早点来（仅供格式参考）</p>
+      <p>降温了，早上来店里第一件事是熬了一锅姜丝红糖水，给自己和店员一人来了一碗。突然想到可以给今天到店的客人也备上，反正成本也没多少。另外新到的内蒙羊肉今天开始供应，炖了一下午了，晚市应该刚好入味。（仅供格式参考，实际请根据你的店铺情况生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 检查语气是否自然</label></li><li><label><input type="checkbox"> 确认没有硬广感</label></li><li><label><input type="checkbox"> 检查信息准确性</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 读起来是否像真实的朋友圈而非广告</label></li><li><label><input type="checkbox"> 菜品信息是否自然融入而非硬推</label></li><li><label><input type="checkbox"> 提到的事情是否真实发生过</label></li><li><label><input type="checkbox"> 语气是否自然放松</label></li><li><label><input type="checkbox"> 是否避免了商业话术和促销感</label></li><li><label><input type="checkbox"> 配图建议是否与文案匹配</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-combo-campaign.html" class="related-link">餐饮套餐活动文案</a><a href="../templates/catering-short-video.html" class="related-link">餐饮短视频脚本</a></div></section>

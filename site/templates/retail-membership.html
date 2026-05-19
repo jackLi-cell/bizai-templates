@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售会员招募文案","description":"为零售店会员制度撰写招募文案","step":[{"@type":"HowToStep","text":"准备材料：会员类型、入会条件、会员权益、有效期"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：入会条件是否清晰；权益是否可兑现；有效期信息准确；无夸大承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"会员类型"},{"@type":"HowToSupply","name":"入会条件"},{"@type":"HowToSupply","name":"会员权益"},{"@type":"HowToSupply","name":"有效期"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售会员招募文案","description":"为零售店会员制度撰写招募文案","step":[{"@type":"HowToStep","text":"准备材料：会员类型和等级设置、入会条件、完整权益清单、有效期和续期规则、积分规则（如有）、当前入会赠品（如有）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：算账逻辑是否合理（客户可验证）；权益是否全部可兑现；入会条件是否清晰；有效期和续期规则是否说明；积分规则是否容易理解；是否有隐瞒的限制条件；语气是否实在不套路"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"会员类型和等级设置"},{"@type":"HowToSupply","name":"入会条件"},{"@type":"HowToSupply","name":"完整权益清单"},{"@type":"HowToSupply","name":"有效期和续期规则"},{"@type":"HowToSupply","name":"积分规则（如有）"},{"@type":"HowToSupply","name":"当前入会赠品（如有）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>会员类型</li><li>入会条件</li><li>会员权益</li><li>有效期</li></ul>
+    <ul class="materials-list"><li>会员类型和等级设置</li><li>入会条件</li><li>完整权益清单</li><li>有效期和续期规则</li><li>积分规则（如有）</li><li>当前入会赠品（如有）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位零售店会员运营助手。请为以下会员制度撰写招募文案。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助实体零售店设计会员体系的运营顾问，擅长用「算账」的方式让客户自己得出「办卡划算」的结论。现在需要为零售店的会员制度撰写招募文案。
 
-会员类型：{会员类型}
+请根据以下信息撰写：
+会员类型和名称：{会员类型}
 入会条件：{入会条件}
-会员权益：{会员权益}
+会员权益（逐条）：{会员权益}
 有效期：{有效期}
+当前入会赠品（如有）：{入会赠品}
+积分规则（如有）：{积分规则}
 
-要求：
-1. 字数80-120字
-2. 突出会员专属感
-3. 权益说明清晰
-4. 不承诺收益
-5. 适合店内展示和朋友圈</pre>
+输出要求：
+- 字数100-140字
+- 开头用一个「算账」的方式切入，让客户看到具体能省多少
+- 权益部分每条用一句话说清楚，不要堆砌形容词
+- 入会条件和有效期要明确标注，不藏着
+- 如果有积分规则，用一个简单例子说明（如「买100元积100分，1000分换XX」）
+- 语气像店员在跟常客推荐，实在不套路
+
+禁止事项：
+- 不使用「尊享」「至尊」「贵宾」等过度包装的词
+- 不隐瞒使用限制
+- 不承诺「保证回本」
+- 不使用「限时办理」制造虚假紧迫（除非确实限时）
+- 不把会员卡包装成「投资」</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{会员类型}</code></td><td>如「银卡会员」「VIP会员」</td></tr><tr><td><code>{入会条件}</code></td><td>如「消费满500元」「免费注册」</td></tr><tr><td><code>{会员权益}</code></td><td>具体享受的优惠和服务</td></tr><tr><td><code>{有效期}</code></td><td>会员资格有效期</td></tr></tbody>
+      <tbody><tr><td><code>{会员类型}</code></td><td>会员卡的名称和等级，如「银卡会员」「VIP会员」</td></tr><tr><td><code>{入会条件}</code></td><td>怎么成为会员，如「消费满500自动升级」「免费注册」「缴纳99元年费」</td></tr><tr><td><code>{会员权益}</code></td><td>逐条列出权益，如「全场9折、生日双倍积分、新品优先通知」</td></tr><tr><td><code>{有效期}</code></td><td>会员资格的有效期和续期规则</td></tr><tr><td><code>{入会赠品}</code></td><td>现在办卡送什么，没有则留空</td></tr><tr><td><code>{积分规则}</code></td><td>积分怎么攒、怎么用，如「消费1元积1分，1000分换50元券」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>成为我们的会员，购物更划算！消费满500元即可免费升级银卡会员，享受：全场9折、生日月双倍积分、新品优先试穿、每月会员专属折扣日。积分可兑换商品或抵扣现金。有效期一年，自动续期。详情咨询店员（仅供格式参考）</p>
+      <p>算了一下，你每个月来买两三次，平均每次消费200左右。办张会员卡的话，全场常年9折，一个月就能省40-60块，三个月就回本了。会员还有几个额外福利：生日月双倍积分、新品到货优先通知、每月8号会员专属折上折。消费满500自动升级，不用额外花钱办卡。积分1000分可以换50元无门槛券。有效期一年，到期前会提醒你。（仅供格式参考，实际请根据你的会员体系生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 入会条件是否清晰</label></li><li><label><input type="checkbox"> 权益是否可兑现</label></li><li><label><input type="checkbox"> 有效期信息准确</label></li><li><label><input type="checkbox"> 无夸大承诺</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 算账逻辑是否合理（客户可验证）</label></li><li><label><input type="checkbox"> 权益是否全部可兑现</label></li><li><label><input type="checkbox"> 入会条件是否清晰</label></li><li><label><input type="checkbox"> 有效期和续期规则是否说明</label></li><li><label><input type="checkbox"> 积分规则是否容易理解</label></li><li><label><input type="checkbox"> 是否有隐瞒的限制条件</label></li><li><label><input type="checkbox"> 语气是否实在不套路</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-seasonal-promo.html" class="related-link">零售换季促销文案</a><a href="../templates/retail-social-media.html" class="related-link">零售店朋友圈运营</a></div></section>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修客户沟通话术","description":"为维修师傅生成与客户沟通的话术","step":[{"@type":"HowToStep","text":"准备材料：沟通场景、客户情况、需要传达的信息、注意事项"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：信息是否完整；语气是否专业；时间是否明确；注意事项是否提到"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"沟通场景"},{"@type":"HowToSupply","name":"客户情况"},{"@type":"HowToSupply","name":"需要传达的信息"},{"@type":"HowToSupply","name":"注意事项"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修客户沟通话术","description":"为维修师傅生成与客户沟通的话术","step":[{"@type":"HowToStep","text":"准备材料：沟通场景（上门前确认/维修中说明/完工交代/回访跟进）、客户的具体问题或故障描述、需要告知客户的关键信息、可能遇到的客户疑问及应对、维修师傅的姓名和联系方式、特殊注意事项（如需要客户配合的事项）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：话术是否简短易记，适合口头表达；是否包含了所有需要传达的关键信息；需要客户配合的事项是否说明了原因；是否准备了应对客户追问的回答；语气是否自然礼貌而非机械化；是否避免了对客户的负面评价；费用相关信息是否透明诚实"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"沟通场景（上门前确认/维修中说明/完工交代/回访跟进）"},{"@type":"HowToSupply","name":"客户的具体问题或故障描述"},{"@type":"HowToSupply","name":"需要告知客户的关键信息"},{"@type":"HowToSupply","name":"可能遇到的客户疑问及应对"},{"@type":"HowToSupply","name":"维修师傅的姓名和联系方式"},{"@type":"HowToSupply","name":"特殊注意事项（如需要客户配合的事项）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,38 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>沟通场景</li><li>客户情况</li><li>需要传达的信息</li><li>注意事项</li></ul>
+    <ul class="materials-list"><li>沟通场景（上门前确认/维修中说明/完工交代/回访跟进）</li><li>客户的具体问题或故障描述</li><li>需要告知客户的关键信息</li><li>可能遇到的客户疑问及应对</li><li>维修师傅的姓名和联系方式</li><li>特殊注意事项（如需要客户配合的事项）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位维修服务沟通助手。请生成以下场景的客户沟通话术。
+      <pre class="prompt-text" id="prompt-text">你是一位带过20多个学徒的资深维修师傅，现在要帮年轻师傅准备跟客户沟通的话术。你知道很多师傅技术好但不善言辞，容易让客户产生误解，所以你的话术要简洁明了、让客户安心。
 
+现在需要根据不同沟通场景，生成维修师傅可以直接使用的沟通话术。
+
+请根据以下信息撰写：
 沟通场景：{沟通场景}
-客户情况：{客户情况}
-需要传达：{需要传达的信息}
-注意事项：{注意事项}
+客户问题描述：{客户问题}
+需要传达的关键信息：{关键信息}
+师傅姓名：{师傅姓名}
+需要客户配合的事项：{配合事项}
+可能的客户追问：{可能追问}
 
-要求：
-1. 语气专业友好
-2. 信息简洁明了
-3. 让客户放心
-4. 字数60-100字
-5. 适合电话或微信沟通</pre>
+输出格式要求：
+- 总字数100-160字
+- 根据场景生成对应话术：上门前（确认地址时间+需要准备什么）、维修中（发现新问题时怎么说）、完工后（交代注意事项+质保说明）
+- 每句话不超过30字，方便师傅记忆和口头表达
+- 包含一句应对客户可能追问的预备回答
+- 如果需要客户配合（如断电、清理空间），要说明原因
+- 语气礼貌但不啰嗦，像一个干活利索的师傅在说话
+
+禁止事项：
+- 不使用书面化的长句子
+- 不使用「您好，我是XX公司的XX」这种机械开场白
+- 不在维修中途随意加价而不解释原因
+- 不对客户的使用习惯做负面评价
+- 不承诺「肯定没问题」等绝对保证</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +96,30 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{沟通场景}</code></td><td>如「上门前确认」「维修中说明」</td></tr><tr><td><code>{客户情况}</code></td><td>客户的基本情况</td></tr><tr><td><code>{需要传达的信息}</code></td><td>要告诉客户什么</td></tr><tr><td><code>{注意事项}</code></td><td>有什么需要客户配合的</td></tr></tbody>
+      <tbody><tr><td><code>{沟通场景}</code></td><td>什么时候说这些话，如「上门前电话确认」「维修过程中发现额外问题」「完工后交代使用注意事项」「维修后第三天回访」</td></tr><tr><td><code>{客户问题}</code></td><td>客户报修的内容，如「洗衣机甩干时异响很大」「马桶一直流水」</td></tr><tr><td><code>{关键信息}</code></td><td>这次沟通必须让客户知道的事，如「需要更换轴承，费用会增加80元」「修好后24小时内不要大量用水」</td></tr><tr><td><code>{师傅姓名}</code></td><td>上门师傅怎么称呼，如「小张」「王师傅」</td></tr><tr><td><code>{配合事项}</code></td><td>需要客户提前做的事，如「把洗衣机周围清理出50厘米空间方便操作」「确保家里有人」</td></tr><tr><td><code>{可能追问}</code></td><td>客户可能会问什么，如「为什么比电话里说的贵」「能不能保证不再坏」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>60-100字沟通话术</p>
+    <p>100-160字场景化沟通话术</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>王先生您好，我是XX维修的小李，您预约的热水器维修我下午2点左右到。麻烦您提前把热水器电源关掉，我到了会先检查一下故障原因，确认维修方案和费用后再动手，您放心（仅供格式参考）</p>
+      <p>【上门前确认话术】
+张姐您好，我是小王，下午两点左右到您家看洗衣机。麻烦您提前把洗衣机周围清一下，我需要挪出来检查底部。另外到时候需要断电操作，大概半小时用不了电，您安排一下。
+
+如果客户问「大概多少钱」：电话里不好确定，到了检查完当面跟您报价，不同意可以不修，不收检查费。
+（仅供格式参考，请根据实际场景生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 信息是否完整</label></li><li><label><input type="checkbox"> 语气是否专业</label></li><li><label><input type="checkbox"> 时间是否明确</label></li><li><label><input type="checkbox"> 注意事项是否提到</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 话术是否简短易记，适合口头表达</label></li><li><label><input type="checkbox"> 是否包含了所有需要传达的关键信息</label></li><li><label><input type="checkbox"> 需要客户配合的事项是否说明了原因</label></li><li><label><input type="checkbox"> 是否准备了应对客户追问的回答</label></li><li><label><input type="checkbox"> 语气是否自然礼貌而非机械化</label></li><li><label><input type="checkbox"> 是否避免了对客户的负面评价</label></li><li><label><input type="checkbox"> 费用相关信息是否透明诚实</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-quotation.html" class="related-link">维修报价说明</a><a href="../templates/repair-review-response.html" class="related-link">维修服务评价回复</a></div></section>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务季节性提醒","description":"为维修服务生成季节性保养提醒和促销","step":[{"@type":"HowToStep","text":"准备材料：季节/节日、保养项目、优惠内容、预约方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：季节建议是否合理；优惠信息准确；预约方式是否畅通；无恐吓营销"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"季节/节日"},{"@type":"HowToSupply","name":"保养项目"},{"@type":"HowToSupply","name":"优惠内容"},{"@type":"HowToSupply","name":"预约方式"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务季节性提醒","description":"为维修服务生成季节性保养提醒和促销","step":[{"@type":"HowToStep","text":"准备材料：当前季节或即将到来的季节、该季节常见的家电/设施问题、预防性保养建议（客户可自行操作的）、需要专业人员处理的检查项目、优惠活动内容（如有）、活动时间和预约方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：季节与当前时间是否匹配；自行保养建议是否安全且可操作；是否避免了恐吓式营销；专业服务的引出是否自然而非硬广；优惠信息是否真实可兑现；预约方式是否清晰完整"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"当前季节或即将到来的季节"},{"@type":"HowToSupply","name":"该季节常见的家电/设施问题"},{"@type":"HowToSupply","name":"预防性保养建议（客户可自行操作的）"},{"@type":"HowToSupply","name":"需要专业人员处理的检查项目"},{"@type":"HowToSupply","name":"优惠活动内容（如有）"},{"@type":"HowToSupply","name":"活动时间和预约方式"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>季节/节日</li><li>保养项目</li><li>优惠内容</li><li>预约方式</li></ul>
+    <ul class="materials-list"><li>当前季节或即将到来的季节</li><li>该季节常见的家电/设施问题</li><li>预防性保养建议（客户可自行操作的）</li><li>需要专业人员处理的检查项目</li><li>优惠活动内容（如有）</li><li>活动时间和预约方式</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位维修服务营销助手。请生成季节性保养提醒文案。
+      <pre class="prompt-text" id="prompt-text">你是一位善于用季节变化来提醒客户做保养的维修服务经营者。你发现很多故障其实可以通过换季保养来预防，而客户往往想不到这一点。你的季节性提醒既要提供真正有用的保养知识，也要自然地引出你的服务。
 
-季节/节日：{季节或节日}
-保养项目：{保养项目}
-优惠内容：{优惠内容}
+现在需要生成一条换季保养提醒或季节性促销内容，用于朋友圈或群发消息。
+
+请根据以下信息撰写：
+当前/即将到来的季节：{季节}
+该季节高发问题：{高发问题}
+客户可自行操作的保养建议：{自行保养}
+需要专业检查的项目：{专业检查}
+优惠活动（如有）：{优惠活动}
 预约方式：{预约方式}
 
-要求：
-1. 字数80-120字
-2. 结合季节需求
-3. 提供实用建议
-4. 优惠信息清晰
-5. 适合朋友圈发布</pre>
+输出格式要求：
+- 总字数100-150字
+- 开头用一个季节相关的生活场景引入（如「最近降温了」「梅雨季快到了」）
+- 中间给出1-2条客户能自己做的简单保养建议，体现你是在帮忙而非纯推销
+- 然后自然引出「有些检查需要专业工具」，带出你的服务
+- 如果有优惠活动，用一句话带过，不要喧宾夺主
+- 结尾留预约方式
+- 语气像一个懂行的邻居在善意提醒
+
+禁止事项：
+- 不使用「不检查就会出大问题」等恐吓式表述
+- 不夸大不保养的后果
+- 不把简单问题说复杂来制造需求
+- 不使用「限时」「仅剩X名额」等虚假紧迫感
+- 不在非促销内容中硬塞广告</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +97,26 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{季节或节日}</code></td><td>如「入冬」「春节前」</td></tr><tr><td><code>{保养项目}</code></td><td>建议做什么保养</td></tr><tr><td><code>{优惠内容}</code></td><td>有什么优惠</td></tr><tr><td><code>{预约方式}</code></td><td>怎么预约</td></tr></tbody>
+      <tbody><tr><td><code>{季节}</code></td><td>当前或即将到来的季节，如「夏季来临前（5月）」「入冬前（10月底）」「梅雨季（6月）」</td></tr><tr><td><code>{高发问题}</code></td><td>这个季节容易出什么问题，如「空调长期不用首次开机有异味、制冷效果差」「水管冻裂」</td></tr><tr><td><code>{自行保养}</code></td><td>客户自己能做的简单维护，如「把空调滤网拆下来用水冲洗晾干」「室外水管包上保温棉」</td></tr><tr><td><code>{专业检查}</code></td><td>需要师傅来做的项目，如「检查冷媒压力是否正常」「检测电路有无老化」</td></tr><tr><td><code>{优惠活动}</code></td><td>如果有活动写具体内容，如「5月空调清洗+检测套餐原价200现价150」，没有就写「无」</td></tr><tr><td><code>{预约方式}</code></td><td>客户怎么预约，如「微信发消息或打电话138XXXX预约时间」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>80-120字季节性文案</p>
+    <p>100-150字季节性提醒文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>入冬了，提醒大家检查一下家里的暖气和热水器！去年冬天好几家因为没提前检修，大冷天热水器罢工的。本月推出冬季检修套餐：暖气排气+热水器清洗，原价200，套餐价150。提前预约还送水龙头过滤芯一个。微信预约即可，师傅上门时间你定（仅供格式参考）</p>
+      <p>最近气温上30了，很多人准备开空调。开机前建议先做两件事：一是把室内机滤网拆下来冲洗一下（积了一冬天的灰），二是开机先运行半小时看看制冷是否正常。如果发现出风不凉或者有异味散不掉，可能是冷媒不足或蒸发器该深度清洗了，这个需要专业设备来处理。最近预约空调检测的比较多，需要的话提前微信约个时间。（仅供格式参考，请根据实际季节和服务生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 季节建议是否合理</label></li><li><label><input type="checkbox"> 优惠信息准确</label></li><li><label><input type="checkbox"> 预约方式是否畅通</label></li><li><label><input type="checkbox"> 无恐吓营销</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 季节与当前时间是否匹配</label></li><li><label><input type="checkbox"> 自行保养建议是否安全且可操作</label></li><li><label><input type="checkbox"> 是否避免了恐吓式营销</label></li><li><label><input type="checkbox"> 专业服务的引出是否自然而非硬广</label></li><li><label><input type="checkbox"> 优惠信息是否真实可兑现</label></li><li><label><input type="checkbox"> 预约方式是否清晰完整</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-social-media.html" class="related-link">维修服务朋友圈内容</a><a href="../templates/repair-service-flow.html" class="related-link">维修服务流程介绍</a></div></section>

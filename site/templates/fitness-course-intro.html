@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身课程介绍","description":"为健身房/瑜伽馆课程撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：课程名称、适合人群、课程内容、时长频次、教练介绍"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无减重承诺；教练资质是否真实；时间信息准确；适合人群描述合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"课程名称"},{"@type":"HowToSupply","name":"适合人群"},{"@type":"HowToSupply","name":"课程内容"},{"@type":"HowToSupply","name":"时长频次"},{"@type":"HowToSupply","name":"教练介绍"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身课程介绍","description":"为健身房/瑜伽馆课程撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：课程的完整教学大纲和动作清单、教练的资质证书信息（认证机构、证书编号）、课程的强度分级标准和依据、不适合人群的医学建议（最好咨询过专业人士）、实际上课时间表和班容量、会员对该课程的真实反馈（用于描述训练感受）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：强度分级是否与课程实际难度匹配；不适合人群和安全提示是否标注完整；教练资质信息是否真实可查；是否存在减重承诺或卡路里数据；是否存在身材焦虑性描述；上课时间和班型信息是否准确；建议频次是否合理（不过度）"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"课程的完整教学大纲和动作清单"},{"@type":"HowToSupply","name":"教练的资质证书信息（认证机构、证书编号）"},{"@type":"HowToSupply","name":"课程的强度分级标准和依据"},{"@type":"HowToSupply","name":"不适合人群的医学建议（最好咨询过专业人士）"},{"@type":"HowToSupply","name":"实际上课时间表和班容量"},{"@type":"HowToSupply","name":"会员对该课程的真实反馈（用于描述训练感受）"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,43 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>课程名称</li><li>适合人群</li><li>课程内容</li><li>时长频次</li><li>教练介绍</li></ul>
+    <ul class="materials-list"><li>课程的完整教学大纲和动作清单</li><li>教练的资质证书信息（认证机构、证书编号）</li><li>课程的强度分级标准和依据</li><li>不适合人群的医学建议（最好咨询过专业人士）</li><li>实际上课时间表和班容量</li><li>会员对该课程的真实反馈（用于描述训练感受）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位健身行业文案助手。请为以下课程撰写介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位在健身行业深耕5年的课程产品经理，熟悉团课设计逻辑、运动科学基础知识和会员的真实需求。你擅长用专业但不晦涩的语言描述课程价值，既能让小白理解课程内容，又能让有经验的训练者判断是否适合自己。现在需要为一家健身房/瑜伽馆的课程撰写介绍文案，用于公众号、小程序课表或海报展示。
 
-课程：{课程名称}
-适合：{适合人群}
-内容：{课程内容}
-时长：{时长频次}
-教练：{教练介绍}
+请根据以下信息撰写课程介绍：
+课程名称：{课程名称}
+课程类型（有氧/力量/柔韧/综合）：{课程类型}
+强度分级（L1入门/L2进阶/L3高强度）：{强度分级}
+适合人群（年龄范围、体能基础要求）：{适合人群}
+不适合人群（健康禁忌）：{不适合人群}
+课程主要内容和训练动作：{课程内容}
+单节时长：{课程时长}
+建议训练频次：{建议频次}
+教练姓名及资质：{教练信息}
+上课时间和班型（大班/小班/私教）：{上课安排}
+训练后的身体感受描述：{训练感受}
 
-要求：
-1. 字数100-150字
-2. 突出课程特色
-3. 不承诺减重/塑形效果
-4. 语气积极专业
-5. 适合公众号或海报</pre>
+输出格式要求：
+- 字数控制在130-180字
+- 开头用一句话说明这节课「练什么」和「适合谁」
+- 中间描述课程内容时，提及2-3个具体动作名称，让读者有画面感
+- 标注强度分级和安全提示
+- 介绍教练时只写资质和经验，不写外貌
+- 结尾给出上课时间和预约方式
+- 语气专业积极，像一位靠谱的教练在介绍自己的课
+
+禁止事项：
+- 不承诺具体的减重数字（如「一个月瘦10斤」）
+- 不使用「燃烧XX卡路里」等无法保证的数据
+- 不制造身材焦虑（如「告别大象腿」「甩掉拜拜肉」）
+- 不使用「魔鬼训练」「地狱级」等恐吓性描述
+- 不建议有特定疾病的人群参加而不提醒就医
+- 不贬低其他运动方式</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +101,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{课程名称}</code></td><td>如「燃脂搏击」「阴瑜伽」</td></tr><tr><td><code>{适合人群}</code></td><td>什么基础的人适合</td></tr><tr><td><code>{课程内容}</code></td><td>主要练什么</td></tr><tr><td><code>{时长频次}</code></td><td>一节多久、建议频次</td></tr><tr><td><code>{教练介绍}</code></td><td>教练的资质</td></tr></tbody>
+      <tbody><tr><td><code>{课程名称}</code></td><td>课程的正式名称，如「燃脂搏击」「流瑜伽」「功能性训练」</td></tr><tr><td><code>{课程类型}</code></td><td>这节课主要训练什么能力：有氧耐力、肌肉力量、柔韧性还是综合体能</td></tr><tr><td><code>{强度分级}</code></td><td>L1适合零基础、L2适合有一定基础、L3适合训练经验丰富的人</td></tr><tr><td><code>{适合人群}</code></td><td>什么年龄段、什么体能水平的人适合上这节课</td></tr><tr><td><code>{不适合人群}</code></td><td>哪些健康状况的人不建议参加，需要标注安全提示</td></tr><tr><td><code>{课程内容}</code></td><td>课程中会做哪些动作或训练模块</td></tr><tr><td><code>{课程时长}</code></td><td>一节课多长时间（含热身和放松）</td></tr><tr><td><code>{建议频次}</code></td><td>建议每周上几次这个课</td></tr><tr><td><code>{教练信息}</code></td><td>教练的姓名、持有的认证资质、教学年限</td></tr><tr><td><code>{上课安排}</code></td><td>每周几上课、什么时间、多少人一班</td></tr><tr><td><code>{训练感受}</code></td><td>上完课后身体通常会有什么感受（如微微出汗、肌肉酸胀等）</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +113,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【燃脂搏击课】适合想提升心肺、释放压力的你。课程融合拳击、踢腿等动作，配合音乐节奏，全程45分钟，运动量适中。零基础友好，教练会分解每个动作。建议每周2-3次，坚持一段时间体能会有明显变化。教练小王：ACE认证私教，5年团课经验。每周二四六晚7:30，小班制12人（仅供格式参考）</p>
+      <p>【燃脂搏击 L2】一节释放压力、提升心肺的全身有氧课。融合直拳、摆拳、前踢等基础搏击动作，配合音乐节奏完成组合，全程45分钟，中等偏上强度。适合有一定运动基础的成年人（18-55岁），膝关节有伤或心血管疾病患者请先咨询医生。教练：李明，ACE-CPT认证，搏击教学经验4年。建议每周2-3次，课后会有5分钟拉伸放松。每周二四六晚19:30，小班制15人，约满截止。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无减重承诺</label></li><li><label><input type="checkbox"> 教练资质是否真实</label></li><li><label><input type="checkbox"> 时间信息准确</label></li><li><label><input type="checkbox"> 适合人群描述合理</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 强度分级是否与课程实际难度匹配</label></li><li><label><input type="checkbox"> 不适合人群和安全提示是否标注完整</label></li><li><label><input type="checkbox"> 教练资质信息是否真实可查</label></li><li><label><input type="checkbox"> 是否存在减重承诺或卡路里数据</label></li><li><label><input type="checkbox"> 是否存在身材焦虑性描述</label></li><li><label><input type="checkbox"> 上课时间和班型信息是否准确</label></li><li><label><input type="checkbox"> 建议频次是否合理（不过度）</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/fitness-campaign.html" class="related-link">健身活动促销文案</a><a href="../templates/fitness-membership.html" class="related-link">健身会员续费话术</a></div></section>

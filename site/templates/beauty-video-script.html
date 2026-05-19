@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业短视频脚本","description":"为美容院抖音/小红书短视频撰写脚本","step":[{"@type":"HowToStep","text":"准备材料：视频主题、展示项目、目标受众、时长"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无医疗效果承诺；内容是否专业准确；拍摄方案可执行；无绝对化用语"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题"},{"@type":"HowToSupply","name":"展示项目"},{"@type":"HowToSupply","name":"目标受众"},{"@type":"HowToSupply","name":"时长"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业短视频脚本","description":"为美容院抖音/小红书短视频撰写脚本","step":[{"@type":"HowToStep","text":"准备材料：视频选题方向、要展示的项目或知识点、目标受众画像、期望时长、出镜人员安排、拍摄场地和设备"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否有任何效果承诺或医疗用语；知识点是否专业准确；前3秒是否有足够吸引力；拍摄方案是否在现有条件下可执行；是否涉及客户隐私；总时长是否符合要求；结尾引导是否自然不硬推"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频选题方向"},{"@type":"HowToSupply","name":"要展示的项目或知识点"},{"@type":"HowToSupply","name":"目标受众画像"},{"@type":"HowToSupply","name":"期望时长"},{"@type":"HowToSupply","name":"出镜人员安排"},{"@type":"HowToSupply","name":"拍摄场地和设备"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>视频主题</li><li>展示项目</li><li>目标受众</li><li>时长</li></ul>
+    <ul class="materials-list"><li>视频选题方向</li><li>要展示的项目或知识点</li><li>目标受众画像</li><li>期望时长</li><li>出镜人员安排</li><li>拍摄场地和设备</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美业短视频策划。请撰写以下短视频脚本。
+      <pre class="prompt-text" id="prompt-text">你是一位专注美业内容的短视频编导，熟悉抖音和小红书上美容类内容的流量规律，知道什么样的内容既能展示专业度又不会踩广告法红线。现在需要为美容院撰写一条短视频脚本。
 
-视频主题：{视频主题}
-展示项目：{展示项目}
-目标受众：{目标受众}
-时长：{时长}
+请根据以下信息撰写：
+视频主题/选题：{视频主题}
+要展示的项目或知识点：{展示项目}
+目标受众（想吸引什么客户）：{目标受众}
+视频时长：{时长}
+出镜人员：{出镜人员}
+拍摄场地：{拍摄场地}
 
-要求：
-1. 分镜头描述
-2. 口播文案自然
-3. 不承诺效果
-4. 不使用医疗用语
-5. 适合竖屏拍摄</pre>
+输出要求：
+- 按「hook前3秒→知识/过程展示→结尾引导」三段结构
+- 每个镜头标注：画面内容、景别、时长、字幕/口播
+- 前3秒用一个「痛点问题」或「视觉冲击」抓住注意力
+- 知识分享类：讲一个具体的护肤误区或正确做法
+- 过程展示类：展示操作步骤，让观众「看到」专业度
+- 结尾不要硬推销，用「想了解更多可以私信」的软引导
+
+禁止事项：
+- 绝对不能承诺效果（如「做完白三度」「一次见效」）
+- 不使用医疗用语（治疗、治愈、药物）
+- 不展示客户面部（除非获得授权）
+- 不贬低其他美容院或产品
+- 不使用有版权风险的音乐
+- 不设计需要专业影视设备的镜头</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +95,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{视频主题}</code></td><td>如「护理过程展示」「护肤小知识」</td></tr><tr><td><code>{展示项目}</code></td><td>要展示的服务项目</td></tr><tr><td><code>{目标受众}</code></td><td>想吸引什么样的客户</td></tr><tr><td><code>{时长}</code></td><td>视频时长要求</td></tr></tbody>
+      <tbody><tr><td><code>{视频主题}</code></td><td>这条视频的核心选题，如「正确洁面方法」「护理过程展示」「换季护肤建议」</td></tr><tr><td><code>{展示项目}</code></td><td>要展示的项目或知识点，如「清洁护理的操作步骤」「防晒的正确用量」</td></tr><tr><td><code>{目标受众}</code></td><td>想吸引什么样的客户，如「25-35岁有护肤需求的女性」</td></tr><tr><td><code>{时长}</code></td><td>视频时长，如「30秒」「60秒」</td></tr><tr><td><code>{出镜人员}</code></td><td>谁出镜，如「美容师本人」「用手部/模型演示」</td></tr><tr><td><code>{拍摄场地}</code></td><td>在哪里拍，如「美容室内」「前台」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,16 +107,16 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【开场3秒】画面：美容师准备工具的特写。字幕「很多姐妹问我，清洁到底怎么做才对？」
-【中间20秒】画面：清洁步骤展示（卸妆→洁面→深清）。口播「第一步卸妆一定要乳化充分，第二步洁面不要超过60秒...」
-【结尾5秒】画面：做完后的皮肤状态。字幕「定期深清，皮肤会慢慢稳定下来」（仅供格式参考）</p>
+      <p>【hook 0-3秒】画面：美容师手上挤出洁面乳的特写。口播：「90%的人洗脸这一步就做错了」
+【知识展示 3-25秒】镜头1（中景）：美容师在模型上演示正确洁面手法。口播：「洁面乳要先在手心打出泡沫，上脸之后用指腹画圈，T区多按几下，全脸不超过60秒...」镜头2（特写）：计时器显示60秒。字幕：「超过60秒反而会破坏皮脂膜」
+【结尾 25-30秒】画面：美容师对镜头微笑。字幕：「还有什么护肤问题，评论区问我」BGM：轻柔钢琴曲风格（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无医疗效果承诺</label></li><li><label><input type="checkbox"> 内容是否专业准确</label></li><li><label><input type="checkbox"> 拍摄方案可执行</label></li><li><label><input type="checkbox"> 无绝对化用语</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否有任何效果承诺或医疗用语</label></li><li><label><input type="checkbox"> 知识点是否专业准确</label></li><li><label><input type="checkbox"> 前3秒是否有足够吸引力</label></li><li><label><input type="checkbox"> 拍摄方案是否在现有条件下可执行</label></li><li><label><input type="checkbox"> 是否涉及客户隐私</label></li><li><label><input type="checkbox"> 总时长是否符合要求</label></li><li><label><input type="checkbox"> 结尾引导是否自然不硬推</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-social-media.html" class="related-link">美业朋友圈日常</a><a href="../templates/beauty-project-intro.html" class="related-link">美容项目介绍文案</a></div></section>

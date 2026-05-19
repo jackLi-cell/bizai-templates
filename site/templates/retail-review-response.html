@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售好评/差评回复","description":"为网店评价生成商家回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、商品名称、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对具体评价内容；语气是否得当；差评是否给出解决方案；无攻击性语言"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"商品名称"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售好评/差评回复","description":"为网店评价生成商家回复","step":[{"@type":"HowToStep","text":"准备材料：评价原文、评价星级、商品名称和基本信息、你想传达的重点信息、差评的解决方案（如适用）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对评价中的具体内容；好评回复是否有实质性的补充信息；差评回复是否给出了具体解决方案；是否避免了模板化的开头和结尾；语气是否与评价星级匹配；是否有攻击性或暗示客户有错的表述；回复对其他潜在买家是否有正面影响"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价原文"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"商品名称和基本信息"},{"@type":"HowToSupply","name":"你想传达的重点信息"},{"@type":"HowToSupply","name":"差评的解决方案（如适用）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,35 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>商品名称</li><li>回复重点</li></ul>
+    <ul class="materials-list"><li>评价原文</li><li>评价星级</li><li>商品名称和基本信息</li><li>你想传达的重点信息</li><li>差评的解决方案（如适用）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位网店运营。请针对以下客户评价生成商家回复。
+      <pre class="prompt-text" id="prompt-text">你是一位管理过多家网店评价区的运营专员，深知评价回复既是给评价者看的，更是给其他潜在买家看的。现在需要针对一条客户评价生成商家回复。
 
-评价内容：{评价内容}
+请根据以下信息生成回复：
+客户评价原文：{评价内容}
 评价星级：{评价星级}
-商品名称：{商品名称}
-回复重点：{回复重点}
+评价涉及的商品：{商品名称}
+你想在回复中传达的重点：{回复重点}
+如是差评，可提供的解决方案：{解决方案}
 
-要求：
-1. 好评回复表示感谢，差评回复先道歉
-2. 针对评价内容做具体回应
-3. 不要模板化
-4. 字数50-100字
-5. 差评要给出解决方案</pre>
+输出要求：
+- 字数60-120字
+- 好评回复：感谢要具体（针对客户提到的点），顺带补充一个使用/搭配建议
+- 差评回复：先道歉+认责，给出具体解决方案，邀请私聊处理
+- 中评回复：感谢反馈，针对不满意的点做解释或改进说明
+- 回复要让其他浏览评价的买家看到你是负责任的商家
+- 每条回复的开头和结构都要不同，避免模板感
+
+禁止事项：
+- 不使用千篇一律的「感谢您的好评」开头
+- 不在差评回复中暗示客户有问题
+- 不使用「亲亲」等过度亲昵称呼
+- 不在回复中透露其他客户的信息
+- 不使用「我们会继续努力」等空话结尾</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +93,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价文字</td></tr><tr><td><code>{评价星级}</code></td><td>1-5星</td></tr><tr><td><code>{商品名称}</code></td><td>被评价的商品</td></tr><tr><td><code>{回复重点}</code></td><td>你想在回复中强调什么</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价原文</td></tr><tr><td><code>{评价星级}</code></td><td>1-5星，决定回复的基调</td></tr><tr><td><code>{商品名称}</code></td><td>被评价的具体商品</td></tr><tr><td><code>{回复重点}</code></td><td>你想通过回复传达什么，如「强调版型优势」「解释色差原因」</td></tr><tr><td><code>{解决方案}</code></td><td>如果是差评，你能提供什么解决方案，如「退换货」「补发」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +105,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>感谢您的认可！很高兴这件外套的版型适合您～您提到的口袋设计确实是我们特意加的，方便放手机。秋冬搭配高领毛衣也很好看，欢迎下次再来选购。有任何穿着问题随时联系客服（仅供格式参考）</p>
+      <p>看到您说这件外套「版型比预期好」特别开心，选这个版型的时候确实打了好几版样才定下来的。您提到的内侧口袋设计是我们特意加的，放手机刚好。入秋之后搭配高领毛衣或卫衣都很合适，有搭配问题随时找客服聊。（仅供格式参考，实际请根据具体评价生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对具体评价内容</label></li><li><label><input type="checkbox"> 语气是否得当</label></li><li><label><input type="checkbox"> 差评是否给出解决方案</label></li><li><label><input type="checkbox"> 无攻击性语言</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对评价中的具体内容</label></li><li><label><input type="checkbox"> 好评回复是否有实质性的补充信息</label></li><li><label><input type="checkbox"> 差评回复是否给出了具体解决方案</label></li><li><label><input type="checkbox"> 是否避免了模板化的开头和结尾</label></li><li><label><input type="checkbox"> 语气是否与评价星级匹配</label></li><li><label><input type="checkbox"> 是否有攻击性或暗示客户有错的表述</label></li><li><label><input type="checkbox"> 回复对其他潜在买家是否有正面影响</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-customer-reply.html" class="related-link">零售客服咨询回复</a><a href="../templates/retail-after-sales.html" class="related-link">零售售后处理话术</a></div></section>

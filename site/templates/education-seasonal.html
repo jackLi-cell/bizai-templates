@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训机构季节性招生","description":"为培训机构节假日或寒暑假招生撰写文案","step":[{"@type":"HowToStep","text":"准备材料：假期/季节、课程安排、优惠政策、报名截止"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无焦虑营销；优惠信息准确；截止日期正确；无成绩承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"假期/季节"},{"@type":"HowToSupply","name":"课程安排"},{"@type":"HowToSupply","name":"优惠政策"},{"@type":"HowToSupply","name":"报名截止"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训机构季节性招生","description":"为培训机构节假日或寒暑假招生撰写文案","step":[{"@type":"HowToStep","text":"准备材料：招生季节（寒假/暑假/春季/秋季）、该季节的课程安排和特色、适合的学生群体、时间安排（开课时间、上课频次）、优惠政策（如有）、报名方式和咨询渠道"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否避免了焦虑话术和效果承诺；课程安排和时间是否清晰明确；适合的学生群体是否描述准确；优惠政策是否真实且条件清楚；是否提供了低门槛的体验方式；报名方式是否清晰简单"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招生季节（寒假/暑假/春季/秋季）"},{"@type":"HowToSupply","name":"该季节的课程安排和特色"},{"@type":"HowToSupply","name":"适合的学生群体"},{"@type":"HowToSupply","name":"时间安排（开课时间、上课频次）"},{"@type":"HowToSupply","name":"优惠政策（如有）"},{"@type":"HowToSupply","name":"报名方式和咨询渠道"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,38 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>假期/季节</li><li>课程安排</li><li>优惠政策</li><li>报名截止</li></ul>
+    <ul class="materials-list"><li>招生季节（寒假/暑假/春季/秋季）</li><li>该季节的课程安排和特色</li><li>适合的学生群体</li><li>时间安排（开课时间、上课频次）</li><li>优惠政策（如有）</li><li>报名方式和咨询渠道</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位培训机构招生助手。请撰写季节性招生文案。
+      <pre class="prompt-text" id="prompt-text">你是一位培训机构的市场负责人，正在为即将到来的假期或新学期做招生推广。你的策略是：用「这个假期/学期可以解决什么问题」来吸引家长，而不是用「不报名就落后」来制造焦虑。你相信家长是理性的，把课程价值说清楚比任何话术都有效。
 
-时段：{假期或季节}
-课程：{课程安排}
-优惠：{优惠政策}
-截止：{报名截止}
+现在需要撰写一条季节性招生文案，用于朋友圈或社群发布。
 
-要求：
-1. 字数80-120字
-2. 突出假期利用价值
-3. 不制造焦虑
-4. 不承诺成绩
-5. 适合家长群发布</pre>
+请根据以下信息撰写：
+招生季节：{招生季节}
+课程安排：{课程安排}
+适合学生：{适合学生}
+时间安排：{时间安排}
+优惠政策：{优惠政策}
+报名方式：{报名方式}
+
+输出格式要求：
+- 总字数100-150字
+- 开头用一句话点明这个假期/学期适合解决什么学习问题
+- 中间简要介绍课程安排和时间，让家长快速判断是否适合
+- 如果有优惠，一句话带过
+- 结尾提供报名方式和试听选项
+- 语气平实务实，像在告知一个安排而非推销
+
+禁止事项：
+- 不使用「弯道超车」「假期是拉开差距的关键」等焦虑话术
+- 不承诺「一个假期提XX分」的效果
+- 不使用「最后X个名额」等虚假紧迫感
+- 不贬低不报名的选择
+- 不把假期休息描述为「浪费时间」</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +96,30 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{假期或季节}</code></td><td>如「暑假」「寒假」</td></tr><tr><td><code>{课程安排}</code></td><td>开什么课、怎么安排</td></tr><tr><td><code>{优惠政策}</code></td><td>有什么优惠</td></tr><tr><td><code>{报名截止}</code></td><td>什么时候截止</td></tr></tbody>
+      <tbody><tr><td><code>{招生季节}</code></td><td>什么时候的班，如「暑假集训班」「寒假短期班」「秋季同步班」</td></tr><tr><td><code>{课程安排}</code></td><td>这期有什么课，如「数学基础巩固（针对上学期薄弱点）、英语口语强化、阅读写作」</td></tr><tr><td><code>{适合学生}</code></td><td>适合什么情况的学生，如「上学期数学跟不太上、想利用暑假补基础的小学生」</td></tr><tr><td><code>{时间安排}</code></td><td>什么时候上课，如「7月8日-8月2日，每周一三五上午，共12次课」</td></tr><tr><td><code>{优惠政策}</code></td><td>有什么优惠，如「6月底前报名减200，两科连报再减100」或「无优惠」</td></tr><tr><td><code>{报名方式}</code></td><td>怎么报名，如「微信私聊咨询，可以先约一节诊断课看看孩子的基础」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>80-120字招生文案</p>
+    <p>100-150字季节性招生文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>暑假班开始报名！7-8月开设：少儿美术、书法、编程三门课程，每周3次课，让孩子假期有事做、有收获。早鸟优惠：6月30日前报名立减300，两科连报再减200。小班制，每班限8人。不想让孩子整个暑假都在家看平板的家长，可以了解一下（仅供格式参考）</p>
+      <p>暑假班来了。如果孩子上学期数学有些吃力，暑假是个补基础的好时机——没有新课压力，可以把没搞懂的知识点慢慢理清楚。
+
+安排：7月8日-8月2日，每周一三五上午9:00-10:30，共12次课。小班6人，按基础分组，不会出现有的孩子觉得太快有的觉得太慢的情况。
+
+6月底前报名减200元。不确定孩子适不适合的，可以先约一节免费诊断课，我们帮你看看基础情况再决定。微信XXX。（仅供格式参考，请根据实际招生信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无焦虑营销</label></li><li><label><input type="checkbox"> 优惠信息准确</label></li><li><label><input type="checkbox"> 截止日期正确</label></li><li><label><input type="checkbox"> 无成绩承诺</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否避免了焦虑话术和效果承诺</label></li><li><label><input type="checkbox"> 课程安排和时间是否清晰明确</label></li><li><label><input type="checkbox"> 适合的学生群体是否描述准确</label></li><li><label><input type="checkbox"> 优惠政策是否真实且条件清楚</label></li><li><label><input type="checkbox"> 是否提供了低门槛的体验方式</label></li><li><label><input type="checkbox"> 报名方式是否清晰简单</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/education-enrollment.html" class="related-link">培训招生文案</a><a href="../templates/education-trial-invite.html" class="related-link">培训试听课邀约</a></div></section>

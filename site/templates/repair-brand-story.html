@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务品牌介绍","description":"为维修/家政服务撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：从业年限、服务特色、覆盖区域、团队情况"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：年限等信息是否真实；资质描述是否准确；承诺是否可兑现；无夸大宣传"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"从业年限"},{"@type":"HowToSupply","name":"服务特色"},{"@type":"HowToSupply","name":"覆盖区域"},{"@type":"HowToSupply","name":"团队情况"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务品牌介绍","description":"为维修/家政服务撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：店铺/个人从业年限和经历、主营维修类型和擅长领域、服务理念或做事原则、服务区域和团队规模、真实的客户口碑或数据（接单量、好评率等）、联系方式和营业时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：从业年限和经历是否真实；服务理念是否通过具体细节体现而非空话；数据（好评率、接单量）是否真实可查；主营项目是否聚焦而非罗列过多；联系方式和营业时间是否完整；语气是否朴实可信而非夸大；是否避免了模板化套话"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"店铺/个人从业年限和经历"},{"@type":"HowToSupply","name":"主营维修类型和擅长领域"},{"@type":"HowToSupply","name":"服务理念或做事原则"},{"@type":"HowToSupply","name":"服务区域和团队规模"},{"@type":"HowToSupply","name":"真实的客户口碑或数据（接单量、好评率等）"},{"@type":"HowToSupply","name":"联系方式和营业时间"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,38 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>从业年限</li><li>服务特色</li><li>覆盖区域</li><li>团队情况</li></ul>
+    <ul class="materials-list"><li>店铺/个人从业年限和经历</li><li>主营维修类型和擅长领域</li><li>服务理念或做事原则</li><li>服务区域和团队规模</li><li>真实的客户口碑或数据（接单量、好评率等）</li><li>联系方式和营业时间</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位品牌文案助手。请为以下维修服务撰写品牌介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助蓝领师傅做线上推广的文案顾问。你要帮一位维修师傅或小型维修公司写一段品牌介绍，用于58同城店铺、名片背面或微信个人简介。你知道这个行业客户最看重的是「靠谱」和「不乱收费」，所以介绍要突出真实经历和做事原则，而不是堆砌华丽辞藻。
 
-从业年限：{从业年限}
-服务特色：{服务特色}
-覆盖区域：{覆盖区域}
+请根据以下信息撰写：
+从业经历：{从业经历}
+主营项目：{主营项目}
+服务理念：{服务理念}
+服务区域：{服务区域}
 团队情况：{团队情况}
+客户数据：{客户数据}
+营业时间：{营业时间}
 
-要求：
-1. 字数120-200字
-2. 突出经验和可靠性
-3. 真实不夸大
-4. 适合平台店铺介绍</pre>
+输出格式要求：
+- 总字数120-180字
+- 开头用一句话概括「我是谁、做什么、做了多久」
+- 中间用1-2个具体细节体现服务理念（如「报价单每一项都拍照给客户看」而非「我们很透明」）
+- 用数据说话：从业年限、服务客户数、好评率等
+- 结尾写明服务区域、营业时间、联系方式
+- 语气朴实可信，像一个老实人在介绍自己
+- 可以有一句个人化的表达（如「修不好不收钱」这种个人承诺）
+
+禁止事项：
+- 不使用「行业领先」「首屈一指」等夸大表述
+- 不编造虚假从业年限或客户数量
+- 不使用「竭诚为您服务」等空洞套话
+- 不罗列一长串服务项目（选主要的3-5项）
+- 不抄袭其他店铺的介绍模板</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,26 +96,26 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{从业年限}</code></td><td>做了多少年</td></tr><tr><td><code>{服务特色}</code></td><td>和别人有什么不同</td></tr><tr><td><code>{覆盖区域}</code></td><td>服务哪些区域</td></tr><tr><td><code>{团队情况}</code></td><td>几个人、什么资质</td></tr></tbody>
+      <tbody><tr><td><code>{从业经历}</code></td><td>你的入行经历，如「2015年开始做家电维修，之前在海尔售后干了3年」</td></tr><tr><td><code>{主营项目}</code></td><td>最擅长修什么，如「空调、冰箱、洗衣机维修，也接热水器和油烟机」</td></tr><tr><td><code>{服务理念}</code></td><td>你做事的原则，如「先报价后维修，修不好不收钱」「不夸大故障，能修的不建议换」</td></tr><tr><td><code>{服务区域}</code></td><td>你跑哪些地方，如「全上海，浦东优先」</td></tr><tr><td><code>{团队情况}</code></td><td>就你一个人还是有团队，如「我和两个徒弟，都是干了5年以上的」</td></tr><tr><td><code>{客户数据}</code></td><td>能证明你靠谱的数据，如「58同城好评率98%，累计接单3000+」</td></tr><tr><td><code>{营业时间}</code></td><td>什么时候能找到你，如「早8点到晚9点，急修可以打电话」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>120-200字品牌介绍</p>
+    <p>120-180字品牌介绍</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>从事家电维修12年，从最初一个人骑电动车上门，到现在5人团队覆盖全城。我们的原则很简单：报价透明、修不好不收费。所有师傅都有电工证，上门自带鞋套和工具，维修完清理现场。12年服务了上万户家庭，很多都是老客户介绍来的。24小时接单，急修2小时内到达（仅供格式参考）</p>
+      <p>做家电维修9年了，之前在品牌售后干了3年，2016年自己出来接活。主修空调、冰箱、洗衣机，热水器和油烟机也能处理。我的规矩是先检查报价，你同意了再动手，修不好不收钱。配件都用正规渠道的，换下来的旧件当面给你看。目前58同城好评率98%，老客户转介绍占一半以上。我和两个徒弟一起干，浦东2小时内能到，其他区提前约。早8晚9都在，急事打电话随时响。（仅供格式参考，请根据实际情况生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 年限等信息是否真实</label></li><li><label><input type="checkbox"> 资质描述是否准确</label></li><li><label><input type="checkbox"> 承诺是否可兑现</label></li><li><label><input type="checkbox"> 无夸大宣传</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 从业年限和经历是否真实</label></li><li><label><input type="checkbox"> 服务理念是否通过具体细节体现而非空话</label></li><li><label><input type="checkbox"> 数据（好评率、接单量）是否真实可查</label></li><li><label><input type="checkbox"> 主营项目是否聚焦而非罗列过多</label></li><li><label><input type="checkbox"> 联系方式和营业时间是否完整</label></li><li><label><input type="checkbox"> 语气是否朴实可信而非夸大</label></li><li><label><input type="checkbox"> 是否避免了模板化套话</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-social-media.html" class="related-link">维修服务朋友圈内容</a><a href="../templates/repair-service-flow.html" class="related-link">维修服务流程介绍</a></div></section>

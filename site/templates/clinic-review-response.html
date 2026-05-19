@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"诊所评价回复","description":"为诊所线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、就诊科室、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无涉及病情；无隐私泄露；语气是否专业；差评是否表示重视"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"就诊科室"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"诊所评价回复","description":"为诊所线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：患者评价原文（完整内容，含星级）、就诊科室和服务项目、内部核实后的情况说明（需与当事医护确认）、已落实或计划落实的改进措施、回复口径（需负责人审批，尤其是差评）、平台规则要求（字数限制、禁用词等）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复中是否泄露了患者的任何病情或诊断信息；是否针对评价中的具体问题做出了回应（而非模板化敷衍）；差评回复是否包含诚恳的致歉和具体改进措施；是否存在疗效承诺或绝对化表述；语气是否专业得体、不卑不亢；是否提供了进一步沟通的渠道（差评时）；字数是否符合平台要求"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"患者评价原文（完整内容，含星级）"},{"@type":"HowToSupply","name":"就诊科室和服务项目"},{"@type":"HowToSupply","name":"内部核实后的情况说明（需与当事医护确认）"},{"@type":"HowToSupply","name":"已落实或计划落实的改进措施"},{"@type":"HowToSupply","name":"回复口径（需负责人审批，尤其是差评）"},{"@type":"HowToSupply","name":"平台规则要求（字数限制、禁用词等）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>就诊科室</li><li>回复重点</li></ul>
+    <ul class="materials-list"><li>患者评价原文（完整内容，含星级）</li><li>就诊科室和服务项目</li><li>内部核实后的情况说明（需与当事医护确认）</li><li>已落实或计划落实的改进措施</li><li>回复口径（需负责人审批，尤其是差评）</li><li>平台规则要求（字数限制、禁用词等）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位诊所运营。请针对评价生成回复。
+      <pre class="prompt-text" id="prompt-text">你是一位在医疗机构从事患者关系管理5年的运营专员，熟悉各平台评价回复规范，深知医疗行业回复评价的特殊性——既要真诚回应，又要严格保护患者隐私。现在需要为诊所在点评平台上的一条评价撰写回复。
 
-评价：{评价内容}
-星级：{评价星级}
-科室：{就诊科室}
-重点：{回复重点}
+请根据以下信息撰写回复：
+评价原文：{评价内容}
+评价星级：{评价星级}
+就诊科室：{就诊科室}
+核实情况：{核实情况}
+回复侧重点：{回复重点}
+已采取的措施：{改进措施}
 
-要求：
-1. 专业温和
-2. 不涉及具体病情
-3. 保护患者隐私
-4. 字数50-80字
-5. 差评要表示重视</pre>
+输出格式要求：
+- 好评回复：60-90字，表达感谢+专业补充建议+欢迎复诊
+- 中评回复：80-110字，感谢反馈+针对性回应+改进说明
+- 差评回复：100-130字，诚恳致歉+问题回应+具体改进+邀请线下沟通
+
+语气与风格：
+- 专业克制，不卑不亢
+- 差评回复要体现重视但不过度卑微
+- 好评回复要真诚但不敷衍
+- 使用第一人称「我们」代表诊所
+
+禁止事项：
+- 绝对不能在回复中提及患者的具体病情、诊断结果或治疗方案
+- 不能暗示或确认患者的健康状况
+- 不能使用「治愈率」「成功率」等数据
+- 不能贬低其他医疗机构
+- 不能承诺具体的治疗效果
+- 不能在公开回复中提供患者个人联系方式</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +98,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>患者写的评价</td></tr><tr><td><code>{评价星级}</code></td><td>几星</td></tr><tr><td><code>{就诊科室}</code></td><td>看的什么科</td></tr><tr><td><code>{回复重点}</code></td><td>想强调什么</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>患者在平台上发布的完整评价文字</td></tr><tr><td><code>{评价星级}</code></td><td>1-5星，决定回复的基调和策略</td></tr><tr><td><code>{就诊科室}</code></td><td>患者就诊的科室，帮助定位回复的专业方向</td></tr><tr><td><code>{核实情况}</code></td><td>与当事医护确认后的实际情况，用于内部参考，不直接暴露在回复中</td></tr><tr><td><code>{回复重点}</code></td><td>这条回复主要想传达什么，如「强调我们已改进流程」「感谢信任」</td></tr><tr><td><code>{改进措施}</code></td><td>针对评价中提到的问题，诊所已经或即将采取的具体措施</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +110,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>感谢您的信任和反馈！很高兴我们的服务让您感到满意。后续如有任何健康问题，欢迎随时预约咨询。祝您身体健康，生活愉快（仅供格式参考）</p>
+      <p>感谢您抽出时间分享就诊体验。关于您提到的候诊等待时间较长的问题，我们非常重视。经核实，当日确实因临时急诊插入导致后续排号延迟，给您带来了不便，深表歉意。目前我们已调整分时段预约机制，每个时段预留了缓冲时间。如您后续就诊仍有任何不满意的地方，欢迎直接联系前台主管，我们会第一时间处理。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无涉及病情</label></li><li><label><input type="checkbox"> 无隐私泄露</label></li><li><label><input type="checkbox"> 语气是否专业</label></li><li><label><input type="checkbox"> 差评是否表示重视</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 回复中是否泄露了患者的任何病情或诊断信息</label></li><li><label><input type="checkbox"> 是否针对评价中的具体问题做出了回应（而非模板化敷衍）</label></li><li><label><input type="checkbox"> 差评回复是否包含诚恳的致歉和具体改进措施</label></li><li><label><input type="checkbox"> 是否存在疗效承诺或绝对化表述</label></li><li><label><input type="checkbox"> 语气是否专业得体、不卑不亢</label></li><li><label><input type="checkbox"> 是否提供了进一步沟通的渠道（差评时）</label></li><li><label><input type="checkbox"> 字数是否符合平台要求</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/clinic-appointment.html" class="related-link">诊所预约提醒</a><a href="../templates/clinic-brand-story.html" class="related-link">诊所品牌介绍</a></div></section>

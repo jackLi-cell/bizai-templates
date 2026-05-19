@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店朋友圈内容","description":"为花店生成朋友圈日常内容","step":[{"@type":"HowToStep","text":"准备材料：今日花材、花艺分享、养花知识"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：内容是否真实；语气是否自然；知识是否准确；无过度推销"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"今日花材"},{"@type":"HowToSupply","name":"花艺分享"},{"@type":"HowToSupply","name":"养花知识"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店朋友圈内容","description":"为花店生成朋友圈日常内容","step":[{"@type":"HowToStep","text":"准备材料：今日到店的新鲜花材（品种、颜色、状态）、今日花艺作品或插花灵感、想分享的养花/鲜花知识、配图描述（实拍照片内容）、当前季节的花材特点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：花材描述是否与实际到货一致；养花知识是否准确实用；语气是否自然真实（不像广告）；是否存在硬性推销内容；配图建议是否为真实拍摄；是否有过度文艺或矫情的表达"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"今日到店的新鲜花材（品种、颜色、状态）"},{"@type":"HowToSupply","name":"今日花艺作品或插花灵感"},{"@type":"HowToSupply","name":"想分享的养花/鲜花知识"},{"@type":"HowToSupply","name":"配图描述（实拍照片内容）"},{"@type":"HowToSupply","name":"当前季节的花材特点"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,42 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>今日花材</li><li>花艺分享</li><li>养花知识</li></ul>
+    <ul class="materials-list"><li>今日到店的新鲜花材（品种、颜色、状态）</li><li>今日花艺作品或插花灵感</li><li>想分享的养花/鲜花知识</li><li>配图描述（实拍照片内容）</li><li>当前季节的花材特点</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位花店老板的朋友圈运营助手。请生成日常内容。
+      <pre class="prompt-text" id="prompt-text">你是一位热爱花艺的独立花店老板，每天在朋友圈分享与花相关的日常。你的朋友圈风格是「真实、有美感、有知识量」，让关注你的人觉得每天看你发圈是一种享受。现在需要生成一条朋友圈日常内容，配合今天拍的花艺照片发布。
 
-花材：{今日花材}
-分享：{花艺分享}
-知识：{养花知识}
+请根据以下信息生成：
+今日花材/作品：{今日花材}
+想分享的内容：{分享内容}
+养花知识（如有）：{养花知识}
+配图描述：{配图描述}
+季节特点：{季节特点}
 
-要求：
-1. 字数40-70字
-2. 有美感
-3. 可以带养花小贴士
-4. 不硬推销
-5. 适合配花艺照片</pre>
+输出格式要求：
+- 总字数控制在50-90字
+- 可以是以下任一类型：
+  a) 新花材到货分享（花材特点+养护小贴士）
+  b) 今日花艺作品展示（灵感来源+搭配思路）
+  c) 养花知识科普（一个实用技巧）
+  d) 花店日常（进货/插花/客户故事片段）
+- 结尾可以有轻度互动引导，但不能硬推销
+
+语气与风格：
+- 像一位文艺但不做作的朋友在分享生活
+- 有温度有质感，不是冷冰冰的产品广告
+- 可以带一点个人感受，但不要过度抒情
+
+禁止事项：
+- 不能硬性推销（如「快来买」「限时优惠」）
+- 不能使用过度文艺的矫情表达
+- 不能发布与花无关的广告内容
+- 不能使用他人照片冒充自己的作品
+- 不能给出错误的养花建议
+- 不能贬低其他花店或花材供应商</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +100,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{今日花材}</code></td><td>今天到了什么花</td></tr><tr><td><code>{花艺分享}</code></td><td>今天做了什么花艺</td></tr><tr><td><code>{养花知识}</code></td><td>实用的养花建议</td></tr></tbody>
+      <tbody><tr><td><code>{今日花材}</code></td><td>今天到店或正在处理的花材，如「今天到了一批云南直发的芍药，花苞很饱满」</td></tr><tr><td><code>{分享内容}</code></td><td>今天想在朋友圈表达什么，如「分享芍药的养护方法」「展示今天做的一个花篮」</td></tr><tr><td><code>{养花知识}</code></td><td>实用的鲜花养护技巧，如「芍药要在花苞期买，养两天慢慢开放最美」</td></tr><tr><td><code>{配图描述}</code></td><td>准备配什么照片，如「芍药花苞特写+开放后的对比照」</td></tr><tr><td><code>{季节特点}</code></td><td>当前季节的花材特点，如「夏天花期短，建议选耐热品种如向日葵、百合」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +112,16 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>今天到了一批芍药，花苞饱满，养两天就会慢慢打开，特别治愈。芍药花期不长但很美，建议每天换水+斜切根部，能多开几天。想要的姐妹私我留，明天就没这么新鲜了（仅供格式参考）</p>
+      <p>今天到了一批芍药，花苞圆鼓鼓的，颜色是很温柔的浅粉。芍药的魅力在于「等待」——买回去是含苞的样子，养两三天会慢慢绽开，每天都有不同的形态，特别治愈。
+
+养护提示：斜切根部，水里加保鲜剂，放在通风阴凉处。不要晒太阳，花期大概5-6天。想要的姐妹趁新鲜，明天就没这个状态了。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 内容是否真实</label></li><li><label><input type="checkbox"> 语气是否自然</label></li><li><label><input type="checkbox"> 知识是否准确</label></li><li><label><input type="checkbox"> 无过度推销</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 花材描述是否与实际到货一致</label></li><li><label><input type="checkbox"> 养花知识是否准确实用</label></li><li><label><input type="checkbox"> 语气是否自然真实（不像广告）</label></li><li><label><input type="checkbox"> 是否存在硬性推销内容</label></li><li><label><input type="checkbox"> 配图建议是否为真实拍摄</label></li><li><label><input type="checkbox"> 是否有过度文艺或矫情的表达</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/flower-product-desc.html" class="related-link">花束产品描述</a><a href="../templates/flower-campaign.html" class="related-link">花店节日促销文案</a></div></section>

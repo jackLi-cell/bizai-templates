@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店节日促销文案","description":"为花店节日活动撰写促销文案","step":[{"@type":"HowToStep","text":"准备材料：节日主题、活动内容、限定花束、预订方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：节日信息是否正确；价格是否准确；限量是否真实；配送范围是否说明"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"节日主题"},{"@type":"HowToSupply","name":"活动内容"},{"@type":"HowToSupply","name":"限定花束"},{"@type":"HowToSupply","name":"预订方式"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店节日促销文案","description":"为花店节日活动撰写促销文案","step":[{"@type":"HowToStep","text":"准备材料：节日名称和具体日期、节日限定花束款式（名称、花材、价格）、预订截止时间和配送安排、配送范围和配送费说明、限量数量（如有，必须真实）、预订方式和支付方式、往年同期销售数据（用于参考备货，不对外公布虚假数据）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：节日日期是否正确；花束价格是否与实际定价一致；限量数量是否真实（不虚构紧迫感）；配送范围和费用是否明确说明；预订截止时间是否合理；是否存在过度焦虑话术；花材搭配是否适合该节日场景"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"节日名称和具体日期"},{"@type":"HowToSupply","name":"节日限定花束款式（名称、花材、价格）"},{"@type":"HowToSupply","name":"预订截止时间和配送安排"},{"@type":"HowToSupply","name":"配送范围和配送费说明"},{"@type":"HowToSupply","name":"限量数量（如有，必须真实）"},{"@type":"HowToSupply","name":"预订方式和支付方式"},{"@type":"HowToSupply","name":"往年同期销售数据（用于参考备货，不对外公布虚假数据）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,42 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>节日主题</li><li>活动内容</li><li>限定花束</li><li>预订方式</li></ul>
+    <ul class="materials-list"><li>节日名称和具体日期</li><li>节日限定花束款式（名称、花材、价格）</li><li>预订截止时间和配送安排</li><li>配送范围和配送费说明</li><li>限量数量（如有，必须真实）</li><li>预订方式和支付方式</li><li>往年同期销售数据（用于参考备货，不对外公布虚假数据）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位花店营销助手。请撰写节日促销文案。
+      <pre class="prompt-text" id="prompt-text">你是一位花店老板，每逢节日都会精心准备限定花束并提前在朋友圈预热。你的营销风格是「提前告知、真诚推荐、适度紧迫」，不制造虚假焦虑但会如实告知备货情况。现在需要为即将到来的节日撰写促销预热文案，发布在朋友圈或社群。
 
-节日：{节日主题}
-活动：{活动内容}
-限定：{限定花束}
-预订：{预订方式}
+请根据以下信息撰写：
+节日名称：{节日名称}
+节日日期：{节日日期}
+限定花束（款式+花材+价格）：{限定花束}
+预订截止时间：{预订截止}
+配送安排：{配送安排}
+配送范围：{配送范围}
+限量情况：{限量数量}
+预订方式：{预订方式}
 
-要求：
-1. 字数80-120字
-2. 营造节日氛围
-3. 突出限量/限时
-4. 不过度煽情
-5. 适合朋友圈</pre>
+输出格式要求：
+- 总字数控制在120-170字
+- 结构：节日引入（一句话，不煽情）→限定款介绍（花材+价格）→预订和配送说明→限量/截止提醒→预订方式
+- 如有多款花束，用简洁的列表展示
+- 配送范围和费用要明确
+
+语气与风格：
+- 像一位贴心的花店老板在提前通知老客户
+- 节日氛围要有但不过度煽情
+- 限量信息如实告知，不虚构紧迫感
+
+禁止事项：
+- 不能虚构限量数量（说50束就真的只做50束）
+- 不能使用「错过等一年」等过度焦虑话术
+- 不能承诺「当天下单当天送」（节日配送需提前）
+- 不能隐瞒配送费或附加费用
+- 不能使用与丧葬花篮相同的花材搭配用于喜庆节日
+- 不能抄袭其他花店的款式命名</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +100,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{节日主题}</code></td><td>什么节日</td></tr><tr><td><code>{活动内容}</code></td><td>有什么优惠</td></tr><tr><td><code>{限定花束}</code></td><td>节日限定款</td></tr><tr><td><code>{预订方式}</code></td><td>怎么预订</td></tr></tbody>
+      <tbody><tr><td><code>{节日名称}</code></td><td>什么节日，如「母亲节」「情人节」「七夕」「教师节」</td></tr><tr><td><code>{节日日期}</code></td><td>节日的具体日期，如「5月11日（周日）」</td></tr><tr><td><code>{限定花束}</code></td><td>节日限定款的详细信息，如「感恩款：粉色康乃馨11枝+满天星，128元；温馨款：混色康乃馨+百合，198元」</td></tr><tr><td><code>{预订截止}</code></td><td>最晚什么时候下单能保证节日当天送达，如「5月9日晚8点前下单可保证母亲节当天配送」</td></tr><tr><td><code>{配送安排}</code></td><td>节日当天的配送时间段，如「5月11日分上午/下午两个时段配送」</td></tr><tr><td><code>{配送范围}</code></td><td>能配送到哪些区域，如「市区5公里内免费配送，超出范围加收10元」</td></tr><tr><td><code>{限量数量}</code></td><td>总共准备多少束，如「每款限量30束，售完即止」</td></tr><tr><td><code>{预订方式}</code></td><td>怎么下单，如「微信私聊发我：款式+收花人地址+配送时间段」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +112,24 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>母亲节快到了，今年想送妈妈一束花吗？我们准备了三款母亲节限定花束：康乃馨系列（99/168/268元），每款都搭配了手写贺卡。5.10-5.12期间下单，免费同城配送。限量50束，去年中午就卖完了，想送的建议提前预订。微信发我选款+地址就行（仅供格式参考）</p>
+      <p>母亲节快到了（5月11日周日），今年准备了三款限定花束：
+
+感恩款：粉色康乃馨11枝+满天星+尤加利叶，128元
+温馨款：混色康乃馨+粉百合+绿叶，198元
+心意款：红玫瑰+康乃馨混搭+满天星，258元
+（以上均含包装+手写贺卡+保鲜剂）
+
+配送：市区5公里内免费送，5月11日分上午（9-12点）和下午（14-17点）两个时段。
+每款限量30束，5月9日晚8点截止预订。
+
+预订方式：微信发我「款式+地址+时段」即可，支持微信转账。去年中午就订满了，想送的姐妹建议早点定。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 节日信息是否正确</label></li><li><label><input type="checkbox"> 价格是否准确</label></li><li><label><input type="checkbox"> 限量是否真实</label></li><li><label><input type="checkbox"> 配送范围是否说明</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 节日日期是否正确</label></li><li><label><input type="checkbox"> 花束价格是否与实际定价一致</label></li><li><label><input type="checkbox"> 限量数量是否真实（不虚构紧迫感）</label></li><li><label><input type="checkbox"> 配送范围和费用是否明确说明</label></li><li><label><input type="checkbox"> 预订截止时间是否合理</label></li><li><label><input type="checkbox"> 是否存在过度焦虑话术</label></li><li><label><input type="checkbox"> 花材搭配是否适合该节日场景</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/flower-product-desc.html" class="related-link">花束产品描述</a><a href="../templates/flower-social-media.html" class="related-link">花店朋友圈内容</a></div></section>

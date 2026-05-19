@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售商品描述","description":"为网店或实体店商品撰写详情描述","step":[{"@type":"HowToStep","text":"准备材料：商品名称、材质/成分、规格尺寸、适用人群、卖点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认材质描述准确；检查尺寸数据正确；无绝对化用语；适用人群描述合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"商品名称"},{"@type":"HowToSupply","name":"材质/成分"},{"@type":"HowToSupply","name":"规格尺寸"},{"@type":"HowToSupply","name":"适用人群"},{"@type":"HowToSupply","name":"卖点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售商品描述","description":"为网店或实体店商品撰写详情描述","step":[{"@type":"HowToStep","text":"准备材料：商品完整名称、材质成分（以吊牌为准）、实测尺寸数据、目标用户画像、经过验证的核心卖点、与竞品的真实差异"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：材质/成分描述是否与商品吊牌一致；尺寸数据是否经过实测；卖点是否有事实支撑（不是主观臆断）；是否包含绝对化用语；适用人群描述是否合理（不过度缩小或扩大）；是否有虚假承诺或效果保证；是否符合电商平台的描述规范"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"商品完整名称"},{"@type":"HowToSupply","name":"材质成分（以吊牌为准）"},{"@type":"HowToSupply","name":"实测尺寸数据"},{"@type":"HowToSupply","name":"目标用户画像"},{"@type":"HowToSupply","name":"经过验证的核心卖点"},{"@type":"HowToSupply","name":"与竞品的真实差异"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>商品名称</li><li>材质/成分</li><li>规格尺寸</li><li>适用人群</li><li>卖点</li></ul>
+    <ul class="materials-list"><li>商品完整名称</li><li>材质成分（以吊牌为准）</li><li>实测尺寸数据</li><li>目标用户画像</li><li>经过验证的核心卖点</li><li>与竞品的真实差异</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位电商文案助手。请为以下商品撰写详情描述。
+      <pre class="prompt-text" id="prompt-text">你是一位为多个电商品牌撰写过商品详情页的资深文案，熟悉淘宝、拼多多、抖音小店的商品描述规范。现在需要为一件商品撰写详情页描述文案。
 
+请根据以下信息撰写：
 商品名称：{商品名称}
-材质/成分：{材质或成分}
-规格尺寸：{规格尺寸}
-适用人群：{适用人群}
-核心卖点：{卖点}
+材质/成分/面料：{材质或成分}
+规格尺寸（含尺码表如适用）：{规格尺寸}
+适用人群和场景：{适用人群}
+核心卖点（最多3个）：{卖点}
+与同类商品的差异点：{差异点}
 
-要求：
-1. 字数100-150字
-2. 突出材质和使用场景
-3. 用具体数据说话
-4. 不使用「最」「第一」等绝对化用语
-5. 适合电商详情页展示</pre>
+输出要求：
+- 字数120-180字
+- 开头一句话点明这个商品「解决什么问题」或「适合什么场景」
+- 材质描述要用消费者能感知的方式（如「摸起来像XX」「穿上去XX感觉」）
+- 至少包含2个具体数字（克重、尺寸、含量等）
+- 卖点之间要有逻辑递进，不要简单罗列
+- 结尾用一句话总结「什么人在什么场景下选它」
+- 语气专业但不冷淡，像一个懂行的朋友在推荐
+
+禁止事项：
+- 不使用「最」「第一」「独家」「全网最低」等绝对化用语
+- 不编造检测报告或认证
+- 不贬低竞品
+- 不使用「买到就是赚到」等促销话术
+- 不承诺使用效果（如「穿了显瘦10斤」）</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +95,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{商品名称}</code></td><td>商品的完整名称</td></tr><tr><td><code>{材质或成分}</code></td><td>如「100%纯棉」「304不锈钢」</td></tr><tr><td><code>{规格尺寸}</code></td><td>具体的尺寸或容量</td></tr><tr><td><code>{适用人群}</code></td><td>目标用户群体</td></tr><tr><td><code>{卖点}</code></td><td>最想让顾客知道的优势</td></tr></tbody>
+      <tbody><tr><td><code>{商品名称}</code></td><td>商品的完整名称，如「纯棉圆领短袖T恤」</td></tr><tr><td><code>{材质或成分}</code></td><td>面料成分和关键参数，如「100%新疆长绒棉，220g克重」</td></tr><tr><td><code>{规格尺寸}</code></td><td>尺码范围和关键尺寸，如「S-3XL，衣长65-75cm」</td></tr><tr><td><code>{适用人群}</code></td><td>目标用户和使用场景，如「25-40岁通勤人群，日常穿搭」</td></tr><tr><td><code>{卖点}</code></td><td>最核心的1-3个卖点，如「不起球、预缩水、落肩设计」</td></tr><tr><td><code>{差异点}</code></td><td>和同类商品相比有什么不同，如「比普通棉T厚30%但透气性不减」</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +107,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【纯棉亲肤T恤】采用新疆长绒棉，面料克重220g，厚实不透但透气性好。宽松版型，肩线下落2cm，男女同款。尺码S-3XL，身高155-185cm均可选到合适尺码。预缩水处理，机洗不易变形。适合日常通勤、周末休闲，基础款百搭不挑人（仅供格式参考）</p>
+      <p>通勤穿搭最怕的就是起球和变形，这件T恤用的是新疆长绒棉，面料克重220g，洗了不容易变薄。做了预缩水处理，按正常尺码买就行，不用担心缩水问题。版型是微宽松的落肩设计，肩线下落2cm，不挑身材。S到3XL都有，155-185cm都能找到合适的码。男女同款，基础色百搭，日常通勤或周末出门都能穿。（仅供格式参考，实际请根据你的商品信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认材质描述准确</label></li><li><label><input type="checkbox"> 检查尺寸数据正确</label></li><li><label><input type="checkbox"> 无绝对化用语</label></li><li><label><input type="checkbox"> 适用人群描述合理</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 材质/成分描述是否与商品吊牌一致</label></li><li><label><input type="checkbox"> 尺寸数据是否经过实测</label></li><li><label><input type="checkbox"> 卖点是否有事实支撑（不是主观臆断）</label></li><li><label><input type="checkbox"> 是否包含绝对化用语</label></li><li><label><input type="checkbox"> 适用人群描述是否合理（不过度缩小或扩大）</label></li><li><label><input type="checkbox"> 是否有虚假承诺或效果保证</label></li><li><label><input type="checkbox"> 是否符合电商平台的描述规范</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-new-arrival.html" class="related-link">零售上新推广文案</a><a href="../templates/retail-short-video.html" class="related-link">零售商品展示短视频脚本</a></div></section>

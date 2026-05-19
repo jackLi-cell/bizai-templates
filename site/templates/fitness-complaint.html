@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身房投诉处理","description":"为健身房客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容、核实情况、解决方案、改进措施"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否承认问题；方案是否具体；改进是否可行；语气是否诚恳"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容"},{"@type":"HowToSupply","name":"核实情况"},{"@type":"HowToSupply","name":"解决方案"},{"@type":"HowToSupply","name":"改进措施"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身房投诉处理","description":"为健身房客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：会员投诉的完整内容、内部核实的结果和原因分析、经管理层确认的解决方案和补偿方案、系统性改进措施的具体计划、跟进责任人和时间节点、类似投诉的历史处理记录（避免重复问题）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否直接承认了问题而非推诿；解决方案是否具体且有时间节点；改进措施是否可执行且可验证；是否存在推诿话术或暗示会员问题；补偿方案是否经确认可执行；跟进安排是否明确（谁、什么时候）"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"会员投诉的完整内容"},{"@type":"HowToSupply","name":"内部核实的结果和原因分析"},{"@type":"HowToSupply","name":"经管理层确认的解决方案和补偿方案"},{"@type":"HowToSupply","name":"系统性改进措施的具体计划"},{"@type":"HowToSupply","name":"跟进责任人和时间节点"},{"@type":"HowToSupply","name":"类似投诉的历史处理记录（避免重复问题）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,41 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>投诉内容</li><li>核实情况</li><li>解决方案</li><li>改进措施</li></ul>
+    <ul class="materials-list"><li>会员投诉的完整内容</li><li>内部核实的结果和原因分析</li><li>经管理层确认的解决方案和补偿方案</li><li>系统性改进措施的具体计划</li><li>跟进责任人和时间节点</li><li>类似投诉的历史处理记录（避免重复问题）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位健身房店长。请针对投诉生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位健身房的店长，直接负责处理会员投诉。你处理投诉的风格是：快速响应、承认问题、给出具体方案、跟进到底。你理解会员投诉时的情绪，不会要求对方「理解」或「体谅」，而是用行动来解决问题。现在需要针对一位会员的具体投诉生成处理话术。
 
-投诉：{投诉内容}
-情况：{核实情况}
-方案：{解决方案}
-改进：{改进措施}
+请根据以下信息生成投诉处理话术：
+会员称呼：{会员称呼}
+投诉的具体问题：{投诉内容}
+问题类别（设备/环境/教练/服务/其他）：{问题类别}
+内部核实结果：{核实结果}
+解决方案：{解决方案}
+改进措施（防止再次发生）：{改进措施}
+补偿方案（如适用）：{补偿方案}
+跟进人和时间：{跟进安排}
 
-要求：
-1. 诚恳道歉
-2. 给出方案
-3. 说明改进
-4. 字数80-120字</pre>
+输出格式要求：
+- 字数控制在120-160字
+- 开头直接道歉并复述问题（让会员知道你听到了）
+- 说明核实结果，不推诿
+- 给出具体的解决方案和时间节点
+- 说明防止再次发生的改进措施
+- 如有补偿，自然提出
+- 结尾告知跟进安排
+- 语气诚恳务实，像一位负责任的管理者在处理问题
+
+禁止事项：
+- 不使用「希望您理解」「给您带来不便敬请谅解」等推诿话术
+- 不把责任推给具体员工（内部处理）
+- 不承诺无法兑现的改进
+- 不在话术中暗示会员要求过分
+- 不使用「我们也很难」等诉苦
+- 不以「下次一定改进」等空话结尾</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +99,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{投诉内容}</code></td><td>会员投诉什么</td></tr><tr><td><code>{核实情况}</code></td><td>实际情况</td></tr><tr><td><code>{解决方案}</code></td><td>如何解决</td></tr><tr><td><code>{改进措施}</code></td><td>如何改进</td></tr></tbody>
+      <tbody><tr><td><code>{会员称呼}</code></td><td>会员的称呼</td></tr><tr><td><code>{投诉内容}</code></td><td>会员具体投诉什么问题</td></tr><tr><td><code>{问题类别}</code></td><td>问题属于哪个类别：设备故障、环境卫生、教练服务、前台服务等</td></tr><tr><td><code>{核实结果}</code></td><td>内部核实后发现的实际情况</td></tr><tr><td><code>{解决方案}</code></td><td>针对这个具体问题的解决方案</td></tr><tr><td><code>{改进措施}</code></td><td>为防止同类问题再次发生的系统性改进</td></tr><tr><td><code>{补偿方案}</code></td><td>如果问题确实影响了会员体验，给予什么补偿</td></tr><tr><td><code>{跟进安排}</code></td><td>谁负责跟进、什么时候给会员反馈</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +111,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>张哥您好，很抱歉给您带来不好的体验。关于您反映的更衣室卫生问题，我今天去检查了确实存在清洁不到位的情况。已经做了以下调整：1.增加保洁频次，从每天2次改为4次；2.每个时段有专人巡查；3.增设意见箱方便及时反馈。感谢您的监督，后续有任何问题直接找我（仅供格式参考）</p>
+      <p>张哥您好，关于您反映的更衣室卫生问题，先跟您道歉，这确实是我们没做好。今天我亲自去检查了，高峰时段确实存在清洁不及时的情况。已经做了以下调整：1.保洁频次从每天2次增加到4次（早中晚各一次+高峰时段加一次）；2.每个时段结束后有专人巡查并拍照记录；3.更衣室门口增设意见反馈码，发现问题可以实时通知我们。这周五我会再检查一次落实情况，届时跟您反馈。感谢您的监督。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否承认问题</label></li><li><label><input type="checkbox"> 方案是否具体</label></li><li><label><input type="checkbox"> 改进是否可行</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否直接承认了问题而非推诿</label></li><li><label><input type="checkbox"> 解决方案是否具体且有时间节点</label></li><li><label><input type="checkbox"> 改进措施是否可执行且可验证</label></li><li><label><input type="checkbox"> 是否存在推诿话术或暗示会员问题</label></li><li><label><input type="checkbox"> 补偿方案是否经确认可执行</label></li><li><label><input type="checkbox"> 跟进安排是否明确（谁、什么时候）</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/fitness-review-response.html" class="related-link">健身房评价回复</a></div></section>

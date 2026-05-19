@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务流程介绍","description":"为维修/家政服务撰写服务流程介绍","step":[{"@type":"HowToStep","text":"准备材料：服务类型、服务步骤、服务时长、收费标准、服务范围"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：步骤是否清晰；收费是否透明；时长估计是否合理；服务范围是否准确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"服务类型"},{"@type":"HowToSupply","name":"服务步骤"},{"@type":"HowToSupply","name":"服务时长"},{"@type":"HowToSupply","name":"收费标准"},{"@type":"HowToSupply","name":"服务范围"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务流程介绍","description":"为维修/家政服务撰写服务流程介绍","step":[{"@type":"HowToStep","text":"准备材料：服务类型（家电维修、水电维修、管道疏通、开锁换锁等）、服务覆盖区域和上门时间范围、从预约到完工的完整步骤、每个环节的大致时间、收费节点说明（何时收费、如何收费）、售后保障政策"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：流程步骤是否完整覆盖从预约到售后的全过程；响应时间承诺是否与实际能力匹配；是否明确说明了客户可以拒绝报价；收费节点和支付方式是否写清楚；售后保障期限是否真实可兑现；服务区域是否准确；是否存在绝对化承诺或夸大表述"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"服务类型（家电维修、水电维修、管道疏通、开锁换锁等）"},{"@type":"HowToSupply","name":"服务覆盖区域和上门时间范围"},{"@type":"HowToSupply","name":"从预约到完工的完整步骤"},{"@type":"HowToSupply","name":"每个环节的大致时间"},{"@type":"HowToSupply","name":"收费节点说明（何时收费、如何收费）"},{"@type":"HowToSupply","name":"售后保障政策"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>服务类型</li><li>服务步骤</li><li>服务时长</li><li>收费标准</li><li>服务范围</li></ul>
+    <ul class="materials-list"><li>服务类型（家电维修、水电维修、管道疏通、开锁换锁等）</li><li>服务覆盖区域和上门时间范围</li><li>从预约到完工的完整步骤</li><li>每个环节的大致时间</li><li>收费节点说明（何时收费、如何收费）</li><li>售后保障政策</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位家政维修服务文案助手。请撰写服务流程介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位负责编写客户手册的维修公司运营经理，需要把复杂的维修服务流程用客户能看懂的方式写清楚。你的目标是让客户在预约前就知道整个过程会怎样进行，消除「不知道会发生什么」的不安感。
 
+现在需要为公司的某项维修服务撰写一段流程介绍，用于发布在58同城店铺页面或发给咨询客户。
+
+请根据以下信息撰写：
 服务类型：{服务类型}
-服务步骤：{服务步骤}
-预计时长：{服务时长}
-收费标准：{收费标准}
-服务范围：{服务范围}
+服务区域：{服务区域}
+响应时间：{响应时间}
+服务流程步骤：{流程步骤}
+收费方式说明：{收费方式}
+售后保障：{售后保障}
 
-要求：
-1. 步骤清晰，易于理解
-2. 收费透明
-3. 突出专业性
-4. 字数120-180字
-5. 适合宣传单或网页展示</pre>
+输出格式要求：
+- 总字数150-220字
+- 用「第一步、第二步」的方式分步骤说明，每步一句话讲清楚做什么
+- 在「检查报价」环节特别强调客户有权拒绝，不收检查费或明确检查费金额
+- 收费节点要明确：是修好再付还是先付定金
+- 售后保障单独成段，写明保修期和联系方式
+- 语气平实专业，像一份简洁的服务说明书
+- 适当使用数字让信息更具体（如「30分钟内回电」「2小时内上门」）
+
+禁止事项：
+- 不使用「随叫随到」等无法保证的承诺
+- 不写「价格最低」「全城最快」等绝对化表述
+- 不省略收费相关的关键信息
+- 不使用过多感叹号或营销语气
+- 不编造不存在的资质或认证</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,34 +97,33 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{服务类型}</code></td><td>如「全屋保洁」「管道疏通」</td></tr><tr><td><code>{服务步骤}</code></td><td>从预约到完成的步骤</td></tr><tr><td><code>{服务时长}</code></td><td>大约需要多长时间</td></tr><tr><td><code>{收费标准}</code></td><td>怎么收费</td></tr><tr><td><code>{服务范围}</code></td><td>覆盖哪些区域</td></tr></tbody>
+      <tbody><tr><td><code>{服务类型}</code></td><td>你提供的具体维修服务，如「家用空调维修与清洗」「厨卫水管维修及疏通」</td></tr><tr><td><code>{服务区域}</code></td><td>你能上门服务的范围，如「朝阳区、东城区，三环内」</td></tr><tr><td><code>{响应时间}</code></td><td>客户预约后多久能上门，如「工作日2小时内，周末需提前预约」</td></tr><tr><td><code>{流程步骤}</code></td><td>从客户打电话到维修完成的每个步骤，如「电话沟通→预约时间→上门检查→报价确认→维修施工→验收付款」</td></tr><tr><td><code>{收费方式}</code></td><td>怎么收费的，如「检查免费，报价后客户同意再施工，完工验收后付款，支持微信/支付宝」</td></tr><tr><td><code>{售后保障}</code></td><td>修完之后的保障，如「同一问题30天内免费返修，配件保修90天」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>120-180字服务流程介绍</p>
+    <p>150-220字服务流程说明</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【全屋深度保洁服务】
-服务流程：
-1. 电话/微信预约，确认时间和面积
-2. 师傅准时上门，自带全套工具和环保清洁剂
-3. 按区域清洁：厨房→卫生间→卧室→客厅
-4. 完成后客户验收，不满意当场返工
-时长：80-120平约3-4小时（2人团队）
-收费：按面积计算，3元/平方米起
-服务范围：全城可达，提前一天预约即可（仅供格式参考）</p>
+      <p>【家用空调维修服务流程】
+第一步：电话或微信描述故障现象，我们初步判断问题方向
+第二步：约定上门时间（工作日2小时内可达，周末需提前一天预约）
+第三步：师傅上门检查，当面告知故障原因和维修方案，报价经您确认后再动工。检查不收费，您觉得价格不合适可以不修
+第四步：现场维修，完工后请您验收试机
+第五步：确认正常后付款，支持微信、支付宝、现金
+售后保障：同一故障30天内免费返修，更换的配件保修90天。有问题随时电话联系。
+服务范围：朝阳区、东城区（三环内）（仅供格式参考，请根据实际服务内容生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 步骤是否清晰</label></li><li><label><input type="checkbox"> 收费是否透明</label></li><li><label><input type="checkbox"> 时长估计是否合理</label></li><li><label><input type="checkbox"> 服务范围是否准确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 流程步骤是否完整覆盖从预约到售后的全过程</label></li><li><label><input type="checkbox"> 响应时间承诺是否与实际能力匹配</label></li><li><label><input type="checkbox"> 是否明确说明了客户可以拒绝报价</label></li><li><label><input type="checkbox"> 收费节点和支付方式是否写清楚</label></li><li><label><input type="checkbox"> 售后保障期限是否真实可兑现</label></li><li><label><input type="checkbox"> 服务区域是否准确</label></li><li><label><input type="checkbox"> 是否存在绝对化承诺或夸大表述</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-quotation.html" class="related-link">维修报价说明</a><a href="../templates/repair-customer-comm.html" class="related-link">维修客户沟通话术</a></div></section>

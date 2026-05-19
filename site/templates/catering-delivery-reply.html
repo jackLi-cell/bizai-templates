@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮外卖客服回复","description":"针对外卖订单问题生成客服回复话术","step":[{"@type":"HowToStep","text":"准备材料：客户问题描述、订单情况、补偿方案"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认补偿方案可执行；检查语气是否得当；确认没有推卸责任；核实时间承诺合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户问题描述"},{"@type":"HowToSupply","name":"订单情况"},{"@type":"HowToSupply","name":"补偿方案"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮外卖客服回复","description":"针对外卖订单问题生成客服回复话术","step":[{"@type":"HowToStep","text":"准备材料：客户投诉的具体内容、后台订单核实结果、问题归因分析、经授权的补偿方案及额度、补偿执行的具体方式和时间、客服联系方式（如需后续跟进）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否准确复述了客户的问题；核实结果是否与后台记录一致；补偿方案是否具体（什么+怎么给+何时到）；是否有推卸责任给骑手或平台的表述；语气是否温和高效，没有过度亲昵；补偿是否在你的权限范围内；时间承诺是否可兑现"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户投诉的具体内容"},{"@type":"HowToSupply","name":"后台订单核实结果"},{"@type":"HowToSupply","name":"问题归因分析"},{"@type":"HowToSupply","name":"经授权的补偿方案及额度"},{"@type":"HowToSupply","name":"补偿执行的具体方式和时间"},{"@type":"HowToSupply","name":"客服联系方式（如需后续跟进）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,35 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>客户问题描述</li><li>订单情况</li><li>补偿方案</li></ul>
+    <ul class="materials-list"><li>客户投诉的具体内容</li><li>后台订单核实结果</li><li>问题归因分析</li><li>经授权的补偿方案及额度</li><li>补偿执行的具体方式和时间</li><li>客服联系方式（如需后续跟进）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位餐饮店外卖客服。请针对以下客户问题生成一段回复话术。
+      <pre class="prompt-text" id="prompt-text">你是一位处理过上千条外卖客诉的餐饮客服主管，熟悉美团、饿了么平台的客诉处理规范。现在需要针对一位外卖客户的投诉生成一段回复话术，用于平台在线客服或电话沟通。
 
-客户问题：{客户问题描述}
-订单实际情况：{订单情况}
-我们的补偿方案：{补偿方案}
+请根据以下信息生成回复：
+客户反馈的问题：{客户问题描述}
+订单实际情况（经后台核实）：{订单情况}
+问题归因（商家/骑手/平台）：{问题归因}
+我们能提供的补偿方案：{补偿方案}
+补偿执行方式：{执行方式}
 
-要求：
-1. 先道歉并表示理解
-2. 简要说明情况
-3. 提出补偿方案
-4. 语气温和专业
-5. 字数60-100字</pre>
+输出要求：
+- 字数80-120字
+- 开头一句话表达歉意并复述客户的问题（让客户感到被听见）
+- 简要说明核实结果，不要长篇解释
+- 补偿方案要具体到「什么东西+怎么给+什么时候到」
+- 结尾留一句关怀，如「希望下次能给您更好的体验」
+- 语气温和但高效，像一个靠谱的客服在解决问题
+
+禁止事项：
+- 不把责任推给骑手或平台（即使确实是对方问题）
+- 不使用「可能」「应该」等模糊词
+- 不要求客户提供过多证明材料
+- 不使用「亲亲」等过度亲昵称呼
+- 补偿承诺不超出你的权限范围</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +93,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{客户问题描述}</code></td><td>客户反馈的具体问题</td></tr><tr><td><code>{订单情况}</code></td><td>核实后的实际订单状态</td></tr><tr><td><code>{补偿方案}</code></td><td>你打算如何补偿客户</td></tr></tbody>
+      <tbody><tr><td><code>{客户问题描述}</code></td><td>客户反馈的具体问题，如「少送了一份菜」「饭菜凉了」「送错地址」</td></tr><tr><td><code>{订单情况}</code></td><td>后台核实的订单状态，如「确认漏打包一份凉菜」「出餐时间正常但配送超时」</td></tr><tr><td><code>{问题归因}</code></td><td>问题出在哪个环节：商家打包/出餐慢/骑手配送/平台调度</td></tr><tr><td><code>{补偿方案}</code></td><td>具体补偿内容，如「补送漏送菜品+赠送8元优惠券」</td></tr><tr><td><code>{执行方式}</code></td><td>补偿怎么给到客户，如「骑手25分钟内补送」「优惠券已发到账户」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +105,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>亲，实在抱歉给您带来不好的体验！核实了一下，确实是我们打包时漏放了一份小食。已经安排骑手为您补送，预计20分钟内送达。另外赠送您一张5元优惠券，下次点餐可直接使用。再次说声抱歉（仅供格式参考）</p>
+      <p>您好，非常抱歉这次点餐体验不好，让您等了这么久还少送了一份菜。核实了一下，确实是我们打包时遗漏了您的凉拌黄瓜。现在安排补送，骑手预计25分钟内送达。另外给您发了一张8元无门槛券，已经放到您的账户里了，下次点餐自动抵扣。给您添麻烦了，下次一定仔细核对。（仅供格式参考，实际请根据具体问题生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认补偿方案可执行</label></li><li><label><input type="checkbox"> 检查语气是否得当</label></li><li><label><input type="checkbox"> 确认没有推卸责任</label></li><li><label><input type="checkbox"> 核实时间承诺合理</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否准确复述了客户的问题</label></li><li><label><input type="checkbox"> 核实结果是否与后台记录一致</label></li><li><label><input type="checkbox"> 补偿方案是否具体（什么+怎么给+何时到）</label></li><li><label><input type="checkbox"> 是否有推卸责任给骑手或平台的表述</label></li><li><label><input type="checkbox"> 语气是否温和高效，没有过度亲昵</label></li><li><label><input type="checkbox"> 补偿是否在你的权限范围内</label></li><li><label><input type="checkbox"> 时间承诺是否可兑现</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-bad-review.html" class="related-link">餐饮差评回复</a><a href="../templates/catering-complaint.html" class="related-link">餐饮投诉处理话术</a></div></section>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身房品牌故事","description":"为健身房撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：创业故事、经营理念、设施特色、团队介绍"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：故事是否真实；无身材焦虑；理念是否清晰；无虚构成分"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创业故事"},{"@type":"HowToSupply","name":"经营理念"},{"@type":"HowToSupply","name":"设施特色"},{"@type":"HowToSupply","name":"团队介绍"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身房品牌故事","description":"为健身房撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：创始人的真实从业经历、开店的真实原因和故事、能体现经营理念的具体做法（如不强制推销的政策）、教练团队的资质信息、会员群体的真实构成、运营时间和会员数量等基础数据"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：创始人背景和运营数据是否真实；经营理念是否通过具体做法而非口号来体现；是否存在身材焦虑或贬低同行的内容；教练资质信息是否可查证；会员画像描述是否体现了包容性；语气是否真诚自然"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创始人的真实从业经历"},{"@type":"HowToSupply","name":"开店的真实原因和故事"},{"@type":"HowToSupply","name":"能体现经营理念的具体做法（如不强制推销的政策）"},{"@type":"HowToSupply","name":"教练团队的资质信息"},{"@type":"HowToSupply","name":"会员群体的真实构成"},{"@type":"HowToSupply","name":"运营时间和会员数量等基础数据"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>创业故事</li><li>经营理念</li><li>设施特色</li><li>团队介绍</li></ul>
+    <ul class="materials-list"><li>创始人的真实从业经历</li><li>开店的真实原因和故事</li><li>能体现经营理念的具体做法（如不强制推销的政策）</li><li>教练团队的资质信息</li><li>会员群体的真实构成</li><li>运营时间和会员数量等基础数据</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位品牌文案助手。请为健身房撰写品牌故事。
+      <pre class="prompt-text" id="prompt-text">你是一位擅长挖掘小微品牌内核的文案写手，能够将健身房创始人的个人经历和经营理念转化为有共鸣的品牌叙事。你知道好的健身房品牌故事不是炫耀设备多先进、教练多厉害，而是让读者感受到这个地方的态度——对运动的理解、对会员的尊重、对社区的融入。现在需要为一家健身房撰写品牌介绍。
 
-故事：{创业故事}
-理念：{经营理念}
-设施：{设施特色}
-团队：{团队介绍}
+请根据以下信息撰写品牌故事：
+创始人/主理人背景：{创始人背景}
+开健身房的原因和契机：{创业原因}
+经营理念（怎么看待健身这件事）：{经营理念}
+与其他健身房的核心区别：{核心区别}
+设施和环境特色：{设施特色}
+教练团队特点：{团队特点}
+服务过的会员群体画像：{会员画像}
+运营时间和会员数量：{运营数据}
 
-要求：
-1. 字数150-250字
-2. 传递运动态度
-3. 不制造焦虑
-4. 真实可信</pre>
+输出格式要求：
+- 字数控制在200-300字
+- 用第一人称叙述
+- 开头从一个具体的经历或观察切入，引出开店的原因
+- 中间用具体的做法（而非口号）来体现经营理念
+- 提及会员群体的多样性，体现包容
+- 结尾表达对运动和社区的简单态度
+- 语气真诚朴实，像在和新朋友介绍自己的店
+
+禁止事项：
+- 不使用「打造」「赋能」「引领」等商业空话
+- 不制造身材焦虑来证明健身房的价值
+- 不贬低其他健身房（如「不像那些只会推销的」）
+- 不虚构数据或资质
+- 不使用「改变你的人生」等夸大承诺
+- 不以教练的外貌作为卖点</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +98,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{创业故事}</code></td><td>为什么开健身房</td></tr><tr><td><code>{经营理念}</code></td><td>怎么看待健身</td></tr><tr><td><code>{设施特色}</code></td><td>设备和环境</td></tr><tr><td><code>{团队介绍}</code></td><td>教练团队</td></tr></tbody>
+      <tbody><tr><td><code>{创始人背景}</code></td><td>创始人之前做什么的，怎么进入健身行业的</td></tr><tr><td><code>{创业原因}</code></td><td>为什么决定自己开健身房，是什么触发了这个决定</td></tr><tr><td><code>{经营理念}</code></td><td>怎么看待健身这件事，健身房应该是什么样的地方</td></tr><tr><td><code>{核心区别}</code></td><td>和其他健身房最大的不同是什么（用事实而非评价）</td></tr><tr><td><code>{设施特色}</code></td><td>健身房的设施和环境有什么特点</td></tr><tr><td><code>{团队特点}</code></td><td>教练团队的特点是什么（资质、风格、理念）</td></tr><tr><td><code>{会员画像}</code></td><td>来这里的都是什么样的人</td></tr><tr><td><code>{运营数据}</code></td><td>开了多久、大约多少会员</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +110,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>开这家健身房之前，我在连锁健身房当了4年教练。离开的原因是：不想再为了卖课而卖课。2022年自己开了这家社区店，面积不大但设备齐全，最重要的是——我们不强制推销。来这里的人，有早起跑步的上班族，有带孩子来的全职妈妈，也有退休后想活动筋骨的叔叔阿姨。我们的教练都有国职证书，但更重要的是他们真的热爱运动，愿意陪你一起坚持。健身不是为了变成谁，是为了让自己状态更好（仅供格式参考）</p>
+      <p>在连锁健身房当了4年教练后，我决定自己开一家。原因很简单：不想再为了完成销售指标去推销客户不需要的课程。2022年在社区里租了个300平的空间，设备不算顶级但够用，最重要的是——我们不强制推销，教练的收入不和卖课挂钩。来这里的人挺多样的：早上6点来跑步的上班族、带孩子来的全职妈妈、退休后想活动筋骨的叔叔阿姨、还有几个把这里当第二个家的健身老炮。我们的教练都有国职或ACE认证，但我觉得比证书更重要的是他们真的喜欢带人运动。健身不是为了变成谁，就是让自己状态好一点。这是我开这家店的全部想法。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 故事是否真实</label></li><li><label><input type="checkbox"> 无身材焦虑</label></li><li><label><input type="checkbox"> 理念是否清晰</label></li><li><label><input type="checkbox"> 无虚构成分</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 创始人背景和运营数据是否真实</label></li><li><label><input type="checkbox"> 经营理念是否通过具体做法而非口号来体现</label></li><li><label><input type="checkbox"> 是否存在身材焦虑或贬低同行的内容</label></li><li><label><input type="checkbox"> 教练资质信息是否可查证</label></li><li><label><input type="checkbox"> 会员画像描述是否体现了包容性</label></li><li><label><input type="checkbox"> 语气是否真诚自然</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/fitness-social-media.html" class="related-link">健身房朋友圈内容</a></div></section>

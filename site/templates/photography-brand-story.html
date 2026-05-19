@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影工作室品牌故事","description":"为摄影工作室撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：创业故事、拍摄理念、风格特色、服务承诺"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：故事是否真实；理念是否清晰；无虚构成分；语气是否自然"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创业故事"},{"@type":"HowToSupply","name":"拍摄理念"},{"@type":"HowToSupply","name":"风格特色"},{"@type":"HowToSupply","name":"服务承诺"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影工作室品牌故事","description":"为摄影工作室撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：摄影师的真实从业经历和时间线、开工作室的真实原因和契机、能代表拍摄理念的1-2个真实客户故事、工作室的运营数据（时间、客户数）、摄影师对自己风格的描述关键词、品牌故事的使用场景（官网/小红书/点评，影响篇幅和语气）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：从业背景和运营时间是否与事实一致；拍摄理念是否通过具体做法而非口号来体现；穿插的客户故事是否为真实发生的；是否存在绝对化表述或贬低同行的内容；语气是否真诚自然，不过度文艺；客户数量等数据是否准确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"摄影师的真实从业经历和时间线"},{"@type":"HowToSupply","name":"开工作室的真实原因和契机"},{"@type":"HowToSupply","name":"能代表拍摄理念的1-2个真实客户故事"},{"@type":"HowToSupply","name":"工作室的运营数据（时间、客户数）"},{"@type":"HowToSupply","name":"摄影师对自己风格的描述关键词"},{"@type":"HowToSupply","name":"品牌故事的使用场景（官网/小红书/点评，影响篇幅和语气）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>创业故事</li><li>拍摄理念</li><li>风格特色</li><li>服务承诺</li></ul>
+    <ul class="materials-list"><li>摄影师的真实从业经历和时间线</li><li>开工作室的真实原因和契机</li><li>能代表拍摄理念的1-2个真实客户故事</li><li>工作室的运营数据（时间、客户数）</li><li>摄影师对自己风格的描述关键词</li><li>品牌故事的使用场景（官网/小红书/点评，影响篇幅和语气）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位品牌文案助手。请为摄影工作室撰写品牌故事。
+      <pre class="prompt-text" id="prompt-text">你是一位擅长挖掘小微品牌故事的文案写手，能够将摄影师的个人经历和拍摄理念转化为有温度、有记忆点的品牌叙事。你知道好的品牌故事不是自吹自擂，而是让读者感受到这个人为什么在做这件事、做事的态度是什么。现在需要为一家独立摄影工作室撰写品牌介绍，用于官网、小红书主页或大众点评商家简介。
 
-故事：{创业故事}
-理念：{拍摄理念}
-风格：{风格特色}
-承诺：{服务承诺}
+请根据以下信息撰写品牌故事：
+摄影师/主理人的从业背景：{从业背景}
+开工作室的契机和原因：{创业契机}
+拍摄理念（怎么看待拍照这件事）：{拍摄理念}
+擅长的拍摄风格：{风格特色}
+工作室的服务态度/承诺：{服务态度}
+一个能体现理念的真实小故事：{真实故事}
+工作室运营时间：{运营时长}
+累计服务客户数（大约）：{客户数量}
 
-要求：
-1. 字数150-250字
-2. 体现审美和态度
-3. 真实不做作
-4. 适合官网或小红书主页</pre>
+输出格式要求：
+- 字数控制在180-280字
+- 用第一人称「我」来叙述，增加真实感和亲近感
+- 开头从一个具体的时刻或决定切入，不要从「大家好我是XX」开始
+- 中间自然融入拍摄理念，用具体做法而非抽象口号来体现
+- 可以穿插一个真实的客户互动小故事来佐证理念
+- 结尾回到当下，表达对未来的简单期待
+- 整体语气真诚朴实，像在和朋友聊天时说起自己的工作
+
+禁止事项：
+- 不使用「匠心」「初心」「极致」等空洞大词
+- 不虚构从业经历或获奖信息
+- 不贬低行业其他从业者
+- 不使用「我们是最XX的工作室」等绝对化表述
+- 不编造客户故事
+- 不过度煽情或文艺腔</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +98,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{创业故事}</code></td><td>为什么做摄影</td></tr><tr><td><code>{拍摄理念}</code></td><td>怎么看待拍照这件事</td></tr><tr><td><code>{风格特色}</code></td><td>擅长什么风格</td></tr><tr><td><code>{服务承诺}</code></td><td>对客户的承诺</td></tr></tbody>
+      <tbody><tr><td><code>{从业背景}</code></td><td>摄影师之前的工作经历，如何走上摄影这条路</td></tr><tr><td><code>{创业契机}</code></td><td>为什么决定自己开工作室，是什么事情触发了这个决定</td></tr><tr><td><code>{拍摄理念}</code></td><td>你怎么看待拍照这件事，你觉得好照片应该是什么样的</td></tr><tr><td><code>{风格特色}</code></td><td>你最擅长或最喜欢的拍摄风格是什么</td></tr><tr><td><code>{服务态度}</code></td><td>你对客户的服务承诺或态度是什么</td></tr><tr><td><code>{真实故事}</code></td><td>一个能体现你拍摄理念的真实客户互动故事</td></tr><tr><td><code>{运营时长}</code></td><td>工作室开了多久</td></tr><tr><td><code>{客户数量}</code></td><td>大约服务过多少组客户</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +110,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>做摄影师五年了，最开始是给朋友拍着玩，后来发现自己真的喜欢用镜头记录人的状态。2021年租了个小工作室，就想做一件事：让每个来拍照的人都觉得轻松、自在，拍出来的是真实的自己而不是千篇一律的网红脸。我不追求过度精修，更喜欢抓拍自然的瞬间。每组客人我都会花时间聊天，了解你想要什么感觉，然后用我的方式帮你呈现。三年了，最开心的是很多客人变成了朋友，每年都会来拍一次（仅供格式参考）</p>
+      <p>2019年辞职那天，其实没想好要开工作室，就是不想再拍自己不喜欢的东西了。之前在影楼干了三年，每天流水线一样的拍法，客人笑得都一样。后来自己接散单，慢慢发现我喜欢拍人放松下来的样子——不是摆好pose等快门，而是聊着聊着突然露出的那个表情。2020年租了现在这个小空间，设备不多但光线好。到现在拍了500多组客人，最开心的是经常有人说「这是我拍过最自然的一组照片」。我不追求每张都完美，但希望每张都是真实的你。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 故事是否真实</label></li><li><label><input type="checkbox"> 理念是否清晰</label></li><li><label><input type="checkbox"> 无虚构成分</label></li><li><label><input type="checkbox"> 语气是否自然</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 从业背景和运营时间是否与事实一致</label></li><li><label><input type="checkbox"> 拍摄理念是否通过具体做法而非口号来体现</label></li><li><label><input type="checkbox"> 穿插的客户故事是否为真实发生的</label></li><li><label><input type="checkbox"> 是否存在绝对化表述或贬低同行的内容</label></li><li><label><input type="checkbox"> 语气是否真诚自然，不过度文艺</label></li><li><label><input type="checkbox"> 客户数量等数据是否准确</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/photography-social-media.html" class="related-link">摄影工作室朋友圈</a></div></section>

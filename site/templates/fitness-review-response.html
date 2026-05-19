@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身房评价回复","description":"为健身房线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、会员情况、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无效果承诺；语气是否积极；回复是否具体；无身材评价"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"会员情况"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身房评价回复","description":"为健身房线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价的完整原文和星级、该会员的基本信息（入会时间、常上课程）、如为差评，内部核实后的情况说明、已落实的改进措施（不是计划）、近期想传达的正面信息（用于好评回复）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对评价中的具体内容；是否存在对会员身材的评价；是否存在训练效果的承诺；差评回复是否给出了具体改进措施；是否在公开回复中提及退费等敏感信息；语气是否专业积极"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价的完整原文和星级"},{"@type":"HowToSupply","name":"该会员的基本信息（入会时间、常上课程）"},{"@type":"HowToSupply","name":"如为差评，内部核实后的情况说明"},{"@type":"HowToSupply","name":"已落实的改进措施（不是计划）"},{"@type":"HowToSupply","name":"近期想传达的正面信息（用于好评回复）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>会员情况</li><li>回复重点</li></ul>
+    <ul class="materials-list"><li>评价的完整原文和星级</li><li>该会员的基本信息（入会时间、常上课程）</li><li>如为差评，内部核实后的情况说明</li><li>已落实的改进措施（不是计划）</li><li>近期想传达的正面信息（用于好评回复）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位健身房运营。请针对评价生成回复。
+      <pre class="prompt-text" id="prompt-text">你是一位健身房的会员体验负责人，负责回复各平台上的会员评价。你的回复原则是：好评要具体感谢并强化正面体验，差评要诚恳面对并给出改进行动，所有回复都不涉及会员的身材评价或训练效果评判。现在需要针对大众点评或美团上的一条评价生成回复。
 
-评价：{评价内容}
-星级：{评价星级}
-会员：{会员情况}
-重点：{回复重点}
+请根据以下信息生成评价回复：
+评价原文：{评价内容}
+评价星级（1-5星）：{评价星级}
+会员情况（新/老会员、常上什么课）：{会员情况}
+评价中提到的具体内容：{具体反馈}
+回复中想强调的信息：{回复重点}
+如为差评，已采取的改进措施：{改进措施}
 
-要求：
-1. 感谢反馈
-2. 针对具体内容
-3. 不承诺效果
-4. 字数50-80字</pre>
+输出格式要求：
+- 字数控制在60-100字
+- 好评（4-5星）：感谢+回应具体细节+鼓励继续
+- 中评（3星）：感谢+重视不足+说明改进
+- 差评（1-2星）：道歉+承认问题+具体措施+邀请私聊
+- 回复必须针对评价中的具体内容
+- 语气积极专业，不卑不亢
+
+禁止事项：
+- 不评价会员的身材变化（如「看得出瘦了」）
+- 不承诺训练效果（如「坚持下去一定能XX」）
+- 不在回复中暴露会员的训练数据
+- 不使用「亲」等电商客服用语
+- 不在差评回复中辩解或推卸责任
+- 不在公开回复中讨论退费等敏感话题</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +95,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价</td></tr><tr><td><code>{评价星级}</code></td><td>几星</td></tr><tr><td><code>{会员情况}</code></td><td>新会员还是老会员</td></tr><tr><td><code>{回复重点}</code></td><td>想强调什么</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>会员在平台上写的完整评价原文</td></tr><tr><td><code>{评价星级}</code></td><td>会员给出的星级评分</td></tr><tr><td><code>{会员情况}</code></td><td>这位会员的基本情况，新会员还是老会员，常参加什么课</td></tr><tr><td><code>{具体反馈}</code></td><td>评价中明确提到的优点或问题</td></tr><tr><td><code>{回复重点}</code></td><td>回复中想顺带传达的信息</td></tr><tr><td><code>{改进措施}</code></td><td>如果是差评，已经做了什么改进（必须是已落实的）</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +107,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>感谢认可！很高兴你喜欢我们的团课氛围，搏击课确实是释放压力的好方式。坚持运动一段时间，你会感受到体能的变化。有任何课程问题随时问前台或你的顾问，我们随时在（仅供格式参考）</p>
+      <p>感谢反馈！很高兴你喜欢我们搏击课的氛围，李教练确实很会带动节奏。你提到更衣室有时比较拥挤，这个我们注意到了——下周开始高峰时段会增加一名保洁轮值，也在考虑错峰排课。有任何建议随时跟前台或你的顾问说，我们持续改进。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无效果承诺</label></li><li><label><input type="checkbox"> 语气是否积极</label></li><li><label><input type="checkbox"> 回复是否具体</label></li><li><label><input type="checkbox"> 无身材评价</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对评价中的具体内容</label></li><li><label><input type="checkbox"> 是否存在对会员身材的评价</label></li><li><label><input type="checkbox"> 是否存在训练效果的承诺</label></li><li><label><input type="checkbox"> 差评回复是否给出了具体改进措施</label></li><li><label><input type="checkbox"> 是否在公开回复中提及退费等敏感信息</label></li><li><label><input type="checkbox"> 语气是否专业积极</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/fitness-social-media.html" class="related-link">健身房朋友圈内容</a><a href="../templates/fitness-membership.html" class="related-link">健身会员续费话术</a></div></section>

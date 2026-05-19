@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影季节性活动","description":"为摄影工作室季节性主题活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：季节主题、拍摄场景、限定内容、活动时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：场景是否真实可达；时间是否准确；价格是否正确；无虚假宣传"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"季节主题"},{"@type":"HowToSupply","name":"拍摄场景"},{"@type":"HowToSupply","name":"限定内容"},{"@type":"HowToSupply","name":"活动时间"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影季节性活动","description":"为摄影工作室季节性主题活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：实际踩点的场景照片和观察记录、场景最佳拍摄时段的判断依据、限定套餐的完整内容和定价、可接待的名额上限（考虑档期）、场景的交通和停车信息、备选方案（如遇恶劣天气的处理方式）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：场景描述是否基于实际踩点而非想象；最佳拍摄时段的日期范围是否合理；限定套餐价格和内容是否准确；名额限制是否为真实可控的数量；是否隐瞒了场景的实际不便之处；是否存在对天气条件的承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"实际踩点的场景照片和观察记录"},{"@type":"HowToSupply","name":"场景最佳拍摄时段的判断依据"},{"@type":"HowToSupply","name":"限定套餐的完整内容和定价"},{"@type":"HowToSupply","name":"可接待的名额上限（考虑档期）"},{"@type":"HowToSupply","name":"场景的交通和停车信息"},{"@type":"HowToSupply","name":"备选方案（如遇恶劣天气的处理方式）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>季节主题</li><li>拍摄场景</li><li>限定内容</li><li>活动时间</li></ul>
+    <ul class="materials-list"><li>实际踩点的场景照片和观察记录</li><li>场景最佳拍摄时段的判断依据</li><li>限定套餐的完整内容和定价</li><li>可接待的名额上限（考虑档期）</li><li>场景的交通和停车信息</li><li>备选方案（如遇恶劣天气的处理方式）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位摄影营销助手。请撰写季节性活动文案。
+      <pre class="prompt-text" id="prompt-text">你是一位对季节变化敏感的摄影内容策划，擅长将自然时令与拍摄主题结合，创造有时效性的营销内容。你了解不同季节的光线特点、场景优势和客户的拍摄心理。现在需要为一家摄影工作室的季节限定拍摄活动撰写推广文案。
 
-主题：{季节主题}
-场景：{拍摄场景}
-限定：{限定内容}
-时间：{活动时间}
+请根据以下信息创作季节活动文案：
+季节/时令主题：{季节主题}
+限定拍摄场景：{拍摄场景}
+场景的最佳拍摄时段（日期范围）：{最佳时段}
+限定套餐内容（与常规套餐的区别）：{限定内容}
+限定套餐价格：{套餐价格}
+可预约名额：{可约名额}
+场景实际踩点情况：{踩点信息}
+预约方式：{预约方式}
 
-要求：
-1. 字数80-120字
-2. 营造季节氛围
-3. 突出限时性
-4. 适合小红书/朋友圈
-5. 文艺有质感</pre>
+输出格式要求：
+- 字数控制在100-140字
+- 开头用一句对季节场景的真实观察引入（基于踩点信息）
+- 中间说明限定套餐的内容和与常规套餐的区别
+- 标注最佳拍摄时段和名额，制造合理的时效感
+- 结尾给出预约方式
+- 语气像摄影师在分享一个自己发现的好拍摄地，有发现感和分享欲
+- 可使用1-2个与季节相关的表情符号
+
+禁止事项：
+- 不虚构未踩点的场景描述
+- 不使用「错过等一年」等夸张紧迫话术
+- 不承诺天气条件（如「保证蓝天」）
+- 不使用「绝美」「仙境」等过度修饰词
+- 不隐瞒场景的实际限制（如需要爬山、停车不便等）</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{季节主题}</code></td><td>如「秋日银杏」「冬日暖阳」</td></tr><tr><td><code>{拍摄场景}</code></td><td>在哪里拍</td></tr><tr><td><code>{限定内容}</code></td><td>季节限定的特别内容</td></tr><tr><td><code>{活动时间}</code></td><td>可预约的时间段</td></tr></tbody>
+      <tbody><tr><td><code>{季节主题}</code></td><td>当前季节的拍摄主题，如「秋日银杏」「春日樱花」「冬日雪景」「夏日海边」</td></tr><tr><td><code>{拍摄场景}</code></td><td>具体的拍摄地点名称和位置</td></tr><tr><td><code>{最佳时段}</code></td><td>这个场景最适合拍摄的日期范围（如「11月10日-25日」）和时间段</td></tr><tr><td><code>{限定内容}</code></td><td>季节限定套餐包含什么，和常规套餐有什么区别</td></tr><tr><td><code>{套餐价格}</code></td><td>限定套餐的价格</td></tr><tr><td><code>{可约名额}</code></td><td>这个活动最多接多少组客户</td></tr><tr><td><code>{踩点信息}</code></td><td>你实际去踩点时观察到的情况，如光线、人流、交通等</td></tr><tr><td><code>{预约方式}</code></td><td>客户如何预约</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +109,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>秋天的银杏大道只美两周。我们踩好了三个绝佳点位，光线最好的时段是下午3-5点。本月推出「秋日限定」户外写真：含妆造+20张精修+全部底片，1299元。限15组，拍完这波黄叶就要等明年了。想在最美的季节留下照片的，现在可以约时间了（仅供格式参考）</p>
+      <p>上周去踩了趟城东的银杏大道，叶子已经黄了七八成，预计再有两周就是最佳拍摄期。下午3点到4点半的侧逆光打在银杏叶上特别通透。本月推出「秋日限定外景写真」：含妆造+2套服装+20张精修+全部底片，1399元（比常规户外套餐多5张精修）。限12组，约满即止。想拍的私信选日期，建议工作日去人少。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 场景是否真实可达</label></li><li><label><input type="checkbox"> 时间是否准确</label></li><li><label><input type="checkbox"> 价格是否正确</label></li><li><label><input type="checkbox"> 无虚假宣传</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 场景描述是否基于实际踩点而非想象</label></li><li><label><input type="checkbox"> 最佳拍摄时段的日期范围是否合理</label></li><li><label><input type="checkbox"> 限定套餐价格和内容是否准确</label></li><li><label><input type="checkbox"> 名额限制是否为真实可控的数量</label></li><li><label><input type="checkbox"> 是否隐瞒了场景的实际不便之处</label></li><li><label><input type="checkbox"> 是否存在对天气条件的承诺</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/photography-campaign.html" class="related-link">摄影活动促销文案</a><a href="../templates/photography-package-intro.html" class="related-link">摄影套餐介绍</a></div></section>

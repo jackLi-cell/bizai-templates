@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"诊所品牌介绍","description":"为诊所撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：创办背景、医疗理念、团队介绍、服务特色"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：资质描述是否真实；无疗效承诺；是否含免责；团队介绍是否准确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创办背景"},{"@type":"HowToSupply","name":"医疗理念"},{"@type":"HowToSupply","name":"团队介绍"},{"@type":"HowToSupply","name":"服务特色"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"诊所品牌介绍","description":"为诊所撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：诊所创办时间、创始人背景（学历、从业经历、职称）、创办初衷和医疗服务理念、医疗团队核心成员及其专业背景（需本人同意公开）、诊所资质证书信息（医疗机构执业许可证编号等）、核心服务项目和特色技术、诊所环境和设备特点、服务过的患者数量级（如「累计服务XX万人次」，需有据可查）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：医师资历描述是否与实际执业证书一致；是否包含医疗机构执业许可证等资质声明；是否存在疗效承诺或绝对化用语；是否违反《医疗广告管理办法》相关规定；团队介绍是否经过本人同意公开；服务特色描述是否真实可验证；是否包含「不构成医疗效果承诺」的免责说明"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"诊所创办时间、创始人背景（学历、从业经历、职称）"},{"@type":"HowToSupply","name":"创办初衷和医疗服务理念"},{"@type":"HowToSupply","name":"医疗团队核心成员及其专业背景（需本人同意公开）"},{"@type":"HowToSupply","name":"诊所资质证书信息（医疗机构执业许可证编号等）"},{"@type":"HowToSupply","name":"核心服务项目和特色技术"},{"@type":"HowToSupply","name":"诊所环境和设备特点"},{"@type":"HowToSupply","name":"服务过的患者数量级（如「累计服务XX万人次」，需有据可查）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,43 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>创办背景</li><li>医疗理念</li><li>团队介绍</li><li>服务特色</li></ul>
+    <ul class="materials-list"><li>诊所创办时间、创始人背景（学历、从业经历、职称）</li><li>创办初衷和医疗服务理念</li><li>医疗团队核心成员及其专业背景（需本人同意公开）</li><li>诊所资质证书信息（医疗机构执业许可证编号等）</li><li>核心服务项目和特色技术</li><li>诊所环境和设备特点</li><li>服务过的患者数量级（如「累计服务XX万人次」，需有据可查）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位医疗品牌文案助手。请为诊所撰写品牌介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位医疗行业品牌顾问，擅长为中小型诊所撰写真实、专业、有温度的品牌介绍。你深知医疗品牌的特殊性：可信度比创意更重要，资质比故事更有说服力。现在需要为一家诊所撰写品牌介绍文案，用于官网、平台主页或宣传物料。
 
-背景：{创办背景}
-理念：{医疗理念}
-团队：{团队介绍}
-特色：{服务特色}
+请根据以下信息撰写：
+诊所名称：{诊所名称}
+创办时间与背景：{创办背景}
+创始人/核心医师介绍：{医师介绍}
+医疗理念：{医疗理念}
+资质信息：{资质信息}
+核心服务：{核心服务}
+服务特色：{服务特色}
+环境设备：{环境设备}
 
-要求：
-1. 字数150-250字
-2. 专业可信
-3. 不夸大疗效
-4. 包含资质说明
-5. 适合官网展示</pre>
+输出格式要求：
+- 总字数控制在200-300字
+- 结构：一句话定位→创办背景与理念→团队实力（资质为主）→服务特色→患者承诺→资质声明
+- 每段之间逻辑清晰，可用小标题分隔
+- 结尾必须包含「本诊所持有XX卫健委颁发的医疗机构执业许可证」等资质说明
+- 附注「以上介绍不构成医疗效果承诺」
+
+语气与风格：
+- 专业稳重，像一份值得信赖的机构简介
+- 用事实和数据说话，少用形容词
+- 体现「以患者为中心」但不煽情
+
+禁止事项：
+- 不能夸大医师资历或编造头衔
+- 不能承诺治愈率、成功率等具体数据（除非有公开发表的论文支持）
+- 不能使用「最好」「第一」「独家」等绝对化用语
+- 不能贬低其他医疗机构
+- 不能使用患者案例作为宣传（即使匿名）
+- 不能违反《医疗广告管理办法》的相关规定</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +101,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{创办背景}</code></td><td>诊所的创办历史</td></tr><tr><td><code>{医疗理念}</code></td><td>怎么看待医疗服务</td></tr><tr><td><code>{团队介绍}</code></td><td>医生团队背景</td></tr><tr><td><code>{服务特色}</code></td><td>和其他诊所的区别</td></tr></tbody>
+      <tbody><tr><td><code>{诊所名称}</code></td><td>诊所的正式注册名称</td></tr><tr><td><code>{创办背景}</code></td><td>何时创办、创始人为什么要开这家诊所，如「2019年由三位口腔科主治医师联合创办」</td></tr><tr><td><code>{医师介绍}</code></td><td>核心医师的学历、职称、从业年限、擅长领域，如「张医生，口腔医学硕士，副主任医师，从业15年，擅长种植修复」</td></tr><tr><td><code>{医疗理念}</code></td><td>诊所的核心价值观，如「规范诊疗、充分沟通、合理收费」</td></tr><tr><td><code>{资质信息}</code></td><td>医疗机构执业许可证、医师执业证等关键资质</td></tr><tr><td><code>{核心服务}</code></td><td>诊所的主要服务项目，如「口腔种植、正畸、儿童齿科、牙周治疗」</td></tr><tr><td><code>{服务特色}</code></td><td>区别于其他诊所的特点，如「术前3D方案模拟」「全程一对一诊疗」</td></tr><tr><td><code>{环境设备}</code></td><td>诊所环境和主要设备，如「独立诊室、进口CBCT、高温高压消毒」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +113,20 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>本诊所成立于2018年，由三位从三甲医院出来的中医师联合创办。我们的理念是：让看中医变得简单、透明、不神秘。每位医师都有10年以上临床经验，擅长领域各有不同。我们坚持：望闻问切不省略、用药剂量透明公开、治疗方案充分沟通。不夸大疗效，不过度治疗。诊所虽小，但每一味药材都经过严格把控。（本介绍仅供了解诊所背景，不构成医疗效果承诺）（仅供格式参考）</p>
+      <p>XX口腔诊所成立于2019年，由三位从公立三甲医院口腔科出来的医师联合创办，专注于为社区居民提供规范、透明的口腔医疗服务。
+
+团队：核心医师均为口腔医学硕士以上学历，持有副主任医师及以上职称，平均临床经验12年。擅长领域覆盖种植、正畸、牙周和儿童齿科。
+
+服务特色：术前充分沟通，所有治疗方案提供书面说明和费用明细；采用数字化诊疗流程，种植和正畸项目提供3D方案预览；独立诊室一对一诊疗，保护患者隐私。
+
+本诊所持有XX区卫健委颁发的医疗机构执业许可证（编号：XXXXX），所有执业医师均在卫健委官网可查。以上介绍不构成医疗效果承诺。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 资质描述是否真实</label></li><li><label><input type="checkbox"> 无疗效承诺</label></li><li><label><input type="checkbox"> 是否含免责</label></li><li><label><input type="checkbox"> 团队介绍是否准确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 医师资历描述是否与实际执业证书一致</label></li><li><label><input type="checkbox"> 是否包含医疗机构执业许可证等资质声明</label></li><li><label><input type="checkbox"> 是否存在疗效承诺或绝对化用语</label></li><li><label><input type="checkbox"> 是否违反《医疗广告管理办法》相关规定</label></li><li><label><input type="checkbox"> 团队介绍是否经过本人同意公开</label></li><li><label><input type="checkbox"> 服务特色描述是否真实可验证</label></li><li><label><input type="checkbox"> 是否包含「不构成医疗效果承诺」的免责说明</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/clinic-health-education.html" class="related-link">诊所健康科普文案</a></div></section>

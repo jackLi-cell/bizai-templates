@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿回头客优惠","description":"为民宿老客户回头优惠撰写话术","step":[{"@type":"HowToStep","text":"准备材料：客人称呼、上次入住、回头优惠、新变化"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：语气是否自然；优惠是否真实；无强迫感；新变化是否真实"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客人称呼"},{"@type":"HowToSupply","name":"上次入住"},{"@type":"HowToSupply","name":"回头优惠"},{"@type":"HowToSupply","name":"新变化"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿回头客优惠","description":"为民宿老客户回头优惠撰写话术","step":[{"@type":"HowToStep","text":"准备材料：客人的历史入住记录和互动细节、民宿近期的新变化和新增体验、当前季节的景观和活动信息、老客户优惠政策、客人的沟通偏好（有些人不喜欢被打扰）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否包含个性化细节（不像群发）；新变化描述是否真实；老客户优惠是否为当前有效政策；语气是否自然不施压；是否给了客人充分的选择空间；是否存在过度亲昵或商业化的表达"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客人的历史入住记录和互动细节"},{"@type":"HowToSupply","name":"民宿近期的新变化和新增体验"},{"@type":"HowToSupply","name":"当前季节的景观和活动信息"},{"@type":"HowToSupply","name":"老客户优惠政策"},{"@type":"HowToSupply","name":"客人的沟通偏好（有些人不喜欢被打扰）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>客人称呼</li><li>上次入住</li><li>回头优惠</li><li>新变化</li></ul>
+    <ul class="materials-list"><li>客人的历史入住记录和互动细节</li><li>民宿近期的新变化和新增体验</li><li>当前季节的景观和活动信息</li><li>老客户优惠政策</li><li>客人的沟通偏好（有些人不喜欢被打扰）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位民宿主。请生成老客户回头邀约话术。
+      <pre class="prompt-text" id="prompt-text">你是一位民宿主人，想邀请住过的老客人再次来住。你不想用促销的方式，而是像朋友之间分享近况一样，告诉他们民宿有什么新变化、当前季节有什么好玩的，顺带提一下老客户的优惠。你的沟通风格是真诚、不打扰、给对方选择空间。现在需要生成一条老客户回访邀约话术。
 
-客人：{客人称呼}
-上次：{上次入住}
-优惠：{回头优惠}
-新变化：{新变化}
+请根据以下信息生成回访邀约：
+客人称呼：{客人称呼}
+上次入住时间和房型：{上次入住}
+民宿近期的新变化：{新变化}
+当前季节的特色：{季节特色}
+老客户专属优惠：{老客优惠}
+优惠有效期：{优惠有效期}
 
-要求：
-1. 语气像朋友
-2. 不强迫
-3. 分享新变化
-4. 字数60-100字</pre>
+输出格式要求：
+- 字数控制在80-120字
+- 开头自然地打招呼，提及上次入住的某个细节（让客人感到被记住）
+- 中间分享民宿的新变化或当前季节的特色
+- 老客户优惠自然带出，不作为核心卖点
+- 结尾给客人充分的选择空间，不施压
+- 语气像老朋友在分享近况，轻松自然
+
+禁止事项：
+- 不使用「好久不见想你了」等过度亲昵的话
+- 不使用「限时优惠即将截止」等紧迫话术
+- 不群发感明显（要有个性化细节）
+- 不在客人没回复时连续发送
+- 不使用「回馈老客户」等商业用语</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{客人称呼}</code></td><td>客人怎么称呼</td></tr><tr><td><code>{上次入住}</code></td><td>上次什么时候来的</td></tr><tr><td><code>{回头优惠}</code></td><td>老客户有什么优惠</td></tr><tr><td><code>{新变化}</code></td><td>民宿有什么新变化</td></tr></tbody>
+      <tbody><tr><td><code>{客人称呼}</code></td><td>客人的称呼</td></tr><tr><td><code>{上次入住}</code></td><td>客人上次什么时候来住的、住的什么房型、有什么印象深刻的细节</td></tr><tr><td><code>{新变化}</code></td><td>民宿最近有什么新的变化（新设施、新体验、环境变化等）</td></tr><tr><td><code>{季节特色}</code></td><td>当前季节有什么特别的景色或体验</td></tr><tr><td><code>{老客优惠}</code></td><td>老客户再次入住有什么优惠</td></tr><tr><td><code>{优惠有效期}</code></td><td>这个优惠的有效期</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>小王好久不见～上次你们来还是夏天，现在秋天的山景完全不一样了，银杏全黄了特别美。最近新增了一个露台可以喝茶看山。老客户直接订享9折，周末也适用。有空带朋友再来坐坐？（仅供格式参考）</p>
+      <p>小王你好，上次你们夏天来住的时候说想看秋天的山景——现在正好是最美的时候，门口银杏全黄了，露台看出去像一幅画。对了，我们新加了一个户外茶台，下午坐那里喝茶看山特别舒服。老朋友再来直接给你9折，周末平日都行。有空的话带朋友一起来坐坐？不着急，想来了随时跟我说。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 语气是否自然</label></li><li><label><input type="checkbox"> 优惠是否真实</label></li><li><label><input type="checkbox"> 无强迫感</label></li><li><label><input type="checkbox"> 新变化是否真实</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否包含个性化细节（不像群发）</label></li><li><label><input type="checkbox"> 新变化描述是否真实</label></li><li><label><input type="checkbox"> 老客户优惠是否为当前有效政策</label></li><li><label><input type="checkbox"> 语气是否自然不施压</label></li><li><label><input type="checkbox"> 是否给了客人充分的选择空间</label></li><li><label><input type="checkbox"> 是否存在过度亲昵或商业化的表达</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/hotel-seasonal.html" class="related-link">民宿季节性推广</a><a href="../templates/hotel-social-media.html" class="related-link">民宿朋友圈内容</a></div></section>

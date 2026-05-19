@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售换季促销文案","description":"为零售店换季清仓或节日促销撰写文案","step":[{"@type":"HowToStep","text":"准备材料：促销主题、折扣力度、活动时间、参与商品范围"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：折扣信息是否准确；活动时间是否正确；库存是否充足；无虚假宣传"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"促销主题"},{"@type":"HowToSupply","name":"折扣力度"},{"@type":"HowToSupply","name":"活动时间"},{"@type":"HowToSupply","name":"参与商品范围"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售换季促销文案","description":"为零售店换季清仓或节日促销撰写文案","step":[{"@type":"HowToStep","text":"准备材料：促销原因和主题、具体折扣规则、活动起止日期、参与和排除的商品范围、附加福利（如有）、库存情况（哪些断码）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：折扣信息是否与实际执行一致；原价是否为真实售价（非虚标）；活动时间是否正确；参与商品范围是否明确；限量/断码等限制是否如实说明；是否有绝对化用语或虚假宣传；附加福利是否可兑现"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"促销原因和主题"},{"@type":"HowToSupply","name":"具体折扣规则"},{"@type":"HowToSupply","name":"活动起止日期"},{"@type":"HowToSupply","name":"参与和排除的商品范围"},{"@type":"HowToSupply","name":"附加福利（如有）"},{"@type":"HowToSupply","name":"库存情况（哪些断码）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>促销主题</li><li>折扣力度</li><li>活动时间</li><li>参与商品范围</li></ul>
+    <ul class="materials-list"><li>促销原因和主题</li><li>具体折扣规则</li><li>活动起止日期</li><li>参与和排除的商品范围</li><li>附加福利（如有）</li><li>库存情况（哪些断码）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位零售促销文案助手。请为以下促销活动撰写文案。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助实体零售店策划换季促销的营销顾问，懂得如何在「清库存」和「维护品牌形象」之间找到平衡。现在需要为一场换季促销或节日大促撰写推广文案。
 
-促销主题：{促销主题}
-折扣力度：{折扣力度}
+请根据以下信息撰写：
+促销主题/原因：{促销主题}
+折扣力度和规则：{折扣力度}
 活动时间：{活动时间}
-参与商品：{参与商品范围}
+参与商品范围：{参与商品范围}
+不参与活动的商品（如有）：{排除商品}
+活动附加福利（如有）：{附加福利}
 
-要求：
-1. 字数80-120字
-2. 突出优惠力度
-3. 制造紧迫感但不虚假
-4. 不使用「最低价」「全网最便宜」等用语
-5. 适合朋友圈和店内海报</pre>
+输出要求：
+- 字数100-140字
+- 开头说明促销的原因（换季腾位置/感恩回馈/节日特惠），让折扣显得合理
+- 折扣信息要清晰：什么商品打几折、满减规则是什么
+- 明确标注活动时间，制造合理的时效感
+- 如果有「码数卖完不补」等真实限制，如实说明
+- 结尾给一个到店/下单的理由
+- 语气坦诚直接，不要过度包装
+
+禁止事项：
+- 不使用「最低价」「全网最便宜」「跳楼价」等用语
+- 不制造虚假紧迫感（如实际不限量却说「限量」）
+- 不虚标原价再打折
+- 不使用「不买就亏了」等焦虑话术
+- 不贬低正价商品的价值</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +95,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{促销主题}</code></td><td>如「换季清仓」「年终感恩」</td></tr><tr><td><code>{折扣力度}</code></td><td>具体折扣或满减规则</td></tr><tr><td><code>{活动时间}</code></td><td>起止日期</td></tr><tr><td><code>{参与商品范围}</code></td><td>哪些商品参与活动</td></tr></tbody>
+      <tbody><tr><td><code>{促销主题}</code></td><td>为什么做促销，如「换季清仓」「店庆三周年」「双十一同步」</td></tr><tr><td><code>{折扣力度}</code></td><td>具体的折扣规则，如「夏装3-5折」「满300减50」「第二件半价」</td></tr><tr><td><code>{活动时间}</code></td><td>活动起止日期</td></tr><tr><td><code>{参与商品范围}</code></td><td>哪些商品参与活动，如「全部夏装」「指定货架」</td></tr><tr><td><code>{排除商品}</code></td><td>哪些不参与，如「新品不参与」「已折扣商品不叠加」</td></tr><tr><td><code>{附加福利}</code></td><td>额外的福利，如「到店送饮品」「消费满额抽奖」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +107,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>换季清仓开始！夏装全场3-5折，T恤低至39元，连衣裙低至79元。秋装新品同步上架，满300减50。活动时间：9.1-9.7，仅此一周。库存有限，码数卖完不补。到店还有额外惊喜，周末来逛逛？（仅供格式参考）</p>
+      <p>秋装要上了，夏款得腾地方。这周开始换季清仓：夏装全场3-5折，T恤最低39元起，连衣裙79元起。都是正价卖过的款，不是尾货。同时秋装新品也到了一批，满300减50可以一起凑。活动就这周一到周日，7天。提醒一下：断码的款卖完就没了，想要的建议早点来试。周末到店还有免费饮品。（仅供格式参考，实际请根据你的活动信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 折扣信息是否准确</label></li><li><label><input type="checkbox"> 活动时间是否正确</label></li><li><label><input type="checkbox"> 库存是否充足</label></li><li><label><input type="checkbox"> 无虚假宣传</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 折扣信息是否与实际执行一致</label></li><li><label><input type="checkbox"> 原价是否为真实售价（非虚标）</label></li><li><label><input type="checkbox"> 活动时间是否正确</label></li><li><label><input type="checkbox"> 参与商品范围是否明确</label></li><li><label><input type="checkbox"> 限量/断码等限制是否如实说明</label></li><li><label><input type="checkbox"> 是否有绝对化用语或虚假宣传</label></li><li><label><input type="checkbox"> 附加福利是否可兑现</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-new-arrival.html" class="related-link">零售上新推广文案</a><a href="../templates/retail-membership.html" class="related-link">零售会员招募文案</a></div></section>

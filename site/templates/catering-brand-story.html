@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮品牌故事","description":"为餐厅撰写品牌故事或创业故事","step":[{"@type":"HowToStep","text":"准备材料：创业初衷、经营年限、招牌特色、经营理念"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认年限等事实信息准确；检查是否有虚构成分；语气是否真实自然；无夸大宣传"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创业初衷"},{"@type":"HowToSupply","name":"经营年限"},{"@type":"HowToSupply","name":"招牌特色"},{"@type":"HowToSupply","name":"经营理念"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮品牌故事","description":"为餐厅撰写品牌故事或创业故事","step":[{"@type":"HowToStep","text":"准备材料：真实的创业故事和动机、经营年限、招牌菜品及其背后的故事、你的经营理念（用自己的话说）、一个具体的用心细节"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：故事中的时间、地点等事实是否真实；是否有具体可信的细节（数字、场景）；是否避免了「匠心」「初心」等陈词滥调；语气是否像老板本人在讲述；招牌特色是否自然融入故事；是否有编造或夸大的成分；结尾是否落在「坚持不变」的点上"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"真实的创业故事和动机"},{"@type":"HowToSupply","name":"经营年限"},{"@type":"HowToSupply","name":"招牌菜品及其背后的故事"},{"@type":"HowToSupply","name":"你的经营理念（用自己的话说）"},{"@type":"HowToSupply","name":"一个具体的用心细节"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>创业初衷</li><li>经营年限</li><li>招牌特色</li><li>经营理念</li></ul>
+    <ul class="materials-list"><li>真实的创业故事和动机</li><li>经营年限</li><li>招牌菜品及其背后的故事</li><li>你的经营理念（用自己的话说）</li><li>一个具体的用心细节</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位品牌文案策划。请为以下餐饮店撰写一段品牌故事。
+      <pre class="prompt-text" id="prompt-text">你是一位擅长挖掘小店故事的品牌文案人，相信每家用心经营的餐厅都有值得讲的故事。现在需要为一家餐厅撰写品牌故事，用于菜单首页、公众号介绍或店内墙面展示。
 
-创业初衷：{创业初衷}
-经营年限：{经营年限}
-招牌特色：{招牌特色}
-经营理念：{经营理念}
+请根据以下信息撰写：
+开店的起因/初衷：{创业初衷}
+经营了多久：{经营年限}
+招牌菜或最大特色：{招牌特色}
+对做餐饮这件事的理解：{经营理念}
+一个能体现你用心的具体细节：{用心细节}
 
-要求：
-1. 字数150-250字
-2. 有温度、有细节
-3. 突出真实感
-4. 不夸大不虚构
-5. 适合放在菜单首页或公众号介绍</pre>
+输出要求：
+- 字数180-280字
+- 用一个具体的场景或画面开头，不要用「我们创立于XX年」这种开头
+- 故事要有时间线：从开始到现在的变化
+- 至少包含一个具体的细节（数字、动作、对话），让故事可信
+- 招牌特色要融入故事中，不要单独介绍
+- 结尾落在「不变的东西」上，体现坚持
+- 语气朴实真诚，像老板自己在讲，不要文艺腔
+
+禁止事项：
+- 不编造没有的经历或荣誉
+- 不使用「匠心」「初心」「情怀」等被用滥的词
+- 不贬低同行或连锁品牌
+- 不夸大经营成绩
+- 不写成企业宣传稿的语气</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{创业初衷}</code></td><td>为什么开这家店</td></tr><tr><td><code>{经营年限}</code></td><td>开了多少年</td></tr><tr><td><code>{招牌特色}</code></td><td>最拿手的菜或最大的特色</td></tr><tr><td><code>{经营理念}</code></td><td>你对做餐饮的理解</td></tr></tbody>
+      <tbody><tr><td><code>{创业初衷}</code></td><td>为什么开这家店，背后的真实原因，如「想让更多人吃到家乡味道」「从小跟着爷爷学做菜」</td></tr><tr><td><code>{经营年限}</code></td><td>从开店到现在多少年了</td></tr><tr><td><code>{招牌特色}</code></td><td>你最拿手的菜或最大的特色，如「手擀面」「秘制卤水」「每天限量的红烧肉」</td></tr><tr><td><code>{经营理念}</code></td><td>你对做餐饮这件事的理解，如「食材好味道就不会差」「让客人吃得放心比什么都重要」</td></tr><tr><td><code>{用心细节}</code></td><td>一个能体现你用心的具体小事，如「每天早上5点去菜市场选菜」「酱料坚持自己熬」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>2018年，我从国企辞职，在大学城旁边开了这家小面馆。原因很简单——想让更多人吃到我妈做的那碗杂酱面的味道。面是每天早上现擀的，杂酱用的是土猪肉加自家晒的豆瓣酱，熬足40分钟。六年了，从最初一天卖20碗到现在午市经常排队，靠的就是这一碗面的味道没变过。我们不追求花哨，就想把一碗面做好（仅供格式参考）</p>
+      <p>2018年夏天，我从写字楼辞职的第二天就去了菜市场。不是冲动，是想了两年的事——开一家面馆，卖我妈教我的那碗杂酱面。最开始在大学城旁边租了个30平的铺子，灶台是二手的，桌子只有四张。杂酱用的是菜市场王叔家的土猪肉，豆瓣酱是每年夏天自己晒的，熬一锅酱要守着灶台40分钟不能走开。六年了，从一天卖20碗到现在午市经常要等位。搬过一次家，换过两次桌椅，但那锅酱的配方和熬法一直没变过。（仅供格式参考，实际请根据你的真实经历生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认年限等事实信息准确</label></li><li><label><input type="checkbox"> 检查是否有虚构成分</label></li><li><label><input type="checkbox"> 语气是否真实自然</label></li><li><label><input type="checkbox"> 无夸大宣传</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 故事中的时间、地点等事实是否真实</label></li><li><label><input type="checkbox"> 是否有具体可信的细节（数字、场景）</label></li><li><label><input type="checkbox"> 是否避免了「匠心」「初心」等陈词滥调</label></li><li><label><input type="checkbox"> 语气是否像老板本人在讲述</label></li><li><label><input type="checkbox"> 招牌特色是否自然融入故事</label></li><li><label><input type="checkbox"> 是否有编造或夸大的成分</label></li><li><label><input type="checkbox"> 结尾是否落在「坚持不变」的点上</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-social-media.html" class="related-link">餐饮朋友圈日常内容</a><a href="../templates/catering-short-video.html" class="related-link">餐饮短视频脚本</a></div></section>

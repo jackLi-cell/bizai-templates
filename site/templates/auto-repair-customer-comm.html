@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修客户沟通话术","description":"为汽修店生成与车主沟通的话术","step":[{"@type":"HowToStep","text":"准备材料：车主称呼、维修项目、当前进度、预计完成时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：进度信息是否准确；时间是否合理；语气是否专业；信息是否完整"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"车主称呼"},{"@type":"HowToSupply","name":"维修项目"},{"@type":"HowToSupply","name":"当前进度"},{"@type":"HowToSupply","name":"预计完成时间"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修客户沟通话术","description":"为汽修店生成与车主沟通的话术","step":[{"@type":"HowToStep","text":"准备材料：车主姓名或称呼、车辆信息（品牌车型，便于车主确认）、当前维修/保养项目、实时进度（已完成步骤和正在进行的步骤）、预计完成时间（精确到小时）、取车时需要注意的事项（如有）、是否发现额外问题需要沟通"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：进度信息是否与实际维修状态一致；预计完成时间是否合理可靠；额外发现是否客观描述（无夸大）；是否给了车主自主决策的空间；语气是否简洁专业、不啰嗦；是否包含取车时的必要注意事项；是否存在未经授权的额外操作暗示"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"车主姓名或称呼"},{"@type":"HowToSupply","name":"车辆信息（品牌车型，便于车主确认）"},{"@type":"HowToSupply","name":"当前维修/保养项目"},{"@type":"HowToSupply","name":"实时进度（已完成步骤和正在进行的步骤）"},{"@type":"HowToSupply","name":"预计完成时间（精确到小时）"},{"@type":"HowToSupply","name":"取车时需要注意的事项（如有）"},{"@type":"HowToSupply","name":"是否发现额外问题需要沟通"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>车主称呼</li><li>维修项目</li><li>当前进度</li><li>预计完成时间</li></ul>
+    <ul class="materials-list"><li>车主姓名或称呼</li><li>车辆信息（品牌车型，便于车主确认）</li><li>当前维修/保养项目</li><li>实时进度（已完成步骤和正在进行的步骤）</li><li>预计完成时间（精确到小时）</li><li>取车时需要注意的事项（如有）</li><li>是否发现额外问题需要沟通</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位汽修店客服。请生成客户沟通话术。
+      <pre class="prompt-text" id="prompt-text">你是一位汽修店的客户服务专员，负责在维修过程中与车主保持沟通。你的风格是主动、透明、不啰嗦——车主最想知道的就是「修到哪了」「什么时候好」「还有没有别的问题」。现在需要生成一条维修进度通知或取车提醒，通过微信发送给车主。
 
-车主：{车主称呼}
-项目：{维修项目}
-进度：{当前进度}
-完成：{预计完成时间}
+请根据以下信息生成沟通话术：
+车主称呼：{车主称呼}
+车辆信息：{车辆信息}
+维修项目：{维修项目}
+当前进度：{当前进度}
+预计完成时间：{预计完成时间}
+取车注意事项：{取车注意}
+额外发现（如有）：{额外发现}
 
-要求：
-1. 信息明确
-2. 语气专业友好
-3. 主动告知进度
-4. 字数50-80字</pre>
+输出格式要求：
+- 总字数控制在70-110字
+- 结构：称呼→进度告知→预计时间→注意事项或额外发现→结束语
+- 如有额外发现的问题，单独说明并表示「不着急决定，取车时再聊」
+- 信息密度高，不说废话
+
+语气与风格：
+- 像一位靠谱的修车师傅在微信上跟你汇报
+- 简洁直接，不用过多客套
+- 有问题如实说，不藏着
+
+禁止事项：
+- 不能催促车主做额外维修决定
+- 不能夸大额外发现的问题严重性
+- 不能泄露其他车主的信息
+- 不能给出不确定的完成时间（宁可说「还需确认」）
+- 不能在未经车主同意的情况下暗示已开始额外维修</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +98,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{车主称呼}</code></td><td>车主怎么称呼</td></tr><tr><td><code>{维修项目}</code></td><td>在修什么</td></tr><tr><td><code>{当前进度}</code></td><td>修到哪一步了</td></tr><tr><td><code>{预计完成时间}</code></td><td>什么时候能取车</td></tr></tbody>
+      <tbody><tr><td><code>{车主称呼}</code></td><td>车主习惯的称呼方式，如「王哥」「李姐」「张先生」</td></tr><tr><td><code>{车辆信息}</code></td><td>简要车辆信息用于确认，如「您的白色卡罗拉」</td></tr><tr><td><code>{维修项目}</code></td><td>本次维修/保养的项目，如「更换前刹车片+常规保养」</td></tr><tr><td><code>{当前进度}</code></td><td>目前完成到哪一步，如「刹车片已换好，正在做保养换机油」</td></tr><tr><td><code>{预计完成时间}</code></td><td>预计什么时候可以取车，如「今天下午4点前」</td></tr><tr><td><code>{取车注意}</code></td><td>取车时需要知道的事，如「新刹车片有200公里磨合期，期间轻踩」</td></tr><tr><td><code>{额外发现}</code></td><td>维修过程中发现的其他问题，如「发现后刹车片也快到磨损极限了，不急但建议近期关注」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +110,16 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>王哥您好，您的车刹车片已经换好了，现在在做最后的制动测试。一切正常的话，下午3点左右可以来取车。取车时我给您演示一下新刹车片的磨合注意事项。到时候直接来就行（仅供格式参考）</p>
+      <p>王哥，您的卡罗拉进度汇报：前刹车片已经换好，现在在做保养（换机油+机滤），顺利的话下午3点半左右能好。
+
+另外跟您说一下，检查时发现右前轮胎外侧有个小鼓包，暂时不影响行驶但建议近期换掉。不着急，取车时我指给您看，您再决定。到时候直接来就行。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 进度信息是否准确</label></li><li><label><input type="checkbox"> 时间是否合理</label></li><li><label><input type="checkbox"> 语气是否专业</label></li><li><label><input type="checkbox"> 信息是否完整</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 进度信息是否与实际维修状态一致</label></li><li><label><input type="checkbox"> 预计完成时间是否合理可靠</label></li><li><label><input type="checkbox"> 额外发现是否客观描述（无夸大）</label></li><li><label><input type="checkbox"> 是否给了车主自主决策的空间</label></li><li><label><input type="checkbox"> 语气是否简洁专业、不啰嗦</label></li><li><label><input type="checkbox"> 是否包含取车时的必要注意事项</label></li><li><label><input type="checkbox"> 是否存在未经授权的额外操作暗示</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/auto-repair-quotation.html" class="related-link">汽修报价说明</a><a href="../templates/auto-repair-review-response.html" class="related-link">汽修店评价回复</a></div></section>

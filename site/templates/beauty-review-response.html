@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业评价回复","description":"为美容院线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、做的项目、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对具体内容；语气是否得当；无效果承诺；无医疗用语"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"做的项目"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业评价回复","description":"为美容院线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价原文、评价星级、客户做的项目、你想传达的重点、差评解决方案（如适用）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对评价中的具体内容；是否有效果承诺或医疗用语；好评回复是否有实质性的护理建议；差评回复是否给出了具体解决方案；是否泄露了客户隐私；语气是否专业温和；对潜在客户是否有正面影响"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价原文"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"客户做的项目"},{"@type":"HowToSupply","name":"你想传达的重点"},{"@type":"HowToSupply","name":"差评解决方案（如适用）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>做的项目</li><li>回复重点</li></ul>
+    <ul class="materials-list"><li>评价原文</li><li>评价星级</li><li>客户做的项目</li><li>你想传达的重点</li><li>差评解决方案（如适用）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美容院运营。请针对以下评价生成回复。
+      <pre class="prompt-text" id="prompt-text">你是一位管理美容院线上口碑的运营专员，深知大众点评和美团上的评价回复既是给评价者看的，更是给其他正在选店的潜在客户看的。现在需要针对一条客户评价生成商家回复。
 
-评价内容：{评价内容}
-星级：{评价星级}
-项目：{做的项目}
-回复重点：{回复重点}
+请根据以下信息生成回复：
+客户评价原文：{评价内容}
+评价星级：{评价星级}
+客户做的项目：{做的项目}
+你想在回复中强调的：{回复重点}
+如是差评，可提供的解决方案：{解决方案}
 
-要求：
-1. 好评表示感谢，差评先道歉
-2. 针对具体内容回应
-3. 语气专业温和
-4. 字数50-100字
-5. 不承诺效果</pre>
+输出要求：
+- 字数60-120字
+- 好评回复：感谢要具体（针对客户提到的体验），补充一个护理建议或下次推荐
+- 差评回复：先道歉+表示重视，给出具体解决方案，邀请私聊
+- 回复要让浏览评价的潜在客户看到你的专业度和服务态度
+- 每条回复的结构和开头都要不同，避免模板感
+- 语气专业温和，体现美业从业者的素养
+
+禁止事项：
+- 不使用「亲」「宝贝」等电商客服用语
+- 不在回复中承诺效果（如「坚持做一定会改善」）
+- 不使用医疗用语
+- 不在差评回复中暗示客户有问题
+- 不泄露客户的个人信息或消费记录
+- 不使用「我们会继续努力」等空话结尾</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价</td></tr><tr><td><code>{评价星级}</code></td><td>几星评价</td></tr><tr><td><code>{做的项目}</code></td><td>客户做了什么项目</td></tr><tr><td><code>{回复重点}</code></td><td>想在回复中强调什么</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价原文</td></tr><tr><td><code>{评价星级}</code></td><td>1-5星</td></tr><tr><td><code>{做的项目}</code></td><td>客户做了什么项目</td></tr><tr><td><code>{回复重点}</code></td><td>你想通过回复传达什么，如「强调专业度」「推荐下次项目」「解决不满」</td></tr><tr><td><code>{解决方案}</code></td><td>如果是差评，你能提供什么解决方案</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>感谢姐的好评和信任！很开心您对这次面部护理的体验满意～换季确实需要加强保湿，建议在家也坚持早晚用保湿精华，下次来可以试试我们的新款补水仪，效果会更持久。期待下次见面（仅供格式参考）</p>
+      <p>看到你说做完补水后「第二天上妆特别服帖」，作为给你做护理的美容师真的很开心。换季这段时间皮肤确实容易缺水，建议在家也坚持早晚用保湿精华打底，效果会更持续。下次来可以试试我们新到的补水仪，导入效率比手工按摩高不少。随时预约，帮你留好时间。（仅供格式参考，实际请根据具体评价生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对具体内容</label></li><li><label><input type="checkbox"> 语气是否得当</label></li><li><label><input type="checkbox"> 无效果承诺</label></li><li><label><input type="checkbox"> 无医疗用语</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对评价中的具体内容</label></li><li><label><input type="checkbox"> 是否有效果承诺或医疗用语</label></li><li><label><input type="checkbox"> 好评回复是否有实质性的护理建议</label></li><li><label><input type="checkbox"> 差评回复是否给出了具体解决方案</label></li><li><label><input type="checkbox"> 是否泄露了客户隐私</label></li><li><label><input type="checkbox"> 语气是否专业温和</label></li><li><label><input type="checkbox"> 对潜在客户是否有正面影响</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-social-media.html" class="related-link">美业朋友圈日常</a><a href="../templates/beauty-recall.html" class="related-link">美业老客户召回话术</a></div></section>

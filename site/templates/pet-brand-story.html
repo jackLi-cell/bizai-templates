@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店品牌故事","description":"为宠物店撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：创业故事、经营理念、团队特色、服务承诺"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：故事是否真实；理念是否清晰；无虚构成分；语气是否自然"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创业故事"},{"@type":"HowToSupply","name":"经营理念"},{"@type":"HowToSupply","name":"团队特色"},{"@type":"HowToSupply","name":"服务承诺"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店品牌故事","description":"为宠物店撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：开店经历和初衷、店铺主营服务和特色、团队情况（人数、资质、养宠经验）、服务理念和对待宠物的态度、店铺数据（营业年限、服务宠物数量、好评率等）、店铺地址和联系方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：开店故事是否真实可信；团队资质描述是否准确；服务理念是否通过具体细节体现；数据是否真实可查；是否避免了绝对化自评和空洞套话；地址和联系方式是否完整；语气是否温暖真诚而非营销感过强"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"开店经历和初衷"},{"@type":"HowToSupply","name":"店铺主营服务和特色"},{"@type":"HowToSupply","name":"团队情况（人数、资质、养宠经验）"},{"@type":"HowToSupply","name":"服务理念和对待宠物的态度"},{"@type":"HowToSupply","name":"店铺数据（营业年限、服务宠物数量、好评率等）"},{"@type":"HowToSupply","name":"店铺地址和联系方式"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,38 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>创业故事</li><li>经营理念</li><li>团队特色</li><li>服务承诺</li></ul>
+    <ul class="materials-list"><li>开店经历和初衷</li><li>店铺主营服务和特色</li><li>团队情况（人数、资质、养宠经验）</li><li>服务理念和对待宠物的态度</li><li>店铺数据（营业年限、服务宠物数量、好评率等）</li><li>店铺地址和联系方式</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位品牌文案助手。请为以下宠物店撰写品牌故事。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助宠物店老板撰写品牌故事的文案顾问。你知道宠物主人选店最看重的是「这家店的人是不是真的喜欢动物」和「我的宠物在这里会不会被善待」。所以品牌介绍要通过具体的细节和故事来传递这种信任感，而不是堆砌「专业」「用心」等空洞形容词。
 
-创业故事：{创业故事}
-经营理念：{经营理念}
-团队特色：{团队特色}
-服务承诺：{服务承诺}
+现在需要为一家宠物店撰写品牌介绍，用于大众点评店铺页面或宣传物料。
 
-要求：
-1. 字数150-250字
-2. 体现对动物的爱
-3. 真实有温度
-4. 不夸大
-5. 适合店铺介绍页</pre>
+请根据以下信息撰写：
+开店经历：{开店经历}
+主营服务：{主营服务}
+团队情况：{团队情况}
+服务理念：{服务理念}
+店铺数据：{店铺数据}
+地址联系：{地址联系}
+
+输出格式要求：
+- 总字数130-200字
+- 开头用一个具体的故事或细节引入（如为什么开这家店、某个让你印象深刻的瞬间）
+- 中间介绍主营服务和团队，用具体细节体现专业（如「美容师都有C级以上证书」而非「团队专业」）
+- 用一个小细节体现对动物的态度（如「店里常备应激安抚喷雾」「第一次来的猫咪我们会多留半小时适应」）
+- 结尾用数据佐证（营业年限、服务数量、好评率）
+- 语气温暖真诚，像一个爱动物的人在介绍自己的小天地
+
+禁止事项：
+- 不使用「最专业」「最用心」等绝对化自评
+- 不编造虚假的开店故事或数据
+- 不使用「把每只宠物当自己孩子」等过度承诺
+- 不罗列过多服务项目（突出特色即可）
+- 不使用「竭诚为您服务」等套话</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +96,26 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{创业故事}</code></td><td>为什么开宠物店</td></tr><tr><td><code>{经营理念}</code></td><td>怎么对待每一只宠物</td></tr><tr><td><code>{团队特色}</code></td><td>团队有什么特别的</td></tr><tr><td><code>{服务承诺}</code></td><td>对客户的承诺</td></tr></tbody>
+      <tbody><tr><td><code>{开店经历}</code></td><td>为什么开这家店，如「自己养了3只猫，之前带去洗澡总觉得别人不够细心，干脆自己开了一家」</td></tr><tr><td><code>{主营服务}</code></td><td>店里主要做什么，如「猫咪专属洗护、造型美容、短期寄养」</td></tr><tr><td><code>{团队情况}</code></td><td>店里有几个人、什么资质，如「3位美容师都有CKU认证，最长的做了7年」</td></tr><tr><td><code>{服务理念}</code></td><td>你们怎么对待宠物的，如「不强制、不催促，猫咪害怕就停下来等它缓一缓」</td></tr><tr><td><code>{店铺数据}</code></td><td>能证明你靠谱的数据，如「开店4年，服务过2000+只猫咪，大众点评4.9分」</td></tr><tr><td><code>{地址联系}</code></td><td>店在哪里、怎么联系，如「XX区XX路XX号，微信：XXX」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>150-250字品牌故事</p>
+    <p>130-200字品牌介绍</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>开这家店是因为我自己养了三只猫，深知找到一家靠谱的宠物店有多难。2020年辞职开店，就想做一家「自己愿意把猫送来」的店。我们团队4个人都是养宠多年的铲屎官，懂宠物的情绪和需求。每只来店里的毛孩子，我们都当自己家的对待：洗护全程有监控，主人可以随时看；用的都是进口无刺激产品；遇到紧张的宝贝会放慢节奏，不强迫。三年了，很多毛孩子一进门就摇尾巴，这是对我们最大的认可（仅供格式参考）</p>
+      <p>开这家店是因为我家三只猫。以前带它们去洗澡，有的店为了赶时间会强按着吹，猫咪吓得发抖。我就想，能不能有一家店是按猫咪的节奏来的。所以我们的规矩是：猫咪害怕就停下来，等它自己缓过来再继续，哪怕多花半小时。店里3位美容师都有CKU认证，最久的做了7年猫咪洗护。我们只接猫（没有狗叫声的环境猫咪更放松），常备费利威安抚喷雾。开店4年，服务过2000多只猫，大众点评4.9分。XX路XX号，欢迎带主子来试试。（仅供格式参考，请根据实际情况生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 故事是否真实</label></li><li><label><input type="checkbox"> 理念是否清晰</label></li><li><label><input type="checkbox"> 无虚构成分</label></li><li><label><input type="checkbox"> 语气是否自然</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 开店故事是否真实可信</label></li><li><label><input type="checkbox"> 团队资质描述是否准确</label></li><li><label><input type="checkbox"> 服务理念是否通过具体细节体现</label></li><li><label><input type="checkbox"> 数据是否真实可查</label></li><li><label><input type="checkbox"> 是否避免了绝对化自评和空洞套话</label></li><li><label><input type="checkbox"> 地址和联系方式是否完整</label></li><li><label><input type="checkbox"> 语气是否温暖真诚而非营销感过强</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-social-media.html" class="related-link">宠物店朋友圈内容</a></div></section>

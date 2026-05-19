@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽车服务项目介绍","description":"为汽修店服务项目撰写介绍","step":[{"@type":"HowToStep","text":"准备材料：服务名称、服务内容、适用车型、价格、耗时"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：价格是否准确；服务内容是否完整；适用范围是否清晰；无夸大效果"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"服务名称"},{"@type":"HowToSupply","name":"服务内容"},{"@type":"HowToSupply","name":"适用车型"},{"@type":"HowToSupply","name":"价格"},{"@type":"HowToSupply","name":"耗时"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽车服务项目介绍","description":"为汽修店服务项目撰写介绍","step":[{"@type":"HowToStep","text":"准备材料：服务项目的标准名称和编号（如有）、服务包含的具体操作步骤清单、适用车型范围及排量限制（如有）、使用的配件品牌和等级（原厂/品牌副厂/普通副厂）、价格构成（配件费+工时费分开列明）、预计耗时（区分不同车型）、质保期限和质保范围"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：价格是否分项列明（配件费和工时费分开）；配件品牌和等级是否如实标注（原厂/副厂）；适用车型范围是否准确，不适用的是否注明；质保期限和范围是否明确；是否存在可能的额外费用未说明；是否有绝对化用语或夸大效果；预计耗时是否合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"服务项目的标准名称和编号（如有）"},{"@type":"HowToSupply","name":"服务包含的具体操作步骤清单"},{"@type":"HowToSupply","name":"适用车型范围及排量限制（如有）"},{"@type":"HowToSupply","name":"使用的配件品牌和等级（原厂/品牌副厂/普通副厂）"},{"@type":"HowToSupply","name":"价格构成（配件费+工时费分开列明）"},{"@type":"HowToSupply","name":"预计耗时（区分不同车型）"},{"@type":"HowToSupply","name":"质保期限和质保范围"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,41 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>服务名称</li><li>服务内容</li><li>适用车型</li><li>价格</li><li>耗时</li></ul>
+    <ul class="materials-list"><li>服务项目的标准名称和编号（如有）</li><li>服务包含的具体操作步骤清单</li><li>适用车型范围及排量限制（如有）</li><li>使用的配件品牌和等级（原厂/品牌副厂/普通副厂）</li><li>价格构成（配件费+工时费分开列明）</li><li>预计耗时（区分不同车型）</li><li>质保期限和质保范围</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位汽车服务文案助手。请为以下服务撰写介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位从业12年的汽修店技术主管，同时负责门店的线上运营。你的文案风格是「说人话、讲实话」，让车主看完就知道这个服务值不值、适不适合自己。现在需要为汽修店的一个服务项目撰写介绍文案，用于美团、抖音或朋友圈展示。
 
-服务：{服务名称}
-内容：{服务内容}
-车型：{适用车型}
-价格：{价格}
-耗时：{耗时}
+请根据以下信息撰写：
+服务名称：{服务名称}
+服务内容（具体操作）：{服务内容}
+适用车型：{适用车型}
+配件信息（品牌/等级）：{配件信息}
+价格明细（配件+工时）：{价格明细}
+预计耗时：{预计耗时}
+质保说明：{质保说明}
 
-要求：
-1. 字数80-120字
-2. 专业透明
-3. 价格明确
-4. 不夸大效果
-5. 适合美团/抖音展示</pre>
+输出格式要求：
+- 总字数控制在120-170字
+- 结构：服务名称（加粗或方括号）→包含什么（逐项列明）→适用范围→价格（配件和工时分开）→耗时→质保→温馨提示
+- 价格必须分项透明，不能只写一个总价
+- 如有车型差异导致的价格浮动，要说明
+
+语气与风格：
+- 像一位靠谱的修车师傅在跟你解释，实在不忽悠
+- 技术术语后面加括号用大白话解释
+- 价格部分直接明了，不藏着掖着
+
+禁止事项：
+- 不能使用「最低价」「全城最便宜」等绝对化表述
+- 不能隐瞒可能产生的额外费用
+- 不能夸大服务效果（如「焕然一新」「延长寿命XX年」）
+- 不能贬低其他修理厂或4S店
+- 不能虚标原厂件（副厂件必须如实标注）
+- 不能省略质保条款</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +99,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{服务名称}</code></td><td>如「小保养」「全车精洗」</td></tr><tr><td><code>{服务内容}</code></td><td>具体做什么</td></tr><tr><td><code>{适用车型}</code></td><td>什么车适合</td></tr><tr><td><code>{价格}</code></td><td>收费标准</td></tr><tr><td><code>{耗时}</code></td><td>大约多久</td></tr></tbody>
+      <tbody><tr><td><code>{服务名称}</code></td><td>服务项目的标准名称，如「常规小保养」「全车精洗+内饰深度清洁」「四轮定位」</td></tr><tr><td><code>{服务内容}</code></td><td>这个服务具体做哪些操作，逐项列出，如「更换机油+机滤+放油螺丝垫片+全车20项安全检查」</td></tr><tr><td><code>{适用车型}</code></td><td>哪些车型适用，如「5年内/10万公里内的日系、德系轿车和SUV」，如有不适用的要注明</td></tr><tr><td><code>{配件信息}</code></td><td>使用什么品牌的配件，如「机油：美孚1号全合成5W-30；机滤：曼牌」，标明原厂还是品牌副厂</td></tr><tr><td><code>{价格明细}</code></td><td>配件费和工时费分开列，如「机油+机滤：280元；工时费：80元；合计360元起」</td></tr><tr><td><code>{预计耗时}</code></td><td>正常情况下需要多长时间，如「约45分钟，可在店内等候」</td></tr><tr><td><code>{质保说明}</code></td><td>质保期限和范围，如「配件质保12个月或1万公里（以先到为准），工艺质保终身」</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +111,23 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【小保养套餐】包含：更换机油（全合成）+机滤+全车检查（刹车、轮胎、灯光等20项）。适用：5万公里以内各品牌轿车/SUV。价格：399元起（含工时+材料），不同机油品牌价格略有差异，到店报价。耗时约45分钟，可在休息区等候。提前预约不用排队（仅供格式参考）</p>
+      <p>【常规小保养套餐】
+包含：更换全合成机油（美孚1号5W-30）+ 机滤（曼牌）+ 放油螺丝垫片 + 全车20项安全检查（刹车片厚度、轮胎磨损、灯光、底盘等）
+
+适用：10万公里内各品牌轿车/SUV（涡轮增压车型机油用量可能多0.5-1L，到店确认）
+
+价格：材料费280元 + 工时费80元 = 360元起
+耗时：约45分钟，店内有休息区可等候
+质保：配件质保1年或1万公里
+
+提示：不同车型机油用量不同，到店后根据实际用量确认最终价格，不会有隐形加价。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 价格是否准确</label></li><li><label><input type="checkbox"> 服务内容是否完整</label></li><li><label><input type="checkbox"> 适用范围是否清晰</label></li><li><label><input type="checkbox"> 无夸大效果</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 价格是否分项列明（配件费和工时费分开）</label></li><li><label><input type="checkbox"> 配件品牌和等级是否如实标注（原厂/副厂）</label></li><li><label><input type="checkbox"> 适用车型范围是否准确，不适用的是否注明</label></li><li><label><input type="checkbox"> 质保期限和范围是否明确</label></li><li><label><input type="checkbox"> 是否存在可能的额外费用未说明</label></li><li><label><input type="checkbox"> 是否有绝对化用语或夸大效果</label></li><li><label><input type="checkbox"> 预计耗时是否合理</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/auto-repair-quotation.html" class="related-link">汽修报价说明</a><a href="../templates/auto-repair-social-media.html" class="related-link">汽修店朋友圈内容</a></div></section>

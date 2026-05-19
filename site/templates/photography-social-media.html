@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影工作室朋友圈","description":"为摄影工作室生成朋友圈日常内容","step":[{"@type":"HowToStep","text":"准备材料：今日内容、拍摄花絮、摄影小知识"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否获得客户授权；语气是否自然；无过度修饰；无隐私泄露"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"今日内容"},{"@type":"HowToSupply","name":"拍摄花絮"},{"@type":"HowToSupply","name":"摄影小知识"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影工作室朋友圈","description":"为摄影工作室生成朋友圈日常内容","step":[{"@type":"HowToStep","text":"准备材料：客户的书面或微信授权截图（展示客片时必须）、当日拍摄的场景和主题信息、配图的具体内容（以便文案与图片呼应）、工作室近期想推广的套餐或活动信息（可选）、发布时间规划（避免同一天发多条类似内容）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否已确认获得客户的照片展示授权；文案中是否泄露了客户的个人隐私信息；是否存在对客户外貌的评价性描述；字数是否在50-80字范围内；语气是否自然，不像广告文案；如有预约信息植入是否过于生硬"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户的书面或微信授权截图（展示客片时必须）"},{"@type":"HowToSupply","name":"当日拍摄的场景和主题信息"},{"@type":"HowToSupply","name":"配图的具体内容（以便文案与图片呼应）"},{"@type":"HowToSupply","name":"工作室近期想推广的套餐或活动信息（可选）"},{"@type":"HowToSupply","name":"发布时间规划（避免同一天发多条类似内容）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>今日内容</li><li>拍摄花絮</li><li>摄影小知识</li></ul>
+    <ul class="materials-list"><li>客户的书面或微信授权截图（展示客片时必须）</li><li>当日拍摄的场景和主题信息</li><li>配图的具体内容（以便文案与图片呼应）</li><li>工作室近期想推广的套餐或活动信息（可选）</li><li>发布时间规划（避免同一天发多条类似内容）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位摄影师的朋友圈运营助手。请生成日常内容。
+      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室的日常内容运营，负责维护工作室朋友圈的专业形象和人格化表达。你理解摄影师的审美追求，也懂得如何用简短文字配合客片展示来吸引潜在客户。现在需要生成一条适合配合客片或花絮照片发布的朋友圈文案。
 
-内容：{今日内容}
-花絮：{拍摄花絮}
-知识：{摄影小知识}
+请根据以下信息创作：
+今日发布类型（客片展示/拍摄花絮/摄影知识/日常感悟）：{发布类型}
+拍摄主题或场景描述：{场景描述}
+想传达的情绪或氛围：{情绪氛围}
+是否已获得客户展示授权：{客户授权}
+配图数量：{配图数量}
+想植入的信息（套餐名/预约方式，可选）：{植入信息}
 
-要求：
-1. 字数40-70字
-2. 展示审美和专业
-3. 不过度修饰
-4. 适合配客片发布
-5. 需客户同意后才发</pre>
+输出格式要求：
+- 字数严格控制在50-80字
+- 如果是客片展示，必须在文末标注「已获客户授权展示」
+- 文案要能独立成立，不依赖图片也能传达信息
+- 语气像摄影师本人在分享工作日常，有温度但不矫情
+- 如果植入预约信息，用最后一句自然带出，不超过10字
+- 不要使用hashtag或话题标签
+
+禁止事项：
+- 未获授权不得发布客片相关内容
+- 不评价客户的外貌或身材
+- 不使用「出片率超高」「张张都是大片」等夸张表述
+- 不暴露客户的个人信息（姓名、职业等）
+- 不使用「约拍请私」等生硬推销结尾</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{今日内容}</code></td><td>今天想分享什么</td></tr><tr><td><code>{拍摄花絮}</code></td><td>拍摄中的有趣事</td></tr><tr><td><code>{摄影小知识}</code></td><td>可以分享的拍照技巧</td></tr></tbody>
+      <tbody><tr><td><code>{发布类型}</code></td><td>今天这条朋友圈的内容类型：展示成片、分享拍摄过程的花絮、科普一个摄影小知识、还是记录工作感悟</td></tr><tr><td><code>{场景描述}</code></td><td>拍摄的场景或主题，如「户外银杏林闺蜜写真」「工作室证件照拍摄」「婚纱外景踩点」</td></tr><tr><td><code>{情绪氛围}</code></td><td>想让读者感受到什么，如「轻松自在」「温馨感动」「专业可靠」</td></tr><tr><td><code>{客户授权}</code></td><td>填「已授权」或「未授权」，未授权则不能发布含客户照片的内容</td></tr><tr><td><code>{配图数量}</code></td><td>这条朋友圈准备配几张图，影响文案的描述详略</td></tr><tr><td><code>{植入信息}</code></td><td>如果想顺带提一下某个套餐或预约方式，写在这里；不需要则留空</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>今天拍的这组闺蜜写真，两个人从头笑到尾，自然的表情比摆拍好看一百倍。其实拍照不用紧张，聊着天就拍完了。（已获客户授权展示）（仅供格式参考）</p>
+      <p>今天这组拍到后半段，她突然笑场了，反而比之前认真摆pose的都好看。有时候最好的表情就是不经意间的那一下。自然光加上放松的状态，比任何滤镜都管用。（已获客户授权展示）（仅供格式参考，请根据实际内容生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否获得客户授权</label></li><li><label><input type="checkbox"> 语气是否自然</label></li><li><label><input type="checkbox"> 无过度修饰</label></li><li><label><input type="checkbox"> 无隐私泄露</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否已确认获得客户的照片展示授权</label></li><li><label><input type="checkbox"> 文案中是否泄露了客户的个人隐私信息</label></li><li><label><input type="checkbox"> 是否存在对客户外貌的评价性描述</label></li><li><label><input type="checkbox"> 字数是否在50-80字范围内</label></li><li><label><input type="checkbox"> 语气是否自然，不像广告文案</label></li><li><label><input type="checkbox"> 如有预约信息植入是否过于生硬</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/photography-package-intro.html" class="related-link">摄影套餐介绍</a><a href="../templates/photography-short-video.html" class="related-link">摄影工作室短视频脚本</a></div></section>

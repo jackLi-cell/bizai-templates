@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身季节性活动","description":"为健身房季节性活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：季节主题、活动内容、优惠信息、活动时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无身材焦虑；无效果承诺；优惠信息准确；时间是否正确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"季节主题"},{"@type":"HowToSupply","name":"活动内容"},{"@type":"HowToSupply","name":"优惠信息"},{"@type":"HowToSupply","name":"活动时间"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身季节性活动","description":"为健身房季节性活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：季节性活动的完整方案、优惠政策的具体内容（经财务确认）、特色体验活动的执行计划（场地、教练、时间）、活动起止日期、报名渠道和流程、天气备选方案（户外活动需要）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否存在身材焦虑或季节性焦虑话术；优惠信息是否准确；活动时间是否正确；特色体验的描述是否真实可执行；是否存在效果承诺；语气是否轻松正面"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"季节性活动的完整方案"},{"@type":"HowToSupply","name":"优惠政策的具体内容（经财务确认）"},{"@type":"HowToSupply","name":"特色体验活动的执行计划（场地、教练、时间）"},{"@type":"HowToSupply","name":"活动起止日期"},{"@type":"HowToSupply","name":"报名渠道和流程"},{"@type":"HowToSupply","name":"天气备选方案（户外活动需要）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>季节主题</li><li>活动内容</li><li>优惠信息</li><li>活动时间</li></ul>
+    <ul class="materials-list"><li>季节性活动的完整方案</li><li>优惠政策的具体内容（经财务确认）</li><li>特色体验活动的执行计划（场地、教练、时间）</li><li>活动起止日期</li><li>报名渠道和流程</li><li>天气备选方案（户外活动需要）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位健身房营销助手。请撰写季节性活动文案。
+      <pre class="prompt-text" id="prompt-text">你是一位健身房的季节营销策划，擅长将季节变化与运动需求自然结合，创造有时效性但不制造焦虑的推广内容。你的核心理念是：每个季节都有适合运动的理由，但这个理由应该是正面的（如春天适合户外、冬天适合室内保暖训练），而不是负面的（如夏天要露肉所以要减肥）。现在需要为健身房的季节性活动撰写推广文案。
 
-主题：{季节主题}
-内容：{活动内容}
-优惠：{优惠信息}
-时间：{活动时间}
+请根据以下信息创作季节活动文案：
+季节/时令主题：{季节主题}
+活动内容：{活动内容}
+优惠信息：{优惠信息}
+活动时间：{活动时间}
+特色体验（如户外跑团、主题团课等）：{特色体验}
+报名方式：{报名方式}
 
-要求：
-1. 字数80-120字
-2. 结合季节
-3. 不制造焦虑
-4. 不承诺效果
-5. 积极正面</pre>
+输出格式要求：
+- 字数控制在100-140字
+- 开头从季节的正面特质切入（如天气、氛围、身体感受），不从身材焦虑切入
+- 中间介绍活动内容和优惠，信息清晰
+- 如有特色体验，突出其趣味性和社交属性
+- 结尾给出报名方式
+- 语气像在分享一个应季的好活动，轻松愉快
+- 可使用1个与季节相关的表情符号
+
+禁止事项：
+- 不使用「夏天要露肉」「冬天容易长膘」等身材焦虑话术
+- 不使用「春天不减肥夏天徒伤悲」等季节性焦虑口号
+- 不承诺「一个月/一个季度达到XX效果」
+- 不使用「再不动就来不及了」等紧迫话术
+- 不贬低不运动的生活方式</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +95,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{季节主题}</code></td><td>如「新年焕新」「夏日活力」</td></tr><tr><td><code>{活动内容}</code></td><td>具体活动</td></tr><tr><td><code>{优惠信息}</code></td><td>有什么优惠</td></tr><tr><td><code>{活动时间}</code></td><td>起止日期</td></tr></tbody>
+      <tbody><tr><td><code>{季节主题}</code></td><td>当前季节的活动主题，如「春日活力」「夏日清凉训练」「秋冬暖身计划」</td></tr><tr><td><code>{活动内容}</code></td><td>这个季节性活动具体包含什么</td></tr><tr><td><code>{优惠信息}</code></td><td>有什么价格优惠或赠送</td></tr><tr><td><code>{活动时间}</code></td><td>活动的起止日期</td></tr><tr><td><code>{特色体验}</code></td><td>这个季节特有的体验活动，如户外跑团、露天瑜伽等</td></tr><tr><td><code>{报名方式}</code></td><td>如何报名参加</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +107,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>春天来了，是时候动起来了！3月「春日焕新」活动：新会员办季卡送一个月，老会员续费享8折。另外本月新增户外跑团活动，每周六早上8点公园集合，免费参加，不限会员。春天适合开始一个新习惯，运动就是个好选择（仅供格式参考）</p>
+      <p>春天来了，周末窝在家里有点可惜。3月「春日活力」活动：新会员办季卡送一个月，老会员续费享8折。另外本月新增户外跑团——每周六早上8点公园集合，教练带队慢跑5公里，跑完一起吃早餐，免费参加不限会员。春天适合开始一个新习惯，运动是个不错的选择。活动截止3.31，前台或微信报名。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无身材焦虑</label></li><li><label><input type="checkbox"> 无效果承诺</label></li><li><label><input type="checkbox"> 优惠信息准确</label></li><li><label><input type="checkbox"> 时间是否正确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否存在身材焦虑或季节性焦虑话术</label></li><li><label><input type="checkbox"> 优惠信息是否准确</label></li><li><label><input type="checkbox"> 活动时间是否正确</label></li><li><label><input type="checkbox"> 特色体验的描述是否真实可执行</label></li><li><label><input type="checkbox"> 是否存在效果承诺</label></li><li><label><input type="checkbox"> 语气是否轻松正面</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/fitness-campaign.html" class="related-link">健身活动促销文案</a><a href="../templates/fitness-membership.html" class="related-link">健身会员续费话术</a></div></section>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修投诉处理","description":"为汽修店客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容、核实情况、解决方案、质保处理"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：技术说明是否准确；态度是否诚恳；质保是否明确；方案是否合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容"},{"@type":"HowToSupply","name":"核实情况"},{"@type":"HowToSupply","name":"解决方案"},{"@type":"HowToSupply","name":"质保处理"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修投诉处理","description":"为汽修店客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：车主投诉的完整内容和投诉渠道、涉及的维修项目、时间和经手技师、内部技术复查结果（需技术主管确认）、质保范围内的处理方案、超出质保范围的处理建议、补偿方案（需店长审批）、后续跟进计划"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：技术解释是否准确且通俗易懂；是否存在推卸责任或指责车主的措辞；解决方案是否具体（有时间节点和操作步骤）；质保承诺是否明确；是否有后续跟进的安排；补偿方案是否经过店长审批；语气是否诚恳负责"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"车主投诉的完整内容和投诉渠道"},{"@type":"HowToSupply","name":"涉及的维修项目、时间和经手技师"},{"@type":"HowToSupply","name":"内部技术复查结果（需技术主管确认）"},{"@type":"HowToSupply","name":"质保范围内的处理方案"},{"@type":"HowToSupply","name":"超出质保范围的处理建议"},{"@type":"HowToSupply","name":"补偿方案（需店长审批）"},{"@type":"HowToSupply","name":"后续跟进计划"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,43 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>投诉内容</li><li>核实情况</li><li>解决方案</li><li>质保处理</li></ul>
+    <ul class="materials-list"><li>车主投诉的完整内容和投诉渠道</li><li>涉及的维修项目、时间和经手技师</li><li>内部技术复查结果（需技术主管确认）</li><li>质保范围内的处理方案</li><li>超出质保范围的处理建议</li><li>补偿方案（需店长审批）</li><li>后续跟进计划</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位汽修店店长。请针对投诉生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位汽修店店长，从业15年，处理过各种客户投诉。你的原则是：技术问题用技术说话，服务问题诚恳认错，质保范围内绝不推诿。现在需要针对一位车主的投诉生成回复话术，用于电话或微信沟通。
 
-投诉：{投诉内容}
-情况：{核实情况}
-方案：{解决方案}
-质保：{质保处理}
+请根据以下信息生成回复：
+车主称呼：{车主称呼}
+投诉内容：{投诉内容}
+涉及项目：{涉及项目}
+维修时间：{维修时间}
+技术复查结果：{复查结果}
+质保状态：{质保状态}
+解决方案：{解决方案}
+补偿方案（如有）：{补偿方案}
 
-要求：
-1. 诚恳负责
-2. 技术说明清晰
-3. 质保承诺明确
-4. 字数80-120字</pre>
+输出格式要求：
+- 总字数控制在120-170字
+- 结构：称呼+表态→技术解释（用车主能懂的话）→解决方案（具体到时间和操作）→质保承诺→后续跟进
+- 如果是技术正常现象（如新刹车片磨合期异响），要解释清楚并给出观察建议
+- 如果确实是维修问题，直接认错并给方案
+
+语气与风格：
+- 像一位负责任的老师傅在跟你解释情况
+- 技术解释要通俗但不敷衍
+- 该认错就认错，不找借口
+- 给方案要具体，不说「回头再看看」
+
+禁止事项：
+- 不能推卸责任给车主（如「你自己开车习惯不好」）
+- 不能推卸给配件供应商而不解决问题
+- 不能使用「按行业惯例」「这很正常」来敷衍
+- 不能承诺超出能力范围的补偿
+- 不能泄露其他车主或员工的个人信息
+- 不能在未确认原因前就下结论</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +101,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{投诉内容}</code></td><td>车主投诉什么</td></tr><tr><td><code>{核实情况}</code></td><td>检查后的实际情况</td></tr><tr><td><code>{解决方案}</code></td><td>如何解决</td></tr><tr><td><code>{质保处理}</code></td><td>质保范围内如何处理</td></tr></tbody>
+      <tbody><tr><td><code>{车主称呼}</code></td><td>车主的称呼</td></tr><tr><td><code>{投诉内容}</code></td><td>车主反映的具体问题，如「换完刹车片一周后出现异响」「保养后发现漏油」</td></tr><tr><td><code>{涉及项目}</code></td><td>之前做的维修项目，如「更换前刹车片，10天前完成」</td></tr><tr><td><code>{维修时间}</code></td><td>上次维修的具体时间</td></tr><tr><td><code>{复查结果}</code></td><td>技术主管复查后的判断，如「异响为新刹车片磨合期正常现象」或「确认为安装工艺问题」</td></tr><tr><td><code>{质保状态}</code></td><td>是否在质保期内，如「质保期内（1年/2万公里）」</td></tr><tr><td><code>{解决方案}</code></td><td>具体的处理方案，如「免费返工重新安装」「免费更换配件」</td></tr><tr><td><code>{补偿方案}</code></td><td>额外补偿，如「赠送下次保养工时费减免」「免费全车检查一次」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +113,18 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>王哥您好，关于您反映的换完刹车片后有异响的问题，我刚才检查了一下，是新刹车片还在磨合期，属于正常现象，一般跑200-300公里就会消失。但为了让您放心，我再帮您做一次制动系统全面检查，确认没有其他问题。如果300公里后还有异响，随时来，质保期内免费处理（仅供格式参考）</p>
+      <p>王哥您好，关于您反映的换完刹车片后有异响的问题，我今天亲自检查了一下，跟您说明情况：
+
+新刹车片和旧刹车盘之间需要一个磨合过程，一般行驶200-500公里后异响会逐渐消失，这是正常现象。我检查了安装工艺和刹车盘状况，都没有问题。
+
+建议您先正常开一周观察，如果500公里后异响没有减轻或者变大，随时联系我，我安排免费复查和处理，质保期内所有费用我们承担。这两天我也会主动跟您确认情况。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 技术说明是否准确</label></li><li><label><input type="checkbox"> 态度是否诚恳</label></li><li><label><input type="checkbox"> 质保是否明确</label></li><li><label><input type="checkbox"> 方案是否合理</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 技术解释是否准确且通俗易懂</label></li><li><label><input type="checkbox"> 是否存在推卸责任或指责车主的措辞</label></li><li><label><input type="checkbox"> 解决方案是否具体（有时间节点和操作步骤）</label></li><li><label><input type="checkbox"> 质保承诺是否明确</label></li><li><label><input type="checkbox"> 是否有后续跟进的安排</label></li><li><label><input type="checkbox"> 补偿方案是否经过店长审批</label></li><li><label><input type="checkbox"> 语气是否诚恳负责</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/auto-repair-review-response.html" class="related-link">汽修店评价回复</a><a href="../templates/auto-repair-customer-comm.html" class="related-link">汽修客户沟通话术</a></div></section>

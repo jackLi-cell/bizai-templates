@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售客服咨询回复","description":"为零售店客服生成常见咨询的回复话术","step":[{"@type":"HowToStep","text":"准备材料：客户问题、商品信息、店铺政策"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认尺码建议准确；发货时间是否真实；退换政策是否正确；语气是否友好"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户问题"},{"@type":"HowToSupply","name":"商品信息"},{"@type":"HowToSupply","name":"店铺政策"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售客服咨询回复","description":"为零售店客服生成常见咨询的回复话术","step":[{"@type":"HowToStep","text":"准备材料：客户的具体问题、商品详细信息（尺码表、材质等）、店铺退换货和发货政策、当前库存和发货时效"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：尺码建议是否基于尺码表数据；发货时间是否与实际物流匹配；退换货政策是否与店铺规则一致；是否有夸大商品优点的表述；回复是否直接解答了客户的问题；是否主动补充了有用信息；语气是否专业友好"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户的具体问题"},{"@type":"HowToSupply","name":"商品详细信息（尺码表、材质等）"},{"@type":"HowToSupply","name":"店铺退换货和发货政策"},{"@type":"HowToSupply","name":"当前库存和发货时效"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,34 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>客户问题</li><li>商品信息</li><li>店铺政策</li></ul>
+    <ul class="materials-list"><li>客户的具体问题</li><li>商品详细信息（尺码表、材质等）</li><li>店铺退换货和发货政策</li><li>当前库存和发货时效</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位零售店客服。请针对以下客户咨询生成回复。
+      <pre class="prompt-text" id="prompt-text">你是一位有3年电商客服经验的零售店客服，熟悉各平台的客服规范，擅长用简洁专业的方式解答客户疑问并促成下单。现在需要针对一位客户的咨询生成回复。
 
-客户问题：{客户问题}
-相关商品信息：{商品信息}
-店铺政策：{店铺政策}
+请根据以下信息生成回复：
+客户的具体问题：{客户问题}
+相关商品的详细信息：{商品信息}
+店铺相关政策：{店铺政策}
+当前库存/发货情况：{库存发货}
 
-要求：
-1. 回答准确、简洁
-2. 语气友好专业
-3. 主动提供有用信息
-4. 字数50-100字
-5. 如有不确定的信息，建议客户进一步确认</pre>
+输出要求：
+- 字数60-120字
+- 直接回答客户的问题，第一句就给出核心答案
+- 在回答基础上主动补充1-2条客户可能还想知道的信息
+- 如果涉及尺码建议，要基于具体数据（尺码表）而非主观判断
+- 如果有不确定的信息，明确告知并建议确认方式
+- 语气友好专业，不过度热情也不冷淡
+
+禁止事项：
+- 不使用「亲亲」「宝贝」等过度亲昵称呼
+- 不给出没有依据的尺码建议（如「你穿M肯定合适」）
+- 不承诺无法确认的发货时间
+- 不隐瞒退换货限制条件
+- 不为了促成下单而夸大商品优点</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +92,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{客户问题}</code></td><td>客户具体问的什么</td></tr><tr><td><code>{商品信息}</code></td><td>相关商品的详细信息</td></tr><tr><td><code>{店铺政策}</code></td><td>退换货、发货等政策</td></tr></tbody>
+      <tbody><tr><td><code>{客户问题}</code></td><td>客户具体问了什么，如「这件外套我165/55kg穿什么码」「什么时候发货」</td></tr><tr><td><code>{商品信息}</code></td><td>与问题相关的商品详情，如尺码表、面料成分、颜色选项等</td></tr><tr><td><code>{店铺政策}</code></td><td>相关的店铺政策，如退换货规则、发货时间、包邮条件等</td></tr><tr><td><code>{库存发货}</code></td><td>当前库存状态和发货安排，如「现货，下单次日发」「预售7天」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +104,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>亲，这款外套建议看下尺码表哦～您平时穿M码的话，这款建议拍L码，版型偏修身。面料是聚酯纤维+棉混纺，有一点弹性。今天下单明天发货，省内一般2天到。7天无理由退换，不影响二次销售就行（仅供格式参考）</p>
+      <p>这款外套版型偏修身，建议参考详情页尺码表。您平时穿M码、身高165左右的话，这款建议拍L码，胸围会宽松2-3cm更舒服。面料是聚酯纤维+棉混纺，有轻微弹性，不会太紧绷。今天下单明天发货，省内一般2天到。支持7天无理由退换，不影响二次销售即可。还有什么想了解的随时问。（仅供格式参考，实际请根据具体咨询生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认尺码建议准确</label></li><li><label><input type="checkbox"> 发货时间是否真实</label></li><li><label><input type="checkbox"> 退换政策是否正确</label></li><li><label><input type="checkbox"> 语气是否友好</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 尺码建议是否基于尺码表数据</label></li><li><label><input type="checkbox"> 发货时间是否与实际物流匹配</label></li><li><label><input type="checkbox"> 退换货政策是否与店铺规则一致</label></li><li><label><input type="checkbox"> 是否有夸大商品优点的表述</label></li><li><label><input type="checkbox"> 回复是否直接解答了客户的问题</label></li><li><label><input type="checkbox"> 是否主动补充了有用信息</label></li><li><label><input type="checkbox"> 语气是否专业友好</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-after-sales.html" class="related-link">零售售后处理话术</a><a href="../templates/retail-review-response.html" class="related-link">零售好评/差评回复</a></div></section>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修店品牌介绍","description":"为汽修店撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：从业经历、经营理念、技术特色、服务承诺"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：经历是否真实；承诺是否可兑现；无夸大宣传；资质描述准确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"从业经历"},{"@type":"HowToSupply","name":"经营理念"},{"@type":"HowToSupply","name":"技术特色"},{"@type":"HowToSupply","name":"服务承诺"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修店品牌介绍","description":"为汽修店撰写品牌介绍","step":[{"@type":"HowToStep","text":"准备材料：店主/创始人的从业经历（年限、之前在哪工作）、开店的初衷和经营理念、技师团队的资质和经验（持证情况）、擅长的车型或维修领域、服务承诺（透明报价、质保政策等）、门店设备和环境特点、累计服务数据（如有，需真实可查）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：从业经历是否真实可查；团队资质描述是否与实际持证情况一致；服务承诺是否具体可兑现；是否存在绝对化用语或虚假宣传；是否贬低了同行或4S店；设备环境描述是否属实；整体语气是否真实可信"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"店主/创始人的从业经历（年限、之前在哪工作）"},{"@type":"HowToSupply","name":"开店的初衷和经营理念"},{"@type":"HowToSupply","name":"技师团队的资质和经验（持证情况）"},{"@type":"HowToSupply","name":"擅长的车型或维修领域"},{"@type":"HowToSupply","name":"服务承诺（透明报价、质保政策等）"},{"@type":"HowToSupply","name":"门店设备和环境特点"},{"@type":"HowToSupply","name":"累计服务数据（如有，需真实可查）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,42 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>从业经历</li><li>经营理念</li><li>技术特色</li><li>服务承诺</li></ul>
+    <ul class="materials-list"><li>店主/创始人的从业经历（年限、之前在哪工作）</li><li>开店的初衷和经营理念</li><li>技师团队的资质和经验（持证情况）</li><li>擅长的车型或维修领域</li><li>服务承诺（透明报价、质保政策等）</li><li>门店设备和环境特点</li><li>累计服务数据（如有，需真实可查）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位品牌文案助手。请为汽修店撰写品牌介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助汽修店做品牌建设的文案顾问。你深知汽修行业的信任痛点：车主最怕被坑、被过度维修、被用副厂件冒充原厂件。所以品牌介绍的核心是建立信任，用事实说话。现在需要为一家汽修店撰写品牌介绍，用于美团店铺、抖音主页或门店展示。
 
-经历：{从业经历}
-理念：{经营理念}
-技术：{技术特色}
-承诺：{服务承诺}
+请根据以下信息撰写：
+店铺名称：{店铺名称}
+从业经历：{从业经历}
+开店初衷：{开店初衷}
+经营理念：{经营理念}
+团队情况：{团队情况}
+擅长领域：{擅长领域}
+服务承诺：{服务承诺}
+设备环境：{设备环境}
 
-要求：
-1. 字数120-200字
-2. 突出技术和诚信
-3. 真实可信
-4. 适合平台展示</pre>
+输出格式要求：
+- 总字数控制在180-260字
+- 结构：一句话定位→从业背景→经营理念（用具体做法体现）→团队实力→服务承诺（逐条列出）→欢迎到店
+- 理念部分要用具体的做法来体现，不要只说空话
+- 承诺部分要可验证、可追溯
+
+语气与风格：
+- 像一位实在的手艺人在介绍自己的店
+- 不吹不黑，用事实和数据说话
+- 体现「靠技术和口碑吃饭」的底气
+
+禁止事项：
+- 不能使用「最专业」「第一」「独家」等绝对化表述
+- 不能虚构从业经历或资质
+- 不能承诺无法兑现的服务（如「永久质保」）
+- 不能贬低4S店或其他修理厂
+- 不能使用「祖传手艺」等不适用于汽修的表述
+- 不能夸大设备的先进程度</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +100,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{从业经历}</code></td><td>做了多少年</td></tr><tr><td><code>{经营理念}</code></td><td>怎么看待汽修</td></tr><tr><td><code>{技术特色}</code></td><td>擅长什么</td></tr><tr><td><code>{服务承诺}</code></td><td>对车主的承诺</td></tr></tbody>
+      <tbody><tr><td><code>{店铺名称}</code></td><td>汽修店的正式名称</td></tr><tr><td><code>{从业经历}</code></td><td>店主的从业背景，如「在4S店做了10年技师，2018年自己开店」</td></tr><tr><td><code>{开店初衷}</code></td><td>为什么要自己开店，如「想让车主修车不被坑，花明白钱」</td></tr><tr><td><code>{经营理念}</code></td><td>怎么看待汽修这门生意，如「能修不换、透明报价、不过度维修」</td></tr><tr><td><code>{团队情况}</code></td><td>技师团队的规模和资质，如「5名技师，均持有中级以上汽车维修工证书，平均从业8年」</td></tr><tr><td><code>{擅长领域}</code></td><td>店里最擅长什么，如「底盘维修、发动机大修、自动变速箱」</td></tr><tr><td><code>{服务承诺}</code></td><td>对车主的具体承诺，如「报价单逐项列明、配件可溯源、质保期内免费返修」</td></tr><tr><td><code>{设备环境}</code></td><td>门店的设备和环境，如「4个工位、进口四轮定位仪、独立客户休息区」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +112,26 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>干汽修15年了，从4S店出来自己开店已经8年。开店的原因很简单：想让车主修车不被坑。我们的原则：检查免费、报价透明、不过度维修。能修的不换，能用副厂件解决的不强推原厂。所有配件明码标价，工时费单独列出。团队5个技师都有5年以上经验，擅长底盘和发动机。修完车都有质保，质保期内同一问题免费返修（仅供格式参考）</p>
+      <p>【XX汽修】一家靠技术和口碑吃饭的社区修理厂。
+
+店主老张，在4S店做了10年底盘和发动机维修，2018年出来自己开店。原因很简单：想让街坊邻居修车能花明白钱。
+
+我们的做法：
+- 检查免费，报价单每一项都列清楚（配件费、工时费分开）
+- 能修的不换，能用品牌副厂件解决的不强推原厂
+- 所有配件提供品牌和批次信息，支持车主自行验证
+- 维修全程可在休息区透过玻璃观看
+
+团队5名技师，均持有中级以上维修工证书，平均从业8年，擅长底盘、发动机和自动变速箱维修。
+
+承诺：配件质保1年/2万公里，工艺问题终身免费返修。修完车都有质检报告，不满意当面说。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 经历是否真实</label></li><li><label><input type="checkbox"> 承诺是否可兑现</label></li><li><label><input type="checkbox"> 无夸大宣传</label></li><li><label><input type="checkbox"> 资质描述准确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 从业经历是否真实可查</label></li><li><label><input type="checkbox"> 团队资质描述是否与实际持证情况一致</label></li><li><label><input type="checkbox"> 服务承诺是否具体可兑现</label></li><li><label><input type="checkbox"> 是否存在绝对化用语或虚假宣传</label></li><li><label><input type="checkbox"> 是否贬低了同行或4S店</label></li><li><label><input type="checkbox"> 设备环境描述是否属实</label></li><li><label><input type="checkbox"> 整体语气是否真实可信</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/auto-repair-social-media.html" class="related-link">汽修店朋友圈内容</a></div></section>

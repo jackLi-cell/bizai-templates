@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业会员卡推广","description":"为美容院会员卡或储值卡撰写推广文案","step":[{"@type":"HowToStep","text":"准备材料：卡种类型、充值优惠、会员权益、有效期"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：充值金额和赠送是否正确；权益是否可兑现；有效期信息准确；无强制消费暗示"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"卡种类型"},{"@type":"HowToSupply","name":"充值优惠"},{"@type":"HowToSupply","name":"会员权益"},{"@type":"HowToSupply","name":"有效期"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业会员卡推广","description":"为美容院会员卡或储值卡撰写推广文案","step":[{"@type":"HowToStep","text":"准备材料：卡种类型和充值档位、赠送金额或折扣、完整会员权益清单、有效期和使用限制、目标客户的消费频次参考"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：算账逻辑是否基于客户真实消费频次；充值金额和赠送是否正确；权益是否全部可兑现；有效期和使用限制是否完整披露；是否有逼单或焦虑话术；语气是否像朋友建议而非销售推卡；是否有效果承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"卡种类型和充值档位"},{"@type":"HowToSupply","name":"赠送金额或折扣"},{"@type":"HowToSupply","name":"完整会员权益清单"},{"@type":"HowToSupply","name":"有效期和使用限制"},{"@type":"HowToSupply","name":"目标客户的消费频次参考"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>卡种类型</li><li>充值优惠</li><li>会员权益</li><li>有效期</li></ul>
+    <ul class="materials-list"><li>卡种类型和充值档位</li><li>赠送金额或折扣</li><li>完整会员权益清单</li><li>有效期和使用限制</li><li>目标客户的消费频次参考</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美业会员运营助手。请为以下会员卡撰写推广文案。
+      <pre class="prompt-text" id="prompt-text">你是一位美容院会员体系设计顾问，擅长用「帮客户算账」的方式让办卡变成一个理性决策而非冲动消费。现在需要为美容院的会员卡撰写推广话术，用于美容师一对一推荐时使用。
 
-卡种类型：{卡种类型}
-充值优惠：{充值优惠}
-会员权益：{会员权益}
-有效期：{有效期}
+请根据以下信息撰写：
+卡种类型和名称：{卡种类型}
+充值金额和赠送：{充值优惠}
+会员专属权益：{会员权益}
+有效期和使用规则：{有效期}
+适合什么消费频次的客户：{适合客户}
 
-要求：
-1. 字数80-120字
-2. 突出长期价值
-3. 权益清晰
-4. 不承诺效果
-5. 适合一对一推荐时使用</pre>
+输出要求：
+- 字数100-150字
+- 用「帮客户算账」的方式开头，基于她的实际消费频次
+- 充值赠送要换算成「每次能省多少」，让数字直观
+- 权益部分挑2-3个最有吸引力的说
+- 有效期和限制要坦诚说明
+- 结尾不要逼单，给客户考虑空间
+- 语气像闺蜜在帮你分析，不像销售在推卡
+
+禁止事项：
+- 不使用「现在不办以后就没有了」等逼单话术
+- 不隐瞒使用限制（如「仅限指定项目」）
+- 不承诺「办卡就能怎样」的效果
+- 不使用「投资自己」等鸡汤话术
+- 不制造焦虑（如「再不保养就来不及了」）</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{卡种类型}</code></td><td>如「年卡」「次卡」「储值卡」</td></tr><tr><td><code>{充值优惠}</code></td><td>充值金额和赠送</td></tr><tr><td><code>{会员权益}</code></td><td>专属服务和优惠</td></tr><tr><td><code>{有效期}</code></td><td>使用期限</td></tr></tbody>
+      <tbody><tr><td><code>{卡种类型}</code></td><td>卡的类型和名称，如「年卡」「储值卡」「次卡（10次）」</td></tr><tr><td><code>{充值优惠}</code></td><td>充值金额和对应赠送，如「充3000送500」「充5000送1000」</td></tr><tr><td><code>{会员权益}</code></td><td>会员专属的权益，如「生日免费项目、新品体验价、每月会员日9折」</td></tr><tr><td><code>{有效期}</code></td><td>卡的有效期和使用规则，如「一年有效，面部和身体项目通用」</td></tr><tr><td><code>{适合客户}</code></td><td>什么消费频次的客户办卡划算，如「每月来2次以上的」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>姐，给你算了一下，你每个月来做两次护理，办张年卡其实更划算。充3000送500，相当于每次省70多块。会员还有专属权益：生日月免费做一次小气泡、新项目优先体验价、每月会员日额外9折。有效期一年，用不完可以延期（仅供格式参考）</p>
+      <p>姐，帮你算了一下，你基本每个月来做两次面部护理，一次198，一个月就是396。如果办张储值卡充3000送500，相当于你每次来只花170左右，一年下来能省将近600块。会员还有几个额外的：生日那个月免费做一次小气泡、新项目上线你可以用体验价先试、每月8号全单再打9折。有效期一年，所有面部和身体项目都能用。你不用现在决定，回去想想也行，随时找我办都可以。（仅供格式参考，实际请根据你的会员体系生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 充值金额和赠送是否正确</label></li><li><label><input type="checkbox"> 权益是否可兑现</label></li><li><label><input type="checkbox"> 有效期信息准确</label></li><li><label><input type="checkbox"> 无强制消费暗示</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 算账逻辑是否基于客户真实消费频次</label></li><li><label><input type="checkbox"> 充值金额和赠送是否正确</label></li><li><label><input type="checkbox"> 权益是否全部可兑现</label></li><li><label><input type="checkbox"> 有效期和使用限制是否完整披露</label></li><li><label><input type="checkbox"> 是否有逼单或焦虑话术</label></li><li><label><input type="checkbox"> 语气是否像朋友建议而非销售推卡</label></li><li><label><input type="checkbox"> 是否有效果承诺</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-campaign.html" class="related-link">美业活动促销文案</a><a href="../templates/beauty-recall.html" class="related-link">美业老客户召回话术</a></div></section>

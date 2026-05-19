@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物服务预约确认","description":"为宠物店生成预约确认和提醒话术","step":[{"@type":"HowToStep","text":"准备材料：宠物主人称呼、宠物名字、预约服务、预约时间、到店须知"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：时间是否正确；宠物名字是否对；须知是否完整；语气是否亲切"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"宠物主人称呼"},{"@type":"HowToSupply","name":"宠物名字"},{"@type":"HowToSupply","name":"预约服务"},{"@type":"HowToSupply","name":"预约时间"},{"@type":"HowToSupply","name":"到店须知"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物服务预约确认","description":"为宠物店生成预约确认和提醒话术","step":[{"@type":"HowToStep","text":"准备材料：宠物主人姓名和宠物名字、预约的服务项目、预约日期和时间、宠物品种、体型和特殊情况、需要主人提前准备的事项、到店注意事项（如需带什么、停车信息等）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：预约时间和服务项目是否准确；预计完成时间是否合理；需要携带的物品是否列全；宠物特殊情况是否已确认知悉；到店实用信息是否完整（找谁、停车等）；是否避免了推销和过度昵称"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"宠物主人姓名和宠物名字"},{"@type":"HowToSupply","name":"预约的服务项目"},{"@type":"HowToSupply","name":"预约日期和时间"},{"@type":"HowToSupply","name":"宠物品种、体型和特殊情况"},{"@type":"HowToSupply","name":"需要主人提前准备的事项"},{"@type":"HowToSupply","name":"到店注意事项（如需带什么、停车信息等）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>宠物主人称呼</li><li>宠物名字</li><li>预约服务</li><li>预约时间</li><li>到店须知</li></ul>
+    <ul class="materials-list"><li>宠物主人姓名和宠物名字</li><li>预约的服务项目</li><li>预约日期和时间</li><li>宠物品种、体型和特殊情况</li><li>需要主人提前准备的事项</li><li>到店注意事项（如需带什么、停车信息等）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位宠物店前台。请生成预约确认话术。
+      <pre class="prompt-text" id="prompt-text">你是一位宠物店的前台接待，负责在客户预约后发送确认消息。你知道宠物主人最关心的是「我家宝贝会不会紧张」「需要带什么」「大概多久能接」，所以你的确认消息要把这些信息都覆盖到，让主人安心。
 
-主人称呼：{宠物主人称呼}
-宠物名字：{宠物名字}
+现在需要生成一条预约确认消息，通过微信发送给宠物主人。
+
+请根据以下信息撰写：
+主人称呼：{主人称呼}
+宠物名字和品种：{宠物信息}
 预约服务：{预约服务}
 预约时间：{预约时间}
-到店须知：{到店须知}
+预计时长：{预计时长}
+需要准备：{需要准备}
+特殊备注：{特殊备注}
 
-要求：
-1. 语气亲切温暖
-2. 信息完整
-3. 提醒注意事项
-4. 字数60-90字</pre>
+输出格式要求：
+- 总字数80-130字
+- 开头确认预约信息（谁、什么时候、做什么）
+- 告知预计服务时长和大约几点可以来接
+- 列出需要带的东西（如疫苗本、自带粮、牵引绳等）
+- 如果宠物有特殊情况（胆小、攻击性、皮肤敏感），确认已知悉并会注意
+- 结尾告知到店后找谁、怎么停车等实用信息
+- 语气亲切自然，对宠物用名字称呼
+
+禁止事项：
+- 不使用「毛宝宝」「小主子」等过度昵称（用宠物本名）
+- 不承诺「保证不会紧张」等无法保证的事
+- 不遗漏关键时间信息
+- 不在确认消息中推销升级服务
+- 不泄露其他客户或宠物的信息</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +98,31 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{宠物主人称呼}</code></td><td>主人怎么称呼</td></tr><tr><td><code>{宠物名字}</code></td><td>宠物叫什么</td></tr><tr><td><code>{预约服务}</code></td><td>预约了什么</td></tr><tr><td><code>{预约时间}</code></td><td>什么时候来</td></tr><tr><td><code>{到店须知}</code></td><td>需要带什么或注意什么</td></tr></tbody>
+      <tbody><tr><td><code>{主人称呼}</code></td><td>宠物主人怎么称呼，如「陈姐」「小王」</td></tr><tr><td><code>{宠物信息}</code></td><td>宠物的名字和基本信息，如「豆豆，比熊，3岁，5kg」</td></tr><tr><td><code>{预约服务}</code></td><td>预约了什么服务，如「全身洗护+造型修剪」</td></tr><tr><td><code>{预约时间}</code></td><td>约好的时间，如「本周六上午10:00」</td></tr><tr><td><code>{预计时长}</code></td><td>服务大概需要多久，如「约2小时，预计12点前可以来接」</td></tr><tr><td><code>{需要准备}</code></td><td>主人需要带什么或提前做什么，如「带上疫苗本，洗护前不要喂太饱」</td></tr><tr><td><code>{特殊备注}</code></td><td>宠物的特殊情况，如「豆豆比较怕吹风机，我们会用低噪音档慢慢吹」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>60-90字预约确认</p>
+    <p>80-130字预约确认消息</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>刘姐您好～豆豆的洗护+造型预约已确认：本周六上午10点。到店时请带上豆豆的疫苗本，如果最近有用过外用药请提前告诉我们。预计2小时左右完成，做好了微信通知您来接。周六见（仅供格式参考）</p>
+      <p>陈姐您好，豆豆的预约已确认：
+服务：全身洗护+造型修剪
+时间：本周六上午10:00
+预计12点前完成，届时微信通知您来接。
+
+麻烦带上疫苗本，当天早上少喂一点避免洗澡时不舒服。您之前提到豆豆怕吹风机，我们会用静音款慢慢处理，不着急。到店后在前台找小李就行，门口可以免费停车。如需改约请提前一天告知。（仅供格式参考，请根据实际预约生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 时间是否正确</label></li><li><label><input type="checkbox"> 宠物名字是否对</label></li><li><label><input type="checkbox"> 须知是否完整</label></li><li><label><input type="checkbox"> 语气是否亲切</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 预约时间和服务项目是否准确</label></li><li><label><input type="checkbox"> 预计完成时间是否合理</label></li><li><label><input type="checkbox"> 需要携带的物品是否列全</label></li><li><label><input type="checkbox"> 宠物特殊情况是否已确认知悉</label></li><li><label><input type="checkbox"> 到店实用信息是否完整（找谁、停车等）</label></li><li><label><input type="checkbox"> 是否避免了推销和过度昵称</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-service-description.html" class="related-link">宠物服务项目介绍</a><a href="../templates/pet-review-reply.html" class="related-link">宠物店评价回复</a></div></section>

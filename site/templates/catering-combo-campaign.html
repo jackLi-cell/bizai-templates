@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮套餐活动文案","description":"为餐厅套餐促销活动生成朋友圈发布文案","step":[{"@type":"HowToStep","text":"准备材料：套餐名称、原价与活动价、活动时间、门店地址"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：检查价格是否正确；确认活动时间无误；检查是否含绝对化用语；确认地址信息完整"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"套餐名称"},{"@type":"HowToSupply","name":"原价与活动价"},{"@type":"HowToSupply","name":"活动时间"},{"@type":"HowToSupply","name":"门店地址"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮套餐活动文案","description":"为餐厅套餐促销活动生成朋友圈发布文案","step":[{"@type":"HowToStep","text":"准备材料：套餐名称和完整菜品组成、原价与活动价（确保利润可覆盖）、活动起止日期、门店地址和联系电话、用餐场景限制（堂食/外卖）、行动号召的具体机制（暗号内容、优惠券码等）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：套餐名称、价格、活动时间是否与实际一致；菜品描述是否真实存在于你的菜单中；是否包含绝对化用语或虚假宣传；行动号召是否具体可执行（暗号、优惠券等）；语气是否自然亲切，不像广告模板；字数是否在100-140字范围内；门店地址和联系方式是否正确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"套餐名称和完整菜品组成"},{"@type":"HowToSupply","name":"原价与活动价（确保利润可覆盖）"},{"@type":"HowToSupply","name":"活动起止日期"},{"@type":"HowToSupply","name":"门店地址和联系电话"},{"@type":"HowToSupply","name":"用餐场景限制（堂食/外卖）"},{"@type":"HowToSupply","name":"行动号召的具体机制（暗号内容、优惠券码等）"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>套餐名称</li><li>原价与活动价</li><li>活动时间</li><li>门店地址</li></ul>
+    <ul class="materials-list"><li>套餐名称和完整菜品组成</li><li>原价与活动价（确保利润可覆盖）</li><li>活动起止日期</li><li>门店地址和联系电话</li><li>用餐场景限制（堂食/外卖）</li><li>行动号召的具体机制（暗号内容、优惠券码等）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位餐饮行业文案助手。请为以下套餐活动撰写一段朋友圈发布文案。
+      <pre class="prompt-text" id="prompt-text">你是一位深耕餐饮行业5年的营销文案专家，擅长用生活化的语言激发食欲和到店欲望。现在需要为一家餐厅的套餐促销活动撰写朋友圈发布文案。
 
+请根据以下信息撰写文案：
 套餐名称：{套餐名称}
+套餐内容（含菜品组成）：{套餐内容}
 原价：{原价}
 活动价：{活动价}
 活动时间：{活动时间}
 门店地址：{门店地址}
+用餐场景（堂食/外卖/均可）：{用餐场景}
 
-要求：
-1. 字数80-120字
-2. 语气亲切、有食欲感
-3. 包含价格对比
-4. 结尾带行动号召
-5. 不使用绝对化用语（如「最好吃」「第一」）</pre>
+输出要求：
+- 字数控制在100-140字
+- 开头用一句与当下时令或生活场景相关的话引入，不要直接报价
+- 中间描述套餐亮点时，至少提及一道菜的食材或做法特色
+- 价格对比要自然融入，不要用「仅需」「只要」等促销感过强的词
+- 结尾设置一个具体的行动指引（如「到店报暗号」「转发本条立减」）
+- 语气像一个热情的老板在跟熟客聊天，亲切但不油腻
+- 可使用1-2个食物相关表情符号
+
+禁止事项：
+- 不使用「最好吃」「第一」「无敌」等绝对化用语
+- 不编造不存在的菜品或食材
+- 不使用「错过等一年」等虚假紧迫感话术</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{套餐名称}</code></td><td>你给套餐起的名字，如「冬日暖心双人餐」</td></tr><tr><td><code>{原价与活动价}</code></td><td>套餐原价和促销价格</td></tr><tr><td><code>{活动时间}</code></td><td>活动起止日期</td></tr><tr><td><code>{门店地址}</code></td><td>方便顾客到店的地址信息</td></tr></tbody>
+      <tbody><tr><td><code>{套餐名称}</code></td><td>你给这个套餐起的名字，建议带场景感，如「周末闺蜜下午茶套餐」「工作日能量午餐」</td></tr><tr><td><code>{套餐内容}</code></td><td>套餐包含哪些菜品，写清楚每道菜名，如「酸菜鱼+蒜蓉西兰花+米饭两份+酸梅汤两杯」</td></tr><tr><td><code>{原价}</code></td><td>套餐内所有菜品单点的总价</td></tr><tr><td><code>{活动价}</code></td><td>促销期间的套餐价格</td></tr><tr><td><code>{活动时间}</code></td><td>活动的起止日期，如「12月1日-12月15日」</td></tr><tr><td><code>{门店地址}</code></td><td>完整的门店地址，方便顾客导航到店</td></tr><tr><td><code>{用餐场景}</code></td><td>这个套餐是堂食专享、外卖专享还是都可以</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>冬日暖心双人餐来啦！原价128元，活动价仅需88元～热腾腾的番茄牛腩锅+两份小食+饮品，两个人吃刚刚好。活动时间12.1-12.15，到店出示本条即可享受优惠。地址：XX路XX号，记得提前电话订位哦（仅供格式参考）</p>
+      <p>天冷了就想吃点热乎的。我们的「冬日暖心双人餐」上线了：一份番茄牛腩锅底（牛腩是每天早市现买的）、两份手工丸子拼盘、一壶热果茶。原价158，活动期间两人到店108就能吃到。12月1号到15号有效，到店跟服务员说「暖心」再送一碟自制辣酱。XX路XX号，晚市建议提前电话留位。（仅供格式参考，实际请根据你的套餐信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 检查价格是否正确</label></li><li><label><input type="checkbox"> 确认活动时间无误</label></li><li><label><input type="checkbox"> 检查是否含绝对化用语</label></li><li><label><input type="checkbox"> 确认地址信息完整</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 套餐名称、价格、活动时间是否与实际一致</label></li><li><label><input type="checkbox"> 菜品描述是否真实存在于你的菜单中</label></li><li><label><input type="checkbox"> 是否包含绝对化用语或虚假宣传</label></li><li><label><input type="checkbox"> 行动号召是否具体可执行（暗号、优惠券等）</label></li><li><label><input type="checkbox"> 语气是否自然亲切，不像广告模板</label></li><li><label><input type="checkbox"> 字数是否在100-140字范围内</label></li><li><label><input type="checkbox"> 门店地址和联系方式是否正确</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-new-product.html" class="related-link">餐饮新品上新文案</a><a href="../templates/catering-short-video.html" class="related-link">餐饮短视频脚本</a></div></section>

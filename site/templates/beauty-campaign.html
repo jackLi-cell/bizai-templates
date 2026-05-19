@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业活动促销文案","description":"为美容院促销活动撰写推广文案","step":[{"@type":"HowToStep","text":"准备材料：活动主题、优惠内容、活动时间、预约方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：优惠信息是否准确；活动时间是否正确；预约方式是否畅通；无夸大承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"活动主题"},{"@type":"HowToSupply","name":"优惠内容"},{"@type":"HowToSupply","name":"活动时间"},{"@type":"HowToSupply","name":"预约方式"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业活动促销文案","description":"为美容院促销活动撰写推广文案","step":[{"@type":"HowToStep","text":"准备材料：活动主题和原因、具体优惠内容和规则、活动起止日期、预约方式和联系方式、名额限制（如有）、新客/老客区分规则"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：优惠内容是否与实际执行一致；活动时间是否正确；名额限制是否真实；是否有效果承诺或医疗用语；预约方式是否畅通；新客/老客区分是否清晰；语气是否温暖而非廉价感"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"活动主题和原因"},{"@type":"HowToSupply","name":"具体优惠内容和规则"},{"@type":"HowToSupply","name":"活动起止日期"},{"@type":"HowToSupply","name":"预约方式和联系方式"},{"@type":"HowToSupply","name":"名额限制（如有）"},{"@type":"HowToSupply","name":"新客/老客区分规则"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>活动主题</li><li>优惠内容</li><li>活动时间</li><li>预约方式</li></ul>
+    <ul class="materials-list"><li>活动主题和原因</li><li>具体优惠内容和规则</li><li>活动起止日期</li><li>预约方式和联系方式</li><li>名额限制（如有）</li><li>新客/老客区分规则</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美业营销文案助手。请为以下活动撰写推广文案。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助美容院策划活动的营销顾问，擅长在「吸引新客」和「不掉价」之间找到平衡。现在需要为一场美容院促销活动撰写推广文案，发布在朋友圈。
 
-活动主题：{活动主题}
-优惠内容：{优惠内容}
+请根据以下信息撰写：
+活动主题/原因：{活动主题}
+优惠内容（具体到项目和折扣）：{优惠内容}
 活动时间：{活动时间}
 预约方式：{预约方式}
+名额限制（如有）：{名额限制}
+新客/老客区分（如有）：{客户区分}
 
-要求：
-1. 字数80-120字
-2. 突出优惠力度
-3. 营造仪式感
-4. 不承诺效果
-5. 适合朋友圈发布</pre>
+输出要求：
+- 字数100-140字
+- 开头用活动的「原因」切入（店庆/感恩/季节），让优惠显得有理由
+- 优惠内容分层次：主推项目+附加福利
+- 如果有名额限制，标明具体数字
+- 预约方式要具体到「怎么约+找谁约」
+- 语气温暖有仪式感，像在邀请朋友来体验
+- 不要写成「大甩卖」的感觉
+
+禁止事项：
+- 不承诺项目效果（如「做完年轻10岁」）
+- 不使用「最低价」「史上最大优惠」等绝对化表述
+- 不制造虚假名额限制
+- 不使用医疗用语
+- 不贬低同行价格</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +95,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{活动主题}</code></td><td>如「三周年店庆」「38女神节」</td></tr><tr><td><code>{优惠内容}</code></td><td>具体折扣或赠送内容</td></tr><tr><td><code>{活动时间}</code></td><td>活动起止日期</td></tr><tr><td><code>{预约方式}</code></td><td>电话、微信还是到店</td></tr></tbody>
+      <tbody><tr><td><code>{活动主题}</code></td><td>活动的原因或主题，如「三周年店庆」「38女神节」「换季护肤月」</td></tr><tr><td><code>{优惠内容}</code></td><td>具体的优惠，如「面部项目8折」「充1000送200」「新客半价体验」</td></tr><tr><td><code>{活动时间}</code></td><td>活动起止日期</td></tr><tr><td><code>{预约方式}</code></td><td>客户怎么预约，如「微信私聊预约」「电话预约」「小程序下单」</td></tr><tr><td><code>{名额限制}</code></td><td>有没有名额限制，如「每天限10个名额」「不限名额但需预约」</td></tr><tr><td><code>{客户区分}</code></td><td>新客和老客的优惠是否不同，如「新客首次半价，老客8折」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +107,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>三周年店庆感恩回馈！3.15-3.20期间：面部护理项目全线8折，充值1000送200，新客首次体验任选项目半价。三年了，感谢每一位信任我们的姐妹。名额有限，提前微信预约可优先安排时间段（仅供格式参考）</p>
+      <p>三周年了，想认真感谢一下这三年陪伴我们的每一位姐妹。3月15号到20号，我们准备了一些回馈：面部护理项目全线8折（补水、清洁、提亮都包含），充值1000送200（不限项目使用）。新朋友也有福利：首次到店任选一个项目半价体验。名额这次不限，但时间段有限，建议提前微信预约，我帮你留个好时段。微信：XXXXX（仅供格式参考，实际请根据你的活动信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 优惠信息是否准确</label></li><li><label><input type="checkbox"> 活动时间是否正确</label></li><li><label><input type="checkbox"> 预约方式是否畅通</label></li><li><label><input type="checkbox"> 无夸大承诺</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 优惠内容是否与实际执行一致</label></li><li><label><input type="checkbox"> 活动时间是否正确</label></li><li><label><input type="checkbox"> 名额限制是否真实</label></li><li><label><input type="checkbox"> 是否有效果承诺或医疗用语</label></li><li><label><input type="checkbox"> 预约方式是否畅通</label></li><li><label><input type="checkbox"> 新客/老客区分是否清晰</label></li><li><label><input type="checkbox"> 语气是否温暖而非廉价感</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-project-intro.html" class="related-link">美容项目介绍文案</a><a href="../templates/beauty-membership.html" class="related-link">美业会员卡推广</a></div></section>

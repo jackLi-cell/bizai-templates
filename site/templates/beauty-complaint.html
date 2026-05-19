@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业投诉处理话术","description":"为美容院客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容、实际情况、解决方案、后续安排"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否承认问题；解决方案是否合理；语气是否诚恳；后续跟进是否具体"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容"},{"@type":"HowToSupply","name":"实际情况"},{"@type":"HowToSupply","name":"解决方案"},{"@type":"HowToSupply","name":"后续安排"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业投诉处理话术","description":"为美容院客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉的具体内容、核实后的实际情况、经授权的解决方案、后续跟进计划、投诉渠道信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否建议涉及皮肤问题的客户就医；解决方案是否在权限范围内；是否有推卸责任的表述；是否有效果承诺；语气是否诚恳负责；后续跟进是否具体；是否给了客户选择权"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉的具体内容"},{"@type":"HowToSupply","name":"核实后的实际情况"},{"@type":"HowToSupply","name":"经授权的解决方案"},{"@type":"HowToSupply","name":"后续跟进计划"},{"@type":"HowToSupply","name":"投诉渠道信息"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>投诉内容</li><li>实际情况</li><li>解决方案</li><li>后续安排</li></ul>
+    <ul class="materials-list"><li>投诉的具体内容</li><li>核实后的实际情况</li><li>经授权的解决方案</li><li>后续跟进计划</li><li>投诉渠道信息</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美容院店长。请针对以下客户投诉生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位处理过各类客诉的美容院店长，深知美业投诉的敏感性——客户的不满往往涉及「脸」和「钱」，处理不好容易升级。现在需要为一起客户投诉生成处理话术。
 
-投诉内容：{投诉内容}
-实际情况：{实际情况}
-解决方案：{解决方案}
-后续安排：{后续安排}
+请根据以下信息生成：
+客户投诉的内容：{投诉内容}
+经核实的实际情况：{实际情况}
+可提供的解决方案：{解决方案}
+后续跟进安排：{后续安排}
+投诉渠道（当面/电话/微信）：{投诉渠道}
 
-要求：
-1. 先表示理解和歉意
-2. 不推卸责任
-3. 给出具体解决方案
-4. 语气温和专业
-5. 字数80-120字</pre>
+输出要求：
+- 字数100-160字
+- 按「共情→认责→方案→跟进」结构组织
+- 共情部分要具体到客户的感受（如「花了钱没看到变化确实会失望」）
+- 如果涉及皮肤问题，建议客户就医检查（不自行判断）
+- 解决方案给出2个选项让客户选择
+- 后续跟进要具体到时间和方式
+- 语气温和诚恳，体现专业和负责
+
+禁止事项：
+- 不使用「每个人肤质不同，效果因人而异」来推卸责任
+- 不暗示客户护理不当导致问题
+- 不承诺「再做几次就好了」等效果
+- 不使用医疗诊断用语
+- 不在话术中提及法律或赔偿上限
+- 如涉及过敏等皮肤反应，必须建议就医</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +95,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{投诉内容}</code></td><td>客户不满意什么</td></tr><tr><td><code>{实际情况}</code></td><td>核实后的情况</td></tr><tr><td><code>{解决方案}</code></td><td>如何补偿或解决</td></tr><tr><td><code>{后续安排}</code></td><td>后续如何跟进</td></tr></tbody>
+      <tbody><tr><td><code>{投诉内容}</code></td><td>客户不满意什么，如「做完护理后皮肤发红发痒」「效果和承诺的不一样」</td></tr><tr><td><code>{实际情况}</code></td><td>核实后的情况，如「可能是产品不适合客户肤质」「美容师操作时间过长」</td></tr><tr><td><code>{解决方案}</code></td><td>可以提供的方案，如「退款/免费修复/更换产品重做」</td></tr><tr><td><code>{后续安排}</code></td><td>后续怎么跟进，如「每天微信确认恢复情况」「一周后回访」</td></tr><tr><td><code>{投诉渠道}</code></td><td>客户是当面说的、打电话还是微信投诉</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +107,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>姐，真的很抱歉这次体验没有让您满意。您说的过敏情况我非常重视，可能是新产品不太适合您的肤质。这样，我安排您这周再来一次，用温和的产品给您做一次修复护理，费用我们承担。之后我会在您的档案里备注敏感肌专用产品，避免再出现这种情况（仅供格式参考）</p>
+      <p>姐，真的很抱歉让你有这样的体验。花了时间和钱来做护理，结果皮肤反而不舒服，换作是我也会着急。你说的发红发痒情况我很重视，建议你先去皮肤科看一下确认原因，挂号费我们报销。同时给你两个方案：一是全额退款这次的费用；二是等皮肤恢复后，我用最温和的产品给你做一次修复护理，费用我们承担。你看哪个合适？后续我每天微信跟你确认恢复情况。（仅供格式参考，实际请根据具体投诉生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否承认问题</label></li><li><label><input type="checkbox"> 解决方案是否合理</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li><li><label><input type="checkbox"> 后续跟进是否具体</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否建议涉及皮肤问题的客户就医</label></li><li><label><input type="checkbox"> 解决方案是否在权限范围内</label></li><li><label><input type="checkbox"> 是否有推卸责任的表述</label></li><li><label><input type="checkbox"> 是否有效果承诺</label></li><li><label><input type="checkbox"> 语气是否诚恳负责</label></li><li><label><input type="checkbox"> 后续跟进是否具体</label></li><li><label><input type="checkbox"> 是否给了客户选择权</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-appointment.html" class="related-link">美业预约确认话术</a><a href="../templates/beauty-recall.html" class="related-link">美业老客户召回话术</a></div></section>

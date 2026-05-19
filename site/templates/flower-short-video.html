@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店短视频脚本","description":"为花店短视频撰写脚本","step":[{"@type":"HowToStep","text":"准备材料：视频主题、展示内容、目标受众、时长"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：步骤是否清晰；视觉是否美观；拍摄方案可执行；内容是否实用"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题"},{"@type":"HowToSupply","name":"展示内容"},{"@type":"HowToSupply","name":"目标受众"},{"@type":"HowToSupply","name":"时长"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店短视频脚本","description":"为花店短视频撰写脚本","step":[{"@type":"HowToStep","text":"准备材料：视频主题和核心卖点、展示的具体内容（花艺制作过程/养护教程/花材介绍）、目标受众和平台（抖音/小红书/视频号）、视频时长要求、可用的拍摄场景和道具、希望引导的用户行为（关注/收藏/到店）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：开场3秒是否有足够的吸引力；步骤是否清晰可跟学；字幕文案是否简洁（每条不超过15字）；拍摄方案是否可执行（场景、角度、道具）；是否存在安全隐患的操作展示；结尾引导是否自然不生硬；整体时长是否符合目标要求"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"视频主题和核心卖点"},{"@type":"HowToSupply","name":"展示的具体内容（花艺制作过程/养护教程/花材介绍）"},{"@type":"HowToSupply","name":"目标受众和平台（抖音/小红书/视频号）"},{"@type":"HowToSupply","name":"视频时长要求"},{"@type":"HowToSupply","name":"可用的拍摄场景和道具"},{"@type":"HowToSupply","name":"希望引导的用户行为（关注/收藏/到店）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,42 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>视频主题</li><li>展示内容</li><li>目标受众</li><li>时长</li></ul>
+    <ul class="materials-list"><li>视频主题和核心卖点</li><li>展示的具体内容（花艺制作过程/养护教程/花材介绍）</li><li>目标受众和平台（抖音/小红书/视频号）</li><li>视频时长要求</li><li>可用的拍摄场景和道具</li><li>希望引导的用户行为（关注/收藏/到店）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位花艺短视频策划。请撰写脚本。
+      <pre class="prompt-text" id="prompt-text">你是一位擅长短视频内容策划的花艺师，你的视频风格是「好看+有用」，让观众既能欣赏花艺之美，又能学到实用技巧。你深知短视频的核心是前3秒抓住注意力。现在需要为花店的短视频撰写拍摄脚本。
 
-主题：{视频主题}
-内容：{展示内容}
-受众：{目标受众}
-时长：{时长}
+请根据以下信息撰写脚本：
+视频主题：{视频主题}
+展示内容：{展示内容}
+目标受众：{目标受众}
+发布平台：{发布平台}
+视频时长：{视频时长}
+拍摄场景：{拍摄场景}
+引导行为：{引导行为}
 
-要求：
-1. 视觉美感强
-2. 有实用价值
-3. 适合竖屏
-4. 分镜头描述</pre>
+输出格式要求：
+- 按分镜头描述，每个镜头包含：画面内容+时长+字幕/旁白+拍摄角度建议
+- 开场镜头（前3秒）必须有视觉冲击力或悬念
+- 中间部分要有节奏感，每个步骤简洁明了
+- 结尾要有成品展示和行动引导
+- 附注背景音乐风格建议
+
+语气与风格：
+- 字幕文案简洁有力，每条不超过15字
+- 旁白（如有）语速适中，像朋友在教你
+- 整体节奏明快，不拖沓
+
+禁止事项：
+- 不能使用有版权风险的音乐（建议用平台自带音乐库）
+- 不能在视频中贬低其他花店
+- 不能展示不安全的操作（如不当使用花艺刀具）
+- 不能虚假宣传花期或效果
+- 不能使用「全网最火」「百万点赞」等夸张标题
+- 不能抄袭其他创作者的创意和脚本</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +100,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{视频主题}</code></td><td>如「花束包装教程」「养花技巧」</td></tr><tr><td><code>{展示内容}</code></td><td>具体展示什么</td></tr><tr><td><code>{目标受众}</code></td><td>给谁看</td></tr><tr><td><code>{时长}</code></td><td>视频时长</td></tr></tbody>
+      <tbody><tr><td><code>{视频主题}</code></td><td>这条视频的核心主题，如「30秒教你包一束韩式花束」「3个延长花期的小技巧」</td></tr><tr><td><code>{展示内容}</code></td><td>具体要展示什么，如「从选花到包装的完整过程」「换水+剪根+加保鲜剂的正确方法」</td></tr><tr><td><code>{目标受众}</code></td><td>给谁看，如「25-35岁女性，喜欢生活美学」「想学插花的新手」</td></tr><tr><td><code>{发布平台}</code></td><td>发在哪里，不同平台的竖屏/横屏和时长偏好不同</td></tr><tr><td><code>{视频时长}</code></td><td>目标时长，如「30-45秒」「1分钟以内」</td></tr><tr><td><code>{拍摄场景}</code></td><td>在哪里拍，如「花店工作台」「家庭客厅花瓶旁」</td></tr><tr><td><code>{引导行为}</code></td><td>希望观众看完做什么，如「关注账号」「收藏教程」「到店体验」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,16 +112,24 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【开场3秒】画面：一堆散落的花材特写。字幕「3分钟教你包一束高级感花束」
-【中间25秒】画面：选花→修剪→螺旋手法→包装纸包裹→系丝带。每步配简短字幕说明
-【结尾5秒】画面：成品花束特写+送人场景。字幕「学会了吗？下次试试自己包」（仅供格式参考）</p>
+      <p>【开场3秒】画面：一堆散乱的花材快速变成精美花束（加速镜头）。字幕：「学会这个手法，你也能包出花店同款」
+
+【步骤1（8秒）】画面：手部特写，展示螺旋手法握花。字幕：「关键：每加一枝花，顺时针转15度」。角度：俯拍45度。
+
+【步骤2（8秒）】画面：加入配叶填充空隙。字幕：「配叶塞在花与花之间，撑出蓬松感」。角度：侧面平拍。
+
+【步骤3（8秒）】画面：包装纸包裹+系丝带。字幕：「包装纸斜45度角，丝带系蝴蝶结」。角度：俯拍。
+
+【结尾5秒】画面：成品花束特写，缓慢旋转展示。字幕：「你学会了吗？收藏起来下次试试」
+
+背景音乐：轻快的钢琴曲或吉他弹唱风格（建议用平台音乐库搜索「花艺」「手作」相关）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 步骤是否清晰</label></li><li><label><input type="checkbox"> 视觉是否美观</label></li><li><label><input type="checkbox"> 拍摄方案可执行</label></li><li><label><input type="checkbox"> 内容是否实用</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 开场3秒是否有足够的吸引力</label></li><li><label><input type="checkbox"> 步骤是否清晰可跟学</label></li><li><label><input type="checkbox"> 字幕文案是否简洁（每条不超过15字）</label></li><li><label><input type="checkbox"> 拍摄方案是否可执行（场景、角度、道具）</label></li><li><label><input type="checkbox"> 是否存在安全隐患的操作展示</label></li><li><label><input type="checkbox"> 结尾引导是否自然不生硬</label></li><li><label><input type="checkbox"> 整体时长是否符合目标要求</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/flower-social-media.html" class="related-link">花店朋友圈内容</a><a href="../templates/flower-product-desc.html" class="related-link">花束产品描述</a></div></section>

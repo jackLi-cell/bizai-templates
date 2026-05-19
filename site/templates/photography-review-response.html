@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影评价回复","description":"为摄影工作室线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、拍摄套餐、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：语气是否真诚；回复是否具体；无过度承诺；无泄露隐私"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"拍摄套餐"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影评价回复","description":"为摄影工作室线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：客户评价的完整原文和星级、该客户的拍摄记录（套餐、时间、摄影师）、如为差评，内部核实后的真实原因、已落实的改进措施（不是空头承诺）、工作室近期想传达的正面信息（用于好评回复）、私聊处理的联系方式（用于差评引导私下沟通）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对评价中的具体内容而非泛泛而谈；是否暴露了客户的个人隐私信息；差评回复是否给出了具体可执行的解决方案；语气是否真诚，有没有反驳客户感受的倾向；是否在公开回复中提及退款等敏感信息；回复长度是否适中，不过长也不敷衍"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户评价的完整原文和星级"},{"@type":"HowToSupply","name":"该客户的拍摄记录（套餐、时间、摄影师）"},{"@type":"HowToSupply","name":"如为差评，内部核实后的真实原因"},{"@type":"HowToSupply","name":"已落实的改进措施（不是空头承诺）"},{"@type":"HowToSupply","name":"工作室近期想传达的正面信息（用于好评回复）"},{"@type":"HowToSupply","name":"私聊处理的联系方式（用于差评引导私下沟通）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>拍摄套餐</li><li>回复重点</li></ul>
+    <ul class="materials-list"><li>客户评价的完整原文和星级</li><li>该客户的拍摄记录（套餐、时间、摄影师）</li><li>如为差评，内部核实后的真实原因</li><li>已落实的改进措施（不是空头承诺）</li><li>工作室近期想传达的正面信息（用于好评回复）</li><li>私聊处理的联系方式（用于差评引导私下沟通）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室运营。请针对评价生成回复。
+      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室的线上口碑运营负责人，擅长针对不同类型的客户评价撰写有针对性的回复。你理解好评需要真诚感谢并强化客户的正面体验，差评需要诚恳面对并给出具体解决方案。现在需要针对大众点评、小红书或美团上的一条客户评价生成回复。
 
-评价：{评价内容}
-星级：{评价星级}
-套餐：{拍摄套餐}
-重点：{回复重点}
+请根据以下信息生成评价回复：
+评价原文：{评价内容}
+评价星级（1-5星）：{评价星级}
+客户拍摄的套餐：{拍摄套餐}
+评价中提到的具体优点或问题：{具体反馈}
+工作室想在回复中强调的信息：{回复重点}
+如为差评，已落实的改进措施：{改进措施}
 
-要求：
-1. 感谢客户信任
-2. 针对具体内容回应
-3. 语气真诚
-4. 字数50-80字</pre>
+输出格式要求：
+- 字数控制在60-100字
+- 好评回复（4-5星）：感谢+回应具体细节+期待再次合作
+- 中评回复（3星）：感谢+针对不足表示重视+说明改进
+- 差评回复（1-2星）：道歉+承认具体问题+给出解决方案+邀请私聊处理
+- 回复必须针对评价中的具体内容，不能用万能模板
+- 语气真诚平和，不卑不亢
+
+禁止事项：
+- 不反驳客户的主观感受
+- 不暴露客户的个人信息
+- 不在公开回复中讨论退款金额等敏感信息
+- 不使用「亲」「宝贝」等电商客服用语
+- 不在差评回复中推销其他套餐</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价</td></tr><tr><td><code>{评价星级}</code></td><td>几星</td></tr><tr><td><code>{拍摄套餐}</code></td><td>拍了什么</td></tr><tr><td><code>{回复重点}</code></td><td>想强调什么</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>客户在平台上写的完整评价原文</td></tr><tr><td><code>{评价星级}</code></td><td>客户给出的星级评分，1-5星</td></tr><tr><td><code>{拍摄套餐}</code></td><td>这位客户拍摄的是哪个套餐</td></tr><tr><td><code>{具体反馈}</code></td><td>评价中明确提到的优点或不满意的地方</td></tr><tr><td><code>{回复重点}</code></td><td>工作室希望在回复中顺带传达的信息，如服务升级、新增服务等</td></tr><tr><td><code>{改进措施}</code></td><td>如果是差评，工作室已经做了什么改进（必须是已落实的，不是计划）</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>感谢小姐姐的好评！那天拍摄氛围确实很好，你本身就很上镜，加上自然光刚好，出片效果我们自己也很满意。精修照片已经发到你邮箱了，有任何修改需求随时说。期待下次合作（仅供格式参考）</p>
+      <p>感谢你的反馈和信任！很开心你喜欢那天的自然光效果，其实那个时段的光线确实是我们工作室最好的时候。你提到想多几张户外的，下次可以试试我们的外景加拍服务。精修已发邮箱，有任何调整需求随时说。期待下次合作！（仅供格式参考，请根据实际评价内容生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 语气是否真诚</label></li><li><label><input type="checkbox"> 回复是否具体</label></li><li><label><input type="checkbox"> 无过度承诺</label></li><li><label><input type="checkbox"> 无泄露隐私</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对评价中的具体内容而非泛泛而谈</label></li><li><label><input type="checkbox"> 是否暴露了客户的个人隐私信息</label></li><li><label><input type="checkbox"> 差评回复是否给出了具体可执行的解决方案</label></li><li><label><input type="checkbox"> 语气是否真诚，有没有反驳客户感受的倾向</label></li><li><label><input type="checkbox"> 是否在公开回复中提及退款等敏感信息</label></li><li><label><input type="checkbox"> 回复长度是否适中，不过长也不敷衍</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/photography-social-media.html" class="related-link">摄影工作室朋友圈</a><a href="../templates/photography-appointment.html" class="related-link">摄影预约确认</a></div></section>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业朋友圈日常","description":"为美容院生成朋友圈日常运营内容","step":[{"@type":"HowToStep","text":"准备材料：今日内容主题、想传达的信息、配图描述"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无医疗承诺；语气是否自然；信息是否准确；无过度推销"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"今日内容主题"},{"@type":"HowToSupply","name":"想传达的信息"},{"@type":"HowToSupply","name":"配图描述"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业朋友圈日常","description":"为美容院生成朋友圈日常运营内容","step":[{"@type":"HowToStep","text":"准备材料：内容方向（知识/日常/提醒）、具体想传达的信息、配图、当前季节信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否有效果承诺或医疗用语；知识点是否专业准确；是否泄露了客户隐私；语气是否自然不推销；是否像真实的朋友圈而非广告；配图建议是否与内容匹配"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"内容方向（知识/日常/提醒）"},{"@type":"HowToSupply","name":"具体想传达的信息"},{"@type":"HowToSupply","name":"配图"},{"@type":"HowToSupply","name":"当前季节信息"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,35 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>今日内容主题</li><li>想传达的信息</li><li>配图描述</li></ul>
+    <ul class="materials-list"><li>内容方向（知识/日常/提醒）</li><li>具体想传达的信息</li><li>配图</li><li>当前季节信息</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美容师的朋友圈运营助手。请生成一条日常朋友圈内容。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助美容师经营个人朋友圈的内容顾问，核心理念是「让客户觉得你专业、真实、值得信任」。现在需要生成一条美容师的朋友圈日常内容。
 
-内容主题：{今日内容主题}
-想传达的信息：{想传达的信息}
-配图：{配图描述}
+请根据以下信息生成：
+今天的内容方向：{今日内容主题}
+想传达的信息或知识点：{想传达的信息}
+配图是什么：{配图描述}
+当前季节/天气：{当前季节}
 
-要求：
-1. 字数40-70字
-2. 像分享日常一样自然
-3. 可以带护肤小知识
-4. 不承诺效果
-5. 不要太推销</pre>
+输出要求：
+- 字数50-80字
+- 内容方向可以是：护肤小知识、工作日常分享、客户反馈（脱敏处理）、季节护肤提醒
+- 知识分享类：讲一个具体的点，不要泛泛而谈
+- 工作日常类：分享一个真实的小细节或感悟
+- 语气像一个专业但亲切的朋友在分享
+- 最多1个表情符号
+
+禁止事项：
+- 不承诺任何效果（如「坚持做就能变白」）
+- 不使用医疗用语
+- 不泄露客户隐私（姓名、照片等）
+- 不贬低其他品牌或产品
+- 不写成广告或推销
+- 不使用「姐妹们」等群体称呼</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +93,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{今日内容主题}</code></td><td>如「换季护肤」「工作日常」</td></tr><tr><td><code>{想传达的信息}</code></td><td>想让客户知道什么</td></tr><tr><td><code>{配图描述}</code></td><td>准备配什么图</td></tr></tbody>
+      <tbody><tr><td><code>{今日内容主题}</code></td><td>今天想发什么方向的内容，如「换季护肤提醒」「今天的工作日常」「一个护肤小知识」</td></tr><tr><td><code>{想传达的信息}</code></td><td>具体想说什么，如「换季要换温和的洁面」「今天给客户做了XX效果不错」</td></tr><tr><td><code>{配图描述}</code></td><td>准备配什么图，如「产品摆拍」「工作台照片」「手写的护肤建议」</td></tr><tr><td><code>{当前季节}</code></td><td>当前的季节或天气，如「秋冬换季」「夏天高温」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +105,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>换季这段时间，好几个姐妹来做护理都说皮肤发干起皮。其实这时候不要急着换很多产品，先把保湿做到位就行。今天给客户做完补水后，皮肤状态明显好了很多（仅供格式参考）</p>
+      <p>换季这两周，来做护理的客户十个有八个说皮肤干、起皮。分享一个简单的判断方法：洗完脸5分钟后如果觉得紧绷，说明你的洁面产品清洁力太强了，可以换一支氨基酸系的试试。不用买很贵的，温和不紧绷就行。（仅供格式参考，实际请根据你的内容方向生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无医疗承诺</label></li><li><label><input type="checkbox"> 语气是否自然</label></li><li><label><input type="checkbox"> 信息是否准确</label></li><li><label><input type="checkbox"> 无过度推销</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否有效果承诺或医疗用语</label></li><li><label><input type="checkbox"> 知识点是否专业准确</label></li><li><label><input type="checkbox"> 是否泄露了客户隐私</label></li><li><label><input type="checkbox"> 语气是否自然不推销</label></li><li><label><input type="checkbox"> 是否像真实的朋友圈而非广告</label></li><li><label><input type="checkbox"> 配图建议是否与内容匹配</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-video-script.html" class="related-link">美业短视频脚本</a><a href="../templates/beauty-project-intro.html" class="related-link">美容项目介绍文案</a></div></section>

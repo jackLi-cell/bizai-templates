@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售店品牌故事","description":"为零售店撰写品牌介绍或创业故事","step":[{"@type":"HowToStep","text":"准备材料：创业故事、经营理念、选品标准、服务特色"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：故事是否真实；理念是否清晰；无虚构成分；语气是否自然"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"创业故事"},{"@type":"HowToSupply","name":"经营理念"},{"@type":"HowToSupply","name":"选品标准"},{"@type":"HowToSupply","name":"服务特色"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售店品牌故事","description":"为零售店撰写品牌介绍或创业故事","step":[{"@type":"HowToStep","text":"准备材料：真实的创业故事/动机、你的经营理念（用自己的话）、选品标准和具体例子、与其他店的差异点、一个真实的细节故事"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：故事中的经历是否真实；选品标准是否有具体例子支撑；是否避免了「匠心」「初心」等陈词；语气是否像老板本人在讲；是否有编造或夸大的成分；结尾是否落在态度/坚持上；整体是否有一条清晰的故事线"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"真实的创业故事/动机"},{"@type":"HowToSupply","name":"你的经营理念（用自己的话）"},{"@type":"HowToSupply","name":"选品标准和具体例子"},{"@type":"HowToSupply","name":"与其他店的差异点"},{"@type":"HowToSupply","name":"一个真实的细节故事"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>创业故事</li><li>经营理念</li><li>选品标准</li><li>服务特色</li></ul>
+    <ul class="materials-list"><li>真实的创业故事/动机</li><li>你的经营理念（用自己的话）</li><li>选品标准和具体例子</li><li>与其他店的差异点</li><li>一个真实的细节故事</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位品牌文案策划。请为以下零售店撰写品牌故事。
+      <pre class="prompt-text" id="prompt-text">你是一位擅长为小店挖掘品牌故事的文案人，相信「真实」比「精致」更打动人。现在需要为一家零售店撰写品牌故事，用于公众号简介、店内展示或社交媒体主页。
 
-创业故事：{创业故事}
-经营理念：{经营理念}
-选品标准：{选品标准}
-服务特色：{服务特色}
+请根据以下信息撰写：
+为什么开这家店：{创业故事}
+你对零售/选品的理解：{经营理念}
+你怎么选择商品：{选品标准}
+你的店和别家有什么不同：{服务特色}
+一个能体现你态度的具体小事：{态度细节}
 
-要求：
-1. 字数150-250字
-2. 真实有温度
-3. 体现店主个性
-4. 不夸大不虚构
-5. 适合公众号或店内展示</pre>
+输出要求：
+- 字数180-280字
+- 用一个具体的场景或经历开头，不要用「我们成立于XX年」
+- 故事要有一条清晰的线索：从「发现问题」到「决定做点什么」到「现在怎么样了」
+- 选品标准要用具体的例子说明，不要只说「精挑细选」
+- 至少包含一个真实的细节（数字、对话、场景）
+- 结尾落在你的坚持或态度上
+- 语气像老板自己在讲，朴实不装
+
+禁止事项：
+- 不编造经历或荣誉
+- 不使用「匠心」「初心」「情怀」等被用滥的词
+- 不贬低电商或其他零售形式
+- 不夸大经营成绩
+- 不写成企业宣传稿</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{创业故事}</code></td><td>为什么开这家店</td></tr><tr><td><code>{经营理念}</code></td><td>你对零售的理解</td></tr><tr><td><code>{选品标准}</code></td><td>怎么选择商品</td></tr><tr><td><code>{服务特色}</code></td><td>和别家店有什么不同</td></tr></tbody>
+      <tbody><tr><td><code>{创业故事}</code></td><td>为什么开这家店，背后的真实原因或经历</td></tr><tr><td><code>{经营理念}</code></td><td>你对零售这件事的理解，如「让人买到不后悔的东西」</td></tr><tr><td><code>{选品标准}</code></td><td>你怎么决定上什么货，如「自己试穿过才上架」「只选XX品质以上的」</td></tr><tr><td><code>{服务特色}</code></td><td>你的店和别家有什么不同，如「可以免费试穿不买也没关系」「提供搭配建议」</td></tr><tr><td><code>{态度细节}</code></td><td>一个能体现你态度的具体小事，如「有次客户退货我发现是尺码问题，主动帮她换了合适的」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>开这家店的想法很简单：我自己买衣服总是踩雷，要么面料差，要么版型不行，网上的图和实物差太远。所以我想开一家「摸得到、试得到」的店，每件衣服都是我自己穿过觉得好才上架的。三年了，从最初的30平小店搬到了现在80平，老客户越来越多。我的选品标准就一条：自己愿不愿意穿。不追爆款，不跟风，就做舒服好穿的基础款（仅供格式参考）</p>
+      <p>开这家店的想法来自一次网购翻车。花了300块买的「纯棉」衬衫，到手一摸就知道不对，退货来回折腾了一周。后来想，如果有一家店能让人「摸到再买」，应该会有人需要。三年前租了现在这个30平的铺子，选品就一个标准：我自己穿过/用过觉得好的才上架。有些衣服看图片很好看，但面料扎人或者版型奇怪，试完就pass了。现在店里大概200个SKU，每件都是我自己体验过的。老客户越来越多，很多人说「在你这买的不用退货」，这句话比什么夸奖都让我高兴。（仅供格式参考，实际请根据你的真实经历生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 故事是否真实</label></li><li><label><input type="checkbox"> 理念是否清晰</label></li><li><label><input type="checkbox"> 无虚构成分</label></li><li><label><input type="checkbox"> 语气是否自然</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 故事中的经历是否真实</label></li><li><label><input type="checkbox"> 选品标准是否有具体例子支撑</label></li><li><label><input type="checkbox"> 是否避免了「匠心」「初心」等陈词</label></li><li><label><input type="checkbox"> 语气是否像老板本人在讲</label></li><li><label><input type="checkbox"> 是否有编造或夸大的成分</label></li><li><label><input type="checkbox"> 结尾是否落在态度/坚持上</label></li><li><label><input type="checkbox"> 整体是否有一条清晰的故事线</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-social-media.html" class="related-link">零售店朋友圈运营</a></div></section>

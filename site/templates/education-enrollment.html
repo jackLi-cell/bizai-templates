@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训招生文案","description":"为培训机构招生季撰写推广文案","step":[{"@type":"HowToStep","text":"准备材料：招生课程、优惠政策、报名时间、联系方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无成绩承诺；优惠信息准确；报名时间正确；联系方式有效"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招生课程"},{"@type":"HowToSupply","name":"优惠政策"},{"@type":"HowToSupply","name":"报名时间"},{"@type":"HowToSupply","name":"联系方式"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训招生文案","description":"为培训机构招生季撰写推广文案","step":[{"@type":"HowToStep","text":"准备材料：招生季节和班型（春季班/暑假班/秋季班等）、开设的课程和对应年龄段、班级容量和剩余名额（真实数据）、报名优惠政策（如有）、报名截止时间和开课时间、报名方式和咨询渠道"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：课程信息和适合年龄是否准确；班级容量和剩余名额是否真实；优惠政策条件是否写清楚；报名截止和开课时间是否明确；是否避免了焦虑话术和虚假紧迫感；总费用是否透明无隐藏收费；是否提供了试听等低门槛体验方式"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招生季节和班型（春季班/暑假班/秋季班等）"},{"@type":"HowToSupply","name":"开设的课程和对应年龄段"},{"@type":"HowToSupply","name":"班级容量和剩余名额（真实数据）"},{"@type":"HowToSupply","name":"报名优惠政策（如有）"},{"@type":"HowToSupply","name":"报名截止时间和开课时间"},{"@type":"HowToSupply","name":"报名方式和咨询渠道"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>招生课程</li><li>优惠政策</li><li>报名时间</li><li>联系方式</li></ul>
+    <ul class="materials-list"><li>招生季节和班型（春季班/暑假班/秋季班等）</li><li>开设的课程和对应年龄段</li><li>班级容量和剩余名额（真实数据）</li><li>报名优惠政策（如有）</li><li>报名截止时间和开课时间</li><li>报名方式和咨询渠道</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位培训机构招生文案助手。请撰写招生推广文案。
+      <pre class="prompt-text" id="prompt-text">你是一位培训机构的招生负责人，正在为新一期的招生撰写推广文案。你的原则是：用课程本身的价值吸引家长，而不是用焦虑和紧迫感逼家长报名。你相信好的课程不需要过度营销，把「学什么、怎么学、谁来教」说清楚，合适的家长自然会来。
 
-招生课程：{招生课程}
+现在需要撰写一条招生推广文案，用于朋友圈或家长群发布。
+
+请根据以下信息撰写：
+招生季/班型：{招生班型}
+开设课程：{开设课程}
+班级容量：{班级容量}
 优惠政策：{优惠政策}
-报名时间：{报名时间}
-联系方式：{联系方式}
+报名截止：{报名截止}
+开课时间：{开课时间}
+报名方式：{报名方式}
 
-要求：
-1. 字数80-120字
-2. 突出课程价值
-3. 不承诺成绩提升
-4. 不贬低其他机构
-5. 适合朋友圈和家长群</pre>
+输出格式要求：
+- 总字数100-160字
+- 开头用一句话说明这是什么班、适合谁
+- 列出2-3门主要课程，每门用一句话说明核心收获
+- 如果有优惠政策，简洁说明条件和力度
+- 写明报名截止时间和开课时间
+- 结尾给出报名方式，可以提及「先试听再决定」降低门槛
+- 语气平实诚恳，像在告知一个好消息而非推销
+
+禁止事项：
+- 不使用「名额紧张」「即将满班」等虚假紧迫感（除非真的只剩几个位置）
+- 不承诺学习效果（如「保证考级通过」）
+- 不贬低不报名的选择
+- 不使用「别让孩子输在起跑线」等焦虑话术
+- 不隐瞒总费用或后续收费项目</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +98,32 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{招生课程}</code></td><td>招什么课程的学生</td></tr><tr><td><code>{优惠政策}</code></td><td>早鸟价、团报优惠等</td></tr><tr><td><code>{报名时间}</code></td><td>截止日期</td></tr><tr><td><code>{联系方式}</code></td><td>电话或微信</td></tr></tbody>
+      <tbody><tr><td><code>{招生班型}</code></td><td>什么时候的班，如「2024暑假班」「春季周末班」「秋季新学期班」</td></tr><tr><td><code>{开设课程}</code></td><td>这期开哪些课，如「少儿英语（5-7岁）、数学思维（8-10岁）、书法入门（6岁+）」</td></tr><tr><td><code>{班级容量}</code></td><td>每班多少人、还剩多少位置，如「每班8人，目前英语班还剩3个名额」</td></tr><tr><td><code>{优惠政策}</code></td><td>报名有什么优惠，如「5月31日前报名立减300元，老学员续报再减200」</td></tr><tr><td><code>{报名截止}</code></td><td>什么时候截止报名，如「6月15日截止，届时未满班也会开课」</td></tr><tr><td><code>{开课时间}</code></td><td>什么时候开始上课，如「7月1日开课，每周二四上午9:00-10:30」</td></tr><tr><td><code>{报名方式}</code></td><td>怎么报名，如「微信私聊或到校区前台，可以先预约一节免费试听课」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>80-120字招生文案</p>
+    <p>100-160字招生推广文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>秋季班开始报名啦！少儿美术、书法、编程三门课程同步招生。9月1日前报名享早鸟价：单科立减200，报两科再减100。小班教学，每班限8人，报满即止。免费试听课随时预约，让孩子先体验再决定。咨询电话/微信：XXX（仅供格式参考）</p>
+      <p>暑假班开始报名了，适合想利用假期系统学习的孩子：
+
+- 少儿英语（5-7岁）：自然拼读+日常对话，让孩子敢开口
+- 数学思维（8-10岁）：用游戏和实物理解抽象概念
+- 硬笔书法（6岁+）：从握笔姿势开始，一个暑假写好基础笔画
+
+每班8人，7月1日开课。5月底前报名减300元，老学员续报再减200。可以先约一节免费试听，觉得合适再报。微信联系XXX或到校区前台咨询。（仅供格式参考，请根据实际招生信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无成绩承诺</label></li><li><label><input type="checkbox"> 优惠信息准确</label></li><li><label><input type="checkbox"> 报名时间正确</label></li><li><label><input type="checkbox"> 联系方式有效</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 课程信息和适合年龄是否准确</label></li><li><label><input type="checkbox"> 班级容量和剩余名额是否真实</label></li><li><label><input type="checkbox"> 优惠政策条件是否写清楚</label></li><li><label><input type="checkbox"> 报名截止和开课时间是否明确</label></li><li><label><input type="checkbox"> 是否避免了焦虑话术和虚假紧迫感</label></li><li><label><input type="checkbox"> 总费用是否透明无隐藏收费</label></li><li><label><input type="checkbox"> 是否提供了试听等低门槛体验方式</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/education-course-intro.html" class="related-link">培训课程介绍</a><a href="../templates/education-trial-invite.html" class="related-link">培训试听课邀约</a></div></section>

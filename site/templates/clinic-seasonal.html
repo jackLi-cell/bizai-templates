@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"诊所季节性健康提醒","description":"为诊所生成季节性健康提醒和体检推广","step":[{"@type":"HowToStep","text":"准备材料：季节主题、健康提醒、服务推荐、免责说明"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否含免责提示；无诊断建议；无焦虑营销；建议是否合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"季节主题"},{"@type":"HowToSupply","name":"健康提醒"},{"@type":"HowToSupply","name":"服务推荐"},{"@type":"HowToSupply","name":"免责说明"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"诊所季节性健康提醒","description":"为诊所生成季节性健康提醒和体检推广","step":[{"@type":"HowToStep","text":"准备材料：当前季节及对应的高发健康问题（需医师确认）、诊所本季度推出的相关服务或体检项目、服务价格及医保覆盖情况、预约方式和可预约时段、科普内容的医学依据来源、免责声明措辞（经负责人确认）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：科普内容是否经过执业医师审核确认；是否存在制造健康焦虑的表述；服务推荐部分是否控制在合理比例（不超过20%）；价格和医保信息是否准确；是否包含完整的免责声明；预防建议是否具体可操作；是否有用药建议或诊断性判断"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"当前季节及对应的高发健康问题（需医师确认）"},{"@type":"HowToSupply","name":"诊所本季度推出的相关服务或体检项目"},{"@type":"HowToSupply","name":"服务价格及医保覆盖情况"},{"@type":"HowToSupply","name":"预约方式和可预约时段"},{"@type":"HowToSupply","name":"科普内容的医学依据来源"},{"@type":"HowToSupply","name":"免责声明措辞（经负责人确认）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,41 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>季节主题</li><li>健康提醒</li><li>服务推荐</li><li>免责说明</li></ul>
+    <ul class="materials-list"><li>当前季节及对应的高发健康问题（需医师确认）</li><li>诊所本季度推出的相关服务或体检项目</li><li>服务价格及医保覆盖情况</li><li>预约方式和可预约时段</li><li>科普内容的医学依据来源</li><li>免责声明措辞（经负责人确认）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位诊所健康宣传助手。请生成季节性内容。
+      <pre class="prompt-text" id="prompt-text">你是一位社区诊所的健康管理师，每到换季都会为周边居民准备实用的健康提醒。你的风格是「科普在前、服务在后」，绝不用健康焦虑来推销服务。现在需要撰写一条季节性健康提醒内容，发布在诊所朋友圈或社群。
 
-主题：{季节主题}
-提醒：{健康提醒}
-服务：{服务推荐}
+请根据以下信息撰写：
+季节主题：{季节主题}
+高发问题：{高发问题}
+预防建议：{预防建议}
+诊所相关服务：{相关服务}
+服务价格：{服务价格}
+医保情况：{医保情况}
+预约方式：{预约方式}
 
-要求：
-1. 字数80-120字
-2. 以科普为主
-3. 必须包含免责提示
-4. 不构成诊断建议
-5. 不制造健康焦虑</pre>
+输出格式要求：
+- 总字数控制在130-180字
+- 结构：季节现象引入→健康知识科普（占60%篇幅）→日常可操作建议→诊所服务简要提及→免责声明
+- 科普部分要有具体的数据或生活化类比
+- 服务提及不超过总篇幅的20%，且用「如有需要」「也可以」等非强制语气
+
+语气与风格：
+- 像社区里那位热心又专业的医生朋友在群里分享
+- 重点是「给建议」而非「卖服务」
+- 数据引用要标注「据XX指南」或「一般认为」
+
+禁止事项：
+- 不能制造健康焦虑（如「不检查就晚了」「拖下去会怎样」）
+- 不能承诺体检或服务的具体效果
+- 不能使用「限时」「仅剩」等促销话术
+- 不能给出具体的用药建议
+- 不能替代医生做任何诊断性判断
+- 必须包含免责声明</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +99,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{季节主题}</code></td><td>如「秋冬养生」「春季过敏」</td></tr><tr><td><code>{健康提醒}</code></td><td>季节性健康建议</td></tr><tr><td><code>{服务推荐}</code></td><td>诊所相关服务</td></tr></tbody>
+      <tbody><tr><td><code>{季节主题}</code></td><td>当前季节的健康主题，如「入秋呼吸道防护」「冬季心脑血管注意」「春季过敏高发」</td></tr><tr><td><code>{高发问题}</code></td><td>该季节常见的健康问题，需经医师确认，如「秋冬流感、老年人血压波动」</td></tr><tr><td><code>{预防建议}</code></td><td>居民日常可执行的预防措施，如「室内通风、接种流感疫苗、监测血压」</td></tr><tr><td><code>{相关服务}</code></td><td>诊所可提供的对应服务，如「流感疫苗接种」「秋季体检套餐」</td></tr><tr><td><code>{服务价格}</code></td><td>明确标注价格，如「体检套餐298元」「疫苗接种按国家定价」</td></tr><tr><td><code>{医保情况}</code></td><td>该服务是否可用医保，如「体检为自费项目」「疫苗接种医保可报销部分」</td></tr><tr><td><code>{预约方式}</code></td><td>如何预约，如「电话预约」「微信公众号挂号」「直接到院」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +111,18 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>入秋了，提醒大家注意几点：1.早晚温差大，注意增减衣物；2.空气干燥，多喝水多吃润肺食物；3.老年人关节容易不适，注意保暖。我们诊所本月推出秋季体检套餐，含基础检查+中医体质辨识，适合想了解自己身体状况的朋友。（以上为一般性建议，不构成医疗诊断，具体健康问题请就医咨询）（仅供格式参考）</p>
+      <p>入秋后气温骤降，心内科数据显示秋冬季心脑血管事件发生率比夏季高出约30%。几个日常建议：晨起不要猛然起身，给身体2-3分钟适应时间；有高血压基础的朋友，换季时建议增加测量频次，早晚各一次并做好记录。日常饮食注意控盐，每天不超过5克。
+
+我们诊所本月有秋季基础体检套餐（含血压监测、血脂血糖、心电图），自费298元，需提前一天预约。
+
+以上为一般性健康提醒，不构成医疗建议。个人健康问题请咨询您的主治医生。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否含免责提示</label></li><li><label><input type="checkbox"> 无诊断建议</label></li><li><label><input type="checkbox"> 无焦虑营销</label></li><li><label><input type="checkbox"> 建议是否合理</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 科普内容是否经过执业医师审核确认</label></li><li><label><input type="checkbox"> 是否存在制造健康焦虑的表述</label></li><li><label><input type="checkbox"> 服务推荐部分是否控制在合理比例（不超过20%）</label></li><li><label><input type="checkbox"> 价格和医保信息是否准确</label></li><li><label><input type="checkbox"> 是否包含完整的免责声明</label></li><li><label><input type="checkbox"> 预防建议是否具体可操作</label></li><li><label><input type="checkbox"> 是否有用药建议或诊断性判断</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/clinic-health-education.html" class="related-link">诊所健康科普文案</a><a href="../templates/clinic-appointment.html" class="related-link">诊所预约提醒</a></div></section>

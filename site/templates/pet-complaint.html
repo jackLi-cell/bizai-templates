@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店投诉处理","description":"为宠物店客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容、核实情况、解决方案、后续措施"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否表达对宠物的关心；解决方案是否具体；是否承担责任；后续措施是否可行"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容"},{"@type":"HowToSupply","name":"核实情况"},{"@type":"HowToSupply","name":"解决方案"},{"@type":"HowToSupply","name":"后续措施"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店投诉处理","description":"为宠物店客户投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容（主人的具体不满）、投诉类型（服务质量/宠物受伤/态度问题/预约问题等）、内部核实的事实情况、宠物当前状况（如涉及受伤或不适）、可执行的解决方案、后续跟进计划"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否第一时间关心了宠物的状况；涉及健康问题是否建议了就医；事实说明是否诚实而非推卸；解决方案是否具体且已获授权；是否避免了自行判断宠物健康状况；后续跟进计划是否明确；语气是否体现了对动物的关爱"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容（主人的具体不满）"},{"@type":"HowToSupply","name":"投诉类型（服务质量/宠物受伤/态度问题/预约问题等）"},{"@type":"HowToSupply","name":"内部核实的事实情况"},{"@type":"HowToSupply","name":"宠物当前状况（如涉及受伤或不适）"},{"@type":"HowToSupply","name":"可执行的解决方案"},{"@type":"HowToSupply","name":"后续跟进计划"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>投诉内容</li><li>核实情况</li><li>解决方案</li><li>后续措施</li></ul>
+    <ul class="materials-list"><li>投诉内容（主人的具体不满）</li><li>投诉类型（服务质量/宠物受伤/态度问题/预约问题等）</li><li>内部核实的事实情况</li><li>宠物当前状况（如涉及受伤或不适）</li><li>可执行的解决方案</li><li>后续跟进计划</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位宠物店店长。请针对以下投诉生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位经营宠物店多年的老板，处理过各种客户投诉。你深知宠物主人投诉时的情绪往往来自对宠物的担心和心疼，所以你处理投诉的第一原则是「先关心宠物的状况」，而不是急着解释或辩解。同时你也知道，涉及宠物健康的问题必须建议就医，不能自行判断。
 
+现在需要针对一起客户投诉生成回复话术。
+
+请根据以下信息撰写：
 投诉内容：{投诉内容}
+投诉类型：{投诉类型}
 核实情况：{核实情况}
+宠物当前状况：{宠物状况}
 解决方案：{解决方案}
-后续措施：{后续措施}
+跟进计划：{跟进计划}
 
-要求：
-1. 表达对宠物的关心
-2. 诚恳道歉
-3. 给出具体方案
-4. 字数80-120字</pre>
+输出格式要求：
+- 总字数120-180字
+- 第一句话关心宠物当前的状况（如「XX现在情况怎么样」）
+- 第二部分诚实说明核实到的情况，如果是我方问题直接承认
+- 如果涉及宠物身体不适，第一时间建议就医而非自行判断
+- 给出具体的解决方案和时间节点
+- 表示后续会跟进关心宠物恢复情况
+- 语气温和诚恳，体现对动物的关爱
+
+禁止事项：
+- 不说「宠物在店里表现很正常」来暗示主人夸大
+- 不自行判断宠物的健康状况（交给兽医）
+- 不使用「按照我们的流程」来推卸责任
+- 不在回复中暗示主人平时照顾不当
+- 不承诺超出能力的医疗费用承担</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,26 +97,30 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{投诉内容}</code></td><td>主人投诉什么</td></tr><tr><td><code>{核实情况}</code></td><td>实际发生了什么</td></tr><tr><td><code>{解决方案}</code></td><td>如何解决</td></tr><tr><td><code>{后续措施}</code></td><td>如何避免再发生</td></tr></tbody>
+      <tbody><tr><td><code>{投诉内容}</code></td><td>主人投诉什么，如「洗完澡回家发现狗狗耳朵里有伤口」「寄养期间猫咪瘦了很多」</td></tr><tr><td><code>{投诉类型}</code></td><td>属于什么类型：洗护过程中受伤/寄养期间状态异常/美容造型不满意/服务态度差/预约被取消</td></tr><tr><td><code>{核实情况}</code></td><td>内部了解到的情况，如「洗护时发现耳道有发红，已告知接宠物的家属建议观察」</td></tr><tr><td><code>{宠物状况}</code></td><td>宠物现在怎么样，如「主人说狗狗一直在挠耳朵，有点蔫」</td></tr><tr><td><code>{解决方案}</code></td><td>打算怎么处理，如「建议先带去医院检查，如确认是我们操作导致的，医疗费用我们承担」</td></tr><tr><td><code>{跟进计划}</code></td><td>后续怎么跟进，如「明天下午我电话回访了解就医结果」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>80-120字投诉处理话术</p>
+    <p>120-180字投诉回复话术</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>姐您好，非常抱歉让您和豆豆有了不好的体验。我看了监控，确实是美容师修剪时不够细心，剪到了耳朵边缘的皮肤。首先我带豆豆去合作的宠物医院检查处理，费用我们全部承担。这位美容师我会安排重新培训。真的很抱歉，豆豆的安全是我们最重视的（仅供格式参考）</p>
+      <p>您好，先问一下豆豆现在耳朵情况怎么样了？还在挠吗？如果持续不舒服，建议尽快带去医院让医生看一下，耳道的问题拖久了容易加重。
+
+关于这次的情况：洗护时我们确实发现豆豆耳道有发红，当时跟接它的家人说了建议观察。但我们应该更明确地强调需要就医，这一点是我们沟通不到位。
+
+这样处理：您先带豆豆去看医生，如果确认跟这次洗护有关，医疗费用我们来承担。明天下午我给您打电话了解情况。（仅供格式参考，请根据实际投诉生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否表达对宠物的关心</label></li><li><label><input type="checkbox"> 解决方案是否具体</label></li><li><label><input type="checkbox"> 是否承担责任</label></li><li><label><input type="checkbox"> 后续措施是否可行</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否第一时间关心了宠物的状况</label></li><li><label><input type="checkbox"> 涉及健康问题是否建议了就医</label></li><li><label><input type="checkbox"> 事实说明是否诚实而非推卸</label></li><li><label><input type="checkbox"> 解决方案是否具体且已获授权</label></li><li><label><input type="checkbox"> 是否避免了自行判断宠物健康状况</label></li><li><label><input type="checkbox"> 后续跟进计划是否明确</label></li><li><label><input type="checkbox"> 语气是否体现了对动物的关爱</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-review-reply.html" class="related-link">宠物店评价回复</a><a href="../templates/pet-appointment.html" class="related-link">宠物服务预约确认</a></div></section>

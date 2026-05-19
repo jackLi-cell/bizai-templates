@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影会员/年度套餐","description":"为摄影工作室年度会员或多次套餐撰写推广","step":[{"@type":"HowToStep","text":"准备材料：套餐类型、包含次数、会员权益、价格对比"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：价格计算是否正确；权益是否可兑现；无强制消费；适用人群是否明确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"套餐类型"},{"@type":"HowToSupply","name":"包含次数"},{"@type":"HowToSupply","name":"会员权益"},{"@type":"HowToSupply","name":"价格对比"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影会员/年度套餐","description":"为摄影工作室年度会员或多次套餐撰写推广","step":[{"@type":"HowToStep","text":"准备材料：年度套餐的完整内容和定价方案、单次购买的对比价格（确保对比真实）、会员专属权益的完整清单、使用规则和限制条件（有效期、预约规则、转让规则）、目标客户群体画像、已有会员的续费率和反馈（可选，用于优化话术）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：价格计算是否正确（总价、单次对比、节省金额）；会员权益是否全部可兑现；有效期和使用规则是否标注清楚；是否存在隐藏的使用限制未说明；适合人群的描述是否准确；是否有强制推销或焦虑制造的倾向"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"年度套餐的完整内容和定价方案"},{"@type":"HowToSupply","name":"单次购买的对比价格（确保对比真实）"},{"@type":"HowToSupply","name":"会员专属权益的完整清单"},{"@type":"HowToSupply","name":"使用规则和限制条件（有效期、预约规则、转让规则）"},{"@type":"HowToSupply","name":"目标客户群体画像"},{"@type":"HowToSupply","name":"已有会员的续费率和反馈（可选，用于优化话术）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>套餐类型</li><li>包含次数</li><li>会员权益</li><li>价格对比</li></ul>
+    <ul class="materials-list"><li>年度套餐的完整内容和定价方案</li><li>单次购买的对比价格（确保对比真实）</li><li>会员专属权益的完整清单</li><li>使用规则和限制条件（有效期、预约规则、转让规则）</li><li>目标客户群体画像</li><li>已有会员的续费率和反馈（可选，用于优化话术）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室会员运营助手。请撰写套餐推广文案。
+      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室的客户关系经理，专注于设计和推广长期拍摄计划。你理解有持续拍摄需求的客户群体（如记录孩子成长的家庭、需要定期更新形象照的职场人士），能够用理性的性价比分析和感性的记录价值来打动他们。现在需要为工作室的年度会员套餐或多次拍摄计划撰写推广文案。
 
-类型：{套餐类型}
-次数：{包含次数}
-权益：{会员权益}
-对比：{价格对比}
+请根据以下信息撰写会员套餐推广：
+套餐类型名称：{套餐名称}
+包含拍摄次数：{拍摄次数}
+每次拍摄包含内容：{单次内容}
+会员专属权益：{专属权益}
+套餐总价：{套餐总价}
+单次购买对比价格：{单次价格}
+节省金额：{节省金额}
+适合人群：{适合人群}
+有效期：{有效期}
 
-要求：
-1. 字数80-120字
-2. 突出性价比
-3. 适合有持续拍摄需求的客户
-4. 不强制推销
-5. 权益清晰</pre>
+输出格式要求：
+- 字数控制在100-140字
+- 开头用一个具体的使用场景引入（如「记录宝宝从爬到走的每个阶段」）
+- 中间清晰列出套餐内容和价格对比，让性价比一目了然
+- 提及会员专属权益作为附加价值
+- 结尾说明适合人群，让客户自我对号入座
+- 语气理性温和，像在帮客户算一笔账，不强推
+
+禁止事项：
+- 不使用「超值」「血赚」「不买亏了」等促销用语
+- 不制造「不记录就来不及了」的焦虑感
+- 不隐瞒使用限制（如有效期、预约规则）
+- 不虚构节省金额
+- 不强制捆绑不需要的服务</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{套餐类型}</code></td><td>如「年度记录计划」「亲子成长套餐」</td></tr><tr><td><code>{包含次数}</code></td><td>一年拍几次</td></tr><tr><td><code>{会员权益}</code></td><td>额外享受什么</td></tr><tr><td><code>{价格对比}</code></td><td>和单次相比省多少</td></tr></tbody>
+      <tbody><tr><td><code>{套餐名称}</code></td><td>年度计划的名称，如「亲子成长记录」「职场形象年卡」「闺蜜约拍计划」</td></tr><tr><td><code>{拍摄次数}</code></td><td>一年内包含几次拍摄</td></tr><tr><td><code>{单次内容}</code></td><td>每次拍摄包含什么（服装数、精修数、底片等）</td></tr><tr><td><code>{专属权益}</code></td><td>会员独享的额外权益，如优先选档期、加片折扣、赠品等</td></tr><tr><td><code>{套餐总价}</code></td><td>年度计划的总价格</td></tr><tr><td><code>{单次价格}</code></td><td>如果不买年度计划，单次购买的价格</td></tr><tr><td><code>{节省金额}</code></td><td>年度计划相比单次购买总共节省多少</td></tr><tr><td><code>{适合人群}</code></td><td>什么样的客户最适合这个计划</td></tr><tr><td><code>{有效期}</code></td><td>套餐的使用有效期</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +109,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>给宝宝做个成长记录？「亲子年度套餐」：一年4次拍摄（每季度一次），每次含10张精修+全部底片。单次拍摄原价699，年度套餐2396元（相当于每次599，省400）。额外赠送：年底制作一本精装相册。适合想记录孩子每个阶段的家庭（仅供格式参考）</p>
+      <p>想给宝宝做个成长记录？「亲子年度计划」：一年4次拍摄（每季度一次），每次含1套服装+10张精修+全部底片。单次购买原价799/次，年度计划2796元（相当于699/次，全年省400元）。会员额外享：优先选档期、年底赠送一本12寸精装相册、加片8折。有效期12个月，适合想持续记录孩子变化的家庭。不着急决定，可以先体验一次单次拍摄再考虑。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 价格计算是否正确</label></li><li><label><input type="checkbox"> 权益是否可兑现</label></li><li><label><input type="checkbox"> 无强制消费</label></li><li><label><input type="checkbox"> 适用人群是否明确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 价格计算是否正确（总价、单次对比、节省金额）</label></li><li><label><input type="checkbox"> 会员权益是否全部可兑现</label></li><li><label><input type="checkbox"> 有效期和使用规则是否标注清楚</label></li><li><label><input type="checkbox"> 是否存在隐藏的使用限制未说明</label></li><li><label><input type="checkbox"> 适合人群的描述是否准确</label></li><li><label><input type="checkbox"> 是否有强制推销或焦虑制造的倾向</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/photography-package-intro.html" class="related-link">摄影套餐介绍</a><a href="../templates/photography-campaign.html" class="related-link">摄影活动促销文案</a></div></section>

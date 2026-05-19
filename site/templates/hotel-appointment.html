@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿入住引导","description":"为民宿生成入住前引导话术","step":[{"@type":"HowToStep","text":"准备材料：客人称呼、入住日期、房型、交通指引、入住须知"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：交通信息是否准确；入住时间是否正确；须知是否完整；联系方式是否提供"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客人称呼"},{"@type":"HowToSupply","name":"入住日期"},{"@type":"HowToSupply","name":"房型"},{"@type":"HowToSupply","name":"交通指引"},{"@type":"HowToSupply","name":"入住须知"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿入住引导","description":"为民宿生成入住前引导话术","step":[{"@type":"HowToStep","text":"准备材料：最新的交通到达方式（导航地址、公共交通路线）、入退时间和相关政策、周边实用信息（最近的超市、餐厅、医院等）、季节性注意事项（天气、穿着建议）、管家的联系方式、接站服务的安排方式（如有）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：交通指引是否准确且为最新信息；入退时间是否与实际政策一致；特殊提醒是否诚实完整（山路、信号等）；管家联系方式是否正确；是否遗漏了关键的安全信息；语气是否温暖实用"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"最新的交通到达方式（导航地址、公共交通路线）"},{"@type":"HowToSupply","name":"入退时间和相关政策"},{"@type":"HowToSupply","name":"周边实用信息（最近的超市、餐厅、医院等）"},{"@type":"HowToSupply","name":"季节性注意事项（天气、穿着建议）"},{"@type":"HowToSupply","name":"管家的联系方式"},{"@type":"HowToSupply","name":"接站服务的安排方式（如有）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>客人称呼</li><li>入住日期</li><li>房型</li><li>交通指引</li><li>入住须知</li></ul>
+    <ul class="materials-list"><li>最新的交通到达方式（导航地址、公共交通路线）</li><li>入退时间和相关政策</li><li>周边实用信息（最近的超市、餐厅、医院等）</li><li>季节性注意事项（天气、穿着建议）</li><li>管家的联系方式</li><li>接站服务的安排方式（如有）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位民宿管家。请生成入住引导话术。
+      <pre class="prompt-text" id="prompt-text">你是一位民宿的管家，负责在客人预订成功后发送入住前的引导信息。你的目标是让客人在到达之前就感受到被欢迎和被照顾，同时获取所有实用的到达和入住信息。你的沟通风格温暖细致，像在接待一位来家里做客的朋友。现在需要生成一条入住引导消息，通过微信发送给已预订的客人。
 
-客人：{客人称呼}
-日期：{入住日期}
-房型：{房型}
-交通：{交通指引}
-须知：{入住须知}
+请根据以下信息生成入住引导话术：
+客人称呼：{客人称呼}
+入住日期：{入住日期}
+预订房型：{房型名称}
+入住时间/退房时间：{入退时间}
+详细交通指引（自驾/公共交通）：{交通指引}
+到达后的接待流程：{接待流程}
+需要客人提前告知的信息：{提前告知}
+周边实用信息（超市/餐厅/加油站）：{周边信息}
+特殊提醒（如山路、信号、天气）：{特殊提醒}
+管家联系方式：{联系方式}
 
-要求：
-1. 信息完整实用
-2. 语气温暖
-3. 包含交通指引
-4. 字数100-150字</pre>
+输出格式要求：
+- 字数控制在130-180字
+- 开头确认预订信息（房型+日期），表示欢迎
+- 中间用编号列出实用信息（交通、入住、注意事项），层次清晰
+- 特殊提醒要诚实标注（如最后一段山路、手机信号弱等）
+- 结尾提供管家联系方式，表示随时可联系
+- 语气温暖实用，像一位贴心的朋友在给你指路
+
+禁止事项：
+- 不隐瞒到达途中的不便（如山路、无信号路段）
+- 不使用「尊贵的客人」等酒店式称呼
+- 不在引导消息中追加推销升级房型
+- 不提供过时的交通信息
+- 不遗漏关键的安全提醒</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +98,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{客人称呼}</code></td><td>客人怎么称呼</td></tr><tr><td><code>{入住日期}</code></td><td>什么时候来</td></tr><tr><td><code>{房型}</code></td><td>订的什么房</td></tr><tr><td><code>{交通指引}</code></td><td>怎么到达</td></tr><tr><td><code>{入住须知}</code></td><td>需要注意什么</td></tr></tbody>
+      <tbody><tr><td><code>{客人称呼}</code></td><td>客人的称呼</td></tr><tr><td><code>{入住日期}</code></td><td>客人计划入住的日期</td></tr><tr><td><code>{房型名称}</code></td><td>客人预订的房型</td></tr><tr><td><code>{入退时间}</code></td><td>入住和退房的具体时间</td></tr><tr><td><code>{交通指引}</code></td><td>自驾和公共交通的详细到达方式</td></tr><tr><td><code>{接待流程}</code></td><td>客人到达后的接待流程（如门口接、带看房间等）</td></tr><tr><td><code>{提前告知}</code></td><td>需要客人提前告知的信息（如到达时间、饮食禁忌、是否需要接站）</td></tr><tr><td><code>{周边信息}</code></td><td>周边的超市、餐厅、加油站等实用信息</td></tr><tr><td><code>{特殊提醒}</code></td><td>需要特别提醒的事项（如山路、信号、天气、蚊虫等）</td></tr><tr><td><code>{联系方式}</code></td><td>管家的电话和微信</td></tr></tbody>
     </table>
   </section>
 
@@ -95,19 +110,26 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>王先生您好～欢迎预订我们的山景大床房！入住日期：本周六。几个实用信息：
-1. 导航搜「XX民宿」可直达，最后500米是山路，开慢点
-2. 入住时间14:00后，提前到可以先寄存行李
-3. 山里晚上凉，建议带件外套
-4. 我们提供免费停车位
-到了给我打电话，我在门口接您。有任何问题随时联系（仅供格式参考）</p>
+      <p>王先生您好，欢迎预订我们的山景大床房！入住日期：本周六。
+
+到达指引：
+1. 自驾导航搜「XX民宿」可直达，最后2公里是盘山路，弯道多请慢行
+2. 高铁到XX站，出站联系我可安排接站（免费，需提前1天预约）
+3. 山上手机信号偶尔不稳定，到了找不到路直接打我电话
+
+入住提醒：
+- 入住时间14:00后，提前到可以先在公共区域喝茶休息
+- 山里早晚温差大，建议带件外套
+- 免费停车位在院子里，可停2辆车
+
+到了给我打电话或微信语音，我在门口接您。管家小李：138XXXX（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 交通信息是否准确</label></li><li><label><input type="checkbox"> 入住时间是否正确</label></li><li><label><input type="checkbox"> 须知是否完整</label></li><li><label><input type="checkbox"> 联系方式是否提供</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 交通指引是否准确且为最新信息</label></li><li><label><input type="checkbox"> 入退时间是否与实际政策一致</label></li><li><label><input type="checkbox"> 特殊提醒是否诚实完整（山路、信号等）</label></li><li><label><input type="checkbox"> 管家联系方式是否正确</label></li><li><label><input type="checkbox"> 是否遗漏了关键的安全信息</label></li><li><label><input type="checkbox"> 语气是否温暖实用</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/hotel-room-description.html" class="related-link">民宿房型介绍</a><a href="../templates/hotel-review-response.html" class="related-link">民宿评价回复</a></div></section>

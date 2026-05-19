@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店评价回复","description":"为花店线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、购买产品、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：语气是否温暖；回复是否具体；养护建议是否实用；无过度承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"购买产品"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花店评价回复","description":"为花店线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：客户评价原文（含星级和购买产品）、订单详情（花束款式、配送时间、配送地址区域）、内部核实情况（如差评需确认问题原因）、回复侧重点、可附带的养护建议（针对客户购买的花材）、后续服务信息（新品预告、会员权益等）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对客户评价的具体内容（非模板化）；是否泄露了收花人信息或配送地址；好评回复是否附带了实用的养护建议；差评回复是否提供了具体解决方案；语气是否温暖真诚、不过度谄媚；是否存在无法兑现的承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户评价原文（含星级和购买产品）"},{"@type":"HowToSupply","name":"订单详情（花束款式、配送时间、配送地址区域）"},{"@type":"HowToSupply","name":"内部核实情况（如差评需确认问题原因）"},{"@type":"HowToSupply","name":"回复侧重点"},{"@type":"HowToSupply","name":"可附带的养护建议（针对客户购买的花材）"},{"@type":"HowToSupply","name":"后续服务信息（新品预告、会员权益等）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>购买产品</li><li>回复重点</li></ul>
+    <ul class="materials-list"><li>客户评价原文（含星级和购买产品）</li><li>订单详情（花束款式、配送时间、配送地址区域）</li><li>内部核实情况（如差评需确认问题原因）</li><li>回复侧重点</li><li>可附带的养护建议（针对客户购买的花材）</li><li>后续服务信息（新品预告、会员权益等）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位花店运营。请针对评价生成回复。
+      <pre class="prompt-text" id="prompt-text">你是一位花店老板，亲自回复每一条客户评价。你的回复风格是「温暖真诚、有花艺专业度」，好评回复会附带养护小贴士让客户觉得贴心，差评回复会诚恳解决问题。现在需要为花店在美团/大众点评上的一条评价撰写回复。
 
-评价：{评价内容}
-星级：{评价星级}
-产品：{购买产品}
-重点：{回复重点}
+请根据以下信息撰写回复：
+评价原文：{评价内容}
+评价星级：{评价星级}
+购买产品：{购买产品}
+配送情况：{配送情况}
+核实情况：{核实情况}
+回复重点：{回复重点}
 
-要求：
-1. 温暖有美感
-2. 针对具体内容
-3. 可以附养护建议
-4. 字数50-80字</pre>
+输出格式要求：
+- 好评回复：60-90字，感谢+针对所购花材的养护建议+期待下次
+- 中评回复：80-110字，感谢+针对性回应+改进说明+养护补充
+- 差评回复：100-140字，诚恳致歉+问题说明+解决方案+补偿+邀请再次体验
+
+语气与风格：
+- 温暖有人情味，像花店老板本人在回复
+- 好评回复要有「专业加分项」（如养护建议、花语小知识）
+- 差评回复要快速给方案，不找借口
+
+禁止事项：
+- 不能使用千篇一律的模板回复
+- 不能在回复中泄露客户的收花人信息或地址
+- 不能承诺「下次一定完美」等无法保证的话
+- 不能贬低客户的审美或选择
+- 不能在差评回复中推销其他产品
+- 不能使用过度谄媚的语气</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价</td></tr><tr><td><code>{评价星级}</code></td><td>几星</td></tr><tr><td><code>{购买产品}</code></td><td>买了什么</td></tr><tr><td><code>{回复重点}</code></td><td>想强调什么</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>客户在平台上写的评价原文</td></tr><tr><td><code>{评价星级}</code></td><td>1-5星，决定回复基调</td></tr><tr><td><code>{购买产品}</code></td><td>客户买了什么花束，如「月色·温柔系列中束」</td></tr><tr><td><code>{配送情况}</code></td><td>配送是否准时、花束状态如何</td></tr><tr><td><code>{核实情况}</code></td><td>差评时需核实的情况，如「配送延迟原因」「花材损坏原因」</td></tr><tr><td><code>{回复重点}</code></td><td>这条回复想传达什么，如「感谢信任+养护建议」「致歉+解决方案」</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +109,18 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>感谢喜欢！这款香槟玫瑰确实很温柔，搭配尤加利叶特别有质感。收到后记得每天换水，放在通风阴凉处，花期会更长。下次有新花材到货我朋友圈会更新，喜欢的话可以关注一下（仅供格式参考）</p>
+      <p>谢谢姐姐的好评和美美的买家秀！卡布奇诺玫瑰确实是最近很受欢迎的色系，搭配尤加利叶特别有高级感。
+
+小贴士：这款玫瑰比较耐放，每天换水时顺手把根部斜剪一小段（约1cm），水里加保鲜剂，放在阴凉通风处，正常能开7-8天。如果花瓣边缘开始发软，可以把外层花瓣轻轻剥掉，里面还是很美的。
+
+下次有新花材到货我会更新朋友圈，喜欢的话可以关注一下~</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 语气是否温暖</label></li><li><label><input type="checkbox"> 回复是否具体</label></li><li><label><input type="checkbox"> 养护建议是否实用</label></li><li><label><input type="checkbox"> 无过度承诺</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对客户评价的具体内容（非模板化）</label></li><li><label><input type="checkbox"> 是否泄露了收花人信息或配送地址</label></li><li><label><input type="checkbox"> 好评回复是否附带了实用的养护建议</label></li><li><label><input type="checkbox"> 差评回复是否提供了具体解决方案</label></li><li><label><input type="checkbox"> 语气是否温暖真诚、不过度谄媚</label></li><li><label><input type="checkbox"> 是否存在无法兑现的承诺</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/flower-social-media.html" class="related-link">花店朋友圈内容</a><a href="../templates/flower-product-desc.html" class="related-link">花束产品描述</a></div></section>

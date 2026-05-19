@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮投诉处理话术","description":"为餐厅处理现场或线上投诉生成应对话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容、核实结果、解决方案、后续跟进"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认解决方案可执行；检查是否有推卸责任；语气是否诚恳；后续改进是否具体"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容"},{"@type":"HowToSupply","name":"核实结果"},{"@type":"HowToSupply","name":"解决方案"},{"@type":"HowToSupply","name":"后续跟进"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮投诉处理话术","description":"为餐厅处理现场或线上投诉生成应对话术","step":[{"@type":"HowToStep","text":"准备材料：投诉的具体内容（尽量记录原话）、内部核实的结果、你的权限范围内可提供的解决方案、后续改进计划、投诉渠道信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否按「共情→认责→方案→跟进」结构组织；共情是否具体到客户的感受；解决方案是否在你的权限范围内；是否提供了选择而非单方面决定；后续跟进是否具体可执行；语气是否与投诉渠道匹配（现场更口语化）；是否避免了对抗性或冷漠的表述"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉的具体内容（尽量记录原话）"},{"@type":"HowToSupply","name":"内部核实的结果"},{"@type":"HowToSupply","name":"你的权限范围内可提供的解决方案"},{"@type":"HowToSupply","name":"后续改进计划"},{"@type":"HowToSupply","name":"投诉渠道信息"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>投诉内容</li><li>核实结果</li><li>解决方案</li><li>后续跟进</li></ul>
+    <ul class="materials-list"><li>投诉的具体内容（尽量记录原话）</li><li>内部核实的结果</li><li>你的权限范围内可提供的解决方案</li><li>后续改进计划</li><li>投诉渠道信息</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位餐饮店店长。请针对以下客户投诉生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位经历过各种客诉场景的餐饮店长，懂得在客户情绪激动时如何稳住局面并解决问题。现在需要为一起客户投诉（现场、电话或线上）生成处理话术。
 
-投诉内容：{投诉内容}
-核实结果：{核实结果}
-解决方案：{解决方案}
-后续跟进：{后续跟进}
+请根据以下信息生成话术：
+投诉内容（客户原话或摘要）：{投诉内容}
+经核实的实际情况：{核实结果}
+当场可提供的解决方案：{解决方案}
+后续跟进计划：{后续跟进}
+投诉渠道（现场/电话/线上）：{投诉渠道}
 
-要求：
-1. 第一时间表达歉意
-2. 不推卸责任
-3. 给出明确解决方案
-4. 说明后续改进
-5. 语气诚恳专业
-6. 字数100-150字</pre>
+输出要求：
+- 字数120-180字
+- 按「共情→认责→方案→跟进」四步结构组织
+- 共情部分要具体到客户的感受，不要泛泛说「给您带来不便」
+- 认责部分诚实说明情况，是自己的问题就承认
+- 方案部分给出2个选项让客户选择（如可能）
+- 跟进部分说明后续会做什么防止再发生
+- 如果是现场投诉，语气要更口语化；线上投诉可以稍正式
+
+禁止事项：
+- 不使用「按照规定」「公司流程」等冷冰冰的话
+- 不暗示客户小题大做或无理取闹
+- 不承诺超出权限的补偿
+- 不在话术中提及「走法律途径」等对抗性语言
+- 不使用「希望您理解」（这句话容易激怒客户）</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{投诉内容}</code></td><td>客户投诉的具体问题</td></tr><tr><td><code>{核实结果}</code></td><td>你了解到的实际情况</td></tr><tr><td><code>{解决方案}</code></td><td>当下如何解决客户问题</td></tr><tr><td><code>{后续跟进}</code></td><td>后续如何避免类似问题</td></tr></tbody>
+      <tbody><tr><td><code>{投诉内容}</code></td><td>客户投诉的具体问题，尽量记录原话，如「菜里有头发」「服务员态度很差」</td></tr><tr><td><code>{核实结果}</code></td><td>你了解到的实际情况，如「确认是后厨操作问题」「服务员当时确实语气不好」</td></tr><tr><td><code>{解决方案}</code></td><td>你能当场提供的解决方案，如「免单+重做」「赠送代金券」</td></tr><tr><td><code>{后续跟进}</code></td><td>后续会做什么防止再发生，如「下午全面检查后厨」「对服务员进行培训」</td></tr><tr><td><code>{投诉渠道}</code></td><td>客户是在现场投诉、打电话投诉还是在线上平台投诉</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>先生/女士您好，非常抱歉给您带来了不愉快的用餐体验。关于您反映的菜品中有异物的问题，我们已经核实确认是后厨操作不规范导致的。这道菜立即为您重做，本桌消费给您免单处理。我们今天就会对后厨进行全面检查和培训，杜绝此类问题再次发生。感谢您的反馈，这对我们很重要（仅供格式参考）</p>
+      <p>先生/女士，吃饭吃到异物确实让人很不舒服，换作是我也会生气，这一点我完全理解。刚才去后厨核实了，确认是备菜环节操作不规范导致的，这是我们的责任。现在给您两个方案：一是这道菜免单并重新做一份，二是本桌全部免单。您看哪个合适？另外，今天下午我会对后厨做一次全面检查，调整备菜流程。感谢您直接告诉我们，这对我们改进很重要。（仅供格式参考，实际请根据具体投诉生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认解决方案可执行</label></li><li><label><input type="checkbox"> 检查是否有推卸责任</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li><li><label><input type="checkbox"> 后续改进是否具体</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否按「共情→认责→方案→跟进」结构组织</label></li><li><label><input type="checkbox"> 共情是否具体到客户的感受</label></li><li><label><input type="checkbox"> 解决方案是否在你的权限范围内</label></li><li><label><input type="checkbox"> 是否提供了选择而非单方面决定</label></li><li><label><input type="checkbox"> 后续跟进是否具体可执行</label></li><li><label><input type="checkbox"> 语气是否与投诉渠道匹配（现场更口语化）</label></li><li><label><input type="checkbox"> 是否避免了对抗性或冷漠的表述</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-bad-review.html" class="related-link">餐饮差评回复</a><a href="../templates/catering-delivery-reply.html" class="related-link">餐饮外卖客服回复</a></div></section>

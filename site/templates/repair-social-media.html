@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务朋友圈内容","description":"为维修/家政服务生成朋友圈日常内容","step":[{"@type":"HowToStep","text":"准备材料：今日工作内容、维修小知识、服务区域"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：知识是否准确；语气是否自然；无过度推销；服务信息是否正确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"今日工作内容"},{"@type":"HowToSupply","name":"维修小知识"},{"@type":"HowToSupply","name":"服务区域"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务朋友圈内容","description":"为维修/家政服务生成朋友圈日常内容","step":[{"@type":"HowToStep","text":"准备材料：内容类型（维修案例分享/知识科普/日常工作/客户好评展示）、具体维修案例或知识点、配图描述（维修前后对比/工具/现场照片）、想传达的核心信息（专业度/服务态度/响应速度）、门店位置和联系方式、当前季节或时事热点（可选）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：内容是否有信息量而非纯广告；是否泄露了客户隐私信息；语气是否自然像朋友圈而非广告文案；知识科普类内容是否准确无误；是否避免了恐吓式营销和自吹自擂；配图建议是否合理可执行"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"内容类型（维修案例分享/知识科普/日常工作/客户好评展示）"},{"@type":"HowToSupply","name":"具体维修案例或知识点"},{"@type":"HowToSupply","name":"配图描述（维修前后对比/工具/现场照片）"},{"@type":"HowToSupply","name":"想传达的核心信息（专业度/服务态度/响应速度）"},{"@type":"HowToSupply","name":"门店位置和联系方式"},{"@type":"HowToSupply","name":"当前季节或时事热点（可选）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,38 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>今日工作内容</li><li>维修小知识</li><li>服务区域</li></ul>
+    <ul class="materials-list"><li>内容类型（维修案例分享/知识科普/日常工作/客户好评展示）</li><li>具体维修案例或知识点</li><li>配图描述（维修前后对比/工具/现场照片）</li><li>想传达的核心信息（专业度/服务态度/响应速度）</li><li>门店位置和联系方式</li><li>当前季节或时事热点（可选）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位维修师傅的朋友圈运营助手。请生成一条日常内容。
+      <pre class="prompt-text" id="prompt-text">你是一位懂得用朋友圈经营个人品牌的维修师傅，你发圈不是为了硬推广，而是让客户看到你的专业和靠谱。你知道朋友圈最忌讳天天发广告，所以你的内容以「有用的知识」和「真实的工作日常」为主，偶尔带一下联系方式。
 
-今日工作：{今日工作内容}
-小知识：{维修小知识}
-服务区域：{服务区域}
+现在需要生成一条朋友圈内容。
 
-要求：
-1. 字数50-80字
-2. 展示专业性
-3. 顺带科普小知识
-4. 不要太推销
-5. 像分享工作日常</pre>
+请根据以下信息撰写：
+内容类型：{内容类型}
+具体素材：{具体素材}
+配图说明：{配图说明}
+想传达的印象：{核心印象}
+联系方式（可选）：{联系方式}
+
+输出格式要求：
+- 正文60-100字
+- 如果是案例分享：先说问题现象，再说排查过程，最后说解决结果，让人觉得你懂行
+- 如果是知识科普：用「你家XX如果出现XX情况」开头，给一个简单的自查方法，再说什么情况需要找专业人员
+- 如果是日常工作：展示工作状态，体现勤劳和认真，不要自夸
+- 结尾可以自然带一句「有类似问题可以问我」，但不要每条都带
+- 配图建议单独一行用【配图】标注
+- 语气像在跟朋友聊天，随意但有信息量
+
+禁止事项：
+- 不使用「专业团队」「金牌服务」等自吹自擂的词
+- 不暴露客户隐私（地址、门牌号等）
+- 不发维修失败或尴尬的案例
+- 不用恐吓式营销（如「不修就会爆炸」）
+- 不连续多条都带广告性质</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,26 +96,28 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{今日工作内容}</code></td><td>今天做了什么</td></tr><tr><td><code>{维修小知识}</code></td><td>可以分享的小贴士</td></tr><tr><td><code>{服务区域}</code></td><td>服务覆盖的区域</td></tr></tbody>
+      <tbody><tr><td><code>{内容类型}</code></td><td>这条朋友圈想发什么类型：维修案例展示/家居知识科普/工作日常记录/客户好评截图分享</td></tr><tr><td><code>{具体素材}</code></td><td>具体内容，如「今天修了一台用了8年的洗衣机，问题是排水泵堵了一团头发」或「夏天空调省电的3个设置技巧」</td></tr><tr><td><code>{配图说明}</code></td><td>准备配什么图，如「维修前后对比照」「工具箱照片」「师傅工作中的照片」</td></tr><tr><td><code>{核心印象}</code></td><td>想让看到的人觉得你怎样，如「技术好能解决问题」「做事认真负责」「经验丰富见多识广」</td></tr><tr><td><code>{联系方式}</code></td><td>如果要带联系方式写什么，如「电话/微信：138XXXX」，也可以不带</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>50-80字朋友圈文案</p>
+    <p>60-100字朋友圈文案+配图建议</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>今天跑了3家，都是热水器不出热水的问题。提醒大家：如果热水器超过3年没清洗过，里面水垢会很厚，不仅费电还影响出水温度。建议每年清洗一次，自己冲不干净的可以找我（仅供格式参考）</p>
+      <p>今天这台洗衣机，客户说甩干的时候声音特别大还会走位。拆开一看，减震杆断了一根，另外滚筒里掏出来三个硬币一个发卡。换了减震杆，清理了异物，试机声音正常了。提醒一下：洗衣服前翻翻口袋，硬币卡进去轻则异响，重则砸坏内筒。
+【配图：断掉的减震杆+掏出来的硬币发卡】
+（仅供格式参考，请根据实际素材生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 知识是否准确</label></li><li><label><input type="checkbox"> 语气是否自然</label></li><li><label><input type="checkbox"> 无过度推销</label></li><li><label><input type="checkbox"> 服务信息是否正确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 内容是否有信息量而非纯广告</label></li><li><label><input type="checkbox"> 是否泄露了客户隐私信息</label></li><li><label><input type="checkbox"> 语气是否自然像朋友圈而非广告文案</label></li><li><label><input type="checkbox"> 知识科普类内容是否准确无误</label></li><li><label><input type="checkbox"> 是否避免了恐吓式营销和自吹自擂</label></li><li><label><input type="checkbox"> 配图建议是否合理可执行</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-service-flow.html" class="related-link">维修服务流程介绍</a><a href="../templates/repair-brand-story.html" class="related-link">维修服务品牌介绍</a></div></section>

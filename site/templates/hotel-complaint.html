@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿投诉处理","description":"为民宿客人投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容、核实情况、解决方案、补偿措施"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否快速响应；方案是否具体；补偿是否合理；语气是否诚恳"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容"},{"@type":"HowToSupply","name":"核实情况"},{"@type":"HowToSupply","name":"解决方案"},{"@type":"HowToSupply","name":"补偿措施"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿投诉处理","description":"为民宿客人投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：客人投诉的具体内容和诉求、核实后的实际情况、可立即执行的解决方案（如备用房间、维修人员）、经确认的补偿方案、后续改进计划、紧急联系方式（让客人能随时找到你）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否在第一时间表达了歉意；解决方案是否有具体的时间节点；补偿措施是否主动提出且合理；是否存在推诿或暗示客人问题的措辞；如客人在住，是否体现了响应速度；语气是否诚恳温暖"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客人投诉的具体内容和诉求"},{"@type":"HowToSupply","name":"核实后的实际情况"},{"@type":"HowToSupply","name":"可立即执行的解决方案（如备用房间、维修人员）"},{"@type":"HowToSupply","name":"经确认的补偿方案"},{"@type":"HowToSupply","name":"后续改进计划"},{"@type":"HowToSupply","name":"紧急联系方式（让客人能随时找到你）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>投诉内容</li><li>核实情况</li><li>解决方案</li><li>补偿措施</li></ul>
+    <ul class="materials-list"><li>客人投诉的具体内容和诉求</li><li>核实后的实际情况</li><li>可立即执行的解决方案（如备用房间、维修人员）</li><li>经确认的补偿方案</li><li>后续改进计划</li><li>紧急联系方式（让客人能随时找到你）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位民宿主。请针对客人投诉生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位民宿主人，亲自处理每一位客人的投诉。你的处理原则是：客人在你家住得不开心，就是你的问题——不管原因是什么，先让客人感受到被重视，然后快速解决。你知道住宿体验的投诉往往发生在客人还在住的时候，所以响应速度和解决效率是第一位的。现在需要针对一位在住客人的投诉生成即时处理话术。
 
-投诉：{投诉内容}
-情况：{核实情况}
-方案：{解决方案}
-补偿：{补偿措施}
+请根据以下信息生成投诉处理话术：
+客人称呼：{客人称呼}
+投诉的具体问题：{投诉内容}
+问题类别（设施故障/卫生/噪音/与描述不符/服务态度）：{问题类别}
+客人当前状态（在住/已退房）：{客人状态}
+核实后的实际情况：{核实情况}
+即时解决方案：{即时方案}
+补偿措施：{补偿措施}
+后续改进：{后续改进}
 
-要求：
-1. 诚恳道歉
-2. 快速解决
-3. 适当补偿
-4. 字数80-120字</pre>
+输出格式要求：
+- 字数控制在100-150字
+- 如客人在住：开头立即道歉+表示马上处理（体现响应速度）
+- 给出即时解决方案（换房/维修/补偿），要有具体时间
+- 补偿措施主动提出，不等客人要求
+- 如客人已退房：道歉+承认问题+说明改进+提供补偿
+- 语气诚恳温暖，像主人在照顾自己的客人
+
+禁止事项：
+- 不使用「给您带来不便深表歉意」等酒店式套话
+- 不推诿（如「这是老房子的问题」「天气原因」）
+- 不让客人等待不确定的时间（如「尽快处理」）
+- 不在处理投诉时推销升级
+- 不暗示客人要求过分
+- 不使用「希望您理解」来结束</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{投诉内容}</code></td><td>客人投诉什么</td></tr><tr><td><code>{核实情况}</code></td><td>实际情况</td></tr><tr><td><code>{解决方案}</code></td><td>如何解决</td></tr><tr><td><code>{补偿措施}</code></td><td>如何补偿</td></tr></tbody>
+      <tbody><tr><td><code>{客人称呼}</code></td><td>客人的称呼</td></tr><tr><td><code>{投诉内容}</code></td><td>客人具体投诉什么问题</td></tr><tr><td><code>{问题类别}</code></td><td>问题属于哪个类别</td></tr><tr><td><code>{客人状态}</code></td><td>客人目前是还在住还是已经退房了（影响处理方式）</td></tr><tr><td><code>{核实情况}</code></td><td>你去核实后发现的实际情况</td></tr><tr><td><code>{即时方案}</code></td><td>能立即执行的解决方案</td></tr><tr><td><code>{补偿措施}</code></td><td>给客人什么补偿</td></tr><tr><td><code>{后续改进}</code></td><td>为防止同类问题再次发生的改进</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +109,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>您好，非常抱歉影响了您的入住体验。关于热水器水温不稳定的问题，我马上安排师傅来检修。在修好之前，我给您换到隔壁同等房型（热水正常），行李我帮您搬。另外今晚的房费给您减免100元作为补偿。再次说声抱歉，有任何问题随时找我（仅供格式参考）</p>
+      <p>王先生您好，热水器的问题非常抱歉，影响您入住体验了。我现在马上安排：1.师傅10分钟内到您房间检修；2.如果30分钟内修不好，我给您换到隔壁同等房型（热水正常），行李我帮您搬；3.今晚房费给您减免100元作为补偿。您先用公共区域的热水洗漱，我马上把干净毛巾给您送过去。再次抱歉，有任何问题直接给我打电话。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否快速响应</label></li><li><label><input type="checkbox"> 方案是否具体</label></li><li><label><input type="checkbox"> 补偿是否合理</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否在第一时间表达了歉意</label></li><li><label><input type="checkbox"> 解决方案是否有具体的时间节点</label></li><li><label><input type="checkbox"> 补偿措施是否主动提出且合理</label></li><li><label><input type="checkbox"> 是否存在推诿或暗示客人问题的措辞</label></li><li><label><input type="checkbox"> 如客人在住，是否体现了响应速度</label></li><li><label><input type="checkbox"> 语气是否诚恳温暖</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/hotel-review-response.html" class="related-link">民宿评价回复</a></div></section>

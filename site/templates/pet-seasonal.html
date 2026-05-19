@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店季节性活动","description":"为宠物店节日或换季活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：活动主题、活动内容、优惠信息、活动时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：活动时间是否正确；优惠信息准确；无医疗承诺；建议是否合理"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"活动主题"},{"@type":"HowToSupply","name":"活动内容"},{"@type":"HowToSupply","name":"优惠信息"},{"@type":"HowToSupply","name":"活动时间"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店季节性活动","description":"为宠物店节日或换季活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：当前季节或节日、该季节宠物常见的健康/护理需求、店铺对应的服务或活动、活动时间和优惠内容（如有）、实用的季节性养宠建议、预约或参与方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：季节性建议是否准确实用；是否避免了恐吓式营销；活动信息是否真实可兑现；是否注明了不同品种可能有差异；是否避免了替代兽医的医疗建议；参与方式是否清晰简单"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"当前季节或节日"},{"@type":"HowToSupply","name":"该季节宠物常见的健康/护理需求"},{"@type":"HowToSupply","name":"店铺对应的服务或活动"},{"@type":"HowToSupply","name":"活动时间和优惠内容（如有）"},{"@type":"HowToSupply","name":"实用的季节性养宠建议"},{"@type":"HowToSupply","name":"预约或参与方式"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>活动主题</li><li>活动内容</li><li>优惠信息</li><li>活动时间</li></ul>
+    <ul class="materials-list"><li>当前季节或节日</li><li>该季节宠物常见的健康/护理需求</li><li>店铺对应的服务或活动</li><li>活动时间和优惠内容（如有）</li><li>实用的季节性养宠建议</li><li>预约或参与方式</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位宠物店营销助手。请撰写季节性活动文案。
+      <pre class="prompt-text" id="prompt-text">你是一位懂得用季节变化来做内容营销的宠物店运营。你知道不同季节宠物有不同的护理需求（春秋换毛、夏季防暑防虫、冬季保暖），而很多新手主人并不了解这些。你的季节性内容既要科普有用知识，也要自然引出店里的相关服务。
 
-活动主题：{活动主题}
-活动内容：{活动内容}
-优惠：{优惠信息}
-时间：{活动时间}
+现在需要生成一条季节性活动或提醒文案，用于朋友圈或社群发布。
 
-要求：
-1. 字数80-120字
-2. 结合季节/节日
-3. 关注宠物健康
-4. 不涉及医疗承诺
-5. 适合朋友圈发布</pre>
+请根据以下信息撰写：
+季节/节日：{季节节日}
+宠物季节性需求：{季节需求}
+店铺活动/服务：{店铺活动}
+活动时间：{活动时间}
+养宠建议：{养宠建议}
+参与方式：{参与方式}
+
+输出格式要求：
+- 总字数100-150字
+- 开头用一个季节相关的宠物行为变化引入（如「最近是不是发现家里到处是毛」）
+- 中间给出1-2条实用的季节性护理建议
+- 自然引出店铺的相关服务或活动
+- 如果有优惠，用一句话简洁带过
+- 结尾留参与方式
+- 语气像一个养宠达人在分享经验，顺便提到自己店里有相关服务
+
+禁止事项：
+- 不使用「不做XX就会生病」等恐吓式表述
+- 不替代兽医给出驱虫药品牌和剂量建议
+- 不夸大季节变化对宠物的影响
+- 不使用「限时抢购」「名额有限」等虚假紧迫感
+- 不把所有品种的宠物一概而论（不同品种需求不同）</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +97,26 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{活动主题}</code></td><td>如「春季驱虫月」「国庆寄养」</td></tr><tr><td><code>{活动内容}</code></td><td>具体做什么</td></tr><tr><td><code>{优惠信息}</code></td><td>有什么优惠</td></tr><tr><td><code>{活动时间}</code></td><td>起止日期</td></tr></tbody>
+      <tbody><tr><td><code>{季节节日}</code></td><td>当前季节或即将到来的节日，如「春季换毛期」「夏季高温」「国庆寄养季」「冬季」</td></tr><tr><td><code>{季节需求}</code></td><td>这个时期宠物有什么特殊需求，如「春季大量掉毛需要加强梳理」「夏季需要防跳蚤和蜱虫」</td></tr><tr><td><code>{店铺活动}</code></td><td>店里针对这个季节推出了什么，如「换毛季深度去毛套餐」「国庆寄养提前预约享9折」</td></tr><tr><td><code>{活动时间}</code></td><td>活动什么时候，如「即日起至4月底」「9月20日前预约国庆寄养」</td></tr><tr><td><code>{养宠建议}</code></td><td>主人在家可以做什么，如「每天梳毛5分钟，用去毛梳从根部梳起」</td></tr><tr><td><code>{参与方式}</code></td><td>怎么参与活动，如「微信预约或到店咨询」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>80-120字活动文案</p>
+    <p>100-150字季节性活动文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>春季驱虫月来了！3月天气回暖，正是跳蚤蜱虫活跃的时候。本月到店做驱虫套餐（体内+体外）享8折优惠，还送一次免费体重监测。提醒各位铲屎官：即使不出门的猫咪也建议定期驱虫哦。活动时间3.1-3.31，提前预约不用排队（仅供格式参考）</p>
+      <p>最近是不是感觉家里猫毛满天飞？春天换毛季到了，猫咪会集中脱掉冬天的底绒。在家可以每天用排梳从根部往外梳5分钟，能减少大部分飘毛。如果毛球已经结成块了，硬拽会疼，可以带来店里让美容师处理。这个月我们有换毛季护理套餐：深度去死毛+皮肤检查+梳理，小型犬/猫88元。需要的话微信提前约个时间就行。（仅供格式参考，请根据实际季节和活动生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 活动时间是否正确</label></li><li><label><input type="checkbox"> 优惠信息准确</label></li><li><label><input type="checkbox"> 无医疗承诺</label></li><li><label><input type="checkbox"> 建议是否合理</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 季节性建议是否准确实用</label></li><li><label><input type="checkbox"> 是否避免了恐吓式营销</label></li><li><label><input type="checkbox"> 活动信息是否真实可兑现</label></li><li><label><input type="checkbox"> 是否注明了不同品种可能有差异</label></li><li><label><input type="checkbox"> 是否避免了替代兽医的医疗建议</label></li><li><label><input type="checkbox"> 参与方式是否清晰简单</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-social-media.html" class="related-link">宠物店朋友圈内容</a><a href="../templates/pet-membership.html" class="related-link">宠物店会员卡推广</a></div></section>

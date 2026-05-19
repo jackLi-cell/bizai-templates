@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮店招聘启事","description":"为餐饮店撰写招聘启事","step":[{"@type":"HowToStep","text":"准备材料：招聘岗位、工作内容、薪资范围、工作时间、福利待遇"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认薪资范围真实；检查工作时间是否合规；福利待遇是否可兑现；无歧视性用语"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招聘岗位"},{"@type":"HowToSupply","name":"工作内容"},{"@type":"HowToSupply","name":"薪资范围"},{"@type":"HowToSupply","name":"工作时间"},{"@type":"HowToSupply","name":"福利待遇"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮店招聘启事","description":"为餐饮店撰写招聘启事","step":[{"@type":"HowToStep","text":"准备材料：招聘岗位和人数、详细的工作内容描述、真实的薪资结构和范围、具体的工作时间和排班、可兑现的福利清单、团队基本情况、联系方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：薪资范围是否与实际发放一致；工作时间是否合规（不超过法定时长）；福利待遇是否全部可兑现；是否有歧视性条件（年龄/性别/外貌）；团队描述是否真实；应聘方式是否清晰；是否隐瞒了工作强度"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招聘岗位和人数"},{"@type":"HowToSupply","name":"详细的工作内容描述"},{"@type":"HowToSupply","name":"真实的薪资结构和范围"},{"@type":"HowToSupply","name":"具体的工作时间和排班"},{"@type":"HowToSupply","name":"可兑现的福利清单"},{"@type":"HowToSupply","name":"团队基本情况"},{"@type":"HowToSupply","name":"联系方式"}]}</script>
 
 </head>
 <body>
@@ -56,27 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>招聘岗位</li><li>工作内容</li><li>薪资范围</li><li>工作时间</li><li>福利待遇</li></ul>
+    <ul class="materials-list"><li>招聘岗位和人数</li><li>详细的工作内容描述</li><li>真实的薪资结构和范围</li><li>具体的工作时间和排班</li><li>可兑现的福利清单</li><li>团队基本情况</li><li>联系方式</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位餐饮店人事助手。请撰写一份招聘启事。
+      <pre class="prompt-text" id="prompt-text">你是一位懂得用真诚打动求职者的餐饮店人事负责人。现在需要撰写一份招聘启事，发布在朋友圈、招聘平台或店门口，目标是吸引踏实肯干的人来应聘。
 
+请根据以下信息撰写：
 招聘岗位：{招聘岗位}
-工作内容：{工作内容}
-薪资范围：{薪资范围}
-工作时间：{工作时间}
+具体工作内容：{工作内容}
+薪资结构：{薪资范围}
+工作时间和排班：{工作时间}
 福利待遇：{福利待遇}
+团队情况：{团队情况}
+对应聘者的要求：{任职要求}
 
-要求：
-1. 简洁明了，重点突出
-2. 薪资透明
-3. 语气友好不严肃
-4. 说明工作环境
-5. 适合发朋友圈或招聘平台
-6. 字数100-150字</pre>
+输出要求：
+- 字数120-180字
+- 开头用一句话说明「我们是谁+在招什么人」
+- 薪资写明结构（底薪+提成/计件等），给出实际到手范围
+- 工作时间要具体到几点到几点，说明排班制度
+- 福利要写实际有的，不要写「五险一金」如果实际没有
+- 用一两句话描述团队氛围，让人感受到工作环境
+- 要求部分写「真正需要的」，不要堆砌无关条件
+- 结尾给出明确的应聘方式
+
+禁止事项：
+- 不使用「有梦想的你」「期待优秀的你加入」等空洞话术
+- 不隐瞒实际工作强度
+- 不写虚高的薪资范围
+- 不设置歧视性条件（年龄、性别、外貌等）
+- 不使用「能吃苦」作为变相暗示加班的说法</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -85,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{招聘岗位}</code></td><td>如「服务员」「后厨帮工」</td></tr><tr><td><code>{工作内容}</code></td><td>主要做什么</td></tr><tr><td><code>{薪资范围}</code></td><td>月薪或日薪范围</td></tr><tr><td><code>{工作时间}</code></td><td>上班时间段</td></tr><tr><td><code>{福利待遇}</code></td><td>如「包吃住」「月休4天」</td></tr></tbody>
+      <tbody><tr><td><code>{招聘岗位}</code></td><td>具体岗位名称和人数，如「服务员2名」「后厨帮工1名」</td></tr><tr><td><code>{工作内容}</code></td><td>每天主要做什么，如「点餐、上菜、收桌、简单收银」</td></tr><tr><td><code>{薪资范围}</code></td><td>实际到手的薪资范围和结构，如「底薪3500+全勤200+餐补」</td></tr><tr><td><code>{工作时间}</code></td><td>具体上下班时间和排班制度，如「早班9:30-14:30，晚班16:00-21:00」</td></tr><tr><td><code>{福利待遇}</code></td><td>实际提供的福利，如「包两餐、月休4天、节日红包」</td></tr><tr><td><code>{团队情况}</code></td><td>团队多少人、年龄段、氛围如何</td></tr><tr><td><code>{任职要求}</code></td><td>真正必要的条件，如「态度好、动作快」</td></tr></tbody>
     </table>
   </section>
 
@@ -97,21 +109,22 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【招聘服务员2名】
-工作内容：点餐、上菜、简单收银
-薪资：4000-5000元/月，试用期同薪
-时间：10:00-14:00，16:30-21:00
-福利：包两餐、月休4天、节日红包
-要求：态度好、手脚勤快就行，经验不限
-工作环境：20人小团队，氛围轻松
-有意者直接电话联系或到店面试（仅供格式参考）</p>
+      <p>【XX面馆招服务员2名】
+我们是一家开了6年的社区面馆，午市晚市都挺忙的，需要两位手脚麻利的伙伴。
+做什么：点餐、上菜、收桌、简单收银
+薪资：4000-4500元/月（固定薪资，不扣不罚），试用期同薪
+时间：早班9:30-14:30，晚班16:00-21:00，做六休一可调休
+福利：包两餐（吃店里的面和菜）、月休4天、过节有红包
+要求：态度好、动作快就行，经验不限，来了会带你
+团队：加上厨师一共8个人，年龄25-45岁，相处简单
+有意直接打电话或到店聊：138XXXX（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认薪资范围真实</label></li><li><label><input type="checkbox"> 检查工作时间是否合规</label></li><li><label><input type="checkbox"> 福利待遇是否可兑现</label></li><li><label><input type="checkbox"> 无歧视性用语</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 薪资范围是否与实际发放一致</label></li><li><label><input type="checkbox"> 工作时间是否合规（不超过法定时长）</label></li><li><label><input type="checkbox"> 福利待遇是否全部可兑现</label></li><li><label><input type="checkbox"> 是否有歧视性条件（年龄/性别/外貌）</label></li><li><label><input type="checkbox"> 团队描述是否真实</label></li><li><label><input type="checkbox"> 应聘方式是否清晰</label></li><li><label><input type="checkbox"> 是否隐瞒了工作强度</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-brand-story.html" class="related-link">餐饮品牌故事</a></div></section>

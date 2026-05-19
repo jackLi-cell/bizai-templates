@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售店朋友圈运营","description":"为零售店生成日常朋友圈内容","step":[{"@type":"HowToStep","text":"准备材料：展示商品、搭配建议、适合场景、当前优惠"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认商品有库存；搭配建议是否合理；优惠信息是否准确；语气是否自然"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"展示商品"},{"@type":"HowToSupply","name":"搭配建议"},{"@type":"HowToSupply","name":"适合场景"},{"@type":"HowToSupply","name":"当前优惠"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售店朋友圈运营","description":"为零售店生成日常朋友圈内容","step":[{"@type":"HowToStep","text":"准备材料：要展示的商品（确认有库存）、搭配或使用建议、适合的场景、当前优惠政策（如有）、配图（建议实拍）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：读起来是否像个人分享而非广告；商品信息是否通过体验带出；是否避免了群体称呼和夸张推荐；优惠信息是否自然不突兀；配图建议是否与文案匹配；商品是否确实有库存可售"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"要展示的商品（确认有库存）"},{"@type":"HowToSupply","name":"搭配或使用建议"},{"@type":"HowToSupply","name":"适合的场景"},{"@type":"HowToSupply","name":"当前优惠政策（如有）"},{"@type":"HowToSupply","name":"配图（建议实拍）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,35 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>展示商品</li><li>搭配建议</li><li>适合场景</li><li>当前优惠</li></ul>
+    <ul class="materials-list"><li>要展示的商品（确认有库存）</li><li>搭配或使用建议</li><li>适合的场景</li><li>当前优惠政策（如有）</li><li>配图（建议实拍）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位零售店朋友圈运营助手。请生成一条日常朋友圈内容。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助实体零售店老板经营朋友圈的内容顾问，核心理念是「朋友圈卖货的前提是让人不想屏蔽你」。现在需要生成一条零售店的朋友圈日常内容。
 
-展示商品：{展示商品}
-搭配建议：{搭配建议}
-适合场景：{适合场景}
-当前优惠：{当前优惠}
+请根据以下信息生成：
+今天想展示的商品：{展示商品}
+搭配或使用建议：{搭配建议}
+适合什么场景/场合：{适合场景}
+当前有什么优惠（如有）：{当前优惠}
+今天的配图是什么：{配图内容}
 
-要求：
-1. 字数50-80字
-2. 像分享好物一样自然
-3. 不要硬推销
-4. 可以带穿搭建议
-5. 适合配图发布</pre>
+输出要求：
+- 字数50-90字
+- 像在分享自己的穿搭/好物发现，不像在卖东西
+- 用第一人称「我」的视角，如「今天上身试了」「这件我自己留了一件」
+- 商品信息通过体验感受带出，不要列参数
+- 优惠信息放在最后，用「顺便说一下」的语气
+- 配图建议：实拍&gt;摆拍&gt;官图
+
+禁止事项：
+- 不使用「姐妹们」「宝子们」等群体称呼
+- 不使用「必入」「闭眼买」等夸张推荐
+- 不堆砌商品卖点
+- 不使用多个感叹号
+- 不写成商品详情页的语气</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +93,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{展示商品}</code></td><td>今天想推的商品</td></tr><tr><td><code>{搭配建议}</code></td><td>怎么搭配好看</td></tr><tr><td><code>{适合场景}</code></td><td>什么场合穿/用</td></tr><tr><td><code>{当前优惠}</code></td><td>如果有优惠活动</td></tr></tbody>
+      <tbody><tr><td><code>{展示商品}</code></td><td>今天想推的商品名称和基本信息</td></tr><tr><td><code>{搭配建议}</code></td><td>怎么搭配好看/怎么用，如「内搭白T+直筒裤」</td></tr><tr><td><code>{适合场景}</code></td><td>什么场合适合，如「通勤」「约会」「周末出门」</td></tr><tr><td><code>{当前优惠}</code></td><td>如果有优惠活动写上，没有就留空</td></tr><tr><td><code>{配图内容}</code></td><td>准备配什么图，如「自己上身的照片」「平铺图」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +105,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>今天上身试了这件焦糖色针织开衫，内搭白T+直筒裤就很好看，通勤休闲都行。面料软糯不扎人，这个天气穿刚好。店里还有奶白色和灰绿色，到店可以试～本周新品9折（仅供格式参考）</p>
+      <p>今天上身试了这件焦糖色针织开衫，手感比我预期的软很多，不扎皮肤。内搭白T加直筒裤就挺好看的，通勤或者周末出门都行。店里还有奶白色和灰绿色可以试。这周到店的新品都可以享9折，感兴趣来摸摸面料就知道了。（仅供格式参考，实际请根据你的商品生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认商品有库存</label></li><li><label><input type="checkbox"> 搭配建议是否合理</label></li><li><label><input type="checkbox"> 优惠信息是否准确</label></li><li><label><input type="checkbox"> 语气是否自然</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 读起来是否像个人分享而非广告</label></li><li><label><input type="checkbox"> 商品信息是否通过体验带出</label></li><li><label><input type="checkbox"> 是否避免了群体称呼和夸张推荐</label></li><li><label><input type="checkbox"> 优惠信息是否自然不突兀</label></li><li><label><input type="checkbox"> 配图建议是否与文案匹配</label></li><li><label><input type="checkbox"> 商品是否确实有库存可售</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-new-arrival.html" class="related-link">零售上新推广文案</a><a href="../templates/retail-short-video.html" class="related-link">零售商品展示短视频脚本</a></div></section>

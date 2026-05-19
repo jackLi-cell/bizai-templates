@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身会员续费话术","description":"为健身房会员续费或升级撰写话术","step":[{"@type":"HowToStep","text":"准备材料：会员称呼、当前卡种、续费优惠、到期时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：到期时间是否正确；优惠是否真实；语气是否友好；无强制感"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"会员称呼"},{"@type":"HowToSupply","name":"当前卡种"},{"@type":"HowToSupply","name":"续费优惠"},{"@type":"HowToSupply","name":"到期时间"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"健身会员续费话术","description":"为健身房会员续费或升级撰写话术","step":[{"@type":"HowToStep","text":"准备材料：会员的卡种和到期日期、会员近期的训练频次数据（从系统导出）、当前有效的续费优惠政策、冻结卡和转让卡的具体规则、续费办理的方式和流程、会员的沟通偏好（有些人不喜欢被打扰）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：到期日期是否与系统记录一致；续费优惠方案是否为当前有效的政策；是否存在沉没成本话术或身材变化暗示；灵活政策（冻结/转让）信息是否准确；语气是否友好且无压力；是否给了会员充分的决策时间"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"会员的卡种和到期日期"},{"@type":"HowToSupply","name":"会员近期的训练频次数据（从系统导出）"},{"@type":"HowToSupply","name":"当前有效的续费优惠政策"},{"@type":"HowToSupply","name":"冻结卡和转让卡的具体规则"},{"@type":"HowToSupply","name":"续费办理的方式和流程"},{"@type":"HowToSupply","name":"会员的沟通偏好（有些人不喜欢被打扰）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>会员称呼</li><li>当前卡种</li><li>续费优惠</li><li>到期时间</li></ul>
+    <ul class="materials-list"><li>会员的卡种和到期日期</li><li>会员近期的训练频次数据（从系统导出）</li><li>当前有效的续费优惠政策</li><li>冻结卡和转让卡的具体规则</li><li>续费办理的方式和流程</li><li>会员的沟通偏好（有些人不喜欢被打扰）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位健身房会员顾问。请生成续费话术。
+      <pre class="prompt-text" id="prompt-text">你是一位健身房的会员服务顾问，负责在会员卡即将到期时进行续费沟通。你的沟通原则是：尊重会员的选择权，用事实说话（如训练频次数据），提供续费优惠信息但不施压。你理解每个人对运动的投入程度不同，续费与否都应该被尊重。现在需要生成一条续费提醒话术，通过微信发送给即将到期的会员。
 
-会员：{会员称呼}
-卡种：{当前卡种}
-优惠：{续费优惠}
-到期：{到期时间}
+请根据以下信息生成续费话术：
+会员称呼：{会员称呼}
+当前卡种：{当前卡种}
+到期日期：{到期日期}
+会员近期训练情况（频次/常上的课）：{训练情况}
+续费优惠方案：{续费优惠}
+优惠截止时间：{优惠截止}
+是否可以冻结/转让：{灵活政策}
 
-要求：
-1. 语气友好不施压
-2. 突出续费优惠
-3. 不强制
-4. 字数60-100字</pre>
+输出格式要求：
+- 字数控制在80-120字
+- 开头自然提及到期时间，不要用「温馨提醒」等客服模板开头
+- 如果会员近期训练频繁，可以肯定其坚持；如果不常来，不要指出
+- 清晰说明续费优惠内容
+- 提及灵活政策（冻结/转让）降低决策压力
+- 结尾明确表示不着急决定，给思考空间
+- 语气像一位熟悉的顾问在告知信息，不是在推销
+
+禁止事项：
+- 不使用「不续费就浪费了之前的努力」等沉没成本话术
+- 不使用「坚持就是胜利」等鸡汤式施压
+- 不暗示不续费身体会变差
+- 不在话术中对比会员的身体变化
+- 不使用「最后X天」制造虚假紧迫
+- 不贬低其他健身房的价格或服务</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{会员称呼}</code></td><td>会员怎么称呼</td></tr><tr><td><code>{当前卡种}</code></td><td>现在是什么卡</td></tr><tr><td><code>{续费优惠}</code></td><td>续费有什么优惠</td></tr><tr><td><code>{到期时间}</code></td><td>什么时候到期</td></tr></tbody>
+      <tbody><tr><td><code>{会员称呼}</code></td><td>会员习惯被怎么称呼</td></tr><tr><td><code>{当前卡种}</code></td><td>会员目前持有的卡种（年卡/季卡/月卡）</td></tr><tr><td><code>{到期日期}</code></td><td>卡的具体到期日期</td></tr><tr><td><code>{训练情况}</code></td><td>会员近一个月的训练频次和常参加的课程（从系统中查看）</td></tr><tr><td><code>{续费优惠}</code></td><td>当前的续费优惠政策，包含具体数字</td></tr><tr><td><code>{优惠截止}</code></td><td>这个优惠政策的有效期</td></tr><tr><td><code>{灵活政策}</code></td><td>是否支持冻结卡、转让卡等灵活安排</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +109,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>张哥，你的年卡下个月15号到期，提前跟你说一声。这个月续费的话有个老会员优惠：续一年送两个月，相当于14个月的使用时间。你最近来得挺勤的，坚持下去状态会越来越好。要不要续上？不着急决定，有问题随时问我（仅供格式参考）</p>
+      <p>张哥，你的年卡下月15号到期，提前跟你说一声。看你最近每周来三四次，搏击课和力量区都挺规律的，状态不错。续费这边有个老会员优惠：续一年送两个月使用时间，相当于14个月。如果担心中间有事来不了，可以申请冻结（最长冻结2个月）。不着急现在决定，有问题随时问我，到期前一周确认就行。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 到期时间是否正确</label></li><li><label><input type="checkbox"> 优惠是否真实</label></li><li><label><input type="checkbox"> 语气是否友好</label></li><li><label><input type="checkbox"> 无强制感</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 到期日期是否与系统记录一致</label></li><li><label><input type="checkbox"> 续费优惠方案是否为当前有效的政策</label></li><li><label><input type="checkbox"> 是否存在沉没成本话术或身材变化暗示</label></li><li><label><input type="checkbox"> 灵活政策（冻结/转让）信息是否准确</label></li><li><label><input type="checkbox"> 语气是否友好且无压力</label></li><li><label><input type="checkbox"> 是否给了会员充分的决策时间</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/fitness-campaign.html" class="related-link">健身活动促销文案</a><a href="../templates/fitness-social-media.html" class="related-link">健身房朋友圈内容</a></div></section>

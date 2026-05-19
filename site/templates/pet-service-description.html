@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物服务项目介绍","description":"为宠物店服务项目撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：服务名称、服务内容、适合宠物、时长价格、注意事项"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：价格信息是否准确；注意事项是否完整；无医疗承诺；适用范围是否清晰"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"服务名称"},{"@type":"HowToSupply","name":"服务内容"},{"@type":"HowToSupply","name":"适合宠物"},{"@type":"HowToSupply","name":"时长价格"},{"@type":"HowToSupply","name":"注意事项"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物服务项目介绍","description":"为宠物店服务项目撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：服务项目名称（洗护/美容/寄养/训练等）、适用宠物类型和体型范围、服务具体流程和时长、使用的产品品牌或工具、价格区间（按体型或项目分）、注意事项和不适用情况"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：服务流程是否完整清晰；产品品牌和特点是否真实；价格分档是否明确无歧义；注意事项是否包含了不适用情况；是否避免了替代兽医的医疗建议；语气是否温暖专业而非过度营销；服务时长是否合理准确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"服务项目名称（洗护/美容/寄养/训练等）"},{"@type":"HowToSupply","name":"适用宠物类型和体型范围"},{"@type":"HowToSupply","name":"服务具体流程和时长"},{"@type":"HowToSupply","name":"使用的产品品牌或工具"},{"@type":"HowToSupply","name":"价格区间（按体型或项目分）"},{"@type":"HowToSupply","name":"注意事项和不适用情况"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>服务名称</li><li>服务内容</li><li>适合宠物</li><li>时长价格</li><li>注意事项</li></ul>
+    <ul class="materials-list"><li>服务项目名称（洗护/美容/寄养/训练等）</li><li>适用宠物类型和体型范围</li><li>服务具体流程和时长</li><li>使用的产品品牌或工具</li><li>价格区间（按体型或项目分）</li><li>注意事项和不适用情况</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位宠物店文案助手。请为以下服务撰写介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位有5年经验的宠物店店长，同时也是持证宠物美容师。你在撰写服务介绍时，始终站在宠物主人的角度思考：他们想知道「我的毛孩子会经历什么」「用什么产品安不安全」「大概要多久多少钱」。你的介绍要让主人放心把宠物交给你。
 
-服务名称：{服务名称}
-服务内容：{服务内容}
-适合宠物：{适合宠物}
-时长/价格：{时长价格}
+现在需要为店里的一项服务撰写介绍文案，用于美团/大众点评的服务详情页或店内价目表。
+
+请根据以下信息撰写：
+服务项目：{服务项目}
+适用宠物：{适用宠物}
+服务流程：{服务流程}
+使用产品/工具：{产品工具}
+价格：{价格}
+服务时长：{服务时长}
 注意事项：{注意事项}
 
-要求：
-1. 字数80-120字
-2. 突出对宠物的关爱
-3. 说明注意事项
-4. 语气温暖专业
-5. 适合美团/大众点评展示</pre>
+输出格式要求：
+- 总字数130-200字
+- 开头一句话说明这项服务适合什么情况的宠物（如「毛发打结严重」「换季掉毛期」）
+- 流程按步骤简述，让主人知道宠物会经历什么
+- 产品/工具要提及品牌或特点，体现专业和安全
+- 价格按体型或项目分档列出
+- 注意事项要包含：哪些情况不建议做（如皮肤病期间）、需要提前准备什么
+- 语气温暖专业，像一个爱动物的专业人士在介绍
+
+禁止事项：
+- 不承诺「绝对安全」「零风险」等绝对化表述
+- 不替代兽医给出医疗建议
+- 不贬低其他宠物店的服务
+- 不使用「毛孩子秒变小公主」等过度拟人化营销语
+- 不隐瞒可能的不适反应（如部分猫咪洗澡会应激）</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,26 +98,29 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{服务名称}</code></td><td>如「精细洗护」「造型修剪」</td></tr><tr><td><code>{服务内容}</code></td><td>具体做什么</td></tr><tr><td><code>{适合宠物}</code></td><td>什么品种/体型适合</td></tr><tr><td><code>{时长价格}</code></td><td>多久、多少钱</td></tr><tr><td><code>{注意事项}</code></td><td>宠物需要满足什么条件</td></tr></tbody>
+      <tbody><tr><td><code>{服务项目}</code></td><td>具体服务名称，如「全身洗护套餐」「造型美容」「长期寄养」「基础服从训练」</td></tr><tr><td><code>{适用宠物}</code></td><td>适合什么宠物，如「中小型犬（15kg以下）」「所有品种猫咪」</td></tr><tr><td><code>{服务流程}</code></td><td>从接到宠物到交还的步骤，如「检查皮肤→梳毛去结→洗浴→吹干→修剪造型→清洁耳道」</td></tr><tr><td><code>{产品工具}</code></td><td>用什么给宠物洗/护理，如「雪貂洗毛液（低敏配方）」「日本多格漫吹水机」</td></tr><tr><td><code>{价格}</code></td><td>收费标准，如「小型犬（5kg以下）128元，中型犬（5-15kg）168元」</td></tr><tr><td><code>{服务时长}</code></td><td>大概需要多长时间，如「全程约1.5-2小时，视毛量和配合度」</td></tr><tr><td><code>{注意事项}</code></td><td>什么情况不能做/需要注意什么，如「皮肤有红肿或伤口的暂不接待，请先就医」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>80-120字服务介绍</p>
+    <p>130-200字服务介绍文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【精细洗护套餐】包含：药浴/香波洗澡+吹干+耳朵清洁+指甲修剪+肛腺清理。适合所有犬种，按体重计价：小型犬（10kg以下）88元，中型犬128元，大型犬168元。全程约60-90分钟。要求：疫苗接种完毕、无皮肤病、性格不过度攻击。建议提前一天预约（仅供格式参考）</p>
+      <p>【全身洗护套餐】适合定期清洁、换季掉毛期的狗狗。
+流程：到店先检查皮肤状况→全身梳理去除浮毛和小结→使用雪貂低敏洗毛液清洗（敏感肌可换用燕麦配方）→专业吹水机吹干至毛根→清洁耳道和剪指甲。全程约1.5小时。
+价格：小型犬128元 / 中型犬168元 / 大型犬218元（严重打结需加收梳结费30-50元）
+提醒：皮肤有红肿、伤口或刚打完疫苗一周内的狗狗暂不接待洗护，建议先咨询医生。首次到店的宝贝建议主人陪同10分钟帮助适应环境。（仅供格式参考，请根据实际服务生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 价格信息是否准确</label></li><li><label><input type="checkbox"> 注意事项是否完整</label></li><li><label><input type="checkbox"> 无医疗承诺</label></li><li><label><input type="checkbox"> 适用范围是否清晰</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 服务流程是否完整清晰</label></li><li><label><input type="checkbox"> 产品品牌和特点是否真实</label></li><li><label><input type="checkbox"> 价格分档是否明确无歧义</label></li><li><label><input type="checkbox"> 注意事项是否包含了不适用情况</label></li><li><label><input type="checkbox"> 是否避免了替代兽医的医疗建议</label></li><li><label><input type="checkbox"> 语气是否温暖专业而非过度营销</label></li><li><label><input type="checkbox"> 服务时长是否合理准确</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-appointment.html" class="related-link">宠物服务预约确认</a><a href="../templates/pet-social-media.html" class="related-link">宠物店朋友圈内容</a></div></section>

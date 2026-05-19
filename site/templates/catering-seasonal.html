@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮季节性促销文案","description":"为餐厅节日或换季促销撰写活动文案","step":[{"@type":"HowToStep","text":"准备材料：节日或季节、活动内容、特色菜品、活动时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认活动时间正确；检查限量数量是否合理；确认赠品库存充足；无绝对化用语"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"节日或季节"},{"@type":"HowToSupply","name":"活动内容"},{"@type":"HowToSupply","name":"特色菜品"},{"@type":"HowToSupply","name":"活动时间"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮季节性促销文案","description":"为餐厅节日或换季促销撰写活动文案","step":[{"@type":"HowToStep","text":"准备材料：节日/季节主题、活动优惠的具体内容和规则、限定菜品名称及特色描述、活动起止日期、限量数量（如有）、预约或参与方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：节日/季节与活动内容是否自然关联；活动时间和参与条件是否清晰；限定菜品描述是否真实；限量数量是否与实际库存匹配；是否有绝对化用语或虚假宣传；优惠内容是否已确认可执行；预约方式是否畅通"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"节日/季节主题"},{"@type":"HowToSupply","name":"活动优惠的具体内容和规则"},{"@type":"HowToSupply","name":"限定菜品名称及特色描述"},{"@type":"HowToSupply","name":"活动起止日期"},{"@type":"HowToSupply","name":"限量数量（如有）"},{"@type":"HowToSupply","name":"预约或参与方式"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>节日或季节</li><li>活动内容</li><li>特色菜品</li><li>活动时间</li></ul>
+    <ul class="materials-list"><li>节日/季节主题</li><li>活动优惠的具体内容和规则</li><li>限定菜品名称及特色描述</li><li>活动起止日期</li><li>限量数量（如有）</li><li>预约或参与方式</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位餐饮营销文案助手。请为以下季节性活动撰写推广文案。
+      <pre class="prompt-text" id="prompt-text">你是一位擅长借势营销的餐饮文案策划，能把节日氛围和餐厅活动自然结合。现在需要为一家餐厅的节日或换季促销活动撰写推广文案，用于朋友圈发布和店内海报。
 
-节日/季节：{节日或季节}
-活动内容：{活动内容}
-特色菜品：{特色菜品}
+请根据以下信息撰写：
+节日或季节：{节日或季节}
+活动形式和优惠内容：{活动内容}
+节日/季节限定菜品：{特色菜品}
 活动时间：{活动时间}
+参与条件或限制：{参与条件}
 
-要求：
-1. 字数80-120字
-2. 结合节日氛围
-3. 突出限时感
-4. 不使用绝对化用语
-5. 适合朋友圈和店内海报</pre>
+输出要求：
+- 字数100-140字
+- 开头用一句与节日/季节相关的生活感受切入，建立情感连接
+- 活动内容要层次分明：主活动+附加福利
+- 限定菜品要有简短的特色描述（一句话即可）
+- 明确标注活动时间和参与方式
+- 如有限量，标明具体数量
+- 语气温暖有节日感，但不要过度煽情
+
+禁止事项：
+- 不使用「史上最低」「年度最大」等绝对化表述
+- 不制造虚假限量（如实际不限量却写「限量」）
+- 不抄袭其他品牌的节日文案套路
+- 不使用与节日无关的强行关联
+- 限定菜品不要承诺「吃了会怎样」的效果</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{节日或季节}</code></td><td>如「中秋节」「入冬」</td></tr><tr><td><code>{活动内容}</code></td><td>具体优惠或活动形式</td></tr><tr><td><code>{特色菜品}</code></td><td>节日限定或季节限定菜品</td></tr><tr><td><code>{活动时间}</code></td><td>活动起止日期</td></tr></tbody>
+      <tbody><tr><td><code>{节日或季节}</code></td><td>具体的节日或季节，如「中秋节」「冬至」「入夏」</td></tr><tr><td><code>{活动内容}</code></td><td>优惠的具体形式，如「满200送礼盒」「全场8折」「消费抽奖」</td></tr><tr><td><code>{特色菜品}</code></td><td>为这个节日/季节特别准备的菜品，写明名称和简要特色</td></tr><tr><td><code>{活动时间}</code></td><td>活动的起止日期</td></tr><tr><td><code>{参与条件}</code></td><td>有什么限制，如「限堂食」「每天限30份」「需提前预约」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>中秋团圆季！9.15-9.17到店消费满200元，赠送手工蛋黄酥礼盒一份（限量50份）。今年的中秋限定菜单也上线了：桂花糯米藕、蟹粉狮子头、桂花酒酿圆子。适合一家人围坐吃顿好的，记得提前订位哦（仅供格式参考）</p>
+      <p>中秋前几天，总觉得该一家人坐下来好好吃顿饭。今年准备了一桌中秋限定：桂花糯米藕是新做法，比去年多蒸了一个小时更软糯；蟹粉狮子头用的是阳澄湖大闸蟹拆的肉。9月15-17号三天，到店消费满200送一盒手工蛋黄酥（每天限30份，送完为止）。提前电话订位可以选靠窗的位置。（仅供格式参考，实际请根据你的活动信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认活动时间正确</label></li><li><label><input type="checkbox"> 检查限量数量是否合理</label></li><li><label><input type="checkbox"> 确认赠品库存充足</label></li><li><label><input type="checkbox"> 无绝对化用语</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 节日/季节与活动内容是否自然关联</label></li><li><label><input type="checkbox"> 活动时间和参与条件是否清晰</label></li><li><label><input type="checkbox"> 限定菜品描述是否真实</label></li><li><label><input type="checkbox"> 限量数量是否与实际库存匹配</label></li><li><label><input type="checkbox"> 是否有绝对化用语或虚假宣传</label></li><li><label><input type="checkbox"> 优惠内容是否已确认可执行</label></li><li><label><input type="checkbox"> 预约方式是否畅通</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-combo-campaign.html" class="related-link">餐饮套餐活动文案</a><a href="../templates/catering-new-product.html" class="related-link">餐饮新品上新文案</a></div></section>

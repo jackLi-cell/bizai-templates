@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业季节性活动文案","description":"为美容院节日或换季活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：节日主题、活动内容、限定项目、活动时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：活动时间是否正确；优惠信息是否准确；无效果承诺；无绝对化用语"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"节日主题"},{"@type":"HowToSupply","name":"活动内容"},{"@type":"HowToSupply","name":"限定项目"},{"@type":"HowToSupply","name":"活动时间"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业季节性活动文案","description":"为美容院节日或换季活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：节日/季节主题、活动优惠内容和规则、限定项目名称和特色、活动起止日期、预约方式、目标客户的皮肤状态描述"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否有效果承诺或医疗用语；活动时间和优惠是否准确；限定项目描述是否合规；是否有焦虑话术；预约方式是否畅通；季节需求切入是否自然；语气是否温暖而非廉价感"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"节日/季节主题"},{"@type":"HowToSupply","name":"活动优惠内容和规则"},{"@type":"HowToSupply","name":"限定项目名称和特色"},{"@type":"HowToSupply","name":"活动起止日期"},{"@type":"HowToSupply","name":"预约方式"},{"@type":"HowToSupply","name":"目标客户的皮肤状态描述"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,37 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>节日主题</li><li>活动内容</li><li>限定项目</li><li>活动时间</li></ul>
+    <ul class="materials-list"><li>节日/季节主题</li><li>活动优惠内容和规则</li><li>限定项目名称和特色</li><li>活动起止日期</li><li>预约方式</li><li>目标客户的皮肤状态描述</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美业营销助手。请为以下季节性活动撰写文案。
+      <pre class="prompt-text" id="prompt-text">你是一位擅长结合季节变化策划美业活动的营销顾问，懂得用「季节性护肤需求」作为活动的天然理由。现在需要为美容院的节日或换季活动撰写推广文案。
 
-节日主题：{节日主题}
-活动内容：{活动内容}
-限定项目：{限定项目}
+请根据以下信息撰写：
+节日或季节主题：{节日主题}
+活动优惠内容：{活动内容}
+季节限定项目（如有）：{限定项目}
 活动时间：{活动时间}
+预约方式：{预约方式}
+适合什么皮肤状态的客户：{适合客户}
 
-要求：
-1. 字数80-120字
-2. 结合节日氛围
-3. 突出仪式感
-4. 不承诺效果
-5. 适合朋友圈发布</pre>
+输出要求：
+- 字数100-140字
+- 开头用一个与季节/节日相关的护肤需求切入（如「换季皮肤容易XX」）
+- 活动内容分主推+附加福利两个层次
+- 限定项目要有简短的特色描述
+- 如果是女性节日（38/七夕），营造「宠爱自己」的氛围而非「取悦他人」
+- 预约方式要具体
+- 语气温暖有仪式感
+
+禁止事项：
+- 不承诺效果（如「做完白一度」「一次见效」）
+- 不使用医疗用语
+- 不使用「最低价」「史上最大」等绝对化表述
+- 不制造焦虑（如「再不保养就来不及了」）
+- 不使用「女神」「仙女」等过度包装的称呼</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +95,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{节日主题}</code></td><td>如「38女神节」「七夕」</td></tr><tr><td><code>{活动内容}</code></td><td>优惠或赠送内容</td></tr><tr><td><code>{限定项目}</code></td><td>节日限定的特别项目</td></tr><tr><td><code>{活动时间}</code></td><td>活动起止日期</td></tr></tbody>
+      <tbody><tr><td><code>{节日主题}</code></td><td>节日或季节，如「38女神节」「秋季换季」「七夕」</td></tr><tr><td><code>{活动内容}</code></td><td>具体优惠，如「面部项目8折」「满500送手部护理」</td></tr><tr><td><code>{限定项目}</code></td><td>为这个季节/节日特别设计的项目，如「秋季焕肤套餐」</td></tr><tr><td><code>{活动时间}</code></td><td>活动起止日期</td></tr><tr><td><code>{预约方式}</code></td><td>怎么预约，如「微信私聊」「电话」</td></tr><tr><td><code>{适合客户}</code></td><td>什么皮肤状态的客户适合，如「换季干燥、暗沉、卡粉的」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +107,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>38女神节，宠爱自己的时间到了！3.1-3.8期间：面部护理全线8折，消费满500赠送手部护理一次，闺蜜同行第二人半价。还有节日限定「春日焕肤套餐」：清洁+补水+提亮三合一，原价398，活动价268。给自己安排一个放松的下午吧（仅供格式参考）</p>
+      <p>入秋之后皮肤最明显的变化就是干和暗沉，很多姐妹反馈上妆开始卡粉了。这个月我们准备了一个换季护肤专场：面部补水项目全线8折，消费满500再送一次手部护理。还有一个秋季限定套餐「清洁+补水+提亮」三步走，原价398，活动价268，适合换季皮肤状态不稳定的时候做。9月1号到15号，微信预约可以选你方便的时间段。（仅供格式参考，实际请根据你的活动信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 活动时间是否正确</label></li><li><label><input type="checkbox"> 优惠信息是否准确</label></li><li><label><input type="checkbox"> 无效果承诺</label></li><li><label><input type="checkbox"> 无绝对化用语</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否有效果承诺或医疗用语</label></li><li><label><input type="checkbox"> 活动时间和优惠是否准确</label></li><li><label><input type="checkbox"> 限定项目描述是否合规</label></li><li><label><input type="checkbox"> 是否有焦虑话术</label></li><li><label><input type="checkbox"> 预约方式是否畅通</label></li><li><label><input type="checkbox"> 季节需求切入是否自然</label></li><li><label><input type="checkbox"> 语气是否温暖而非廉价感</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-campaign.html" class="related-link">美业活动促销文案</a><a href="../templates/beauty-membership.html" class="related-link">美业会员卡推广</a></div></section>

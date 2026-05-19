@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训试听课邀约","description":"为培训机构生成试听课邀约话术","step":[{"@type":"HowToStep","text":"准备材料：课程名称、试听时间、试听内容、地址"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否说明免费；语气是否自然；无强迫感；信息是否完整"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"课程名称"},{"@type":"HowToSupply","name":"试听时间"},{"@type":"HowToSupply","name":"试听内容"},{"@type":"HowToSupply","name":"地址"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训试听课邀约","description":"为培训机构生成试听课邀约话术","step":[{"@type":"HowToStep","text":"准备材料：试听课程名称和内容、试听课时间和时长、适合的孩子年龄和水平、试听课的具体安排（孩子做什么、家长做什么）、需要家长提前准备的事项、试听后的跟进安排（不强制报名）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：试听时间和课程内容是否明确；是否明确说明了免费且不强制报名；家长在试听期间的安排是否说清楚；需要准备的事项是否列全；语气是否温和无压力；是否给了家长选择的空间（如备选时间）；是否避免了施压话术和效果承诺"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"试听课程名称和内容"},{"@type":"HowToSupply","name":"试听课时间和时长"},{"@type":"HowToSupply","name":"适合的孩子年龄和水平"},{"@type":"HowToSupply","name":"试听课的具体安排（孩子做什么、家长做什么）"},{"@type":"HowToSupply","name":"需要家长提前准备的事项"},{"@type":"HowToSupply","name":"试听后的跟进安排（不强制报名）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,41 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>课程名称</li><li>试听时间</li><li>试听内容</li><li>地址</li></ul>
+    <ul class="materials-list"><li>试听课程名称和内容</li><li>试听课时间和时长</li><li>适合的孩子年龄和水平</li><li>试听课的具体安排（孩子做什么、家长做什么）</li><li>需要家长提前准备的事项</li><li>试听后的跟进安排（不强制报名）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位培训机构课程顾问。请生成试听课邀约话术。
+      <pre class="prompt-text" id="prompt-text">你是一位培训机构的课程顾问，正在邀请一位潜在学员的家长带孩子来试听。你知道家长对试听课最大的顾虑是「去了会不会被强制推销」和「孩子不喜欢怎么办」。所以你的邀约要让家长感到零压力——来看看，不合适完全没关系。
 
-课程：{课程名称}
-时间：{试听时间}
-内容：{试听内容}
-地址：{地址}
+现在需要生成一条试听课邀约消息，通过微信发送给家长。
 
-要求：
-1. 语气友好不强迫
-2. 说明试听是免费的
-3. 降低决策门槛
-4. 字数60-100字</pre>
+请根据以下信息撰写：
+试听课程：{试听课程}
+试听时间：{试听时间}
+适合对象：{适合对象}
+课程安排：{课程安排}
+需要准备：{需要准备}
+家长称呼：{家长称呼}
+孩子信息：{孩子信息}
+
+输出格式要求：
+- 总字数100-150字
+- 开头自然引入（可以接续之前的沟通，如「上次聊到XX对XX感兴趣」）
+- 说明试听课的具体内容和时间，让家长知道孩子会体验什么
+- 明确告知试听免费、不强制报名
+- 告知家长试听时可以做什么（旁听/等候区等待/同步了解课程）
+- 说明需要提前准备什么（如带水杯、穿运动鞋等）
+- 结尾确认是否方便，给家长选择的空间
+- 语气温和不施压，像朋友在推荐一个体验机会
+
+禁止事项：
+- 不使用「机会难得」「名额有限」等施压话术
+- 不暗示「不来试听就会错过什么」
+- 不在邀约中就开始推销课程包
+- 不对孩子的现有水平做负面评价
+- 不承诺试听课就能看到明显效果</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,26 +99,30 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{课程名称}</code></td><td>邀请试听什么课</td></tr><tr><td><code>{试听时间}</code></td><td>具体时间</td></tr><tr><td><code>{试听内容}</code></td><td>试听课会做什么</td></tr><tr><td><code>{地址}</code></td><td>上课地点</td></tr></tbody>
+      <tbody><tr><td><code>{试听课程}</code></td><td>试听什么课，如「少儿英语自然拼读体验课」「数学思维趣味挑战课」</td></tr><tr><td><code>{试听时间}</code></td><td>什么时候试听，如「本周六上午10:00-11:00」</td></tr><tr><td><code>{适合对象}</code></td><td>适合什么样的孩子，如「5-7岁英语零基础或刚启蒙的小朋友」</td></tr><tr><td><code>{课程安排}</code></td><td>试听课具体做什么，如「通过英文儿歌和字母游戏让孩子感受自然拼读的学习方式，全程互动」</td></tr><tr><td><code>{需要准备}</code></td><td>家长需要提前做什么，如「带上水杯就行，不需要任何基础」</td></tr><tr><td><code>{家长称呼}</code></td><td>家长怎么称呼，如「陈妈妈」「王爸爸」</td></tr><tr><td><code>{孩子信息}</code></td><td>孩子的基本情况，如「小明，6岁，幼儿园大班，之前没接触过英语」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>60-100字邀约话术</p>
+    <p>100-150字试听邀约消息</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>XX妈妈您好～我们这周六下午2点有一节少儿编程体验课，小朋友可以动手做一个小游戏，挺有趣的。完全免费，不满意也没关系，就当让孩子体验一下。地址在XX商场3楼，方便的话带孩子来玩玩？（仅供格式参考）</p>
+      <p>陈妈妈您好，上次聊到小明对英语挺感兴趣的，我们这周六上午10点有一节自然拼读体验课，想邀请他来试试看。
+
+课上会通过英文儿歌和字母游戏让孩子感受拼读的学习方式，60分钟全程互动，不需要任何英语基础。您可以在教室外面的家长区观看，也可以进去旁听。
+
+试听完全免费，不合适也没关系，主要是让小明体验一下看他喜不喜欢这种学习方式。带个水杯就行。您看这个时间方便吗？不方便的话下周也有一场。（仅供格式参考，请根据实际情况生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否说明免费</label></li><li><label><input type="checkbox"> 语气是否自然</label></li><li><label><input type="checkbox"> 无强迫感</label></li><li><label><input type="checkbox"> 信息是否完整</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 试听时间和课程内容是否明确</label></li><li><label><input type="checkbox"> 是否明确说明了免费且不强制报名</label></li><li><label><input type="checkbox"> 家长在试听期间的安排是否说清楚</label></li><li><label><input type="checkbox"> 需要准备的事项是否列全</label></li><li><label><input type="checkbox"> 语气是否温和无压力</label></li><li><label><input type="checkbox"> 是否给了家长选择的空间（如备选时间）</label></li><li><label><input type="checkbox"> 是否避免了施压话术和效果承诺</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/education-enrollment.html" class="related-link">培训招生文案</a><a href="../templates/education-parent-comm.html" class="related-link">培训家长沟通话术</a></div></section>

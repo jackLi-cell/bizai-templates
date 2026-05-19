@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业招聘启事","description":"为美容院招聘美容师或学徒","step":[{"@type":"HowToStep","text":"准备材料：招聘岗位、技能要求、薪资待遇、培训支持、工作环境"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：薪资是否真实；培训承诺是否可兑现；无歧视性用语；工作环境描述准确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招聘岗位"},{"@type":"HowToSupply","name":"技能要求"},{"@type":"HowToSupply","name":"薪资待遇"},{"@type":"HowToSupply","name":"培训支持"},{"@type":"HowToSupply","name":"工作环境"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业招聘启事","description":"为美容院招聘美容师或学徒","step":[{"@type":"HowToStep","text":"准备材料：招聘岗位和人数、技能/经验要求、完整薪资结构（学徒期+转正后）、培训计划详情、工作环境和团队信息、福利清单、联系方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：薪资结构是否真实（学徒期和转正后分别标明）；培训内容是否具体可兑现；是否有歧视性条件；工作环境描述是否真实；福利是否全部可兑现；是否有夸大收入的表述；应聘方式是否清晰"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招聘岗位和人数"},{"@type":"HowToSupply","name":"技能/经验要求"},{"@type":"HowToSupply","name":"完整薪资结构（学徒期+转正后）"},{"@type":"HowToSupply","name":"培训计划详情"},{"@type":"HowToSupply","name":"工作环境和团队信息"},{"@type":"HowToSupply","name":"福利清单"},{"@type":"HowToSupply","name":"联系方式"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,38 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>招聘岗位</li><li>技能要求</li><li>薪资待遇</li><li>培训支持</li><li>工作环境</li></ul>
+    <ul class="materials-list"><li>招聘岗位和人数</li><li>技能/经验要求</li><li>完整薪资结构（学徒期+转正后）</li><li>培训计划详情</li><li>工作环境和团队信息</li><li>福利清单</li><li>联系方式</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美容院人事助手。请撰写招聘启事。
+      <pre class="prompt-text" id="prompt-text">你是一位帮助美容院招聘的HR顾问，知道美业招人的关键是「让求职者看到成长空间和稳定收入」。现在需要撰写一份招聘启事，吸引想入行或想换平台的美容师/学徒。
 
+请根据以下信息撰写：
 招聘岗位：{招聘岗位}
-技能要求：{技能要求}
-薪资待遇：{薪资待遇}
-培训支持：{培训支持}
-工作环境：{工作环境}
+技能或经验要求：{技能要求}
+薪资结构（底薪+提成+奖金）：{薪资待遇}
+培训和成长支持：{培训支持}
+工作环境和团队：{工作环境}
+福利待遇：{福利待遇}
 
-要求：
-1. 突出成长空间
-2. 薪资透明
-3. 语气友好
-4. 字数100-150字</pre>
+输出要求：
+- 字数130-180字
+- 开头说明「我们是谁+在找什么样的人」
+- 薪资要写清楚结构，给出实际到手范围（学徒期和转正后分别写）
+- 培训支持要具体（培训什么、多久、是否有外派学习）
+- 用1-2句话描述工作环境和团队氛围
+- 福利要写实际有的
+- 结尾给出应聘方式
+- 对学徒友好：强调「有无经验均可」（如果确实如此）
+
+禁止事项：
+- 不使用「月入过万不是梦」等夸大收入的话
+- 不隐瞒学徒期的薪资和时长
+- 不设置歧视性条件（年龄/外貌/婚育）
+- 不使用「能吃苦」暗示高强度工作
+- 不承诺无法兑现的晋升路径</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +96,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{招聘岗位}</code></td><td>如「美容师」「美甲学徒」</td></tr><tr><td><code>{技能要求}</code></td><td>需要什么技能或经验</td></tr><tr><td><code>{薪资待遇}</code></td><td>底薪+提成结构</td></tr><tr><td><code>{培训支持}</code></td><td>提供什么培训</td></tr><tr><td><code>{工作环境}</code></td><td>店铺环境和团队氛围</td></tr></tbody>
+      <tbody><tr><td><code>{招聘岗位}</code></td><td>岗位名称，如「美容师」「美甲师」「学徒」</td></tr><tr><td><code>{技能要求}</code></td><td>需要什么技能或经验，如「有面部护理经验优先」「零基础可培训」</td></tr><tr><td><code>{薪资待遇}</code></td><td>薪资结构，分学徒期和转正后，如「学徒期2800+包住，转正后4000+提成15%-25%」</td></tr><tr><td><code>{培训支持}</code></td><td>提供什么培训，如「入职培训1个月」「每季度外派学习」</td></tr><tr><td><code>{工作环境}</code></td><td>店铺位置、团队人数、氛围，如「商场店，5人团队，氛围轻松」</td></tr><tr><td><code>{福利待遇}</code></td><td>额外福利，如「免费体验项目、带薪年假、包住」</td></tr></tbody>
     </table>
   </section>
 
@@ -95,20 +108,21 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【招聘美容师/学徒】
-要求：热爱美业，有无经验均可
-薪资：学徒期2500+包住，转正后底薪4000+提成（综合6000-10000）
-培训：入职即有系统培训，每月外派学习机会
-环境：商场店铺，5人小团队，氛围好
-福利：员工免费体验所有项目、带薪年假
-想入行或想换个更好平台的姐妹，欢迎来聊（仅供格式参考）</p>
+      <p>【XX美容工作室招美容师/学徒】
+我们是一家开了4年的社区美容院，主做面部护理和身体项目，现在想找1-2位热爱美业、愿意长期发展的伙伴。
+岗位：美容师或学徒（有无经验均可）
+薪资：学徒期3个月，底薪2800+包住；转正后底薪4000+手工提成15%-25%，综合到手6000-12000
+培训：入职系统培训1个月（面部+身体基础手法），每季度有品牌方外派学习机会
+环境：商场店铺，目前5人团队，最小的22岁，氛围轻松不内卷
+福利：员工免费体验所有项目、带薪年假、生日红包
+想入行或想换个更好环境的，加微信聊：XXXXX（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 薪资是否真实</label></li><li><label><input type="checkbox"> 培训承诺是否可兑现</label></li><li><label><input type="checkbox"> 无歧视性用语</label></li><li><label><input type="checkbox"> 工作环境描述准确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 薪资结构是否真实（学徒期和转正后分别标明）</label></li><li><label><input type="checkbox"> 培训内容是否具体可兑现</label></li><li><label><input type="checkbox"> 是否有歧视性条件</label></li><li><label><input type="checkbox"> 工作环境描述是否真实</label></li><li><label><input type="checkbox"> 福利是否全部可兑现</label></li><li><label><input type="checkbox"> 是否有夸大收入的表述</label></li><li><label><input type="checkbox"> 应聘方式是否清晰</label></li></ul>
   </section>
 
   

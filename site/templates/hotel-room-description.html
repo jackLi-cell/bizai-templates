@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿房型介绍","description":"为民宿/酒店房型撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：房型名称、房间配置、特色亮点、价格区间、入住须知"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：配置描述是否准确；价格是否正确；入住须知是否完整；无夸大描述"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"房型名称"},{"@type":"HowToSupply","name":"房间配置"},{"@type":"HowToSupply","name":"特色亮点"},{"@type":"HowToSupply","name":"价格区间"},{"@type":"HowToSupply","name":"入住须知"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿房型介绍","description":"为民宿/酒店房型撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：房间的实际面积和配置清单、窗外景观的真实照片（不同时段）、设施的品牌和型号信息、当前有效的价格体系、入退时间和相关政策、房间的实际限制说明（如无电梯、隔音情况）、早餐的具体内容和供应时间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：房间面积、床型等硬件信息是否与实际一致；景观描述是否为真实可见的（不同天气/季节是否有差异）；设施品牌和配置是否准确；价格区间是否为当前有效价格；入退时间是否与实际政策一致；是否隐瞒了房间的实际限制（如无电梯、噪音等）；早餐信息是否标注清楚"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"房间的实际面积和配置清单"},{"@type":"HowToSupply","name":"窗外景观的真实照片（不同时段）"},{"@type":"HowToSupply","name":"设施的品牌和型号信息"},{"@type":"HowToSupply","name":"当前有效的价格体系"},{"@type":"HowToSupply","name":"入退时间和相关政策"},{"@type":"HowToSupply","name":"房间的实际限制说明（如无电梯、隔音情况）"},{"@type":"HowToSupply","name":"早餐的具体内容和供应时间"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,43 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>房型名称</li><li>房间配置</li><li>特色亮点</li><li>价格区间</li><li>入住须知</li></ul>
+    <ul class="materials-list"><li>房间的实际面积和配置清单</li><li>窗外景观的真实照片（不同时段）</li><li>设施的品牌和型号信息</li><li>当前有效的价格体系</li><li>入退时间和相关政策</li><li>房间的实际限制说明（如无电梯、隔音情况）</li><li>早餐的具体内容和供应时间</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位民宿文案助手。请为以下房型撰写介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位民宿/精品酒店的OTA运营专家，有5年携程、美团、小红书平台的房型文案经验。你擅长用精准的描述让客人在预订前就能「看到」房间的样子，同时严格遵守不夸大实际条件的原则。现在需要为一个房型撰写介绍文案，用于OTA平台或官网展示。
 
-房型：{房型名称}
-配置：{房间配置}
-亮点：{特色亮点}
-价格：{价格区间}
-须知：{入住须知}
+请根据以下信息撰写房型介绍：
+房型名称：{房型名称}
+房间面积：{房间面积}
+床型和尺寸：{床型信息}
+窗外景观：{景观描述}
+卫浴配置：{卫浴配置}
+特色设施/亮点：{特色设施}
+房间风格/设计理念：{设计风格}
+价格区间（平日/周末/节假日）：{价格区间}
+入住时间/退房时间：{入退时间}
+可住人数：{可住人数}
+早餐情况：{早餐信息}
+周边环境简述：{周边环境}
 
-要求：
-1. 字数100-150字
-2. 突出体验感
-3. 配置信息准确
-4. 不夸大实际条件
-5. 适合携程/美团展示</pre>
+输出格式要求：
+- 字数控制在130-180字
+- 第一句用房间最大的亮点开头（景观、设计或体验感）
+- 中间按「空间→设施→体验」的逻辑展开
+- 设施描述要具体到品牌或材质（如「金可儿床垫」「科勒卫浴」）
+- 价格信息单独一行，区分平日和周末
+- 入退时间和可住人数作为基础信息标注
+- 语气像一位用心的民宿主在介绍自己最满意的房间
+
+禁止事项：
+- 不使用「奢华」「顶级」「五星级体验」等过度修饰
+- 不虚构不存在的设施或景观
+- 不使用「仿佛置身XX」等虚幻描述
+- 不隐瞒房间的实际限制（如无电梯、隔音一般等）
+- 不使用其他酒店的照片描述来误导</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +101,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{房型名称}</code></td><td>如「山景大床房」「亲子套房」</td></tr><tr><td><code>{房间配置}</code></td><td>床型、面积、设施</td></tr><tr><td><code>{特色亮点}</code></td><td>最吸引人的点</td></tr><tr><td><code>{价格区间}</code></td><td>淡旺季价格</td></tr><tr><td><code>{入住须知}</code></td><td>入住退房时间等</td></tr></tbody>
+      <tbody><tr><td><code>{房型名称}</code></td><td>房间的名称，建议带场景感，如「山景大床房」「星空阁楼房」</td></tr><tr><td><code>{房间面积}</code></td><td>房间的实际使用面积（平方米）</td></tr><tr><td><code>{床型信息}</code></td><td>床的类型和尺寸，如「1.8m大床」「1.2m双床」</td></tr><tr><td><code>{景观描述}</code></td><td>窗外能看到什么，不同时段的景色差异</td></tr><tr><td><code>{卫浴配置}</code></td><td>卫生间的配置，如干湿分离、浴缸、品牌等</td></tr><tr><td><code>{特色设施}</code></td><td>房间里有什么特别的设施，如投影仪、茶具、浴缸等</td></tr><tr><td><code>{设计风格}</code></td><td>房间的装修风格和设计理念</td></tr><tr><td><code>{价格区间}</code></td><td>平日、周末、节假日的不同价格</td></tr><tr><td><code>{入退时间}</code></td><td>入住和退房的具体时间</td></tr><tr><td><code>{可住人数}</code></td><td>这个房型最多住几个人</td></tr><tr><td><code>{早餐信息}</code></td><td>是否含早餐、早餐的形式</td></tr><tr><td><code>{周边环境}</code></td><td>房间周围的环境，如安静程度、距离公共区域远近</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +113,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【山景大床房】面积35平，落地窗正对茶山，早上拉开窗帘就是满眼绿色。配置：1.8m乳胶床垫、独立卫浴（干湿分离）、小冰箱、蓝牙音箱。免费提供茶具和本地茶叶，可以边泡茶边看山。价格：平日298，周末/节假日398。入住14:00后，退房12:00前。适合情侣或独自放松（仅供格式参考）</p>
+      <p>【山景大床房】推开窗就是整片茶山，早晨的云雾和傍晚的夕阳各有各的好看。房间35平，1.8米金可儿乳胶床垫，独立卫浴干湿分离（科勒花洒+浴缸）。配有小冰箱、蓝牙音箱、免费茶具和本地高山绿茶。整体原木风格，没有多余装饰，安静舒适。平日318元/晚，周末及节假日428元/晚（含双人早餐）。入住14:00后，退房12:00前。适合情侣或需要安静独处的朋友。二楼无电梯，有大件行李可联系我们帮忙搬运。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 配置描述是否准确</label></li><li><label><input type="checkbox"> 价格是否正确</label></li><li><label><input type="checkbox"> 入住须知是否完整</label></li><li><label><input type="checkbox"> 无夸大描述</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 房间面积、床型等硬件信息是否与实际一致</label></li><li><label><input type="checkbox"> 景观描述是否为真实可见的（不同天气/季节是否有差异）</label></li><li><label><input type="checkbox"> 设施品牌和配置是否准确</label></li><li><label><input type="checkbox"> 价格区间是否为当前有效价格</label></li><li><label><input type="checkbox"> 入退时间是否与实际政策一致</label></li><li><label><input type="checkbox"> 是否隐瞒了房间的实际限制（如无电梯、噪音等）</label></li><li><label><input type="checkbox"> 早餐信息是否标注清楚</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/hotel-review-response.html" class="related-link">民宿评价回复</a><a href="../templates/hotel-social-media.html" class="related-link">民宿朋友圈内容</a></div></section>

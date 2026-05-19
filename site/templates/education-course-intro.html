@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训课程介绍","description":"为培训机构课程撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：课程名称、适合年龄、课程内容、师资介绍、课时安排"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无成绩承诺；师资描述是否真实；课时信息准确；价格是否需要标注"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"课程名称"},{"@type":"HowToSupply","name":"适合年龄"},{"@type":"HowToSupply","name":"课程内容"},{"@type":"HowToSupply","name":"师资介绍"},{"@type":"HowToSupply","name":"课时安排"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"培训课程介绍","description":"为培训机构课程撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：课程名称和所属学科/领域、适合的年龄段或水平、课程内容大纲（主要学什么）、教学方式和特色（小班/一对一/线上等）、师资介绍（教师背景和经验）、课时安排和价格区间"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：课程内容描述是否具体可感知；适合对象的年龄/水平是否明确；教学方式是否写清楚了上课流程；师资背景是否真实准确；价格是否包含了所有费用；是否避免了效果承诺和焦虑话术；是否提及了试听或体验机会"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"课程名称和所属学科/领域"},{"@type":"HowToSupply","name":"适合的年龄段或水平"},{"@type":"HowToSupply","name":"课程内容大纲（主要学什么）"},{"@type":"HowToSupply","name":"教学方式和特色（小班/一对一/线上等）"},{"@type":"HowToSupply","name":"师资介绍（教师背景和经验）"},{"@type":"HowToSupply","name":"课时安排和价格区间"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,40 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>课程名称</li><li>适合年龄</li><li>课程内容</li><li>师资介绍</li><li>课时安排</li></ul>
+    <ul class="materials-list"><li>课程名称和所属学科/领域</li><li>适合的年龄段或水平</li><li>课程内容大纲（主要学什么）</li><li>教学方式和特色（小班/一对一/线上等）</li><li>师资介绍（教师背景和经验）</li><li>课时安排和价格区间</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位教育培训文案助手。请为以下课程撰写介绍。
+      <pre class="prompt-text" id="prompt-text">你是一位有7年教培行业经验的课程顾问，擅长用家长能理解的语言介绍课程内容。你知道家长最关心的是「孩子能学到什么」「怎么教的」「老师靠不靠谱」，而不是华丽的教育理念。你的课程介绍要具体、可感知，让家长看完就知道这个课适不适合自己的孩子。
 
+现在需要为一门课程撰写介绍文案，用于官网、朋友圈或招生手册。
+
+请根据以下信息撰写：
 课程名称：{课程名称}
-适合年龄：{适合年龄}
+适合对象：{适合对象}
 课程内容：{课程内容}
-师资：{师资介绍}
-课时：{课时安排}
+教学方式：{教学方式}
+师资情况：{师资情况}
+课时与价格：{课时价格}
 
-要求：
-1. 字数100-150字
-2. 突出课程特色和师资
-3. 不承诺考试成绩或升学结果
-4. 语气专业可信
-5. 适合公众号或传单</pre>
+输出格式要求：
+- 总字数150-220字
+- 开头用一句话说明这门课解决什么问题或培养什么能力
+- 课程内容用3-4个要点概括，每个要点一句话说清楚学什么
+- 教学方式要具体到「怎么上课」（如「每节课前15分钟复习上节内容」）
+- 师资介绍要有具体背景（学历、从教年限、擅长方向）
+- 课时安排写明频次、每次时长、总课时
+- 结尾可以提及试听安排，降低决策门槛
+- 语气专业温和，像一个懂教育的人在跟家长交流
+
+禁止事项：
+- 不承诺「保证提分XX分」「学完就能XX」等效果保证
+- 不贬低学校教育或其他机构
+- 不使用「赢在起跑线」「不能输」等焦虑话术
+- 不夸大师资背景（如把助教说成名师）
+- 不隐瞒额外费用（教材费、考级费等）</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,26 +98,37 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{课程名称}</code></td><td>课程的正式名称</td></tr><tr><td><code>{适合年龄}</code></td><td>目标学员年龄段</td></tr><tr><td><code>{课程内容}</code></td><td>主要学什么</td></tr><tr><td><code>{师资介绍}</code></td><td>老师的背景</td></tr><tr><td><code>{课时安排}</code></td><td>多少课时、怎么上</td></tr></tbody>
+      <tbody><tr><td><code>{课程名称}</code></td><td>课程叫什么，如「少儿编程启蒙班」「初中数学思维提升课」「成人英语口语班」</td></tr><tr><td><code>{适合对象}</code></td><td>适合谁来学，如「6-8岁零基础儿童」「初一到初三数学基础薄弱的学生」</td></tr><tr><td><code>{课程内容}</code></td><td>主要学什么，如「Scratch图形化编程→简单游戏制作→逻辑思维训练」</td></tr><tr><td><code>{教学方式}</code></td><td>怎么教的，如「6人小班，每节课60分钟，前15分钟复习+40分钟新内容+5分钟总结作业」</td></tr><tr><td><code>{师资情况}</code></td><td>谁来教，如「张老师，计算机专业硕士，从事少儿编程教学4年，带过200+学生」</td></tr><tr><td><code>{课时价格}</code></td><td>多少钱上多久，如「共24课时，每周一次，每次60分钟，学费3600元（含教材）」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>100-150字课程介绍</p>
+    <p>150-220字课程介绍文案</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【少儿编程启蒙班】适合6-9岁零基础小朋友。通过Scratch图形化编程，让孩子在游戏中学习逻辑思维。课程内容：基础指令→动画制作→简单游戏开发，循序渐进。授课老师计算机专业毕业，3年少儿编程教学经验。每周一次课，每次90分钟，小班制（6-8人）。免费试听一次，满意再报名（仅供格式参考）</p>
+      <p>【少儿编程启蒙班】帮助6-8岁孩子建立基础的逻辑思维能力，用编程的方式学会「拆解问题→设计步骤→验证结果」的思考方法。
+
+学什么：
+- 用Scratch图形化编程制作简单动画和小游戏
+- 学习顺序、循环、条件判断等基础逻辑概念
+- 每4节课完成一个小项目，孩子能看到自己的作品
+
+怎么教：6人小班，每节课60分钟。前15分钟带着回顾上节内容，中间40分钟学新知识并动手实践，最后5分钟总结和布置趣味练习。
+
+师资：张老师，计算机硕士，专注少儿编程教学4年。
+
+安排：每周六上午一次，共24课时，学费3600元含教材。可预约免费试听一次。（仅供格式参考，请根据实际课程生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无成绩承诺</label></li><li><label><input type="checkbox"> 师资描述是否真实</label></li><li><label><input type="checkbox"> 课时信息准确</label></li><li><label><input type="checkbox"> 价格是否需要标注</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 课程内容描述是否具体可感知</label></li><li><label><input type="checkbox"> 适合对象的年龄/水平是否明确</label></li><li><label><input type="checkbox"> 教学方式是否写清楚了上课流程</label></li><li><label><input type="checkbox"> 师资背景是否真实准确</label></li><li><label><input type="checkbox"> 价格是否包含了所有费用</label></li><li><label><input type="checkbox"> 是否避免了效果承诺和焦虑话术</label></li><li><label><input type="checkbox"> 是否提及了试听或体验机会</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/education-enrollment.html" class="related-link">培训招生文案</a><a href="../templates/education-trial-invite.html" class="related-link">培训试听课邀约</a></div></section>

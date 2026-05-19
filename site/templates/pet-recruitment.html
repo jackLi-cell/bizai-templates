@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店招聘启事","description":"为宠物店招聘宠物美容师或店员","step":[{"@type":"HowToStep","text":"准备材料：招聘岗位、技能要求、薪资待遇、工作环境"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：薪资是否真实；要求是否合理；无歧视性用语；环境描述准确"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招聘岗位"},{"@type":"HowToSupply","name":"技能要求"},{"@type":"HowToSupply","name":"薪资待遇"},{"@type":"HowToSupply","name":"工作环境"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店招聘启事","description":"为宠物店招聘宠物美容师或店员","step":[{"@type":"HowToStep","text":"准备材料：招聘岗位（宠物美容师/店员/寄养看护等）、技能要求和资质证书、工作内容和日常安排、薪资范围和福利待遇、工作环境描述、对应聘者的软性要求（如喜欢动物）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否真实描述了工作的辛苦面；技能要求是否具体明确；薪资范围是否真实透明；是否体现了对动物态度的重视；工作环境描述是否诚实；是否存在歧视性表述；联系方式是否清晰"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"招聘岗位（宠物美容师/店员/寄养看护等）"},{"@type":"HowToSupply","name":"技能要求和资质证书"},{"@type":"HowToSupply","name":"工作内容和日常安排"},{"@type":"HowToSupply","name":"薪资范围和福利待遇"},{"@type":"HowToSupply","name":"工作环境描述"},{"@type":"HowToSupply","name":"对应聘者的软性要求（如喜欢动物）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,42 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>招聘岗位</li><li>技能要求</li><li>薪资待遇</li><li>工作环境</li></ul>
+    <ul class="materials-list"><li>招聘岗位（宠物美容师/店员/寄养看护等）</li><li>技能要求和资质证书</li><li>工作内容和日常安排</li><li>薪资范围和福利待遇</li><li>工作环境描述</li><li>对应聘者的软性要求（如喜欢动物）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位宠物店人事助手。请撰写招聘启事。
+      <pre class="prompt-text" id="prompt-text">你是一位正在招人的宠物店老板。你招人最看重的不是技术（技术可以教），而是这个人是不是真的喜欢动物、有没有耐心。所以你的招聘信息要吸引那些真心喜欢宠物的人，同时把工作的真实状态写清楚——这份工作有可爱的部分，也有辛苦和脏累的部分。
 
-岗位：{招聘岗位}
-要求：{技能要求}
-薪资：{薪资待遇}
-环境：{工作环境}
+现在需要撰写一条招聘信息，发布在BOSS直聘、小红书或朋友圈。
 
-要求：
-1. 突出爱宠物这个前提
-2. 薪资透明
-3. 语气友好
-4. 字数100-150字</pre>
+请根据以下信息撰写：
+招聘岗位：{岗位}
+技能/资质要求：{技能要求}
+工作内容：{工作内容}
+工作时间：{工作时间}
+薪资福利：{薪资福利}
+工作环境：{工作环境}
+软性要求：{软性要求}
+联系方式：{联系方式}
+
+输出格式要求：
+- 总字数130-200字
+- 开头用一句话说明招什么人，可以带一点温度（如「找一个喜欢毛孩子的伙伴」）
+- 工作内容要写实：既写可爱的部分（每天跟宠物相处），也写辛苦的部分（要洗很多只、会被抓伤）
+- 技能要求分「必须」和「加分项」
+- 薪资写明范围和涨薪机制
+- 提及工作环境的真实状态（如「店里常年有动物味道」「夏天会很忙」）
+- 结尾写联系方式
+- 语气真诚直接，像在跟一个可能的未来同事聊天
+
+禁止事项：
+- 不使用「轻松愉快」来形容工作（宠物行业体力消耗大）
+- 不隐瞒工作中可能遇到的困难
+- 不写「有爱心就行」而忽略专业要求
+- 不使用「待遇面议」等不透明表述
+- 不对应聘者的外貌、年龄做歧视性要求</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,32 +100,34 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{招聘岗位}</code></td><td>如「宠物美容师」「店员」</td></tr><tr><td><code>{技能要求}</code></td><td>需要什么技能</td></tr><tr><td><code>{薪资待遇}</code></td><td>薪资结构</td></tr><tr><td><code>{工作环境}</code></td><td>店铺环境</td></tr></tbody>
+      <tbody><tr><td><code>{岗位}</code></td><td>招什么人，如「宠物美容师」「洗护助理」「寄养看护员」</td></tr><tr><td><code>{技能要求}</code></td><td>需要什么技能或证书，如「必须：有C级以上美容师证，能独立完成洗护全流程；加分：会猫咪洗护」</td></tr><tr><td><code>{工作内容}</code></td><td>每天做什么，如「日均洗护5-8只，含洗澡、吹干、基础修剪、耳道清洁」</td></tr><tr><td><code>{工作时间}</code></td><td>上班时间，如「早9晚7，月休4天，旺季可能加班但有加班费」</td></tr><tr><td><code>{薪资福利}</code></td><td>能挣多少，如「底薪5000+提成，综合7000-10000，自家宠物免费洗护」</td></tr><tr><td><code>{工作环境}</code></td><td>工作环境什么样，如「独立洗护间，有空调，但动物多味道难免大」</td></tr><tr><td><code>{软性要求}</code></td><td>除了技能还看重什么，如「有耐心，不会因为宠物不配合就粗暴对待」</td></tr><tr><td><code>{联系方式}</code></td><td>怎么应聘，如「微信XXX，发个简历或者直接来店里聊都行」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>100-150字招聘启事</p>
+    <p>130-200字招聘信息</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【招聘宠物美容师/学徒】
-首要条件：真心喜欢小动物
-技能：有C级以上证书优先，学徒可从零培养
-薪资：美容师底薪4000+提成（综合6000-10000），学徒期3000
-环境：社区店，日均接待8-10只，不赶工不加班
-福利：自家宠物免费洗护、每月学习补贴
-我们要的是耐心细心、把每只毛孩子当自己家的人（仅供格式参考）</p>
+      <p>招一位宠物美容师，坐标XX区，找一个真心喜欢动物、有耐心的伙伴。
+
+日常工作：每天洗护5-8只（猫狗都有），从洗澡吹干到基础修剪全流程。说实话，会被猫抓、被狗甩一身水，夏天旺季会很累。但每天跟毛孩子打交道，看到它们洗完变漂亮，还是挺有成就感的。
+
+要求：有C级以上美容师证，能独立操作。会猫咪洗护的优先。最重要的是有耐心——宠物害怕的时候愿意等一等，不急躁。
+
+薪资：底薪5000+按只提成，综合7000-10000。自家宠物免费洗护。早9晚7，月休4天。
+
+有兴趣加微信XXX聊。（仅供格式参考，请根据实际岗位生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 薪资是否真实</label></li><li><label><input type="checkbox"> 要求是否合理</label></li><li><label><input type="checkbox"> 无歧视性用语</label></li><li><label><input type="checkbox"> 环境描述准确</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否真实描述了工作的辛苦面</label></li><li><label><input type="checkbox"> 技能要求是否具体明确</label></li><li><label><input type="checkbox"> 薪资范围是否真实透明</label></li><li><label><input type="checkbox"> 是否体现了对动物态度的重视</label></li><li><label><input type="checkbox"> 工作环境描述是否诚实</label></li><li><label><input type="checkbox"> 是否存在歧视性表述</label></li><li><label><input type="checkbox"> 联系方式是否清晰</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-brand-story.html" class="related-link">宠物店品牌故事</a></div></section>

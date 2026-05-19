@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影活动促销文案","description":"为摄影工作室促销活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：活动主题、优惠内容、活动时间、预约方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：优惠是否真实；时间是否正确；名额限制是否合理；无虚假宣传"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"活动主题"},{"@type":"HowToSupply","name":"优惠内容"},{"@type":"HowToSupply","name":"活动时间"},{"@type":"HowToSupply","name":"预约方式"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"摄影活动促销文案","description":"为摄影工作室促销活动撰写文案","step":[{"@type":"HowToStep","text":"准备材料：活动优惠的具体方案（经核算确认利润可覆盖）、活动起止日期和名额上限、适用套餐的完整列表、预约渠道信息（确保活动期间有人响应）、活动发起的真实原因（用于文案引入）、往期类似活动的效果参考（可选）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：优惠内容是否与实际执行方案一致；活动起止日期是否正确；名额限制是否为真实可控的数量；是否存在虚假原价或虚构对比；预约方式是否畅通可用；适用套餐范围是否标注清楚"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"活动优惠的具体方案（经核算确认利润可覆盖）"},{"@type":"HowToSupply","name":"活动起止日期和名额上限"},{"@type":"HowToSupply","name":"适用套餐的完整列表"},{"@type":"HowToSupply","name":"预约渠道信息（确保活动期间有人响应）"},{"@type":"HowToSupply","name":"活动发起的真实原因（用于文案引入）"},{"@type":"HowToSupply","name":"往期类似活动的效果参考（可选）"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>活动主题</li><li>优惠内容</li><li>活动时间</li><li>预约方式</li></ul>
+    <ul class="materials-list"><li>活动优惠的具体方案（经核算确认利润可覆盖）</li><li>活动起止日期和名额上限</li><li>适用套餐的完整列表</li><li>预约渠道信息（确保活动期间有人响应）</li><li>活动发起的真实原因（用于文案引入）</li><li>往期类似活动的效果参考（可选）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位摄影工作室营销助手。请撰写活动文案。
+      <pre class="prompt-text" id="prompt-text">你是一位专注摄影行业营销的内容运营，有4年独立工作室推广经验，深谙如何在不制造虚假紧迫感的前提下激发客户的拍摄欲望。现在需要为一家摄影工作室的限时促销活动撰写朋友圈推广文案。
 
-主题：{活动主题}
-优惠：{优惠内容}
-时间：{活动时间}
-预约：{预约方式}
+请根据以下信息创作活动文案：
+活动主题：{活动主题}
+优惠形式（加赠精修/折扣/免费升级等）：{优惠形式}
+优惠具体内容：{优惠详情}
+活动起止日期：{活动时间}
+限定名额（如有）：{名额限制}
+适用套餐范围：{适用套餐}
+预约方式（微信/电话/小程序）：{预约方式}
+活动发起原因（周年庆/节日/季节等）：{活动缘由}
 
-要求：
-1. 字数80-120字
-2. 营造限时感
-3. 不虚假降价
-4. 适合朋友圈
-5. 文艺但接地气</pre>
+输出格式要求：
+- 字数控制在100-150字
+- 开头用一句与活动缘由相关的话自然引入，不要直接甩优惠信息
+- 中间清晰说明优惠内容，用对比方式体现价值（如「原15张精修→现20张」）
+- 名额或时间限制要真实标注，不夸大
+- 结尾给出明确的预约行动指引
+- 语气像工作室主理人在跟老客户分享好消息，真诚不浮夸
+- 可使用1-2个与拍摄或季节相关的表情符号
+
+禁止事项：
+- 不使用「手慢无」「秒杀」「疯抢」等电商促销用语
+- 不虚构原价或虚假对比
+- 不使用「最后X个名额」等无法验证的紧迫话术
+- 不承诺拍摄效果（如「保证出片」「张张精品」）
+- 不贬低同行定价</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,7 +97,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{活动主题}</code></td><td>如「春日限定」「周年庆」</td></tr><tr><td><code>{优惠内容}</code></td><td>具体优惠</td></tr><tr><td><code>{活动时间}</code></td><td>起止日期</td></tr><tr><td><code>{预约方式}</code></td><td>怎么预约</td></tr></tbody>
+      <tbody><tr><td><code>{活动主题}</code></td><td>活动的核心主题，如「三周年感恩回馈」「春日限定企划」「毕业季特惠」</td></tr><tr><td><code>{优惠形式}</code></td><td>优惠的类型，是加赠精修张数、打折、免费升级妆造、还是赠送相册等</td></tr><tr><td><code>{优惠详情}</code></td><td>优惠的具体数字，如「精修从15张升级到20张」「套餐价直降200元」</td></tr><tr><td><code>{活动时间}</code></td><td>活动的起止日期，精确到天</td></tr><tr><td><code>{名额限制}</code></td><td>如果有名额限制请写明具体数字，没有则填「不限」</td></tr><tr><td><code>{适用套餐}</code></td><td>哪些套餐可以享受这个优惠</td></tr><tr><td><code>{预约方式}</code></td><td>客户通过什么渠道预约，微信号、电话还是小程序</td></tr><tr><td><code>{活动缘由}</code></td><td>为什么做这个活动，给客户一个合理的理由</td></tr></tbody>
     </table>
   </section>
 
@@ -95,14 +109,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>春日限定写真开拍！3月樱花季，我们在公园踩好了点位。本月预约户外写真套餐，加赠5张精修（原套餐15张→20张），不加价。限10组名额，拍完这季花期就结束了。想在春天留下好看照片的姐妹，微信预约选时间段（仅供格式参考）</p>
+      <p>工作室三周年了，想做点实在的回馈。这个月预约任意写真套餐，精修张数免费升级：原15张→20张，原20张→28张，不加价不套路。活动时间3月1日-3月31日，限前20组预约客户。三年来拍了400多组客人，感谢每一位信任。想拍的姐妹微信私聊选时间段就行，周末档期比较紧建议早点约。（仅供格式参考，请根据实际活动信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 优惠是否真实</label></li><li><label><input type="checkbox"> 时间是否正确</label></li><li><label><input type="checkbox"> 名额限制是否合理</label></li><li><label><input type="checkbox"> 无虚假宣传</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 优惠内容是否与实际执行方案一致</label></li><li><label><input type="checkbox"> 活动起止日期是否正确</label></li><li><label><input type="checkbox"> 名额限制是否为真实可控的数量</label></li><li><label><input type="checkbox"> 是否存在虚假原价或虚构对比</label></li><li><label><input type="checkbox"> 预约方式是否畅通可用</label></li><li><label><input type="checkbox"> 适用套餐范围是否标注清楚</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/photography-package-intro.html" class="related-link">摄影套餐介绍</a><a href="../templates/photography-seasonal.html" class="related-link">摄影季节性活动</a></div></section>

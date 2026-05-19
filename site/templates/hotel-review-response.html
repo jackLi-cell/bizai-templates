@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿评价回复","description":"为民宿/酒店线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价内容、评价星级、入住房型、回复重点"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：语气是否温暖；回复是否具体；无过度承诺；邀请是否自然"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价内容"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"入住房型"},{"@type":"HowToSupply","name":"回复重点"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿评价回复","description":"为民宿/酒店线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：客人评价的完整原文和星级、客人的入住记录（房型、日期、特殊需求）、如为差评，内部核实后的情况和已采取的措施、民宿近期的变化或新增体验（用于好评回复）、不同季节的特色信息（用于邀请再次入住）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对评价中的具体内容；是否暴露了客人的个人信息；差评回复是否给出了具体已采取的措施；是否存在反驳客人感受的倾向；是否在公开回复中提及退款等敏感信息；回复是否有人情味而非模板感"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客人评价的完整原文和星级"},{"@type":"HowToSupply","name":"客人的入住记录（房型、日期、特殊需求）"},{"@type":"HowToSupply","name":"如为差评，内部核实后的情况和已采取的措施"},{"@type":"HowToSupply","name":"民宿近期的变化或新增体验（用于好评回复）"},{"@type":"HowToSupply","name":"不同季节的特色信息（用于邀请再次入住）"}]}</script>
 
 </head>
 <body>
@@ -56,24 +56,38 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>评价内容</li><li>评价星级</li><li>入住房型</li><li>回复重点</li></ul>
+    <ul class="materials-list"><li>客人评价的完整原文和星级</li><li>客人的入住记录（房型、日期、特殊需求）</li><li>如为差评，内部核实后的情况和已采取的措施</li><li>民宿近期的变化或新增体验（用于好评回复）</li><li>不同季节的特色信息（用于邀请再次入住）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位民宿运营。请针对评价生成回复。
+      <pre class="prompt-text" id="prompt-text">你是一位民宿/精品酒店的口碑运营负责人，每天处理携程、美团、大众点评上的客人评价。你深知评价回复不仅是给写评价的客人看的，更是给所有浏览评价的潜在客人看的。好的回复能展示民宿的服务态度和处理问题的能力。现在需要针对一条客人评价生成回复。
 
-评价：{评价内容}
-星级：{评价星级}
-房型：{入住房型}
-重点：{回复重点}
+请根据以下信息生成评价回复：
+评价原文：{评价内容}
+评价星级（1-5星）：{评价星级}
+客人入住的房型：{入住房型}
+入住日期（用于判断季节/天气）：{入住日期}
+评价中提到的具体优点或问题：{具体反馈}
+回复中想传达的信息：{回复重点}
+如为差评，已采取的补救/改进措施：{改进措施}
 
-要求：
-1. 好评感谢，差评道歉
-2. 有温度有人情味
-3. 邀请再次入住
-4. 字数50-100字</pre>
+输出格式要求：
+- 字数控制在70-120字
+- 好评（4-5星）：感谢+回应具体细节+分享一个下次来的新体验+期待再见
+- 中评（3星）：感谢+针对不足表示重视+说明改进+欢迎再来验证
+- 差评（1-2星）：真诚道歉+承认具体问题+已采取的措施+邀请私聊进一步处理
+- 回复要有人情味，像民宿主人在和客人对话
+- 好评回复可以分享一个客人可能不知道的小信息（如最佳观景时间）
+
+禁止事项：
+- 不使用「尊敬的客人」等酒店式套话
+- 不在公开回复中讨论退款金额
+- 不反驳客人的主观感受（如「我们觉得隔音还好」）
+- 不暴露客人的个人信息
+- 不使用千篇一律的模板回复
+- 不在差评回复中推销升级房型</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -82,7 +96,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>客人写的评价</td></tr><tr><td><code>{评价星级}</code></td><td>几星</td></tr><tr><td><code>{入住房型}</code></td><td>住的什么房</td></tr><tr><td><code>{回复重点}</code></td><td>想强调什么</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>客人在平台上写的完整评价原文</td></tr><tr><td><code>{评价星级}</code></td><td>客人给出的星级评分</td></tr><tr><td><code>{入住房型}</code></td><td>客人住的是哪个房型</td></tr><tr><td><code>{入住日期}</code></td><td>客人是什么时候入住的（影响季节性回复内容）</td></tr><tr><td><code>{具体反馈}</code></td><td>评价中明确提到的优点或不满意的地方</td></tr><tr><td><code>{回复重点}</code></td><td>回复中想顺带传达的信息（如新增设施、季节变化等）</td></tr><tr><td><code>{改进措施}</code></td><td>如果是差评，已经做了什么改进</td></tr></tbody>
     </table>
   </section>
 
@@ -94,14 +108,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>感谢您选择我们的民宿！很高兴您喜欢山景房的视野，那个角度看日出确实很美。下次来可以试试我们新开的露台烧烤，晚上看星星特别惬意。期待再次见到您，祝生活愉快（仅供格式参考）</p>
+      <p>感谢你选择我们！很开心你喜欢山景房清晨的云海，其实傍晚5点左右从露台看夕阳也特别美，下次来可以试试。你提到早餐品种可以再丰富些，这个建议收到了——下个月我们会增加本地特色的手工馒头和时令水果。期待秋天再见，那时候门口的银杏会很好看。（仅供格式参考）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 语气是否温暖</label></li><li><label><input type="checkbox"> 回复是否具体</label></li><li><label><input type="checkbox"> 无过度承诺</label></li><li><label><input type="checkbox"> 邀请是否自然</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对评价中的具体内容</label></li><li><label><input type="checkbox"> 是否暴露了客人的个人信息</label></li><li><label><input type="checkbox"> 差评回复是否给出了具体已采取的措施</label></li><li><label><input type="checkbox"> 是否存在反驳客人感受的倾向</label></li><li><label><input type="checkbox"> 是否在公开回复中提及退款等敏感信息</label></li><li><label><input type="checkbox"> 回复是否有人情味而非模板感</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/hotel-room-description.html" class="related-link">民宿房型介绍</a><a href="../templates/hotel-social-media.html" class="related-link">民宿朋友圈内容</a></div></section>

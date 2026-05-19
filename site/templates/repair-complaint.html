@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修投诉处理话术","description":"为维修服务投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容、核实情况、解决方案、补偿措施"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否承认问题；解决方案是否具体；补偿是否合理；语气是否诚恳"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容"},{"@type":"HowToSupply","name":"核实情况"},{"@type":"HowToSupply","name":"解决方案"},{"@type":"HowToSupply","name":"补偿措施"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修投诉处理话术","description":"为维修服务投诉生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：投诉内容（客户原话或转述）、投诉类型（维修质量/收费争议/态度问题/未按时上门等）、内部核实后的事实情况、责任判定（我方责任/双方误解/客户误解）、可执行的解决方案（需老板确认）、处理时限承诺"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否在开头表达了对客户体验的歉意；事实陈述是否客观，没有推卸也没有过度揽责；解决方案是否具体且已获授权执行；处理时限是否明确且可兑现；是否避免了指责客户或激化情绪的措辞；是否留下了负责人的联系方式；语气是否克制专业、不卑不亢"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉内容（客户原话或转述）"},{"@type":"HowToSupply","name":"投诉类型（维修质量/收费争议/态度问题/未按时上门等）"},{"@type":"HowToSupply","name":"内部核实后的事实情况"},{"@type":"HowToSupply","name":"责任判定（我方责任/双方误解/客户误解）"},{"@type":"HowToSupply","name":"可执行的解决方案（需老板确认）"},{"@type":"HowToSupply","name":"处理时限承诺"}]}</script>
 
 </head>
 <body>
@@ -56,25 +56,39 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>投诉内容</li><li>核实情况</li><li>解决方案</li><li>补偿措施</li></ul>
+    <ul class="materials-list"><li>投诉内容（客户原话或转述）</li><li>投诉类型（维修质量/收费争议/态度问题/未按时上门等）</li><li>内部核实后的事实情况</li><li>责任判定（我方责任/双方误解/客户误解）</li><li>可执行的解决方案（需老板确认）</li><li>处理时限承诺</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位维修公司客服主管。请针对以下投诉生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位处理过上百起客户投诉的维修服务客服主管。你的经验是：投诉处理的关键不是「谁对谁错」，而是「怎么让客户的问题真正得到解决」。同时你也知道，不合理的要求要温和但坚定地拒绝，保护师傅的合理权益。
 
-投诉内容：{投诉内容}
-核实情况：{核实情况}
+现在需要针对一起客户投诉，生成回复话术。
+
+请根据以下信息撰写：
+投诉内容摘要：{投诉内容}
+投诉类型：{投诉类型}
+核实后的事实：{事实情况}
+责任判定：{责任判定}
 解决方案：{解决方案}
-补偿措施：{补偿措施}
+处理时限：{处理时限}
 
-要求：
-1. 先道歉表示重视
-2. 说明核实结果
-3. 给出解决方案
-4. 语气诚恳负责
-5. 字数100-150字</pre>
+输出格式要求：
+- 总字数120-180字
+- 第一句表达对客户不好体验的歉意（不管责任在谁）
+- 第二部分客观陈述核实到的情况，如果是我方问题直接承认
+- 如果是误解，用「可能是我们没沟通清楚」的方式化解，不说「您理解错了」
+- 第三部分给出具体解决方案和时间节点
+- 结尾留下负责人联系方式，表示后续跟进
+- 语气克制专业，不卑不亢
+
+禁止事项：
+- 不说「这不是我们的责任」即使确实不是
+- 不使用「按照规定」「公司流程」等冷冰冰的措辞
+- 不承诺做不到的补偿（如全额退款但老板没同意）
+- 不在回复中指责具体师傅的名字
+- 不使用「您消消气」「别生气」等可能激化情绪的话</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -83,26 +97,26 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{投诉内容}</code></td><td>客户投诉什么</td></tr><tr><td><code>{核实情况}</code></td><td>了解到的实际情况</td></tr><tr><td><code>{解决方案}</code></td><td>如何解决问题</td></tr><tr><td><code>{补偿措施}</code></td><td>如何补偿客户</td></tr></tbody>
+      <tbody><tr><td><code>{投诉内容}</code></td><td>客户投诉的核心问题，如「修完空调第二天又不制冷了，怀疑没修好就收了钱」</td></tr><tr><td><code>{投诉类型}</code></td><td>属于哪类投诉：维修质量问题/收费争议/服务态度/爽约未上门/现场弄脏弄坏东西</td></tr><tr><td><code>{事实情况}</code></td><td>内部了解后的真实情况，如「师傅确认当时制冷正常，可能是新故障或环境温度过高导致」</td></tr><tr><td><code>{责任判定}</code></td><td>经核实后的判断：确实是我方维修质量问题/属于新故障与上次维修无关/沟通不充分导致误解</td></tr><tr><td><code>{解决方案}</code></td><td>打算怎么解决，如「免费上门复查，如果是同一问题免费返修，如果是新问题按正常报价优惠20%」</td></tr><tr><td><code>{处理时限}</code></td><td>多久内解决，如「今天下午安排师傅上门复查」「24小时内给您回复处理结果」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>输出格式</h2>
-    <p>100-150字投诉处理话术</p>
+    <p>120-180字投诉回复话术</p>
   </section>
 
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>先生您好，非常抱歉给您带来了困扰。关于您反映的维修后仍然漏水的问题，我已经和当天上门的师傅核实了，确实是接口处没有拧紧。我今天安排另一位资深师傅免费上门返修，同时这次维修费用全额退还给您。后续我们会加强完工检查流程，避免类似情况。再次向您道歉（仅供格式参考）</p>
+      <p>王先生您好，空调修完第二天又出问题，换谁都会不舒服，先跟您说声抱歉。我跟当天上门的师傅核实了，完工时试机确实是正常制冷的，但不排除是其他部件也有老化的情况当时没检查到。这样处理：今天下午我安排师傅再上门做一次全面检测，如果确认是上次没修彻底，免费返修并延长质保到半年；如果是新的故障点，维修费给您打八折。我的电话是XXX，有任何问题直接找我。（仅供格式参考，请根据实际投诉内容生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 是否承认问题</label></li><li><label><input type="checkbox"> 解决方案是否具体</label></li><li><label><input type="checkbox"> 补偿是否合理</label></li><li><label><input type="checkbox"> 语气是否诚恳</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否在开头表达了对客户体验的歉意</label></li><li><label><input type="checkbox"> 事实陈述是否客观，没有推卸也没有过度揽责</label></li><li><label><input type="checkbox"> 解决方案是否具体且已获授权执行</label></li><li><label><input type="checkbox"> 处理时限是否明确且可兑现</label></li><li><label><input type="checkbox"> 是否避免了指责客户或激化情绪的措辞</label></li><li><label><input type="checkbox"> 是否留下了负责人的联系方式</label></li><li><label><input type="checkbox"> 语气是否克制专业、不卑不亢</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/repair-review-response.html" class="related-link">维修服务评价回复</a><a href="../templates/repair-customer-comm.html" class="related-link">维修客户沟通话术</a></div></section>

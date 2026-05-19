@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮菜品描述","description":"为菜单或外卖平台撰写菜品描述文案","step":[{"@type":"HowToStep","text":"准备材料：菜品名称、主要食材、烹饪方式、口味特点、份量信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：确认食材描述准确；检查是否有过度承诺；确认份量信息正确；无绝对化用语"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"菜品名称"},{"@type":"HowToSupply","name":"主要食材"},{"@type":"HowToSupply","name":"烹饪方式"},{"@type":"HowToSupply","name":"口味特点"},{"@type":"HowToSupply","name":"份量信息"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮菜品描述","description":"为菜单或外卖平台撰写菜品描述文案","step":[{"@type":"HowToStep","text":"准备材料：菜品名称和完整食材清单、食材来源（如有特色产地）、详细烹饪方法和关键参数、准确的口味描述、实际出品的份量/重量、过敏原信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：食材描述是否与实际采购一致；烹饪方式和时间是否准确；口味描述是否反映真实味道；份量信息是否与实际出品一致；过敏原信息是否完整准确；是否有夸张或绝对化用语；字数是否在50-90字范围内"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"菜品名称和完整食材清单"},{"@type":"HowToSupply","name":"食材来源（如有特色产地）"},{"@type":"HowToSupply","name":"详细烹饪方法和关键参数"},{"@type":"HowToSupply","name":"准确的口味描述"},{"@type":"HowToSupply","name":"实际出品的份量/重量"},{"@type":"HowToSupply","name":"过敏原信息"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,36 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>菜品名称</li><li>主要食材</li><li>烹饪方式</li><li>口味特点</li><li>份量信息</li></ul>
+    <ul class="materials-list"><li>菜品名称和完整食材清单</li><li>食材来源（如有特色产地）</li><li>详细烹饪方法和关键参数</li><li>准确的口味描述</li><li>实际出品的份量/重量</li><li>过敏原信息</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位餐饮文案专家。请为以下菜品撰写一段吸引人的描述文案。
+      <pre class="prompt-text" id="prompt-text">你是一位为多家餐厅撰写过菜单文案的美食文案师，擅长用简短的文字让人产生食欲。现在需要为一道菜品撰写外卖平台或纸质菜单上的描述文案。
 
+请根据以下信息撰写：
 菜品名称：{菜品名称}
-主要食材：{主要食材}
-烹饪方式：{烹饪方式}
+主要食材及来源：{主要食材}
+烹饪方式与时间：{烹饪方式}
 口味特点：{口味特点}
-份量：{份量信息}
+份量/适合人数：{份量信息}
+过敏原提示（如有）：{过敏原}
 
-要求：
-1. 字数40-80字
-2. 突出食材新鲜度和烹饪特色
-3. 让人有食欲
-4. 不使用「最」「第一」等绝对化用语
-5. 适合外卖平台展示</pre>
+输出要求：
+- 字数50-90字
+- 第一句用食材或做法的亮点切入，不要重复菜名
+- 至少包含一个具体的数字（时间、温度、重量等），增加可信度
+- 口味描述用对比或层次感的方式表达，如「外酥里嫩」「先咸后甜」
+- 最后一句可以是份量建议或食用建议
+- 语气克制专业，像一本讲究的菜单
+
+禁止事项：
+- 不使用「最」「极致」「无与伦比」等夸张词
+- 不编造食材产地
+- 不承诺健康功效（如「养胃」「美容」）
+- 不使用网络用语或表情符号
+- 不写成广告文案的语气</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +94,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{菜品名称}</code></td><td>菜品的正式名称</td></tr><tr><td><code>{主要食材}</code></td><td>核心食材，如「黑猪肉、手工面皮」</td></tr><tr><td><code>{烹饪方式}</code></td><td>如「慢炖3小时」「现炒现做」</td></tr><tr><td><code>{口味特点}</code></td><td>如「微辣、酸甜」</td></tr><tr><td><code>{份量信息}</code></td><td>如「适合1-2人」</td></tr></tbody>
+      <tbody><tr><td><code>{菜品名称}</code></td><td>菜品的正式名称，如「酸菜炖五花肉」</td></tr><tr><td><code>{主要食材}</code></td><td>核心食材及来源，如「本地农场黑猪五花肉、自家腌制酸菜」</td></tr><tr><td><code>{烹饪方式}</code></td><td>具体做法和关键时间，如「小火慢炖3小时」「280度烤制8分钟」</td></tr><tr><td><code>{口味特点}</code></td><td>味道的层次和特征，如「酸香开胃，微辣收尾」</td></tr><tr><td><code>{份量信息}</code></td><td>重量或适合人数，如「约600g，适合1-2人」</td></tr><tr><td><code>{过敏原}</code></td><td>含有的常见过敏原，如「含花生」「含乳制品」，没有则写「无」</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +106,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>精选黑猪五花肉，搭配自家腌制的酸菜，小火慢炖3小时，肉质软烂入味。微辣口感，配一碗米饭刚好。份量适合1-2人享用，冬天来一锅暖胃又满足（仅供格式参考）</p>
+      <p>选用本地农场黑猪五花，切厚片与自家坛子酸菜同炖3小时。肉质软烂不腻，汤底酸香开胃，微辣收尾。每份约600g，配米饭适合1-2人。含大豆制品（酸菜），介意者请提前告知。（仅供格式参考，实际请根据你的菜品信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 确认食材描述准确</label></li><li><label><input type="checkbox"> 检查是否有过度承诺</label></li><li><label><input type="checkbox"> 确认份量信息正确</label></li><li><label><input type="checkbox"> 无绝对化用语</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 食材描述是否与实际采购一致</label></li><li><label><input type="checkbox"> 烹饪方式和时间是否准确</label></li><li><label><input type="checkbox"> 口味描述是否反映真实味道</label></li><li><label><input type="checkbox"> 份量信息是否与实际出品一致</label></li><li><label><input type="checkbox"> 过敏原信息是否完整准确</label></li><li><label><input type="checkbox"> 是否有夸张或绝对化用语</label></li><li><label><input type="checkbox"> 字数是否在50-90字范围内</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-new-product.html" class="related-link">餐饮新品上新文案</a><a href="../templates/catering-short-video.html" class="related-link">餐饮短视频脚本</a></div></section>

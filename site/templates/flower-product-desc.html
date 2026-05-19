@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花束产品描述","description":"为花店花束/绿植撰写产品描述","step":[{"@type":"HowToStep","text":"准备材料：花束名称、花材组成、适合场景、价格、养护建议"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：花材描述是否准确；价格是否正确；养护建议是否实用；无夸大花期"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"花束名称"},{"@type":"HowToSupply","name":"花材组成"},{"@type":"HowToSupply","name":"适合场景"},{"@type":"HowToSupply","name":"价格"},{"@type":"HowToSupply","name":"养护建议"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"花束产品描述","description":"为花店花束/绿植撰写产品描述","step":[{"@type":"HowToStep","text":"准备材料：花束名称及系列归属、完整花材清单（主花+配花+配叶，含数量）、花材产地和品质等级（如A级厄瓜多尔玫瑰）、适用场景和送礼对象、价格（含包装费还是另计）、花束尺寸规格（手捧/中束/大束）、详细养护方法和预期花期"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：花材品种和数量是否与实际出品一致；价格是否明确标注包含内容；花期说明是否真实（未夸大）；是否注明了鲜花自然差异的提示；养护方法是否具体可操作；是否存在绝对化表述或虚假承诺；花材产地标注是否属实"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"花束名称及系列归属"},{"@type":"HowToSupply","name":"完整花材清单（主花+配花+配叶，含数量）"},{"@type":"HowToSupply","name":"花材产地和品质等级（如A级厄瓜多尔玫瑰）"},{"@type":"HowToSupply","name":"适用场景和送礼对象"},{"@type":"HowToSupply","name":"价格（含包装费还是另计）"},{"@type":"HowToSupply","name":"花束尺寸规格（手捧/中束/大束）"},{"@type":"HowToSupply","name":"详细养护方法和预期花期"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,43 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>花束名称</li><li>花材组成</li><li>适合场景</li><li>价格</li><li>养护建议</li></ul>
+    <ul class="materials-list"><li>花束名称及系列归属</li><li>完整花材清单（主花+配花+配叶，含数量）</li><li>花材产地和品质等级（如A级厄瓜多尔玫瑰）</li><li>适用场景和送礼对象</li><li>价格（含包装费还是另计）</li><li>花束尺寸规格（手捧/中束/大束）</li><li>详细养护方法和预期花期</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位花店文案助手。请为以下花束撰写描述。
+      <pre class="prompt-text" id="prompt-text">你是一位经营独立花店5年的花艺师，擅长用文字传达花束的美感和情感价值。你的文案风格是「有美感但不矫情，有信息量但不像说明书」。现在需要为一款花束撰写产品描述，用于美团、小红书或微信商城展示。
 
-名称：{花束名称}
-花材：{花材组成}
-场景：{适合场景}
+请根据以下信息撰写：
+花束名称：{花束名称}
+花材组成：{花材组成}
+花材产地/品质：{花材品质}
+适合场景：{适合场景}
+花束规格：{花束规格}
 价格：{价格}
-养护：{养护建议}
+包装方式：{包装方式}
+养护方法：{养护方法}
+预期花期：{预期花期}
 
-要求：
-1. 字数80-120字
-2. 有美感和仪式感
-3. 说明花材和养护
-4. 不夸大花期
-5. 适合电商展示</pre>
+输出格式要求：
+- 总字数控制在120-170字
+- 结构：花束名称→一句话氛围描述→花材详情（主花+配花+配叶）→适合场景→价格和规格→养护要点→花期说明
+- 花材描述要具体到品种和颜色，如「卡布奇诺玫瑰」而非「玫瑰」
+- 养护建议要实用可操作
+
+语气与风格：
+- 有美感和仪式感，但不过度文艺
+- 像一位懂花的朋友在推荐，而非冷冰冰的商品说明
+- 花语寓意可以提及但不要过度解读
+
+禁止事项：
+- 不能夸大花期（鲜花有自然凋谢周期，如实说明）
+- 不能使用「永不凋谢」等误导性表述（除非是永生花）
+- 不能承诺花材与图片100%一致（鲜花有自然差异）
+- 不能使用「最美」「独一无二」等绝对化表述
+- 不能隐瞒可能的花粉过敏风险（百合等）
+- 不能虚标花材产地或品种</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +101,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{花束名称}</code></td><td>花束的名字</td></tr><tr><td><code>{花材组成}</code></td><td>用了什么花</td></tr><tr><td><code>{适合场景}</code></td><td>送什么人/什么场合</td></tr><tr><td><code>{价格}</code></td><td>售价</td></tr><tr><td><code>{养护建议}</code></td><td>怎么养护延长花期</td></tr></tbody>
+      <tbody><tr><td><code>{花束名称}</code></td><td>花束的命名，如「晨光·暖阳」「月色·温柔」，建议有系列感</td></tr><tr><td><code>{花材组成}</code></td><td>完整的花材清单，如「卡布奇诺玫瑰5枝+白色洋桔梗3枝+尤加利叶若干+白色满天星点缀」</td></tr><tr><td><code>{花材品质}</code></td><td>花材的产地和等级，如「玫瑰为A级昆明直发」「进口厄瓜多尔玫瑰」</td></tr><tr><td><code>{适合场景}</code></td><td>适合什么场合和对象，如「生日、纪念日、送闺蜜、自己买来装饰家里」</td></tr><tr><td><code>{花束规格}</code></td><td>花束的大小规格，如「手捧束（单手可握）」「中束（适合花瓶插放）」</td></tr><tr><td><code>{价格}</code></td><td>售价及包含内容，如「168元（含韩式包装+丝带+保鲜剂+养护卡）」</td></tr><tr><td><code>{包装方式}</code></td><td>包装风格，如「牛皮纸+麻绳系带」「雾面纸+缎带」</td></tr><tr><td><code>{养护方法}</code></td><td>收到后的具体养护步骤</td></tr><tr><td><code>{预期花期}</code></td><td>正常养护下的预期观赏期，如「夏季约5天，春秋季约7天」</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +113,25 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【晨光系列·暖阳】主花材：香槟玫瑰5枝+洋桔梗+尤加利叶，暖色调搭配，温柔不张扬。适合送闺蜜、送自己、或者摆在家里提升氛围。价格：128元（含包装）。收到后斜切根部，换清水+保鲜剂，避免阳光直射，正常花期5-7天。每周三到新鲜花材，建议提前一天预订（仅供格式参考）</p>
+      <p>【月色·温柔】
+奶白色调的温柔系花束，适合送给气质安静的她。
+
+花材：卡布奇诺玫瑰5枝（昆明A级）+ 白色洋桔梗3枝 + 尤加利叶 + 白色满天星点缀。雾面白色包装纸，香槟色缎带收束。
+
+适合：生日、表白、送闺蜜、家居装饰
+规格：中束（适合放入花瓶）
+价格：168元（含包装+保鲜剂+养护卡）
+
+养护：收到后斜切根部2cm，放入干净花瓶加清水和保鲜剂，避免阳光直射和空调直吹，每天换水可延长花期。正常养护观赏期约5-7天。
+
+提示：鲜花为自然生长，实物与图片可能存在细微色差，属正常现象。</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 花材描述是否准确</label></li><li><label><input type="checkbox"> 价格是否正确</label></li><li><label><input type="checkbox"> 养护建议是否实用</label></li><li><label><input type="checkbox"> 无夸大花期</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 花材品种和数量是否与实际出品一致</label></li><li><label><input type="checkbox"> 价格是否明确标注包含内容</label></li><li><label><input type="checkbox"> 花期说明是否真实（未夸大）</label></li><li><label><input type="checkbox"> 是否注明了鲜花自然差异的提示</label></li><li><label><input type="checkbox"> 养护方法是否具体可操作</label></li><li><label><input type="checkbox"> 是否存在绝对化表述或虚假承诺</label></li><li><label><input type="checkbox"> 花材产地标注是否属实</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/flower-campaign.html" class="related-link">花店节日促销文案</a><a href="../templates/flower-social-media.html" class="related-link">花店朋友圈内容</a></div></section>

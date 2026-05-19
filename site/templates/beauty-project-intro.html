@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="小商家 AI 工作流与模板库">
 <meta property="og:locale" content="zh_CN">
 <link rel="stylesheet" href="../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美容项目介绍文案","description":"为美容院服务项目撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：项目名称、适合人群、项目流程、时长和价格、注意事项"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：无医疗效果承诺；价格信息准确；注意事项是否完整；无绝对化用语"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"项目名称"},{"@type":"HowToSupply","name":"适合人群"},{"@type":"HowToSupply","name":"项目流程"},{"@type":"HowToSupply","name":"时长和价格"},{"@type":"HowToSupply","name":"注意事项"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美容项目介绍文案","description":"为美容院服务项目撰写介绍文案","step":[{"@type":"HowToStep","text":"准备材料：项目名称和定价、适合的客户类型（用感受描述）、完整操作流程、单次时长、做完后的真实即时感受、术后注意事项、建议频次"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否包含任何医疗用语（治疗、治愈、药物等）；效果描述是否仅限于即时感受；价格和时长是否准确；注意事项是否完整实用；是否有绝对化用语；适合人群描述是否合理；建议频次是否基于专业判断"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"项目名称和定价"},{"@type":"HowToSupply","name":"适合的客户类型（用感受描述）"},{"@type":"HowToSupply","name":"完整操作流程"},{"@type":"HowToSupply","name":"单次时长"},{"@type":"HowToSupply","name":"做完后的真实即时感受"},{"@type":"HowToSupply","name":"术后注意事项"},{"@type":"HowToSupply","name":"建议频次"}]}</script>
 
 </head>
 <body>
@@ -56,26 +56,38 @@
 
   <section class="template-section">
     <h2>需要准备的材料</h2>
-    <ul class="materials-list"><li>项目名称</li><li>适合人群</li><li>项目流程</li><li>时长和价格</li><li>注意事项</li></ul>
+    <ul class="materials-list"><li>项目名称和定价</li><li>适合的客户类型（用感受描述）</li><li>完整操作流程</li><li>单次时长</li><li>做完后的真实即时感受</li><li>术后注意事项</li><li>建议频次</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt（点击复制）</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">你是一位美业文案助手。请为以下美容项目撰写介绍文案。
+      <pre class="prompt-text" id="prompt-text">你是一位有5年美容院运营经验的项目文案顾问，深知美业文案的核心是「让客户想体验」同时「不踩广告法红线」。现在需要为一个美容服务项目撰写介绍文案，用于朋友圈、小红书或店内价目表。
 
+请根据以下信息撰写：
 项目名称：{项目名称}
-适合人群：{适合人群}
-项目流程：{项目流程}
-时长/价格：{时长和价格}
-注意事项：{注意事项}
+适合什么样的客户：{适合人群}
+项目操作流程（简述）：{项目流程}
+单次时长和价格：{时长和价格}
+做完后的即时感受：{即时感受}
+术后注意事项：{注意事项}
+建议频次：{建议频次}
 
-要求：
-1. 字数100-150字
-2. 突出体验感和效果描述
-3. 不承诺具体疗效
-4. 不使用医疗用语
-5. 适合朋友圈或小红书发布</pre>
+输出要求：
+- 字数120-180字
+- 开头用一个客户常见的皮肤/身体困扰切入，引发共鸣
+- 项目流程用简短的步骤描述，让客户知道「会经历什么」
+- 效果描述只说「做完的即时感受」（如「摸起来滑滑的」），不承诺长期疗效
+- 注意事项要具体实用
+- 价格和时长信息自然融入
+- 语气专业温和，像美容师在跟客户面对面介绍
+
+禁止事项：
+- 绝对不能使用「治疗」「治愈」「根治」「药物」等医疗用语
+- 不承诺「美白」「祛斑」「抗衰」等具体疗效
+- 不使用before/after对比暗示效果
+- 不使用「最先进」「独家技术」等绝对化表述
+- 不贬低其他美容院或项目</pre>
       <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
     </div>
   </section>
@@ -84,7 +96,7 @@
     <h2>字段说明</h2>
     <table class="field-table">
       <thead><tr><th>字段</th><th>说明</th></tr></thead>
-      <tbody><tr><td><code>{项目名称}</code></td><td>服务项目的名称</td></tr><tr><td><code>{适合人群}</code></td><td>什么样的客户适合做</td></tr><tr><td><code>{项目流程}</code></td><td>大致的操作步骤</td></tr><tr><td><code>{时长和价格}</code></td><td>做一次多久、多少钱</td></tr><tr><td><code>{注意事项}</code></td><td>做完后需要注意什么</td></tr></tbody>
+      <tbody><tr><td><code>{项目名称}</code></td><td>服务项目的名称，如「深层补水护理」「肩颈疏通」</td></tr><tr><td><code>{适合人群}</code></td><td>什么样的客户适合做这个项目，用症状描述而非诊断，如「皮肤干燥、上妆卡粉的人」</td></tr><tr><td><code>{项目流程}</code></td><td>操作步骤的简要描述，如「清洁→导入精华→敷膜→按摩」</td></tr><tr><td><code>{时长和价格}</code></td><td>单次时长和价格，如「60分钟/168元」</td></tr><tr><td><code>{即时感受}</code></td><td>做完当天的感受，如「皮肤摸起来软润」「肩颈轻松很多」</td></tr><tr><td><code>{注意事项}</code></td><td>做完后需要注意什么，如「24小时内不化浓妆」「当天不要洗热水澡」</td></tr><tr><td><code>{建议频次}</code></td><td>建议多久做一次，如「每周一次，连续4-6次」</td></tr></tbody>
     </table>
   </section>
 
@@ -96,14 +108,14 @@
   <section class="template-section">
     <h2>输出示例</h2>
     <div class="example-box">
-      <p>【深层补水护理】适合换季皮肤干燥、上妆卡粉的姐妹。流程：清洁→导入精华→敷膜→按摩提拉，全程约60分钟，做完皮肤摸起来软软润润的。单次体验价168元。建议做完24小时内不化浓妆，让皮肤好好吸收。每周一次，连续做会感觉皮肤状态稳定很多（仅供格式参考）</p>
+      <p>换季的时候很多姐妹反馈皮肤发干、上妆卡粉，其实是角质层缺水导致的。这个深层补水护理就是针对这种情况设计的。流程大概是：清洁→精华导入（用的是玻尿酸原液）→冷膜敷20分钟→收尾按摩提拉。全程60分钟左右，做的时候很放松。做完当天皮肤摸起来会软软润润的，上妆也会服帖很多。单次体验价168元。做完24小时内建议不化浓妆，让皮肤好好吸收。一般建议每周一次，连续做4-6次感受会比较明显。（仅供格式参考，实际请根据你的项目信息生成）</p>
       <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>发布前复核清单</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> 无医疗效果承诺</label></li><li><label><input type="checkbox"> 价格信息准确</label></li><li><label><input type="checkbox"> 注意事项是否完整</label></li><li><label><input type="checkbox"> 无绝对化用语</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否包含任何医疗用语（治疗、治愈、药物等）</label></li><li><label><input type="checkbox"> 效果描述是否仅限于即时感受</label></li><li><label><input type="checkbox"> 价格和时长是否准确</label></li><li><label><input type="checkbox"> 注意事项是否完整实用</label></li><li><label><input type="checkbox"> 是否有绝对化用语</label></li><li><label><input type="checkbox"> 适合人群描述是否合理</label></li><li><label><input type="checkbox"> 建议频次是否基于专业判断</label></li></ul>
   </section>
 
   <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/beauty-campaign.html" class="related-link">美业活动促销文案</a><a href="../templates/beauty-social-media.html" class="related-link">美业朋友圈日常</a></div></section>
