@@ -27,6 +27,14 @@ const dirs = [
 dirs.forEach(d => { if (!existsSync(d)) mkdirSync(d, { recursive: true }); });
 
 // --- Helper: path prefix ---
+function cleanUrl(url) {
+  // /xxx/index.html -> /xxx/
+  url = url.replace(/\/index\.html$/, '/');
+  // /xxx.html -> /xxx
+  url = url.replace(/\.html$/, '');
+  return url;
+}
+
 function getPrefix(canonicalPath) {
   const parts = canonicalPath.split('/').filter(Boolean);
   const depth = canonicalPath.endsWith('/') ? parts.length : Math.max(0, parts.length - 1);
@@ -102,7 +110,7 @@ function jsonLdCollectionPage(name, description, canonical) {
     "@type": "CollectionPage",
     "name": name,
     "description": description,
-    "url": canonical,
+    "url": cleanUrl(canonical),
     "isPartOf": { "@type": "WebSite", "name": SITE_NAME, "url": DOMAIN }
   });
 }
@@ -113,7 +121,7 @@ function jsonLdWebApplication(name, description, canonical) {
     "@type": "WebApplication",
     "name": name,
     "description": description,
-    "url": canonical,
+    "url": cleanUrl(canonical),
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "All",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
@@ -128,7 +136,7 @@ function jsonLdArticle(title, description, canonical) {
     "@type": "Article",
     "headline": title,
     "description": description,
-    "url": canonical,
+    "url": cleanUrl(canonical),
     "datePublished": "2024-01-01",
     "dateModified": today,
     "author": { "@type": "Organization", "name": SITE_NAME, "url": DOMAIN },
@@ -140,7 +148,7 @@ function jsonLdArticle(title, description, canonical) {
 function ogTags({ title, description, canonical, type = 'website' }) {
   return `<meta property="og:title" content="${title}">
 <meta property="og:description" content="${description}">
-<meta property="og:url" content="${canonical}">
+<meta property="og:url" content="${cleanUrl(canonical)}">
 <meta property="og:type" content="${type}">
 <meta property="og:site_name" content="${SITE_NAME}">
 <meta property="og:locale" content="zh_CN">`;
@@ -161,7 +169,7 @@ function htmlPage({ title, description, canonical, body, extra = '', jsonLd = nu
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${title} - ${SITE_NAME}</title>
 <meta name="description" content="${description}">
-<link rel="canonical" href="${canonical}">
+<link rel="canonical" href="${cleanUrl(canonical)}">
 <link rel="icon" type="image/svg+xml" href="${prefix}favicon.svg">
 ${ogMetaTags}
 <link rel="stylesheet" href="${prefix}assets/styles.css">
@@ -813,19 +821,19 @@ function buildSitemap() {
   const urls = [
     { loc: '/', priority: '1.0' },
     { loc: '/templates/', priority: '0.9' },
-    ...templates.map(t => ({ loc: `/templates/${t.slug}.html`, priority: '0.6' })),
-    ...industries.map(i => ({ loc: `/industries/${i.slug}.html`, priority: '0.7' })),
-    ...tasks.map(t => ({ loc: `/tasks/${t.slug}.html`, priority: '0.7' })),
-    ...guides.map(g => ({ loc: `/guides/${g.slug}.html`, priority: '0.6' })),
-    ...scenarios.map(s => ({ loc: `/scenarios/${s.slug}.html`, priority: '0.5' })),
-    { loc: '/tools/prompt-builder.html', priority: '0.8' },
-    { loc: '/tools/output-checker.html', priority: '0.8' },
-    { loc: '/tools/reply-filter.html', priority: '0.8' },
-    { loc: '/pages/about.html', priority: '0.4' },
-    { loc: '/pages/contact.html', priority: '0.4' },
-    { loc: '/pages/disclaimer.html', priority: '0.4' },
-    { loc: '/pages/privacy.html', priority: '0.4' },
-    { loc: '/pages/terms.html', priority: '0.4' }
+    ...templates.map(t => ({ loc: `/templates/${t.slug}`, priority: '0.6' })),
+    ...industries.map(i => ({ loc: `/industries/${i.slug}`, priority: '0.7' })),
+    ...tasks.map(t => ({ loc: `/tasks/${t.slug}`, priority: '0.7' })),
+    ...guides.map(g => ({ loc: `/guides/${g.slug}`, priority: '0.6' })),
+    ...scenarios.map(s => ({ loc: `/scenarios/${s.slug}`, priority: '0.5' })),
+    { loc: '/tools/prompt-builder', priority: '0.8' },
+    { loc: '/tools/output-checker', priority: '0.8' },
+    { loc: '/tools/reply-filter', priority: '0.8' },
+    { loc: '/pages/about', priority: '0.4' },
+    { loc: '/pages/contact', priority: '0.4' },
+    { loc: '/pages/disclaimer', priority: '0.4' },
+    { loc: '/pages/privacy', priority: '0.4' },
+    { loc: '/pages/terms', priority: '0.4' }
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
