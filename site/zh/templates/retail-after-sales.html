@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>零售售后处理话术 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为零售店售后问题生成处理话术">
+<link rel="canonical" href="https://bizai.jtlcook.com/zh/templates/retail-after-sales">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/retail-after-sales">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/retail-after-sales">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/retail-after-sales">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="零售售后处理话术 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为零售店售后问题生成处理话术">
+<meta property="og:url" content="https://bizai.jtlcook.com/zh/templates/retail-after-sales">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售售后处理话术","description":"为零售店售后问题生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：客户反馈的具体问题和证据（照片等）、商品状况判断、经授权的处理方案（含备选）、各环节的时间节点、运费承担方案、退货地址和快递信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：处理方案是否在你的权限范围内；时间承诺是否可兑现；运费承担是否明确说明；是否给了客户选择权；是否有暗示客户责任的表述；需要客户配合的事项是否简单明了；语气是否诚恳高效"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户反馈的具体问题和证据（照片等）"},{"@type":"HowToSupply","name":"商品状况判断"},{"@type":"HowToSupply","name":"经授权的处理方案（含备选）"},{"@type":"HowToSupply","name":"各环节的时间节点"},{"@type":"HowToSupply","name":"运费承担方案"},{"@type":"HowToSupply","name":"退货地址和快递信息"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../en/templates/retail-after-sales.html" class="lang-btn" title="English">EN</a></div>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>零售售后处理话术</span>
+</nav>
+<article class="template-detail">
+  <h1>零售售后处理话术</h1>
+  <div class="template-meta">
+    <span class="tag">零售与小电商</span>
+    <span class="tag">投诉处理</span>
+  </div>
+  <p class="template-desc">为零售店售后问题生成处理话术</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>客户要求退换货、商品有质量问题时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于批量召回通知</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>客户反馈的具体问题和证据（照片等）</li><li>商品状况判断</li><li>经授权的处理方案（含备选）</li><li>各环节的时间节点</li><li>运费承担方案</li><li>退货地址和快递信息</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位处理过大量售后问题的零售客服主管，深知售后处理的核心是「快速解决+不让客户觉得麻烦」。现在需要针对一位客户的售后问题生成处理话术。
+
+请根据以下信息生成话术：
+客户反馈的售后问题：{售后问题}
+商品当前状况（客户描述/照片）：{商品情况}
+经确认的处理方案：{处理方案}
+处理时间节点：{时间节点}
+需要客户配合的事项：{客户配合}
+
+输出要求：
+- 字数100-150字
+- 开头表示理解，但不要过度道歉（一句即可）
+- 快速进入解决方案，给出2个选项让客户选择（如可能）
+- 每个方案要说清楚：客户需要做什么+我们做什么+多久完成
+- 如果需要客户寄回商品，主动说明运费承担方
+- 结尾确认客户意向，不要单方面决定
+
+禁止事项：
+- 不要求客户提供过多证明（照片够了就不要求视频）
+- 不使用「按照规定」「公司流程要求」等冷冰冰的话
+- 不暗示客户使用不当
+- 不拖延处理时间
+- 不承诺无法兑现的时间节点</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{售后问题}</code></td><td>客户反馈的具体问题，如「衣服走线开裂」「鞋子左右脚颜色不一样」</td></tr><tr><td><code>{商品情况}</code></td><td>根据客户描述或照片判断的商品状况</td></tr><tr><td><code>{处理方案}</code></td><td>经确认可执行的方案，如「退款/换货/补发配件」</td></tr><tr><td><code>{时间节点}</code></td><td>每个环节的预计时间，如「今天发货，后天到」「退款3个工作日到账」</td></tr><tr><td><code>{客户配合}</code></td><td>需要客户做什么，如「寄回商品」「提供订单号」</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>80-120字售后回复</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>看了您发的照片，确实是走线开裂的质量问题，给您添麻烦了。这边给您两个方案：
+方案一：直接退款，您把衣服寄回来就行，运费我们出（发退货码给您，不用垫付）；
+方案二：换一件新的寄给您，我这边今天就发，预计后天到。
+您看哪个方便？选好了我马上安排。（仅供格式参考，实际请根据具体售后问题生成）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 处理方案是否在你的权限范围内</label></li><li><label><input type="checkbox"> 时间承诺是否可兑现</label></li><li><label><input type="checkbox"> 运费承担是否明确说明</label></li><li><label><input type="checkbox"> 是否给了客户选择权</label></li><li><label><input type="checkbox"> 是否有暗示客户责任的表述</label></li><li><label><input type="checkbox"> 需要客户配合的事项是否简单明了</label></li><li><label><input type="checkbox"> 语气是否诚恳高效</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/retail-customer-reply.html" class="related-link">零售客服咨询回复</a><a href="../templates/retail-review-response.html" class="related-link">零售好评/差评回复</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>餐饮投诉处理话术 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为餐厅处理现场或线上投诉生成应对话术">
+<link rel="canonical" href="https://bizai.jtlcook.com/zh/templates/catering-complaint">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/catering-complaint">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/catering-complaint">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/catering-complaint">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="餐饮投诉处理话术 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为餐厅处理现场或线上投诉生成应对话术">
+<meta property="og:url" content="https://bizai.jtlcook.com/zh/templates/catering-complaint">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮投诉处理话术","description":"为餐厅处理现场或线上投诉生成应对话术","step":[{"@type":"HowToStep","text":"准备材料：投诉的具体内容（尽量记录原话）、内部核实的结果、你的权限范围内可提供的解决方案、后续改进计划、投诉渠道信息"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否按「共情→认责→方案→跟进」结构组织；共情是否具体到客户的感受；解决方案是否在你的权限范围内；是否提供了选择而非单方面决定；后续跟进是否具体可执行；语气是否与投诉渠道匹配（现场更口语化）；是否避免了对抗性或冷漠的表述"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"投诉的具体内容（尽量记录原话）"},{"@type":"HowToSupply","name":"内部核实的结果"},{"@type":"HowToSupply","name":"你的权限范围内可提供的解决方案"},{"@type":"HowToSupply","name":"后续改进计划"},{"@type":"HowToSupply","name":"投诉渠道信息"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../en/templates/catering-complaint.html" class="lang-btn" title="English">EN</a></div>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>餐饮投诉处理话术</span>
+</nav>
+<article class="template-detail">
+  <h1>餐饮投诉处理话术</h1>
+  <div class="template-meta">
+    <span class="tag">餐饮与咖啡</span>
+    <span class="tag">投诉处理</span>
+  </div>
+  <p class="template-desc">为餐厅处理现场或线上投诉生成应对话术</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>顾客现场投诉、电话投诉或平台投诉时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于食品安全事故的官方声明</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>投诉的具体内容（尽量记录原话）</li><li>内部核实的结果</li><li>你的权限范围内可提供的解决方案</li><li>后续改进计划</li><li>投诉渠道信息</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位经历过各种客诉场景的餐饮店长，懂得在客户情绪激动时如何稳住局面并解决问题。现在需要为一起客户投诉（现场、电话或线上）生成处理话术。
+
+请根据以下信息生成话术：
+投诉内容（客户原话或摘要）：{投诉内容}
+经核实的实际情况：{核实结果}
+当场可提供的解决方案：{解决方案}
+后续跟进计划：{后续跟进}
+投诉渠道（现场/电话/线上）：{投诉渠道}
+
+输出要求：
+- 字数120-180字
+- 按「共情→认责→方案→跟进」四步结构组织
+- 共情部分要具体到客户的感受，不要泛泛说「给您带来不便」
+- 认责部分诚实说明情况，是自己的问题就承认
+- 方案部分给出2个选项让客户选择（如可能）
+- 跟进部分说明后续会做什么防止再发生
+- 如果是现场投诉，语气要更口语化；线上投诉可以稍正式
+
+禁止事项：
+- 不使用「按照规定」「公司流程」等冷冰冰的话
+- 不暗示客户小题大做或无理取闹
+- 不承诺超出权限的补偿
+- 不在话术中提及「走法律途径」等对抗性语言
+- 不使用「希望您理解」（这句话容易激怒客户）</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{投诉内容}</code></td><td>客户投诉的具体问题，尽量记录原话，如「菜里有头发」「服务员态度很差」</td></tr><tr><td><code>{核实结果}</code></td><td>你了解到的实际情况，如「确认是后厨操作问题」「服务员当时确实语气不好」</td></tr><tr><td><code>{解决方案}</code></td><td>你能当场提供的解决方案，如「免单+重做」「赠送代金券」</td></tr><tr><td><code>{后续跟进}</code></td><td>后续会做什么防止再发生，如「下午全面检查后厨」「对服务员进行培训」</td></tr><tr><td><code>{投诉渠道}</code></td><td>客户是在现场投诉、打电话投诉还是在线上平台投诉</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>100-150字投诉处理话术</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>先生/女士，吃饭吃到异物确实让人很不舒服，换作是我也会生气，这一点我完全理解。刚才去后厨核实了，确认是备菜环节操作不规范导致的，这是我们的责任。现在给您两个方案：一是这道菜免单并重新做一份，二是本桌全部免单。您看哪个合适？另外，今天下午我会对后厨做一次全面检查，调整备菜流程。感谢您直接告诉我们，这对我们改进很重要。（仅供格式参考，实际请根据具体投诉生成）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否按「共情→认责→方案→跟进」结构组织</label></li><li><label><input type="checkbox"> 共情是否具体到客户的感受</label></li><li><label><input type="checkbox"> 解决方案是否在你的权限范围内</label></li><li><label><input type="checkbox"> 是否提供了选择而非单方面决定</label></li><li><label><input type="checkbox"> 后续跟进是否具体可执行</label></li><li><label><input type="checkbox"> 语气是否与投诉渠道匹配（现场更口语化）</label></li><li><label><input type="checkbox"> 是否避免了对抗性或冷漠的表述</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-bad-review.html" class="related-link">餐饮差评回复</a><a href="../templates/catering-delivery-reply.html" class="related-link">餐饮外卖客服回复</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

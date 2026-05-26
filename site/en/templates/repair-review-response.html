@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repair Service Review Response - Small Business AI Workflow & Template Library</title>
+<meta name="description" content="Home repair/housekeeping service online reviews generate responses">
+<link rel="canonical" href="https://bizai.jtlcook.com/en/templates/repair-review-response">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/repair-review-response">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/repair-review-response">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/repair-review-response">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="Repair Service Review Response - Small Business AI Workflow & Template Library">
+<meta property="og:description" content="Home repair/housekeeping service online reviews generate responses">
+<meta property="og:url" content="https://bizai.jtlcook.com/en/templates/repair-review-response">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Small Business AI Workflow & Template Library">
+<meta property="og:locale" content="en_US">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"维修服务评价回复","description":"Generate reply for repair / service review","step":[{"@type":"HowToStep","text":"Prepare materials: review (positive review or negative review complete content), review and platform, customer repair service item and actual situation, negative review: verify reason and, provide service or plan/solution, store contact method/way"},{"@type":"HowToStep","text":"Copy the Prompt and replace the fields in curly braces with your actual information"},{"@type":"HowToStep","text":"Paste the Prompt into an AI tool to generate content"},{"@type":"HowToStep","text":"Human review checklist: whether review specific issue/problem response; negative review reply whether issue/problem; whether specific actionable; plan/solution whether deliverable; tone whether sincere or; whether avoid template; reply whether ()"}],"tool":[{"@type":"HowToTool","name":"AI chat tool (e.g., ChatGPT, Claude, Gemini)"}],"supply":[{"@type":"HowToSupply","name":"review (positive review or negative review complete content)"},{"@type":"HowToSupply","name":"review and platform"},{"@type":"HowToSupply","name":"customer repair service item and actual situation"},{"@type":"HowToSupply","name":"negative review: verify reason and"},{"@type":"HowToSupply","name":"provide service or plan/solution"},{"@type":"HowToSupply","name":"store contact method/way"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">Small Business AI Workflow & Template Library</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">Templates</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt Builder</a></li>
+      <li><a href="../tools/output-checker.html">Content Checker</a></li>
+      <li><a href="../tools/reply-filter.html">Service Filter</a></li>
+      <li><a href="../guides/how-to-use-ai.html">User Guide</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../zh/templates/repair-review-response.html" class="lang-btn" title="Chinese">CN</a></div>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a> &gt; <a href="../templates/index.html">Templates</a> &gt; <span>Repair Service Review Response</span>
+</nav>
+<article class="template-detail">
+  <h1>Repair Service Review Response</h1>
+  <div class="template-meta">
+    <span class="tag">Repair & Home Services</span>
+    <span class="tag">Review Responses</span>
+  </div>
+  <p class="template-desc">Home repair/housekeeping service online reviews generate responses</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>Use Cases</h3>
+      <p>Use for responding to 58.com , Meituan etc. platform reviews</p>
+    </div>
+    <div class="info-box">
+      <h3>Not Suitable For</h3>
+      <p>Not suitable for dispute resolution</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>Materials Needed</h2>
+    <ul class="materials-list"><li>original review text (positive review or negative review complete content)</li><li>review star rating and platform source</li><li>customer repair items and situation</li><li>is negative review: within verify reason and</li><li>can after service or compensation plan</li><li>store contact info</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt (Click to Copy)</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">[Note: This prompt template is in Chinese, designed for use with Chinese-language AI models.]
+
+你是一位经营维修服务店铺5年的老板，在58同城和美团上积累了上千条评价。你回复评价的原则是：好评要感谢但不敷衍，差评要解决问题而不是辩解。你知道潜在客户会看评价回复来判断这家店靠不靠谱。
+
+现在需要针对一条线上评价撰写商家回复。
+
+请根据以下信息撰写：
+评价内容：{评价内容}
+评价星级：{星级}
+评价平台：{平台}
+当时的维修项目：{维修项目}
+实际情况说明：{实际情况}
+后续方案（差评适用）：{后续方案}
+
+输出格式要求：
+- 好评回复60-100字，差评回复100-160字
+- 好评回复：提及客户具体夸奖的点，补充一个使用小贴士，欢迎再次联系
+- 差评回复：先道歉，再针对具体问题说明原因（不推卸），然后说已经做了什么改进，最后给出补救方案和联系方式
+- 称呼用「您」，不用「亲」「宝」
+- 语气诚恳务实，像一个重视口碑的手艺人在回话
+
+禁止事项：
+- 不使用「感谢您的五星好评」等模板化开头
+- 不在差评回复中暗示客户有错
+- 不使用「我们会加强管理」等空洞承诺
+- 不在回复中透露其他客户的信息
+- 不用过长的回复（避免像在写作文）</pre>
+      <button class="btn-copy" onclick="copyPrompt()">Copy Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>Field Descriptions</h2>
+    <table class="field-table">
+      <thead><tr><th>Field</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>{评价内容}</code></td><td>customer original review text (e.g. "师傅很准时，修得也快，就是走的时候地上有点脏")</td></tr><tr><td><code>{星级}</code></td><td>customer give (e.g. "「4星」「2星」")</td></tr><tr><td><code>{平台}</code></td><td>review at platform (e.g. "「58同城」「美团」「大众点评」")</td></tr><tr><td><code>{维修项目}</code></td><td>give customer (e.g. "厨房水龙头更换")</td></tr><tr><td><code>{实际情况}</code></td><td>to situation (e.g. "当天师傅赶下一单确实走得急，没来得及清理")</td></tr><tr><td><code>{后续方案}</code></td><td>negative review situation under (e.g. "安排师傅上门清理并检查是否有遗漏")</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>Output Format</h2>
+    <p>60-100 character / 100-160 character platform response</p>
+  </section>
+
+  <section class="template-section">
+    <h2>Output Example</h2>
+    <div class="example-box">
+      <p>[Sample output in Chinese - this is a format reference for Chinese-language AI output]
+
+您好，感谢反馈。师傅走后现场没清理干净这个问题确实是我们的疏忽，当天单子排得紧不是借口。我已经跟师傅强调过，以后每次完工必须清理现场、请Customer验收后再离开。您看方便的话加我微信XXX，我安排人上门把卫生补做了，顺便帮您检查一下水龙头用着是否正常。给您添麻烦了，抱歉。（仅供格式参考，请根据实际评价内容生成）</p>
+      <p class="example-note">The above is a format example only. Actual output should be generated based on your materials.</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>Pre-publish Review Checklist</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> whether to review in to specific issue do</label></li><li><label><input type="checkbox"> negative review reply whether issue</label></li><li><label><input type="checkbox"> whether specific and actionable</label></li><li><label><input type="checkbox"> plan whether can</label></li><li><label><input type="checkbox"> tone whether sincere or</label></li><li><label><input type="checkbox"> whether</label></li><li><label><input type="checkbox"> reply long whether (not long not)</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>Related Templates</h2><div class="related-templates"><a href="../templates/repair-customer-comm.html" class="related-link">Repair Customer Communication Script</a><a href="../templates/repair-complaint.html" class="related-link">Repair Complaint Handling Script</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 Small Business AI Workflow & Template Library</p>
+    <p>Email: 1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">About Us</a>
+      <a href="../pages/contact.html">Contact Us</a>
+      <a href="../pages/disclaimer.html">Disclaimer</a>
+      <a href="../pages/privacy.html">Privacy Policy</a>
+      <a href="../pages/terms.html">Terms of Use</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

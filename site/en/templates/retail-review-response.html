@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retail Review Response - Small Business AI Workflow & Template Library</title>
+<meta name="description" content="Online store reviews generate merchantresponses">
+<link rel="canonical" href="https://bizai.jtlcook.com/en/templates/retail-review-response">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/retail-review-response">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/retail-review-response">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/retail-review-response">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="Retail Review Response - Small Business AI Workflow & Template Library">
+<meta property="og:description" content="Online store reviews generate merchantresponses">
+<meta property="og:url" content="https://bizai.jtlcook.com/en/templates/retail-review-response">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Small Business AI Workflow & Template Library">
+<meta property="og:locale" content="en_US">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售好评/差评回复","description":"Generate reply for online store review","step":[{"@type":"HowToStep","text":"Prepare materials: review, review, product/item and information, information, negative review resolve plan/solution (applicable to)"},{"@type":"HowToStep","text":"Copy the Prompt and replace the fields in curly braces with your actual information"},{"@type":"HowToStep","text":"Paste the Prompt into an AI tool to generate content"},{"@type":"HowToStep","text":"Human review checklist: reply whether review specific content; positive review reply whether information; negative review reply whether specific resolve plan/solution; whether avoid template opening and ending; tone whether and review; whether or customer; reply whether affect"}],"tool":[{"@type":"HowToTool","name":"AI chat tool (e.g., ChatGPT, Claude, Gemini)"}],"supply":[{"@type":"HowToSupply","name":"review"},{"@type":"HowToSupply","name":"review"},{"@type":"HowToSupply","name":"product/item and information"},{"@type":"HowToSupply","name":"information"},{"@type":"HowToSupply","name":"negative review resolve plan/solution (applicable to)"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">Small Business AI Workflow & Template Library</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">Templates</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt Builder</a></li>
+      <li><a href="../tools/output-checker.html">Content Checker</a></li>
+      <li><a href="../tools/reply-filter.html">Service Filter</a></li>
+      <li><a href="../guides/how-to-use-ai.html">User Guide</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../zh/templates/retail-review-response.html" class="lang-btn" title="Chinese">CN</a></div>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a> &gt; <a href="../templates/index.html">Templates</a> &gt; <span>Retail Review Response</span>
+</nav>
+<article class="template-detail">
+  <h1>Retail Review Response</h1>
+  <div class="template-meta">
+    <span class="tag">Retail & E-commerce</span>
+    <span class="tag">Review Responses</span>
+  </div>
+  <p class="template-desc">Online store reviews generate merchantresponses</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>Use Cases</h3>
+      <p>Use for responding to customers positive or negative reviews</p>
+    </div>
+    <div class="info-box">
+      <h3>Not Suitable For</h3>
+      <p></p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>Materials Needed</h2>
+    <ul class="materials-list"><li>original review text</li><li>review star rating</li><li>product name and basic info</li><li>info</li><li>negative review solution (use)</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt (Click to Copy)</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">[Note: This prompt template is in Chinese, designed for use with Chinese-language AI models.]
+
+你是一位管理过多家网店评价区的运营专员，深知评价回复既是给评价者看的，更是给其他潜在买家看的。现在需要针对一条客户评价生成商家回复。
+
+请根据以下信息生成回复：
+客户评价原文：{评价内容}
+评价星级：{评价星级}
+评价涉及的商品：{商品名称}
+你想在回复中传达的重点：{回复重点}
+如是差评，可提供的解决方案：{解决方案}
+
+输出要求：
+- 字数60-120字
+- 好评回复：感谢要具体（针对客户提到的点），顺带补充一个使用/搭配建议
+- 差评回复：先道歉+认责，给出具体解决方案，邀请私聊处理
+- 中评回复：感谢反馈，针对不满意的点做解释或改进说明
+- 回复要让其他浏览评价的买家看到你是负责任的商家
+- 每条回复的开头和结构都要不同，避免模板感
+
+禁止事项：
+- 不使用千篇一律的「感谢您的好评」开头
+- 不在差评回复中暗示客户有问题
+- 不使用「亲亲」等过度亲昵称呼
+- 不在回复中透露其他客户的信息
+- 不使用「我们会继续努力」等空话结尾</pre>
+      <button class="btn-copy" onclick="copyPrompt()">Copy Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>Field Descriptions</h2>
+    <table class="field-table">
+      <thead><tr><th>Field</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>{评价内容}</code></td><td>customer original review text</td></tr><tr><td><code>{评价星级}</code></td><td>1-5, reply</td></tr><tr><td><code>{商品名称}</code></td><td>by review specific product</td></tr><tr><td><code>{回复重点}</code></td><td>reply (e.g. "「强调版型优势」「解释色差原因」")</td></tr><tr><td><code>{解决方案}</code></td><td>is negative review, can solution (e.g. "「退换货」「补发」")</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>Output Format</h2>
+    <p>50-100 character review response</p>
+  </section>
+
+  <section class="template-section">
+    <h2>Output Example</h2>
+    <div class="example-box">
+      <p>[Sample output in Chinese - this is a format reference for Chinese-language AI output]
+
+看到您说这件外套「版型比预期好」特别开心，选这个版型的时候确实打了好几版样才定下来的。您提到的内侧口袋设计是我们特意加的，放手机刚好。入秋之后搭配高领毛衣或卫衣都很合适，有搭配问题随时找客服聊。（仅供格式参考，实际请根据具体评价生成）</p>
+      <p class="example-note">The above is a format example only. Actual output should be generated based on your materials.</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>Pre-publish Review Checklist</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> reply whether to review in specific content</label></li><li><label><input type="checkbox"> positive review reply whether has info</label></li><li><label><input type="checkbox"> negative review reply whether give specific solution</label></li><li><label><input type="checkbox"> whether and</label></li><li><label><input type="checkbox"> tone whether and review star rating</label></li><li><label><input type="checkbox"> whether has or customer has</label></li><li><label><input type="checkbox"> reply to at whether has</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>Related Templates</h2><div class="related-templates"><a href="../templates/retail-customer-reply.html" class="related-link">Retail Customer Service Reply</a><a href="../templates/retail-after-sales.html" class="related-link">Retail After-sales Script</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 Small Business AI Workflow & Template Library</p>
+    <p>Email: 1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">About Us</a>
+      <a href="../pages/contact.html">Contact Us</a>
+      <a href="../pages/disclaimer.html">Disclaimer</a>
+      <a href="../pages/privacy.html">Privacy Policy</a>
+      <a href="../pages/terms.html">Terms of Use</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

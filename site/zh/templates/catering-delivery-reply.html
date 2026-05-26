@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>餐饮外卖客服回复 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="针对外卖订单问题生成客服回复话术">
+<link rel="canonical" href="https://bizai.jtlcook.com/zh/templates/catering-delivery-reply">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/catering-delivery-reply">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/catering-delivery-reply">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/catering-delivery-reply">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="餐饮外卖客服回复 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="针对外卖订单问题生成客服回复话术">
+<meta property="og:url" content="https://bizai.jtlcook.com/zh/templates/catering-delivery-reply">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"餐饮外卖客服回复","description":"针对外卖订单问题生成客服回复话术","step":[{"@type":"HowToStep","text":"准备材料：客户投诉的具体内容、后台订单核实结果、问题归因分析、经授权的补偿方案及额度、补偿执行的具体方式和时间、客服联系方式（如需后续跟进）"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否准确复述了客户的问题；核实结果是否与后台记录一致；补偿方案是否具体（什么+怎么给+何时到）；是否有推卸责任给骑手或平台的表述；语气是否温和高效，没有过度亲昵；补偿是否在你的权限范围内；时间承诺是否可兑现"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"客户投诉的具体内容"},{"@type":"HowToSupply","name":"后台订单核实结果"},{"@type":"HowToSupply","name":"问题归因分析"},{"@type":"HowToSupply","name":"经授权的补偿方案及额度"},{"@type":"HowToSupply","name":"补偿执行的具体方式和时间"},{"@type":"HowToSupply","name":"客服联系方式（如需后续跟进）"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../en/templates/catering-delivery-reply.html" class="lang-btn" title="English">EN</a></div>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>餐饮外卖客服回复</span>
+</nav>
+<article class="template-detail">
+  <h1>餐饮外卖客服回复</h1>
+  <div class="template-meta">
+    <span class="tag">餐饮与咖啡</span>
+    <span class="tag">客服回复</span>
+  </div>
+  <p class="template-desc">针对外卖订单问题生成客服回复话术</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>外卖漏送、送错、超时等问题的客服回复</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于食品安全投诉的正式回应</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>客户投诉的具体内容</li><li>后台订单核实结果</li><li>问题归因分析</li><li>经授权的补偿方案及额度</li><li>补偿执行的具体方式和时间</li><li>客服联系方式（如需后续跟进）</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位处理过上千条外卖客诉的餐饮客服主管，熟悉美团、饿了么平台的客诉处理规范。现在需要针对一位外卖客户的投诉生成一段回复话术，用于平台在线客服或电话沟通。
+
+请根据以下信息生成回复：
+客户反馈的问题：{客户问题描述}
+订单实际情况（经后台核实）：{订单情况}
+问题归因（商家/骑手/平台）：{问题归因}
+我们能提供的补偿方案：{补偿方案}
+补偿执行方式：{执行方式}
+
+输出要求：
+- 字数80-120字
+- 开头一句话表达歉意并复述客户的问题（让客户感到被听见）
+- 简要说明核实结果，不要长篇解释
+- 补偿方案要具体到「什么东西+怎么给+什么时候到」
+- 结尾留一句关怀，如「希望下次能给您更好的体验」
+- 语气温和但高效，像一个靠谱的客服在解决问题
+
+禁止事项：
+- 不把责任推给骑手或平台（即使确实是对方问题）
+- 不使用「可能」「应该」等模糊词
+- 不要求客户提供过多证明材料
+- 不使用「亲亲」等过度亲昵称呼
+- 补偿承诺不超出你的权限范围</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{客户问题描述}</code></td><td>客户反馈的具体问题，如「少送了一份菜」「饭菜凉了」「送错地址」</td></tr><tr><td><code>{订单情况}</code></td><td>后台核实的订单状态，如「确认漏打包一份凉菜」「出餐时间正常但配送超时」</td></tr><tr><td><code>{问题归因}</code></td><td>问题出在哪个环节：商家打包/出餐慢/骑手配送/平台调度</td></tr><tr><td><code>{补偿方案}</code></td><td>具体补偿内容，如「补送漏送菜品+赠送8元优惠券」</td></tr><tr><td><code>{执行方式}</code></td><td>补偿怎么给到客户，如「骑手25分钟内补送」「优惠券已发到账户」</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>60-100字客服回复</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>您好，非常抱歉这次点餐体验不好，让您等了这么久还少送了一份菜。核实了一下，确实是我们打包时遗漏了您的凉拌黄瓜。现在安排补送，骑手预计25分钟内送达。另外给您发了一张8元无门槛券，已经放到您的账户里了，下次点餐自动抵扣。给您添麻烦了，下次一定仔细核对。（仅供格式参考，实际请根据具体问题生成）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否准确复述了客户的问题</label></li><li><label><input type="checkbox"> 核实结果是否与后台记录一致</label></li><li><label><input type="checkbox"> 补偿方案是否具体（什么+怎么给+何时到）</label></li><li><label><input type="checkbox"> 是否有推卸责任给骑手或平台的表述</label></li><li><label><input type="checkbox"> 语气是否温和高效，没有过度亲昵</label></li><li><label><input type="checkbox"> 补偿是否在你的权限范围内</label></li><li><label><input type="checkbox"> 时间承诺是否可兑现</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/catering-bad-review.html" class="related-link">餐饮差评回复</a><a href="../templates/catering-complaint.html" class="related-link">餐饮投诉处理话术</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

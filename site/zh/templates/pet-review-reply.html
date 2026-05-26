@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宠物店评价回复 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为宠物店线上评价生成回复">
+<link rel="canonical" href="https://bizai.jtlcook.com/zh/templates/pet-review-reply">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/pet-review-reply">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/pet-review-reply">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/pet-review-reply">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="宠物店评价回复 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为宠物店线上评价生成回复">
+<meta property="og:url" content="https://bizai.jtlcook.com/zh/templates/pet-review-reply">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店评价回复","description":"为宠物店线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价原文和星级、评价涉及的服务项目、宠物名字（如评价中提到）、如果是差评：核实后的情况和改进措施、可提供的后续关怀或补偿、店铺联系方式"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否用宠物名字称呼而非泛称；差评回复是否优先关心了宠物状况；是否避免了给出医疗诊断建议；后续方案是否具体可执行；语气是否温暖真诚而非机械；是否避免了暗示主人照顾不当"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价原文和星级"},{"@type":"HowToSupply","name":"评价涉及的服务项目"},{"@type":"HowToSupply","name":"宠物名字（如评价中提到）"},{"@type":"HowToSupply","name":"如果是差评：核实后的情况和改进措施"},{"@type":"HowToSupply","name":"可提供的后续关怀或补偿"},{"@type":"HowToSupply","name":"店铺联系方式"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../en/templates/pet-review-reply.html" class="lang-btn" title="English">EN</a></div>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>宠物店评价回复</span>
+</nav>
+<article class="template-detail">
+  <h1>宠物店评价回复</h1>
+  <div class="template-meta">
+    <span class="tag">宠物服务</span>
+    <span class="tag">评价回复</span>
+  </div>
+  <p class="template-desc">为宠物店线上评价生成回复</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>收到美团、大众点评等平台评价时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于医疗纠纷回复</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>评价原文和星级</li><li>评价涉及的服务项目</li><li>宠物名字（如评价中提到）</li><li>如果是差评：核实后的情况和改进措施</li><li>可提供的后续关怀或补偿</li><li>店铺联系方式</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位真心喜欢动物的宠物店老板，在回复评价时你不只是在做客服，而是在跟一群同样爱宠物的人交流。你回复好评时会记住宠物的名字和特点，回复差评时会优先关心宠物的状况而非辩解。
+
+现在需要针对一条线上评价撰写商家回复。
+
+请根据以下信息撰写：
+评价内容：{评价内容}
+评价星级：{星级}
+服务项目：{服务项目}
+宠物名字：{宠物名字}
+实际情况（差评适用）：{实际情况}
+后续方案（差评适用）：{后续方案}
+
+输出格式要求：
+- 好评回复50-90字，差评回复100-150字
+- 好评回复：用宠物名字称呼，提及宠物在店里的表现或状态，给一个针对该品种的小贴士
+- 差评回复：先表达对宠物状况的关心，再说明情况和已采取的措施，给出具体的补救方案
+- 语气温暖真诚，体现对动物的关爱
+- 回复中体现你记得这只宠物（提及品种特点、上次服务等细节）
+
+禁止事项：
+- 不使用「感谢您的好评」等机械回复
+- 不在差评回复中暗示主人照顾不当
+- 不给出任何医疗建议（如果涉及健康问题建议就医）
+- 不泄露宠物的健康隐私信息
+- 不使用「我们家所有宠物都很开心」等无法证实的说法</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{评价内容}</code></td><td>客户写的评价，如「洗得很干净，但是豆豆回来后一直挠耳朵」</td></tr><tr><td><code>{星级}</code></td><td>几颗星，如「3星」「5星」</td></tr><tr><td><code>{服务项目}</code></td><td>客户当时做了什么服务，如「全身洗护+耳道清洁」</td></tr><tr><td><code>{宠物名字}</code></td><td>评价中提到的宠物名字，如「豆豆」「没提到名字」</td></tr><tr><td><code>{实际情况}</code></td><td>差评情况下核实的原因，如「耳道清洁时发现有轻微发红，已告知主人建议观察」</td></tr><tr><td><code>{后续方案}</code></td><td>打算怎么跟进，如「邀请带豆豆回店免费复查耳朵情况，如有异常建议就医」</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>好评50-90字/差评100-150字评价回复</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>您好，感谢反馈。豆豆挠耳朵的情况我很在意——当天清洁耳道时我们发现里面有轻微发红，洗护结束时跟接宠物的家人提过建议观察。如果现在还在挠，建议带去医院看一下排除耳螨的可能。您方便的话这周可以带豆豆来店里，我免费帮忙再检查一下耳道状况。有任何情况随时微信联系我。（仅供格式参考，请根据实际评价生成）</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否用宠物名字称呼而非泛称</label></li><li><label><input type="checkbox"> 差评回复是否优先关心了宠物状况</label></li><li><label><input type="checkbox"> 是否避免了给出医疗诊断建议</label></li><li><label><input type="checkbox"> 后续方案是否具体可执行</label></li><li><label><input type="checkbox"> 语气是否温暖真诚而非机械</label></li><li><label><input type="checkbox"> 是否避免了暗示主人照顾不当</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/pet-service-description.html" class="related-link">宠物服务项目介绍</a><a href="../templates/pet-social-media.html" class="related-link">宠物店朋友圈内容</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

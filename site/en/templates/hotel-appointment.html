@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B&B Check-in Guide - Small Business AI Workflow & Template Library</title>
+<meta name="description" content="Generate content for B&B">
+<link rel="canonical" href="https://bizai.jtlcook.com/en/templates/hotel-appointment">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/hotel-appointment">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/hotel-appointment">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/hotel-appointment">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="B&B Check-in Guide - Small Business AI Workflow & Template Library">
+<meta property="og:description" content="Generate content for B&B">
+<meta property="og:url" content="https://bizai.jtlcook.com/en/templates/hotel-appointment">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Small Business AI Workflow & Template Library">
+<meta property="og:locale" content="en_US">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿入住引导","description":"Generate check-in script for B&B","step":[{"@type":"HowToStep","text":"Prepare materials: method/way （ address, ）, time and policy, information （, restaurant, , etc.）, season note/attention （, recommend ）, housekeeper contact method/way, service arrangement method/way (if any)"},{"@type":"HowToStep","text":"Copy the Prompt and replace the fields in curly braces with your actual information"},{"@type":"HowToStep","text":"Paste the Prompt into an AI tool to generate content"},{"@type":"HowToStep","text":"Human review checklist: whether accurate information; time whether and actual policy; remind whether complete (,, etc.); housekeeper contact method/way whether correct; whether safety information; tone whether"}],"tool":[{"@type":"HowToTool","name":"AI chat tool (e.g., ChatGPT, Claude, Gemini)"}],"supply":[{"@type":"HowToSupply","name":"method/way (address,)"},{"@type":"HowToSupply","name":"time and policy"},{"@type":"HowToSupply","name":"information (, restaurant,, etc.)"},{"@type":"HowToSupply","name":"season note/attention (, recommend)"},{"@type":"HowToSupply","name":"housekeeper contact method/way"},{"@type":"HowToSupply","name":"service arrangement method/way (if any)"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">Small Business AI Workflow & Template Library</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">Templates</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt Builder</a></li>
+      <li><a href="../tools/output-checker.html">Content Checker</a></li>
+      <li><a href="../tools/reply-filter.html">Service Filter</a></li>
+      <li><a href="../guides/how-to-use-ai.html">User Guide</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../zh/templates/hotel-appointment.html" class="lang-btn" title="Chinese">CN</a></div>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a> &gt; <a href="../templates/index.html">Templates</a> &gt; <span>B&B Check-in Guide</span>
+</nav>
+<article class="template-detail">
+  <h1>B&B Check-in Guide</h1>
+  <div class="template-meta">
+    <span class="tag">Hotels & B&B</span>
+    <span class="tag">Appointment Management</span>
+  </div>
+  <p class="template-desc">Generate content for B&B</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>Use Cases</h3>
+      <p>Use for after guest booking sending check-in guide</p>
+    </div>
+    <div class="info-box">
+      <h3>Not Suitable For</h3>
+      <p>Not suitable for contract terms</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>Materials Needed</h2>
+    <ul class="materials-list"><li>new to (address,)</li><li>time and policy</li><li>use info (, restaurant, etc.)</li><li>season precautions (days, advice)</li><li>housekeeper contact info</li><li>service arrangement (if any)</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt (Click to Copy)</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">[Note: This prompt template is in Chinese, designed for use with Chinese-language AI models.]
+
+你是一位民宿的管家，负责在客人预订成功后发送入住前的引导信息。你的目标是让客人在到达之前就感受到被欢迎和被照顾，同时获取所有实用的到达和入住信息。你的沟通风格温暖细致，像在接待一位来家里做客的朋友。现在需要生成一条入住引导消息，通过微信发送给已预订的客人。
+
+请根据以下信息生成入住引导话术：
+客人称呼：{客人称呼}
+入住日期：{入住日期}
+预订房型：{房型名称}
+入住时间/退房时间：{入退时间}
+详细交通指引（自驾/公共交通）：{交通指引}
+到达后的接待流程：{接待流程}
+需要客人提前告知的信息：{提前告知}
+周边实用信息（超市/餐厅/加油站）：{周边信息}
+特殊提醒（如山路、信号、天气）：{特殊提醒}
+管家联系方式：{联系方式}
+
+输出格式要求：
+- 字数控制在130-180字
+- 开头确认预订信息（房型+日期），表示欢迎
+- 中间用编号列出实用信息（交通、入住、注意事项），层次清晰
+- 特殊提醒要诚实标注（如最后一段山路、手机信号弱等）
+- 结尾提供管家联系方式，表示随时可联系
+- 语气温暖实用，像一位贴心的朋友在给你指路
+
+禁止事项：
+- 不隐瞒到达途中的不便（如山路、无信号路段）
+- 不使用「尊贵的客人」等酒店式称呼
+- 不在引导消息中追加推销升级房型
+- 不提供过时的交通信息
+- 不遗漏关键的安全提醒</pre>
+      <button class="btn-copy" onclick="copyPrompt()">Copy Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>Field Descriptions</h2>
+    <table class="field-table">
+      <thead><tr><th>Field</th><th>Description</th></tr></thead>
+      <tbody><tr><td><code>{客人称呼}</code></td><td></td></tr><tr><td><code>{入住日期}</code></td><td>check-in day</td></tr><tr><td><code>{房型名称}</code></td><td>room type</td></tr><tr><td><code>{入退时间}</code></td><td>check-in and specific time</td></tr><tr><td><code>{交通指引}</code></td><td>and to</td></tr><tr><td><code>{接待流程}</code></td><td>to after process (, etc.)</td></tr><tr><td><code>{提前告知}</code></td><td>requires should before info (to time, whether requires should)</td></tr><tr><td><code>{周边信息}</code></td><td>restaurant, etc. use info</td></tr><tr><td><code>{特殊提醒}</code></td><td>requires should remind (, days, etc.)</td></tr><tr><td><code>{联系方式}</code></td><td>housekeeper phone and WeChat</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>Output Format</h2>
+    <p>100-150 character check-in guide</p>
+  </section>
+
+  <section class="template-section">
+    <h2>Output Example</h2>
+    <div class="example-box">
+      <p>[Sample output in Chinese - this is a format reference for Chinese-language AI output]
+
+王先生您好，欢迎预订我们的山景大床房！入住日期：本周六。
+
+到达指引：
+1. 自驾导航搜「XX民宿」可直达，最后2公里是盘山路，弯道多请慢行
+2. 高铁到XX站，出站联系我可安排接站（免费，需提前1天预约）
+3. 山上手机信号偶尔不稳定，到了找不到路直接打我电话
+
+入住提醒：
+- 入住时间14:00后，提前到可以先在公共区域喝茶休息
+- 山里早晚温差大，建议带件外套
+- 免费停车位在院子里，可停2辆车
+
+到了给我打电话或微信语音，我在门口接您。管家小李：138XXXX（仅供格式参考）</p>
+      <p class="example-note">The above is a format example only. Actual output should be generated based on your materials.</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>Pre-publish Review Checklist</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> whether accurate for new info</label></li><li><label><input type="checkbox"> time whether and policy</label></li><li><label><input type="checkbox"> remind whether complete (, etc.)</label></li><li><label><input type="checkbox"> housekeeper Is the contact information correct</label></li><li><label><input type="checkbox"> whether safety info</label></li><li><label><input type="checkbox"> tone whether use</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>Related Templates</h2><div class="related-templates"><a href="../templates/hotel-room-description.html" class="related-link">B&B Room Description</a><a href="../templates/hotel-review-response.html" class="related-link">B&B Review Response</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 Small Business AI Workflow & Template Library</p>
+    <p>Email: 1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">About Us</a>
+      <a href="../pages/contact.html">Contact Us</a>
+      <a href="../pages/disclaimer.html">Disclaimer</a>
+      <a href="../pages/privacy.html">Privacy Policy</a>
+      <a href="../pages/terms.html">Terms of Use</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

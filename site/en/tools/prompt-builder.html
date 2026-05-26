@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Builder - Small Business AI Workflow & Template Library</title>
+<meta name="description" content="Select industry, task, and tone to quickly generate an AI prompt framework for small businesses">
+<link rel="canonical" href="https://bizai.jtlcook.com/en/tools/prompt-builder">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/tools/prompt-builder">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/tools/prompt-builder">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/tools/prompt-builder">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="Prompt Builder - Small Business AI Workflow & Template Library">
+<meta property="og:description" content="Select industry, task, and tone to quickly generate an AI prompt framework for small businesses">
+<meta property="og:url" content="https://bizai.jtlcook.com/en/tools/prompt-builder">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Small Business AI Workflow & Template Library">
+<meta property="og:locale" content="en_US">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Prompt Builder","description":"Select industry, task, and tone to quickly generate an AI prompt framework for small businesses","url":"https://bizai.jtlcook.com/tools/prompt-builder","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},"provider":{"@type":"Organization","name":"Small Business AI Workflow & Template Library","url":"https://bizai.jtlcook.com"}}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">Small Business AI Workflow & Template Library</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">Templates</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt Builder</a></li>
+      <li><a href="../tools/output-checker.html">Content Checker</a></li>
+      <li><a href="../tools/reply-filter.html">Service Filter</a></li>
+      <li><a href="../guides/how-to-use-ai.html">User Guide</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../zh/tools/prompt-builder.html" class="lang-btn" title="Chinese">CN</a></div>
+</header>
+<main class="main-content">
+
+<section class="section">
+  <h1>Prompt Builder</h1>
+  <p>Select industry, task, and tone to quickly generate a basic prompt framework</p>
+  <div class="tool-form">
+    <div class="form-group">
+      <label for="pb-industry">Select Industry</label>
+      <select id="pb-industry">
+        <option value="">Please select an industry</option>
+        <option value="catering">Food & Beverage</option><option value="retail">Retail & E-commerce</option><option value="beauty">Beauty & Hair</option><option value="repair">Repair & Home Services</option><option value="pet">Pet Services</option><option value="education">Education & Training</option><option value="photography">Photography Studio</option><option value="fitness">Fitness & Yoga</option><option value="hotel">Hotels & B&B</option><option value="clinic">Clinics & TCM</option><option value="auto-repair">Auto Services</option><option value="flower">Flower & Plant Shop</option><option value="bakery">Bakery & Desserts</option><option value="laundry">Laundry & Dry Cleaning</option><option value="real-estate">Real Estate</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="pb-task">Select Task</label>
+      <select id="pb-task">
+        <option value="">Please select a task type</option>
+        <option value="customer-service">Customer Service Replies</option><option value="campaign-copy">Campaign Copy</option><option value="short-video">Short Video Scripts</option><option value="product-description">Product & Service Descriptions</option><option value="recruitment">Recruitment & Training</option><option value="quotation">Quotation & Pre-contract Notes</option><option value="operations">Operations Sheets</option><option value="review-checklist">Review Checklist</option><option value="social-media">Social Media Operations</option><option value="review-response">Review Responses</option><option value="appointment">Appointment Management</option><option value="membership">Membership Operations</option><option value="seasonal-promo">Seasonal Promotions</option><option value="complaint-handling">Complaint Handling</option><option value="brand-story">Brand Story</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="pb-tone">Select Tone</label>
+      <select id="pb-tone">
+        <option value="friendly">亲切友好</option>
+        <option value="professional">专业正式</option>
+        <option value="casual">轻松随意</option>
+        <option value="warm">温暖贴心</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="pb-extra">补充要求（可选）</label>
+      <textarea id="pb-extra" rows="3" placeholder="如：字数限制、特殊格式要求等"></textarea>
+    </div>
+    <button class="btn btn-primary" onclick="generatePrompt()">Generate Prompt</button>
+  </div>
+  <div class="tool-output" id="pb-output" style="display:none;">
+    <h3>Generated Prompt</h3>
+    <pre class="prompt-text" id="pb-result"></pre>
+    <button class="btn-copy" onclick="copyGenerated()">复制</button>
+  </div>
+  <p class="tool-note">本工具在浏览器本地运行，不上传任何数据。</p>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 Small Business AI Workflow & Template Library</p>
+    <p>Email: 1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">About Us</a>
+      <a href="../pages/contact.html">Contact Us</a>
+      <a href="../pages/disclaimer.html">Disclaimer</a>
+      <a href="../pages/privacy.html">Privacy Policy</a>
+      <a href="../pages/terms.html">Terms of Use</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

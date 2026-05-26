@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>汽修报价说明 - 小商家 AI 工作流与模板库</title>
+<meta name="description" content="为汽修店生成维修报价说明">
+<link rel="canonical" href="https://bizai.jtlcook.com/zh/templates/auto-repair-quotation">
+<link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/auto-repair-quotation">
+<link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/auto-repair-quotation">
+<link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/auto-repair-quotation">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta property="og:title" content="汽修报价说明 - 小商家 AI 工作流与模板库">
+<meta property="og:description" content="为汽修店生成维修报价说明">
+<meta property="og:url" content="https://bizai.jtlcook.com/zh/templates/auto-repair-quotation">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="小商家 AI 工作流与模板库">
+<meta property="og:locale" content="zh_CN">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"汽修报价说明","description":"为汽修店生成维修报价说明","step":[{"@type":"HowToStep","text":"准备材料：车辆完整信息（品牌、车型、年款、里程数、VIN后四位）、故障现象描述（车主描述+技师检查结果）、维修方案（含备选方案，如原厂件/副厂件两种报价）、费用明细（每个配件单价+数量+工时费逐项列出）、质保条款（不同配件的质保期可能不同）、维修风险提示（如有拆检后可能发现的额外问题）、预计工期"},{"@type":"HowToStep","text":"复制 Prompt 并替换花括号中的字段为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：费用是否逐项透明列出（无隐藏收费）；配件等级是否如实标注（原厂/品牌副厂/普通副厂）；质保期限是否明确且与配件等级匹配；是否存在夸大故障严重性的恐吓话术；风险提示是否完整（可能的额外费用）；技术解释是否通俗易懂；是否给了车主选择空间而非单一方案"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"车辆完整信息（品牌、车型、年款、里程数、VIN后四位）"},{"@type":"HowToSupply","name":"故障现象描述（车主描述+技师检查结果）"},{"@type":"HowToSupply","name":"维修方案（含备选方案，如原厂件/副厂件两种报价）"},{"@type":"HowToSupply","name":"费用明细（每个配件单价+数量+工时费逐项列出）"},{"@type":"HowToSupply","name":"质保条款（不同配件的质保期可能不同）"},{"@type":"HowToSupply","name":"维修风险提示（如有拆检后可能发现的额外问题）"},{"@type":"HowToSupply","name":"预计工期"}]}</script>
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="../index.html" class="logo">小商家 AI 工作流与模板库</a>
+    <ul class="nav-links">
+      <li><a href="../templates/index.html">模板库</a></li>
+      <li><a href="../tools/prompt-builder.html">Prompt 构造器</a></li>
+      <li><a href="../tools/output-checker.html">内容自检</a></li>
+      <li><a href="../tools/reply-filter.html">客服筛选</a></li>
+      <li><a href="../guides/how-to-use-ai.html">使用指南</a></li>
+    </ul>
+  </nav>
+  <div class="lang-switcher"><a href="../../en/templates/auto-repair-quotation.html" class="lang-btn" title="English">EN</a></div>
+</header>
+<main class="main-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">首页</a> &gt; <a href="../templates/index.html">模板库</a> &gt; <span>汽修报价说明</span>
+</nav>
+<article class="template-detail">
+  <h1>汽修报价说明</h1>
+  <div class="template-meta">
+    <span class="tag">汽车服务</span>
+    <span class="tag">报价与合同前说明</span>
+  </div>
+  <p class="template-desc">为汽修店生成维修报价说明</p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>适用场景</h3>
+      <p>检查后向车主报价时使用</p>
+    </div>
+    <div class="info-box">
+      <h3>不适合</h3>
+      <p>不适合用于保险定损</p>
+    </div>
+  </div>
+
+  <section class="template-section">
+    <h2>需要准备的材料</h2>
+    <ul class="materials-list"><li>车辆完整信息（品牌、车型、年款、里程数、VIN后四位）</li><li>故障现象描述（车主描述+技师检查结果）</li><li>维修方案（含备选方案，如原厂件/副厂件两种报价）</li><li>费用明细（每个配件单价+数量+工时费逐项列出）</li><li>质保条款（不同配件的质保期可能不同）</li><li>维修风险提示（如有拆检后可能发现的额外问题）</li><li>预计工期</li></ul>
+  </section>
+
+  <section class="template-section">
+    <h2>Prompt（点击复制）</h2>
+    <div class="prompt-box">
+      <pre class="prompt-text" id="prompt-text">你是一位持有高级汽车维修工证书的技师主管，负责向车主解释检查结果和维修方案。你的原则是：让车主看懂每一分钱花在哪里，每个维修决定为什么这么做。现在需要为一位车主生成维修报价说明，通过微信发送给对方确认。
+
+请根据以下信息生成报价说明：
+车辆信息：{车辆信息}
+故障现象（车主描述）：{车主描述}
+检查结果（技师判断）：{检查结果}
+维修方案：{维修方案}
+配件选择（原厂/副厂及品牌）：{配件选择}
+费用明细：{费用明细}
+预计工期：{预计工期}
+质保说明：{质保说明}
+风险提示：{风险提示}
+
+输出格式要求：
+- 总字数控制在150-220字
+- 结构：称呼+车辆确认→检查结果（用车主能懂的话解释）→维修方案→费用明细表（逐项）→合计→质保→风险提示（如有）→确认请求
+- 费用必须逐项列出，格式统一
+- 如有两种方案（如原厂件/副厂件），并列展示供选择
+
+语气与风格：
+- 像一位值得信赖的技师在跟你解释车况
+- 技术问题用类比解释，如「刹车片就像鞋底，磨薄了就该换」
+- 不施压、不催促，给车主决策空间
+
+禁止事项：
+- 不能隐瞒任何可能产生的额外费用
+- 不能夸大故障严重性来促成维修
+- 不能贬低车主之前的维修选择
+- 不能虚标配件等级（副厂标原厂）
+- 不能省略质保条款
+- 不能使用「不修就会怎样」的恐吓话术</pre>
+      <button class="btn-copy" onclick="copyPrompt()">复制 Prompt</button>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>字段说明</h2>
+    <table class="field-table">
+      <thead><tr><th>字段</th><th>说明</th></tr></thead>
+      <tbody><tr><td><code>{车辆信息}</code></td><td>车辆的完整信息，如「2020款丰田卡罗拉1.2T，行驶6.8万公里」</td></tr><tr><td><code>{车主描述}</code></td><td>车主自己感受到的问题，如「刹车时有吱吱响」「方向盘抖动」</td></tr><tr><td><code>{检查结果}</code></td><td>技师检查后的专业判断，如「前刹车片剩余厚度1.5mm（正常应>3mm），已达更换标准」</td></tr><tr><td><code>{维修方案}</code></td><td>建议的维修操作，如「更换前轮刹车片一对+刹车盘检查（如磨损超标需一并更换）」</td></tr><tr><td><code>{配件选择}</code></td><td>提供的配件选项，如「方案A：原厂刹车片380元/对；方案B：博世品牌件260元/对」</td></tr><tr><td><code>{费用明细}</code></td><td>逐项列出所有费用，如「刹车片XX元+工时费XX元+检查费XX元」</td></tr><tr><td><code>{预计工期}</code></td><td>维修需要多长时间，如「约1.5小时，可等候取车」</td></tr><tr><td><code>{质保说明}</code></td><td>维修后的质保期，如「原厂件质保2年/4万公里，品牌副厂件质保1年/2万公里」</td></tr><tr><td><code>{风险提示}</code></td><td>维修过程中可能发现的额外问题，如「拆检后如发现刹车盘磨损超标，需额外更换，届时会再次报价确认」</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="template-section">
+    <h2>输出格式</h2>
+    <p>100-150字报价说明</p>
+  </section>
+
+  <section class="template-section">
+    <h2>输出示例</h2>
+    <div class="example-box">
+      <p>张先生您好，您的2020款卡罗拉（6.8万公里）检查结果如下：
+
+故障：前刹车片磨损严重，剩余厚度约1.5mm（安全标准为3mm以上），制动距离已明显变长。
+
+维修方案：更换前轮刹车片一对
+方案A（原厂件）：刹车片380元 + 工时费100元 = 480元
+方案B（博世品牌件）：刹车片260元 + 工时费100元 = 360元
+两种配件质量都有保障，原厂件质保2年，博世件质保1年。
+
+工期：约1.5小时，可在店等候。
+提示：拆检时会同步检查刹车盘状况，如磨损超标会提前告知并另行报价。
+
+您看选哪个方案？确认后今天就能安排。</p>
+      <p class="example-note">以上仅为格式示例，实际输出请根据你的素材生成</p>
+    </div>
+  </section>
+
+  <section class="template-section">
+    <h2>发布前复核清单</h2>
+    <ul class="checklist"><li><label><input type="checkbox"> 费用是否逐项透明列出（无隐藏收费）</label></li><li><label><input type="checkbox"> 配件等级是否如实标注（原厂/品牌副厂/普通副厂）</label></li><li><label><input type="checkbox"> 质保期限是否明确且与配件等级匹配</label></li><li><label><input type="checkbox"> 是否存在夸大故障严重性的恐吓话术</label></li><li><label><input type="checkbox"> 风险提示是否完整（可能的额外费用）</label></li><li><label><input type="checkbox"> 技术解释是否通俗易懂</label></li><li><label><input type="checkbox"> 是否给了车主选择空间而非单一方案</label></li></ul>
+  </section>
+
+  <section class="template-section"><h2>相关模板</h2><div class="related-templates"><a href="../templates/auto-repair-service-intro.html" class="related-link">汽车服务项目介绍</a><a href="../templates/auto-repair-customer-comm.html" class="related-link">汽修客户沟通话术</a></div></section>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>&copy; 2024 小商家 AI 工作流与模板库</p>
+    <p>联系邮箱：1055567003@qq.com</p>
+    <nav class="footer-links">
+      <a href="../pages/about.html">关于我们</a>
+      <a href="../pages/contact.html">联系我们</a>
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/privacy.html">隐私政策</a>
+      <a href="../pages/terms.html">使用条款</a>
+    </nav>
+  </div>
+</footer>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -68,6 +68,12 @@ li { margin-bottom: 0.3em; }
 .nav-links a { color: var(--color-text-light); font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; transition: all var(--transition); }
 .nav-links a:hover { color: var(--color-primary); border-bottom-color: var(--color-primary); }
 
+/* === Language Switcher === */
+.lang-switcher { position: absolute; top: 0.75rem; right: 1.25rem; }
+.lang-btn { display: inline-block; padding: 0.25rem 0.6rem; font-size: 0.8rem; font-weight: 600; color: var(--color-primary); border: 1.5px solid var(--color-primary); border-radius: var(--radius); transition: all var(--transition); text-decoration: none; }
+.lang-btn:hover { background: var(--color-primary); color: #fff; text-decoration: none; }
+.site-header .nav-container { position: relative; }
+
 .main-content { flex: 1; max-width: var(--max-width); margin: 0 auto; padding: 2rem 1.25rem; width: 100%; }
 
 .site-footer { background: #f1f5f9; border-top: 1px solid var(--color-border); margin-top: 3rem; padding: 2rem 1.25rem; text-align: center; color: var(--color-text-light); font-size: 0.9rem; }
