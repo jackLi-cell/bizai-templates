@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B&B Check-in Guide - Small Business AI Workflow & Template Library</title>
-<meta name="description" content="Generate content for B&B">
+<meta name="description" content="为民宿生成入住前引导话术">
 <link rel="canonical" href="https://bizai.jtlcook.com/en/templates/hotel-appointment">
 <link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/hotel-appointment">
 <link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/hotel-appointment">
 <link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/hotel-appointment">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta property="og:title" content="B&B Check-in Guide - Small Business AI Workflow & Template Library">
-<meta property="og:description" content="Generate content for B&B">
+<meta property="og:description" content="为民宿生成入住前引导话术">
 <meta property="og:url" content="https://bizai.jtlcook.com/en/templates/hotel-appointment">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Small Business AI Workflow & Template Library">
 <meta property="og:locale" content="en_US">
 <link rel="stylesheet" href="../../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"民宿入住引导","description":"Generate check-in script for B&B","step":[{"@type":"HowToStep","text":"Prepare materials: method/way （ address, ）, time and policy, information （, restaurant, , etc.）, season note/attention （, recommend ）, housekeeper contact method/way, service arrangement method/way (if any)"},{"@type":"HowToStep","text":"Copy the Prompt and replace the fields in curly braces with your actual information"},{"@type":"HowToStep","text":"Paste the Prompt into an AI tool to generate content"},{"@type":"HowToStep","text":"Human review checklist: whether accurate information; time whether and actual policy; remind whether complete (,, etc.); housekeeper contact method/way whether correct; whether safety information; tone whether"}],"tool":[{"@type":"HowToTool","name":"AI chat tool (e.g., ChatGPT, Claude, Gemini)"}],"supply":[{"@type":"HowToSupply","name":"method/way (address,)"},{"@type":"HowToSupply","name":"time and policy"},{"@type":"HowToSupply","name":"information (, restaurant,, etc.)"},{"@type":"HowToSupply","name":"season note/attention (, recommend)"},{"@type":"HowToSupply","name":"housekeeper contact method/way"},{"@type":"HowToSupply","name":"service arrangement method/way (if any)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"B&B Check-in Guide","description":"为民宿生成入住前引导话术","step":[{"@type":"HowToStep","text":"准备材料：最新的交通到达方式（导航地址、公共交通路线）、入退时间和相关政策、周边实用信息（最近的超市、餐厅、医院等）、季节性注意事项（天气、穿着建议）、管家的Contact Information、接站服务的安排方式（如有）"},{"@type":"HowToStep","text":"Copy Prompt 并替换花括号中的Field为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：交通指引是否准确且为最新信息；入退时间是否与实际政策一致；特殊提醒是否诚实完整（山路、信号等）；管家Contact Information是否正确；是否遗漏了关键的安全信息；语气是否温暖实用"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"最新的交通到达方式（导航地址、公共交通路线）"},{"@type":"HowToSupply","name":"入退时间和相关政策"},{"@type":"HowToSupply","name":"周边实用信息（最近的超市、餐厅、医院等）"},{"@type":"HowToSupply","name":"季节性注意事项（天气、穿着建议）"},{"@type":"HowToSupply","name":"管家的Contact Information"},{"@type":"HowToSupply","name":"接站服务的安排方式（如有）"}]}</script>
 
 </head>
 <body>
@@ -45,30 +45,28 @@
     <span class="tag">Hotels & B&B</span>
     <span class="tag">Appointment Management</span>
   </div>
-  <p class="template-desc">Generate content for B&B</p>
+  <p class="template-desc">为民宿生成入住前引导话术</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>Use Cases</h3>
-      <p>Use for after guest booking sending check-in guide</p>
+      <p>客人预订后发送入住指引时使用</p>
     </div>
     <div class="info-box">
       <h3>Not Suitable For</h3>
-      <p>Not suitable for contract terms</p>
+      <p>Not Suitable For用于合同条款</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>Materials Needed</h2>
-    <ul class="materials-list"><li>new to (address,)</li><li>time and policy</li><li>use info (, restaurant, etc.)</li><li>season precautions (days, advice)</li><li>housekeeper contact info</li><li>service arrangement (if any)</li></ul>
+    <ul class="materials-list"><li>最新的交通到达方式（导航地址、公共交通路线）</li><li>入退时间和相关政策</li><li>周边实用信息（最近的超市、餐厅、医院等）</li><li>季节性注意事项（天气、穿着建议）</li><li>管家的Contact Information</li><li>接站服务的安排方式（如有）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt (Click to Copy)</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">[Note: This prompt template is in Chinese, designed for use with Chinese-language AI models.]
-
-你是一位民宿的管家，负责在客人预订成功后发送入住前的引导信息。你的目标是让客人在到达之前就感受到被欢迎和被照顾，同时获取所有实用的到达和入住信息。你的沟通风格温暖细致，像在接待一位来家里做客的朋友。现在需要生成一条入住引导消息，通过微信发送给已预订的客人。
+      <pre class="prompt-text" id="prompt-text">你是一位民宿的管家，负责在客人预订成功后发送入住前的引导信息。你的目标是让客人在到达之前就感受到被欢迎和被照顾，同时获取所有实用的到达和入住信息。你的沟通风格温暖细致，像在接待一位来家里做客的朋友。现在需要生成一条入住引导消息，通过微信发送给已预订的客人。
 
 请根据以下信息生成入住引导话术：
 客人称呼：{客人称呼}
@@ -104,21 +102,19 @@
     <h2>Field Descriptions</h2>
     <table class="field-table">
       <thead><tr><th>Field</th><th>Description</th></tr></thead>
-      <tbody><tr><td><code>{客人称呼}</code></td><td></td></tr><tr><td><code>{入住日期}</code></td><td>check-in day</td></tr><tr><td><code>{房型名称}</code></td><td>room type</td></tr><tr><td><code>{入退时间}</code></td><td>check-in and specific time</td></tr><tr><td><code>{交通指引}</code></td><td>and to</td></tr><tr><td><code>{接待流程}</code></td><td>to after process (, etc.)</td></tr><tr><td><code>{提前告知}</code></td><td>requires should before info (to time, whether requires should)</td></tr><tr><td><code>{周边信息}</code></td><td>restaurant, etc. use info</td></tr><tr><td><code>{特殊提醒}</code></td><td>requires should remind (, days, etc.)</td></tr><tr><td><code>{联系方式}</code></td><td>housekeeper phone and WeChat</td></tr></tbody>
+      <tbody><tr><td><code>{客人称呼}</code></td><td>客人的称呼</td></tr><tr><td><code>{入住日期}</code></td><td>客人计划入住的日期</td></tr><tr><td><code>{房型名称}</code></td><td>客人预订的房型</td></tr><tr><td><code>{入退时间}</code></td><td>入住和退房的具体时间</td></tr><tr><td><code>{交通指引}</code></td><td>自驾和公共交通的详细到达方式</td></tr><tr><td><code>{接待流程}</code></td><td>客人到达后的接待流程（如门口接、带看房间等）</td></tr><tr><td><code>{提前告知}</code></td><td>需要客人提前告知的信息（如到达时间、饮食禁忌、是否需要接站）</td></tr><tr><td><code>{周边信息}</code></td><td>周边的超市、餐厅、加油站等实用信息</td></tr><tr><td><code>{特殊提醒}</code></td><td>需要特别提醒的事项（如山路、信号、天气、蚊虫等）</td></tr><tr><td><code>{Contact Information}</code></td><td>管家的电话和微信</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>Output Format</h2>
-    <p>100-150 character check-in guide</p>
+    <p>100-150字入住引导</p>
   </section>
 
   <section class="template-section">
     <h2>Output Example</h2>
     <div class="example-box">
-      <p>[Sample output in Chinese - this is a format reference for Chinese-language AI output]
-
-王先生您好，欢迎预订我们的山景大床房！入住日期：本周六。
+      <p>王先生您好，欢迎预订我们的山景大床房！入住日期：本周六。
 
 到达指引：
 1. 自驾导航搜「XX民宿」可直达，最后2公里是盘山路，弯道多请慢行
@@ -137,7 +133,7 @@
 
   <section class="template-section">
     <h2>Pre-publish Review Checklist</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> whether accurate for new info</label></li><li><label><input type="checkbox"> time whether and policy</label></li><li><label><input type="checkbox"> remind whether complete (, etc.)</label></li><li><label><input type="checkbox"> housekeeper Is the contact information correct</label></li><li><label><input type="checkbox"> whether safety info</label></li><li><label><input type="checkbox"> tone whether use</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 交通指引是否准确且为最新信息</label></li><li><label><input type="checkbox"> 入退时间是否与实际政策一致</label></li><li><label><input type="checkbox"> 特殊提醒是否诚实完整（山路、信号等）</label></li><li><label><input type="checkbox"> 管家Contact Information是否正确</label></li><li><label><input type="checkbox"> 是否遗漏了关键的安全信息</label></li><li><label><input type="checkbox"> 语气是否温暖实用</label></li></ul>
   </section>
 
   <section class="template-section"><h2>Related Templates</h2><div class="related-templates"><a href="../templates/hotel-room-description.html" class="related-link">B&B Room Description</a><a href="../templates/hotel-review-response.html" class="related-link">B&B Review Response</a></div></section>

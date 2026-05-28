@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Retail After-sales Script - Small Business AI Workflow & Template Library</title>
-<meta name="description" content="Generate after-sales handling scripts for retail store">
+<meta name="description" content="为零售店售后问题生成处理话术">
 <link rel="canonical" href="https://bizai.jtlcook.com/en/templates/retail-after-sales">
 <link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/retail-after-sales">
 <link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/retail-after-sales">
 <link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/retail-after-sales">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta property="og:title" content="Retail After-sales Script - Small Business AI Workflow & Template Library">
-<meta property="og:description" content="Generate after-sales handling scripts for retail store">
+<meta property="og:description" content="为零售店售后问题生成处理话术">
 <meta property="og:url" content="https://bizai.jtlcook.com/en/templates/retail-after-sales">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Small Business AI Workflow & Template Library">
 <meta property="og:locale" content="en_US">
 <link rel="stylesheet" href="../../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"零售售后处理话术","description":"Generate handle script for retail store issue/problem","step":[{"@type":"HowToStep","text":"Prepare materials: customer feedback specific issue/problem and (photo, etc.), product/item judge, handle plan/solution (including), time, plan/solution, address and information"},{"@type":"HowToStep","text":"Copy the Prompt and replace the fields in curly braces with your actual information"},{"@type":"HowToStep","text":"Paste the Prompt into an AI tool to generate content"},{"@type":"HowToStep","text":"Human review checklist: handle plan/solution whether range/scope; time commitment whether deliverable; whether clear/explicit explain; whether customer select; whether customer; requires customer whether; tone whether sincere"}],"tool":[{"@type":"HowToTool","name":"AI chat tool (e.g., ChatGPT, Claude, Gemini)"}],"supply":[{"@type":"HowToSupply","name":"customer feedback specific issue/problem and (photo, etc.)"},{"@type":"HowToSupply","name":"product/item judge"},{"@type":"HowToSupply","name":"handle plan/solution (including)"},{"@type":"HowToSupply","name":"time"},{"@type":"HowToSupply","name":"plan/solution"},{"@type":"HowToSupply","name":"address and information"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Retail After-sales Script","description":"为零售店售后问题生成处理话术","step":[{"@type":"HowToStep","text":"准备材料：Customer反馈的具体问题和证据（照片等）、商品状况判断、经授权的处理方案（含备选）、各环节的时间节点、运费承担方案、退货地址和快递信息"},{"@type":"HowToStep","text":"Copy Prompt 并替换花括号中的Field为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：处理方案是否在你的权限范围内；时间承诺是否可兑现；运费承担是否明确Description；是否给了Customer选择权；是否有暗示Customer责任的表述；需要Customer配合的事项是否简单明了；语气是否诚恳高效"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"Customer反馈的具体问题和证据（照片等）"},{"@type":"HowToSupply","name":"商品状况判断"},{"@type":"HowToSupply","name":"经授权的处理方案（含备选）"},{"@type":"HowToSupply","name":"各环节的时间节点"},{"@type":"HowToSupply","name":"运费承担方案"},{"@type":"HowToSupply","name":"退货地址和快递信息"}]}</script>
 
 </head>
 <body>
@@ -45,30 +45,28 @@
     <span class="tag">Retail & E-commerce</span>
     <span class="tag">Complaint Handling</span>
   </div>
-  <p class="template-desc">Generate after-sales handling scripts for retail store</p>
+  <p class="template-desc">为零售店售后问题生成处理话术</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>Use Cases</h3>
-      <p>Use for customers returns/exchanges , product quality issues</p>
+      <p>Customer要求退换货、商品有质量问题时使用</p>
     </div>
     <div class="info-box">
       <h3>Not Suitable For</h3>
-      <p></p>
+      <p>Not Suitable For用于批量召回通知</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>Materials Needed</h2>
-    <ul class="materials-list"><li>customer feedback specific issue and (photo etc.)</li><li>product</li><li>resolution plan (including)</li><li>time</li><li>plan</li><li>address and info</li></ul>
+    <ul class="materials-list"><li>Customer反馈的具体问题和证据（照片等）</li><li>商品状况判断</li><li>经授权的处理方案（含备选）</li><li>各环节的时间节点</li><li>运费承担方案</li><li>退货地址和快递信息</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt (Click to Copy)</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">[Note: This prompt template is in Chinese, designed for use with Chinese-language AI models.]
-
-你是一位处理过大量售后问题的零售客服主管，深知售后处理的核心是「快速解决+不让客户觉得麻烦」。现在需要针对一位客户的售后问题生成处理话术。
+      <pre class="prompt-text" id="prompt-text">你是一位处理过大量售后问题的零售客服主管，深知售后处理的核心是「快速解决+不让客户觉得麻烦」。现在需要针对一位客户的售后问题生成处理话术。
 
 请根据以下信息生成话术：
 客户反馈的售后问题：{售后问题}
@@ -99,21 +97,19 @@
     <h2>Field Descriptions</h2>
     <table class="field-table">
       <thead><tr><th>Field</th><th>Description</th></tr></thead>
-      <tbody><tr><td><code>{售后问题}</code></td><td>customer feedback specific issue (e.g. "「衣服走线开裂」「鞋子左右脚颜色不一样」")</td></tr><tr><td><code>{商品情况}</code></td><td>customer description or photo product</td></tr><tr><td><code>{处理方案}</code></td><td>confirm can plan (e.g. "退款/换货/补发配件")</td></tr><tr><td><code>{时间节点}</code></td><td>each time (e.g. "「今天发货，后天到」「退款3个工作日到账」")</td></tr><tr><td><code>{客户配合}</code></td><td>requires should customer do (e.g. "「寄回商品」「提供订单号」")</td></tr></tbody>
+      <tbody><tr><td><code>{售后问题}</code></td><td>Customer反馈的具体问题，如「衣服走线开裂」「鞋子左右脚颜色不一样」</td></tr><tr><td><code>{商品情况}</code></td><td>根据Customer描述或照片判断的商品状况</td></tr><tr><td><code>{处理方案}</code></td><td>经确认可执行的方案，如「退款/换货/补发配件」</td></tr><tr><td><code>{时间节点}</code></td><td>每个环节的预计时间，如「今天发货，后天到」「退款3个工作日到账」</td></tr><tr><td><code>{Customer配合}</code></td><td>需要Customer做什么，如「寄回商品」「提供订单号」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>Output Format</h2>
-    <p>80-120 character after-sales reply</p>
+    <p>80-120字售后回复</p>
   </section>
 
   <section class="template-section">
     <h2>Output Example</h2>
     <div class="example-box">
-      <p>[Sample output in Chinese - this is a format reference for Chinese-language AI output]
-
-看了您发的照片，确实是走线开裂的质量问题，给您添麻烦了。这边给您两个方案：
+      <p>看了您发的照片，确实是走线开裂的质量问题，给您添麻烦了。这边给您两个方案：
 方案一：直接退款，您把衣服寄回来就行，运费我们出（发退货码给您，不用垫付）；
 方案二：换一件新的寄给您，我这边今天就发，预计后天到。
 您看哪个方便？选好了我马上安排。（仅供格式参考，实际请根据具体售后问题生成）</p>
@@ -123,7 +119,7 @@
 
   <section class="template-section">
     <h2>Pre-publish Review Checklist</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> resolution plan whether at scope within</label></li><li><label><input type="checkbox"> time commitment whether can</label></li><li><label><input type="checkbox"> whether description</label></li><li><label><input type="checkbox"> whether give customer</label></li><li><label><input type="checkbox"> whether has customer</label></li><li><label><input type="checkbox"> requires should customer whether</label></li><li><label><input type="checkbox"> tone whether sincere</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 处理方案是否在你的权限范围内</label></li><li><label><input type="checkbox"> 时间承诺是否可兑现</label></li><li><label><input type="checkbox"> 运费承担是否明确Description</label></li><li><label><input type="checkbox"> 是否给了Customer选择权</label></li><li><label><input type="checkbox"> 是否有暗示Customer责任的表述</label></li><li><label><input type="checkbox"> 需要Customer配合的事项是否简单明了</label></li><li><label><input type="checkbox"> 语气是否诚恳高效</label></li></ul>
   </section>
 
   <section class="template-section"><h2>Related Templates</h2><div class="related-templates"><a href="../templates/retail-customer-reply.html" class="related-link">Retail Customer Service Reply</a><a href="../templates/retail-review-response.html" class="related-link">Retail Review Response</a></div></section>

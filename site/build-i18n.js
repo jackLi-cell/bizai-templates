@@ -6,9 +6,15 @@ const fs = require('fs');
 const path = require('path');
 
 const SITE_DIR = __dirname;
-const BASE_URL = 'https://bizai.jtlcook.com';
+const BASE_URL = normalizeSiteUrl(process.env.SITE_URL, 'https://bizai.jtlcook.com');
 const TODAY = '2026-05-26';
 const CONTENT_DIRS = ['guides', 'industries', 'pages', 'scenarios', 'tasks', 'templates', 'tools'];
+const SITEMAP_PAGE_LIMIT = Number(process.env.SITEMAP_PAGE_LIMIT || 49);
+
+function normalizeSiteUrl(value, fallback) {
+  const raw = String(value || fallback || '').trim().replace(/\/+$/, '');
+  return raw.replace(/^http:\/\//i, 'https://');
+}
 
 // Load translation dictionary from external JSON file
 const T = JSON.parse(fs.readFileSync(path.join(SITE_DIR, 'translations.json'), 'utf-8'));
@@ -220,7 +226,7 @@ function generateSitemap() {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
   xml += `  <url>\n    <loc>${BASE_URL}/</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n`;
 
-  for (const page of pages) {
+  for (const page of selectSitemapPages(pages)) {
     const zhUrl = `${BASE_URL}/zh/${page.path}`;
     const enUrl = `${BASE_URL}/en/${page.path}`;
     xml += `  <url>\n    <loc>${zhUrl}</loc>\n`;
@@ -237,6 +243,24 @@ function generateSitemap() {
   xml += '</urlset>\n';
   fs.writeFileSync(path.join(SITE_DIR, 'sitemap.xml'), xml);
   console.log('  Generated: sitemap.xml');
+}
+
+function selectSitemapPages(pages) {
+  const score = (page) => {
+    if (page.path === '') return 0;
+    if (page.path === 'templates/') return 1;
+    if (/^industries\//.test(page.path)) return 2;
+    if (/^tasks\//.test(page.path)) return 3;
+    if (/^tools\//.test(page.path)) return 4;
+    if (/^guides\//.test(page.path)) return 5;
+    if (/^scenarios\//.test(page.path)) return 6;
+    if (/^pages\//.test(page.path)) return 7;
+    if (/^templates\//.test(page.path)) return 9;
+    return 20;
+  };
+  return [...pages]
+    .sort((a, b) => score(a) - score(b) || a.path.localeCompare(b.path))
+    .slice(0, SITEMAP_PAGE_LIMIT);
 }
 
 function createRootIndex() {

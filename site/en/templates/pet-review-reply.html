@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pet Store Review Response - Small Business AI Workflow & Template Library</title>
-<meta name="description" content="Generate review responses for pet store">
+<meta name="description" content="为宠物店线上评价生成回复">
 <link rel="canonical" href="https://bizai.jtlcook.com/en/templates/pet-review-reply">
 <link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/pet-review-reply">
 <link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/pet-review-reply">
 <link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/pet-review-reply">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta property="og:title" content="Pet Store Review Response - Small Business AI Workflow & Template Library">
-<meta property="og:description" content="Generate review responses for pet store">
+<meta property="og:description" content="为宠物店线上评价生成回复">
 <meta property="og:url" content="https://bizai.jtlcook.com/en/templates/pet-review-reply">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Small Business AI Workflow & Template Library">
 <meta property="og:locale" content="en_US">
 <link rel="stylesheet" href="../../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"宠物店评价回复","description":"Generate reply for pet store review","step":[{"@type":"HowToStep","text":"Prepare materials: review and, review and service service item, (review), negative review: verify situation and, provide or, store contact method/way"},{"@type":"HowToStep","text":"Copy the Prompt and replace the fields in curly braces with your actual information"},{"@type":"HowToStep","text":"Paste the Prompt into an AI tool to generate content"},{"@type":"HowToStep","text":"Human review checklist: whether title/name; negative review reply whether; whether avoid recommend; plan/solution whether specific actionable; tone whether; whether avoid"}],"tool":[{"@type":"HowToTool","name":"AI chat tool (e.g., ChatGPT, Claude, Gemini)"}],"supply":[{"@type":"HowToSupply","name":"review and"},{"@type":"HowToSupply","name":"review and service service item"},{"@type":"HowToSupply","name":"(review)"},{"@type":"HowToSupply","name":"negative review: verify situation and"},{"@type":"HowToSupply","name":"provide or"},{"@type":"HowToSupply","name":"store contact method/way"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Pet Store Review Response","description":"为宠物店线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价原文和星级、评价涉及的服务项目、宠物名字（如评价中提到）、如果是差评：核实后的情况和改进措施、可提供的后续关怀或补偿、店铺Contact Information"},{"@type":"HowToStep","text":"Copy Prompt 并替换花括号中的Field为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：是否用宠物名字称呼而非泛称；差评回复是否优先关心了宠物状况；是否避免了给出医疗诊断建议；后续方案是否具体可执行；语气是否温暖真诚而非机械；是否避免了暗示主人照顾不当"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价原文和星级"},{"@type":"HowToSupply","name":"评价涉及的服务项目"},{"@type":"HowToSupply","name":"宠物名字（如评价中提到）"},{"@type":"HowToSupply","name":"如果是差评：核实后的情况和改进措施"},{"@type":"HowToSupply","name":"可提供的后续关怀或补偿"},{"@type":"HowToSupply","name":"店铺Contact Information"}]}</script>
 
 </head>
 <body>
@@ -45,30 +45,28 @@
     <span class="tag">Pet Services</span>
     <span class="tag">Review Responses</span>
   </div>
-  <p class="template-desc">Generate review responses for pet store</p>
+  <p class="template-desc">为宠物店线上评价生成回复</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>Use Cases</h3>
-      <p>Use for responding to Meituan , Dianping etc. platform reviews</p>
+      <p>收到美团、大众点评等平台评价时使用</p>
     </div>
     <div class="info-box">
       <h3>Not Suitable For</h3>
-      <p>Not suitable for medical dispute responses</p>
+      <p>Not Suitable For用于医疗纠纷回复</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>Materials Needed</h2>
-    <ul class="materials-list"><li>original review text and star rating</li><li>review service item</li><li>(review in to)</li><li>is negative review: verify after situation and</li><li>can after or</li><li>store contact info</li></ul>
+    <ul class="materials-list"><li>评价原文和星级</li><li>评价涉及的服务项目</li><li>宠物名字（如评价中提到）</li><li>如果是差评：核实后的情况和改进措施</li><li>可提供的后续关怀或补偿</li><li>店铺Contact Information</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt (Click to Copy)</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">[Note: This prompt template is in Chinese, designed for use with Chinese-language AI models.]
-
-你是一位真心喜欢动物的宠物店老板，在回复评价时你不只是在做客服，而是在跟一群同样爱宠物的人交流。你回复好评时会记住宠物的名字和特点，回复差评时会优先关心宠物的状况而非辩解。
+      <pre class="prompt-text" id="prompt-text">你是一位真心喜欢动物的宠物店老板，在回复评价时你不只是在做客服，而是在跟一群同样爱宠物的人交流。你回复好评时会记住宠物的名字和特点，回复差评时会优先关心宠物的状况而非辩解。
 
 现在需要针对一条线上评价撰写商家回复。
 
@@ -101,28 +99,26 @@
     <h2>Field Descriptions</h2>
     <table class="field-table">
       <thead><tr><th>Field</th><th>Description</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>customer review (e.g. "洗得很干净，但是豆豆回来后一直挠耳朵")</td></tr><tr><td><code>{星级}</code></td><td> (e.g. "「3星」「5星」")</td></tr><tr><td><code>{服务项目}</code></td><td>customer do service (e.g. "全身洗护+耳道清洁")</td></tr><tr><td><code>{宠物名字}</code></td><td>review in to (e.g. "「豆豆」「没提到名字」")</td></tr><tr><td><code>{实际情况}</code></td><td>negative review situation under verify reason (e.g. "耳道清洁时发现有轻微发红，已告知主人建议观察")</td></tr><tr><td><code>{后续方案}</code></td><td>follow up (e.g. "邀请带豆豆回店免费复查耳朵情况，如有异常建议就医")</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>Customer写的评价，如「洗得很干净，但是豆豆回来后一直挠耳朵」</td></tr><tr><td><code>{星级}</code></td><td>几颗星，如「3星」「5星」</td></tr><tr><td><code>{服务项目}</code></td><td>Customer当时做了什么服务，如「全身洗护+耳道清洁」</td></tr><tr><td><code>{宠物名字}</code></td><td>评价中提到的宠物名字，如「豆豆」「没提到名字」</td></tr><tr><td><code>{实际情况}</code></td><td>差评情况下核实的原因，如「耳道清洁时发现有轻微发红，已告知主人建议观察」</td></tr><tr><td><code>{后续方案}</code></td><td>打算怎么跟进，如「邀请带豆豆回店免费复查耳朵情况，如有异常建议就医」</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>Output Format</h2>
-    <p>50-90 character / 100-150 character review response</p>
+    <p>好评50-90字/差评100-150字Review Responses</p>
   </section>
 
   <section class="template-section">
     <h2>Output Example</h2>
     <div class="example-box">
-      <p>[Sample output in Chinese - this is a format reference for Chinese-language AI output]
-
-您好，感谢反馈。豆豆挠耳朵的情况我很在意——当天清洁耳道时我们发现里面有轻微发红，洗护结束时跟接宠物的家人提过建议观察。如果现在还在挠，建议带去医院看一下排除耳螨的可能。您方便的话这周可以带豆豆来店里，我免费帮忙再检查一下耳道状况。有任何情况随时微信联系我。（仅供格式参考，请根据实际评价生成）</p>
+      <p>您好，感谢反馈。豆豆挠耳朵的情况我很在意——当天清洁耳道时我们发现里面有轻微发红，洗护结束时跟接宠物的家人提过建议观察。如果现在还在挠，建议带去医院看一下排除耳螨的可能。您方便的话这周可以带豆豆来店里，我免费帮忙再检查一下耳道状况。有任何情况随时微信联系我。（仅供格式参考，请根据实际评价生成）</p>
       <p class="example-note">The above is a format example only. Actual output should be generated based on your materials.</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>Pre-publish Review Checklist</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> whether use</label></li><li><label><input type="checkbox"> negative review reply whether</label></li><li><label><input type="checkbox"> whether give advice</label></li><li><label><input type="checkbox"> after plan whether specific and actionable</label></li><li><label><input type="checkbox"> tone whether</label></li><li><label><input type="checkbox"> whether not</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 是否用宠物名字称呼而非泛称</label></li><li><label><input type="checkbox"> 差评回复是否优先关心了宠物状况</label></li><li><label><input type="checkbox"> 是否避免了给出医疗诊断建议</label></li><li><label><input type="checkbox"> 后续方案是否具体可执行</label></li><li><label><input type="checkbox"> 语气是否温暖真诚而非机械</label></li><li><label><input type="checkbox"> 是否避免了暗示主人照顾不当</label></li></ul>
   </section>
 
   <section class="template-section"><h2>Related Templates</h2><div class="related-templates"><a href="../templates/pet-service-description.html" class="related-link">Pet Service Description</a><a href="../templates/pet-social-media.html" class="related-link">Pet Store Social Media Content</a></div></section>

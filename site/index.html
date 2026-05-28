@@ -10,17 +10,17 @@
 <script>
 (function(){
   var saved = localStorage.getItem('lang');
-  if(saved === 'en') { window.location.replace('./en/index.html'); return; }
-  if(saved === 'zh') { window.location.replace('./zh/index.html'); return; }
+  if(saved === 'en') { window.location.replace('./en/'); return; }
+  if(saved === 'zh') { window.location.replace('./zh/'); return; }
   var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-  if(lang.startsWith('zh')) { window.location.replace('./zh/index.html'); }
-  else { window.location.replace('./en/index.html'); }
+  if(lang.startsWith('zh')) { window.location.replace('./zh/'); }
+  else { window.location.replace('./en/'); }
 })();
 </script>
 </head>
 <body>
 <noscript>
-<p><a href="./zh/index.html">中文版</a> | <a href="./en/index.html">English</a></p>
+<p><a href="./zh/">中文版</a> | <a href="./en/">English</a></p>
 </noscript>
 </body>
 </html>

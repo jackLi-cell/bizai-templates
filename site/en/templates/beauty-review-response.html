@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beauty Review Response - Small Business AI Workflow & Template Library</title>
-<meta name="description" content="Generate review responses for beauty salon">
+<meta name="description" content="为美容院线上评价生成回复">
 <link rel="canonical" href="https://bizai.jtlcook.com/en/templates/beauty-review-response">
 <link rel="alternate" hreflang="zh" href="https://bizai.jtlcook.com/zh/templates/beauty-review-response">
 <link rel="alternate" hreflang="en" href="https://bizai.jtlcook.com/en/templates/beauty-review-response">
 <link rel="alternate" hreflang="x-default" href="https://bizai.jtlcook.com/en/templates/beauty-review-response">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta property="og:title" content="Beauty Review Response - Small Business AI Workflow & Template Library">
-<meta property="og:description" content="Generate review responses for beauty salon">
+<meta property="og:description" content="为美容院线上评价生成回复">
 <meta property="og:url" content="https://bizai.jtlcook.com/en/templates/beauty-review-response">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Small Business AI Workflow & Template Library">
 <meta property="og:locale" content="en_US">
 <link rel="stylesheet" href="../../assets/styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"美业评价回复","description":"Generate reply for beauty salon review","step":[{"@type":"HowToStep","text":"Prepare materials: review, review, customer service item, , negative review resolve plan/solution (applicable to)"},{"@type":"HowToStep","text":"Copy the Prompt and replace the fields in curly braces with your actual information"},{"@type":"HowToStep","text":"Paste the Prompt into an AI tool to generate content"},{"@type":"HowToStep","text":"Human review checklist: reply whether review specific content; whether effective commitment or; positive review reply whether recommend; negative review reply whether specific resolve plan/solution; whether customer privacy; tone whether professional and; customer whether affect"}],"tool":[{"@type":"HowToTool","name":"AI chat tool (e.g., ChatGPT, Claude, Gemini)"}],"supply":[{"@type":"HowToSupply","name":"review"},{"@type":"HowToSupply","name":"review"},{"@type":"HowToSupply","name":"customer service item"},{"@type":"HowToSupply","name":""},{"@type":"HowToSupply","name":"negative review resolve plan/solution (applicable to)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Beauty Review Response","description":"为美容院线上评价生成回复","step":[{"@type":"HowToStep","text":"准备材料：评价原文、评价星级、Customer做的项目、你想传达的重点、差评解决方案（如适用）"},{"@type":"HowToStep","text":"Copy Prompt 并替换花括号中的Field为你的实际信息"},{"@type":"HowToStep","text":"将 Prompt 粘贴到 AI 工具中生成内容"},{"@type":"HowToStep","text":"人工复核检查清单：回复是否针对评价中的具体内容；是否有效果承诺或医疗用语；好评回复是否有实质性的护理建议；差评回复是否给出了具体解决方案；是否泄露了Customer隐私；语气是否专业温和；对潜在Customer是否有正面影响"}],"tool":[{"@type":"HowToTool","name":"AI 对话工具（如文心一言、通义千问、ChatGPT）"}],"supply":[{"@type":"HowToSupply","name":"评价原文"},{"@type":"HowToSupply","name":"评价星级"},{"@type":"HowToSupply","name":"Customer做的项目"},{"@type":"HowToSupply","name":"你想传达的重点"},{"@type":"HowToSupply","name":"差评解决方案（如适用）"}]}</script>
 
 </head>
 <body>
@@ -45,30 +45,28 @@
     <span class="tag">Beauty & Hair</span>
     <span class="tag">Review Responses</span>
   </div>
-  <p class="template-desc">Generate review responses for beauty salon</p>
+  <p class="template-desc">为美容院线上评价生成回复</p>
 
   <div class="info-grid">
     <div class="info-box">
       <h3>Use Cases</h3>
-      <p>Use for responding to Dianping , Meituan etc. platform reviews</p>
+      <p>收到大众点评、美团等平台评价时使用</p>
     </div>
     <div class="info-box">
       <h3>Not Suitable For</h3>
-      <p>Not suitable for fake positive reviews</p>
+      <p>Not Suitable For用于刷好评</p>
     </div>
   </div>
 
   <section class="template-section">
     <h2>Materials Needed</h2>
-    <ul class="materials-list"><li>original review text</li><li>review star rating</li><li>customer do service</li><li></li><li>negative review solution (use)</li></ul>
+    <ul class="materials-list"><li>评价原文</li><li>评价星级</li><li>Customer做的项目</li><li>你想传达的重点</li><li>差评解决方案（如适用）</li></ul>
   </section>
 
   <section class="template-section">
     <h2>Prompt (Click to Copy)</h2>
     <div class="prompt-box">
-      <pre class="prompt-text" id="prompt-text">[Note: This prompt template is in Chinese, designed for use with Chinese-language AI models.]
-
-你是一位管理美容院线上口碑的运营专员，深知大众点评和美团上的评价回复既是给评价者看的，更是给其他正在选店的潜在客户看的。现在需要针对一条客户评价生成商家回复。
+      <pre class="prompt-text" id="prompt-text">你是一位管理美容院线上口碑的运营专员，深知大众点评和美团上的评价回复既是给评价者看的，更是给其他正在选店的潜在客户看的。现在需要针对一条客户评价生成商家回复。
 
 请根据以下信息生成回复：
 客户评价原文：{评价内容}
@@ -100,28 +98,26 @@
     <h2>Field Descriptions</h2>
     <table class="field-table">
       <thead><tr><th>Field</th><th>Description</th></tr></thead>
-      <tbody><tr><td><code>{评价内容}</code></td><td>customer original review text</td></tr><tr><td><code>{评价星级}</code></td><td>1-5</td></tr><tr><td><code>{做的项目}</code></td><td>customer do service</td></tr><tr><td><code>{回复重点}</code></td><td>reply (e.g. "「强调专业度」「推荐下次项目」「解决不满」")</td></tr><tr><td><code>{解决方案}</code></td><td>is negative review, can solution</td></tr></tbody>
+      <tbody><tr><td><code>{评价内容}</code></td><td>Customer写的评价原文</td></tr><tr><td><code>{评价星级}</code></td><td>1-5星</td></tr><tr><td><code>{做的项目}</code></td><td>Customer做了什么项目</td></tr><tr><td><code>{回复重点}</code></td><td>你想通过回复传达什么，如「强调专业度」「推荐下次项目」「解决不满」</td></tr><tr><td><code>{解决方案}</code></td><td>如果是差评，你能提供什么解决方案</td></tr></tbody>
     </table>
   </section>
 
   <section class="template-section">
     <h2>Output Format</h2>
-    <p>50-100 character review response</p>
+    <p>50-100字Review Responses</p>
   </section>
 
   <section class="template-section">
     <h2>Output Example</h2>
     <div class="example-box">
-      <p>[Sample output in Chinese - this is a format reference for Chinese-language AI output]
-
-看到你说做完补水后「第二天上妆特别服帖」，作为给你做护理的美容师真的很开心。换季这段时间皮肤确实容易缺水，建议在家也坚持早晚用保湿精华打底，效果会更持续。下次来可以试试我们新到的补水仪，导入效率比手工按摩高不少。随时预约，帮你留好时间。（仅供格式参考，实际请根据具体评价生成）</p>
+      <p>看到你说做完补水后「第二天上妆特别服帖」，作为给你做护理的美容师真的很开心。换季这段时间皮肤确实容易缺水，建议在家也坚持早晚用保湿精华打底，效果会更持续。下次来可以试试我们新到的补水仪，导入效率比手工按摩高不少。随时预约，帮你留好时间。（仅供格式参考，实际请根据具体评价生成）</p>
       <p class="example-note">The above is a format example only. Actual output should be generated based on your materials.</p>
     </div>
   </section>
 
   <section class="template-section">
     <h2>Pre-publish Review Checklist</h2>
-    <ul class="checklist"><li><label><input type="checkbox"> reply whether to review in specific content</label></li><li><label><input type="checkbox"> whether has effect commitment or medical terminology</label></li><li><label><input type="checkbox"> positive review reply whether has advice</label></li><li><label><input type="checkbox"> negative review reply whether give specific solution</label></li><li><label><input type="checkbox"> whether customer privacy</label></li><li><label><input type="checkbox"> tone whether professional and</label></li><li><label><input type="checkbox"> to at customer whether has</label></li></ul>
+    <ul class="checklist"><li><label><input type="checkbox"> 回复是否针对评价中的具体内容</label></li><li><label><input type="checkbox"> 是否有效果承诺或医疗用语</label></li><li><label><input type="checkbox"> 好评回复是否有实质性的护理建议</label></li><li><label><input type="checkbox"> 差评回复是否给出了具体解决方案</label></li><li><label><input type="checkbox"> 是否泄露了Customer隐私</label></li><li><label><input type="checkbox"> 语气是否专业温和</label></li><li><label><input type="checkbox"> 对潜在Customer是否有正面影响</label></li></ul>
   </section>
 
   <section class="template-section"><h2>Related Templates</h2><div class="related-templates"><a href="../templates/beauty-social-media.html" class="related-link">Beauty Social Media Daily</a><a href="../templates/beauty-recall.html" class="related-link">Beauty Customer Win-back Script</a></div></section>

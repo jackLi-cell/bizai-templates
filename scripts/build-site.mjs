@@ -7,9 +7,15 @@ const ROOT = join(__dirname, '..');
 const SITE = join(ROOT, 'site');
 const DATA = join(ROOT, 'data');
 
-const DOMAIN = 'https://bizai.jtlcook.com';
+const DOMAIN = normalizeSiteUrl(process.env.SITE_URL, 'https://bizai.jtlcook.com');
 const SITE_NAME = '小商家 AI 工作流与模板库';
 const EMAIL = '1055567003@qq.com';
+const SITEMAP_TEMPLATE_LIMIT = Number(process.env.SITEMAP_TEMPLATE_LIMIT || 44);
+
+function normalizeSiteUrl(value, fallback) {
+  const raw = String(value || fallback || '').trim().replace(/\/+$/, '');
+  return raw.replace(/^http:\/\//i, 'https://');
+}
 
 // Load data
 const industries = JSON.parse(readFileSync(join(DATA, 'industries.json'), 'utf-8'));
@@ -818,10 +824,11 @@ function buildTrustPages() {
 // --- Build Sitemap and Robots ---
 function buildSitemap() {
   const today = new Date().toISOString().split('T')[0];
+  const sitemapTemplates = templates.slice(0, SITEMAP_TEMPLATE_LIMIT);
   const urls = [
     { loc: '/', priority: '1.0' },
     { loc: '/templates/', priority: '0.9' },
-    ...templates.map(t => ({ loc: `/templates/${t.slug}`, priority: '0.6' })),
+    ...sitemapTemplates.map(t => ({ loc: `/templates/${t.slug}`, priority: '0.6' })),
     ...industries.map(i => ({ loc: `/industries/${i.slug}`, priority: '0.7' })),
     ...tasks.map(t => ({ loc: `/tasks/${t.slug}`, priority: '0.7' })),
     ...guides.map(g => ({ loc: `/guides/${g.slug}`, priority: '0.6' })),
@@ -870,4 +877,3 @@ buildReplyFilterPage();
 buildTrustPages();
 buildSitemap();
 console.log('Build complete!');
-
