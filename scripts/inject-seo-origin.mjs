@@ -303,7 +303,42 @@ function rewriteHtml(text, publicPath) {
     return `<script${before}type=${quote}application/ld+json${quote}${after}>${rewritten.text}</script>`;
   });
 
+  const canonical = ensureCanonical(next, publicPath);
+  next = canonical.text;
+  urlChanges += canonical.urlChanges;
+
   return withWarnings(next, urlChanges, collectHtmlSeoText(next));
+}
+
+function ensureCanonical(text, publicPath) {
+  if (hasCanonicalLink(text)) {
+    return { text, urlChanges: 0 };
+  }
+
+  const closeHead = text.match(/<\/head\s*>/i);
+  if (!closeHead || typeof closeHead.index !== 'number') {
+    return { text, urlChanges: 0 };
+  }
+
+  const canonicalUrl = buildOriginUrl(publicPath);
+  const tag = `<link rel="canonical" href="${escapeHtmlAttr(canonicalUrl)}">`;
+  const before = text.slice(0, closeHead.index);
+  const after = text.slice(closeHead.index);
+  const insertion = before.endsWith('\n') ? `    ${tag}\n` : `\n    ${tag}\n`;
+  return { text: `${before}${insertion}${after}`, urlChanges: 1 };
+}
+
+function hasCanonicalLink(text) {
+  for (const match of text.matchAll(/<link\b[^>]*>/gi)) {
+    const rel = getAttr(match[0], 'rel');
+    if (!rel) {
+      continue;
+    }
+    if (rel.toLowerCase().split(/\s+/).includes('canonical')) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function rewriteJsonLd(jsonText, publicPath) {
