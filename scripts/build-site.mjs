@@ -176,7 +176,9 @@ function htmlPage({ title, description, canonical, body, extra = '', jsonLd = nu
 <title>${title} - ${SITE_NAME}</title>
 <meta name="description" content="${description}">
 <link rel="canonical" href="${cleanUrl(canonical)}">
+<link rel="icon" href="${prefix}favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="${prefix}favicon.svg">
+<link rel="apple-touch-icon" href="${prefix}apple-touch-icon.png">
 ${ogMetaTags}
 <link rel="stylesheet" href="${prefix}assets/styles.css">
 ${jsonLdScript}
